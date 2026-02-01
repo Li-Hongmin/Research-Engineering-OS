@@ -5,6 +5,8 @@
 
 ## 故事引入：那些"差不多就行"的代价
 
+![05 03 almost done trap](images/comics/05_03_almost_done_trap.png)
+
 ![完成清单](images/comics/05_checklist_hero.png)
 
 凌晨两点，你终于跑出了一个"看起来不错"的结果——测试准确率 94.3%，比 baseline 高了 3 个百分点。你兴奋地截了图，发到团队群里："新方法有效！"
@@ -39,6 +41,8 @@
 
 ### 埋雷 1："跑出结果"但无法复现
 
+![05 04 mine reproduce](images/comics/05_04_mine_reproduce.png)
+
 **症状**：你看到了一个好结果，但缺少完整的环境记录、配置信息、数据版本。几天后想重跑，结果对不上。
 
 **真实成本**：
@@ -51,6 +55,8 @@
 
 ### 埋雷 2："改进有效"但不知道为什么
 
+![05 05 mine unknown why](images/comics/05_05_mine_unknown_why.png)
+
 **症状**：你同时改了三个地方，结果确实变好了，但你不知道是哪个改动起作用，也没有做消融实验。
 
 **真实成本**：
@@ -62,6 +68,8 @@
 - 可能误把无效甚至有害的改动当成关键贡献。
 
 ### 埋雷 3："对比实验"但评估口径不一致
+
+![05 06 mine unfair eval](images/comics/05_06_mine_unfair_eval.png)
 
 **症状**：你的方法和 baseline 用了不同的评估脚本，或者后处理方式不同，看起来你的方法更好，但实际上比较不公平。
 
@@ -78,6 +86,8 @@
 以下清单适用于任何"可能写进论文"的实验结果。建议原样贴到项目 README 里，作为团队共识。
 
 ### 最小 DoD（5 项必须满足）
+
+![05 07 minimal dod](images/comics/05_07_minimal_dod.png)
 
 1.  **一条命令可复现主指标**
 
@@ -157,6 +167,8 @@
 - 在 Makefile 里加入 `make plots`，一键生成所有图表。
 
 ### 增强 DoD（推荐额外满足）
+
+![05 08 enhanced dod](images/comics/05_08_enhanced_dod.png)
 
 满足最小 DoD 后，以下几项可以进一步提升结果可信度：
 
@@ -353,6 +365,8 @@
           # 预期时间：6 小时（单卡 V100）
 
 ## 团队如何使用 DoD
+
+![05 09 team dod](images/comics/05_09_team_dod.png)
 
 ### 作为合并标准
 

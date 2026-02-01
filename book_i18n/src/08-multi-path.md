@@ -60,6 +60,8 @@ outputs/ 已经占了 50GB 空间，但你不敢删除任何目录——万一�
 
 #### 问题 3：无法对比不同路径
 
+![08 10 path comparison](images/comics/08_10_path_comparison.png)
+
 你想对比"路径 A（注意力改进）"和"路径 B（学习率优化）"的效果，但你发现：
 
 - 它们用的 baseline 不一样（一个是三个月前的，一个是最近的）
@@ -468,6 +470,8 @@ outputs/ 已经占了 50GB 空间，但你不敢删除任何目录——万一�
 **核心理念**：定期清理是避免垃圾堆的唯一方法。
 
 ### 每周五下午的清理流程（30 分钟）
+
+![08 09 weekly cleanup](images/comics/08_09_weekly_cleanup.png)
 
 #### Step 1：列出所有活跃路径（5 分钟）
 

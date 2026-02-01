@@ -49,6 +49,8 @@
 
 ### 第一层：机器日志（run.json）
 
+![06 08 run json structure](images/comics/06_08_run_json_structure.png)
+
 **目的**：为复现和自动化提供完整、结构化的信息。
 
 **原则**：
@@ -138,6 +140,8 @@
 - **random.seed**：所有随机数种子。确保设置了 PyTorch、NumPy、Python 内置 random 的种子。
 
 ### 第二层：人类日志（run.md）
+
+![06 09 run md template](images/comics/06_09_run_md_template.png)
 
 **目的**：为人类（包括未来的你）提供快速理解实验的摘要。
 
@@ -401,6 +405,8 @@
 ## 与现有工具集成
 
 ### 与 MLflow 集成
+
+![06 10 mlflow integration](images/comics/06_10_mlflow_integration.png)
 
 如果你已经在使用 MLflow，可以把 run.json 信息同步到 MLflow：
 

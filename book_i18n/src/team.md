@@ -13,6 +13,8 @@
 
 ### 周一早上的站会
 
+![10 05 monday standup](images/comics/10_05_monday_standup.png)
+
 你："我周末跑了新模型，效果不错，准确率 95%。"
 
 学弟："太好了！能发我代码吗？我想基于这个继续改。"
@@ -29,6 +31,8 @@
 
 #### 周三的代码冲突
 
+![10 06 wednesday conflict](images/comics/10_06_wednesday_conflict.png)
+
 学弟："师兄，我把代码 push 了，你 pull 一下。"
 
 你 pull 代码，结果：
@@ -42,6 +46,8 @@
 你花了两个小时解决冲突，最后发现：你的代码被覆盖了，上周跑出的好结果复现不了了。
 
 #### 周五的数据灾难
+
+![10 07 friday data disaster](images/comics/10_07_friday_data_disaster.png)
 
 实习生："师兄，我不小心把 data/ 目录删了，你那里有备份吗？"
 
@@ -61,6 +67,8 @@
 
 #### 陷阱 1：隐性知识依赖
 
+![10 08 hidden knowledge](images/comics/10_08_hidden_knowledge.png)
+
 每个人脑子里都有很多"只有自己知道"的信息：
 
 - 这个参数为什么设成这个值
@@ -75,6 +83,8 @@
 
 #### 陷阱 2：重复劳动
 
+![10 09 duplicate work](images/comics/10_09_duplicate_work.png)
+
 没有明确的分工和接口，导致：
 
 - 两个人写了功能相同但实现不同的代码
@@ -86,6 +96,8 @@
 表面上是"并行工作"，实际上是"浪费算力和时间"。
 
 #### 陷阱 3：集成成本爆炸
+
+![10 10 integration explosion](images/comics/10_10_integration_explosion.png)
 
 每个人在自己的分支上"做得很好"，但合并时发现：
 
@@ -120,6 +132,8 @@
 ![代码审查](images/comics/10_code_review.png)
 
 ### 命名规范：让代码自解释
+
+![10 11 naming convention](images/comics/10_11_naming_convention.png)
 
 #### 文件命名
 
@@ -232,6 +246,8 @@
         ...
 
 ### PR 模板：即使一个人也要用
+
+![10 12 pr template](images/comics/10_12_pr_template.png)
 
 Pull Request（或 Merge Request）模板强制你在合并前回答关键问题。
 

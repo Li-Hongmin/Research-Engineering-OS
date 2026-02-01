@@ -15,6 +15,8 @@
 
 ### 周一：发现主实验无法复现
 
+![09 04 monday crisis](images/comics/09_04_monday_crisis.png)
+
 你想重新跑一次主实验，确认数字没记错。但运行脚本后，结果和三周前不一样——准确率从 94.3% 降到了 92.1%。
 
 你慌了。开始排查：
@@ -29,11 +31,15 @@
 
 #### 周二：发现 baseline 不公平
 
+![09 05 tuesday baseline](images/comics/09_05_tuesday_baseline.png)
+
 审稿人肯定会关注你和 baseline 的对比。你仔细检查，发现一个致命问题：你的方法用的是最新的数据预处理，但 baseline 用的是旧版本。评估口径根本不一致。
 
 你需要重新跑 baseline——但这需要 6 小时训练时间。
 
 #### 周三：发现缺少关键的消融实验
+
+![09 06 wednesday ablation](images/comics/09_06_wednesday_ablation.png)
 
 导师看了你的初稿，指出："你的方法包含三个改进（A、B、C），但你没有说明每个改进贡献了多少。审稿人肯定会问。"
 
@@ -59,11 +65,15 @@
 
 #### 周四：发现图表数据找不到
 
+![09 07 thursday data](images/comics/09_07_thursday_data.png)
+
 你想生成论文图表，但发现关键实验的输出文件找不到了——可能被你不小心删了，或者在某次清理时弄丢了。你只记得"结果很好"，但原始数据没了。
 
 你不得不重新跑那些实验。
 
 #### 周五：开始怀疑人生
+
+![09 08 friday doubt](images/comics/09_08_friday_doubt.png)
 
 你已经三天没睡好觉了。实验还在跑，论文还没开始写，图表还没做完。你开始怀疑**："为什么我总是在最后阶段爆炸？"**
 
@@ -92,6 +102,8 @@
 那怎么办？答案是**：提前暴露问题，提前解决，或者至少提前知道有问题。**
 
 ## 提前动作 1：每周一次"可复现性自查"（15 分钟）
+
+![09 09 weekly check](images/comics/09_09_weekly_check.png)
 
 ![预警系统](images/comics/09_early_warning.png)
 
