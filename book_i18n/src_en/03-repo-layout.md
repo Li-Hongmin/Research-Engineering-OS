@@ -8,16 +8,19 @@ The purpose of a repository structure is not to look nice, but to **reduce cogni
 
 ## Real Case: The Cost of Rapidly Piling Up Code
 
+![从混乱到整洁](images/comics/03_messy_to_clean.png)
+
 When I first started using AI coding assistants, I learned this lesson the hard way. To quickly validate an idea, I had Copilot generate a large amount of “runnable” code—data loading, model definitions, training loops, evaluation scripts, and so on. Within a few hours, I had built what looked like a complete framework.
 
 ### Early “success”:
+
+![03 04 early success](images/comics/03_04_early_success.png)
 
 The code did run, and the experiments produced results. Excited, I continued iterating, repeatedly asking the AI to add new features: data augmentation, different model variants, various evaluation metrics... Each change had an “immediate effect,” and the codebase expanded rapidly.
 
 #### The beginning of the collapse:
 
-![08 Collapse](images/comics/03_08_collapse.png)
-
+![03 05 collapse begins](images/comics/03_05_collapse_begins.png)
 Two weeks later, when I needed to prepare ablation and comparison experiments for a paper, the problems surfaced:
 
 - I could not tell which script was the latest and which was obsolete;
@@ -30,6 +33,8 @@ Two weeks later, when I needed to prepare ablation and comparison experiments fo
 
 #### Starting over:
 
+![03 06 rewrite pain](images/comics/03_06_rewrite_pain.png)
+
 In the end, I had to stop all new experiments and spend three full days **rewriting almost all the code**. This rewrite was not because the AI-generated code had bugs, but because of **a lack of structure**: reusable core logic and one-off experimental scripts were mixed together; quick-and-dirty trial code was not cleaned up in time; outputs were scattered everywhere and hard to trace.
 
 This experience made me deeply understand: AI can help you produce code quickly, but **the structure must be designed by humans**. If, from the beginning, you separate “stable” from “exploratory,” and organize outputs by run_id, you will not fall into this kind of chaos later.
@@ -39,6 +44,8 @@ This experience made me deeply understand: AI can help you produce code quickly,
 This is not an isolated issue. When you use AI to quickly pile up a “runnable” repository but fail to isolate reusable code from one-off experimental entry points, the common ending is: every module must be rewritten, and almost all AI-generated fragments are replaced. **Structure is the first line of defense against this kind of rework.**
 
 ## A Copy-and-Paste Directory Layout (Research-Friendly)
+
+![完美的目录结构](images/comics/03_folder_tree.png)
 
     repo/
       src/                 # Core library: reusable, testable, maintainable (slow variables)
@@ -55,8 +62,7 @@ This is not an isolated issue. When you use AI to quickly pile up a “runnable�
 
 ## Fast Variables vs. Slow Variables: Separate “Stability” from “Exploration”
 
-![03 Fast Slow](images/comics/03_03_fast_slow.png)
-
+![快慢变量分离](images/comics/03_fast_slow_variables.png)
 It is recommended to divide the contents of a repository into two categories:
 
 - **Slow variables (stable):** parts that will be maintained long-term, reused repeatedly, and require test coverage.
@@ -80,6 +86,8 @@ In my rewrite experience, the biggest pain point was **being unable to distingui
 A directory name only truly reduces chaos when “what should go in” and “what should not go in” are sufficiently clear.
 
 ### src/: Core Library (Reusable, Testable)
+
+![03 07 src directory](images/comics/03_07_src_directory.png)
 - Store reusable modules: data loading, model components, losses, evaluation, general utilities.
 
 - Must be testable: at minimum, have smoke tests covering key pipelines.
@@ -91,6 +99,8 @@ A directory name only truly reduces chaos when “what should go in” and “wh
 In my rewrite case, the original “data loading” code hard-coded the path and preprocessing for a specific experiment, forcing new experiments to copy-paste and modify it. If the paths and parameters had been passed in as function arguments from the start, this problem would not have occurred.
 
 ### experiments/: Experimental Entry Points (Disposable)
+
+![03 08 experiments directory](images/comics/03_08_experiments_directory.png)
 - Store only entry points and glue: **short-lived is allowed**; delete after use.
 
 - Any logic proven valuable and reusable should be migrated to `src/` once it stabilizes.
@@ -126,6 +136,8 @@ Name each experiment script by date or run_id, e.g., `2026-02-01_baseline.py`. T
 - Add assertions for critical functions: shape, NaN, value ranges, signals of data leakage, etc.
 
 ## Converge Entry Points: Make “How to Run” Obvious
+
+![03 09 makefile entry](images/comics/03_09_makefile_entry.png)
 
 The most common waste in research is that others (including your future self) do not know how to run the code.
 

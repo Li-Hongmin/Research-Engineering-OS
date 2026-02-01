@@ -10,8 +10,7 @@ Simply put, **an experiment = code version + configuration + data version + envi
 
 ### Six Questions That Must Be Answerable
 
-![01 Six Questions](images/comics/02_01_six_questions.png)
-
+![六个关键问题](images/comics/02_six_questions.png)
 To ensure traceability and comparability of experimental results, each experiment must be able to answer at least the following six key questions:
 
 1. **What code was used?** — Specify the code version, such as the Git commit hash, and whether the repository had uncommitted changes at the time (dirty). This ensures we know exactly which version of the code was used to run the experiment.
@@ -30,9 +29,13 @@ None of these six elements can be omitted. If any one question cannot be answere
 
 #### Case: AI Generates “Seemingly Complete” Code That Cannot Run
 
+![代码版本](images/comics/02_04_code_version.png)
+
 In cross-language migration (“code translation”) scenarios, API hallucination frequently occurs: the model generates functions that look reasonable but do not actually exist in the target language’s libraries, causing the generated code to be non-executable. Researchers ultimately have to rewrite and fix files one by one.. If we mistakenly treat “code” as the smallest unit of a project, we may fall into the trap of focusing only on how many files or lines of code were generated. The significance of using “experiment” as the smallest unit is that our acceptance criterion is not how many files were produced, but whether we produced **runnable deliverables and metrics that can be evaluated comparatively**. In other words, whether an experiment succeeds does not depend on how many lines of code were changed, but on whether you obtained an executable model or result, along with clear evaluation metrics to demonstrate the effect of the change.
 
 ## The Experimental Object Model: Decomposing the Research Process into Stable “Five Elements”
+
+![组装实验](images/comics/02_experiment_assembly.png)
 
 To make each stage of the research workflow clear, controllable, easy to compose, and convenient for tool automation, we can describe the elements of the experimental process using a fixed set of conceptual objects. Each experiment involves the following five objects:
 
@@ -53,6 +56,8 @@ The relationships among these objects can be summarized in one sentence:
 With this object model, we decompose a complex research process into several stable “noun” objects, making it easier to think and communicate. For example, when discussing an experiment, we can clearly distinguish “which config and dataset were used,” “which artifacts were produced,” and “how the final report is written.” More importantly, this partitioning lays the foundation for subsequent tooling: we can define conventions for each object type (e.g., managing config with YAML files, storing artifacts in specific directories), thereby standardizing and automating the experimental workflow.
 
 ## run_id: Making Every Run Unambiguously Referable
+
+![实验命名](images/comics/02_run_id_naming.png)
 
 When writing a paper or report, you may need to frequently cite results produced under a specific configuration, e.g., “our best result under a certain setting is …”. If that experiment does not have a stable and unambiguous name, your description will be vague, which hinders reader understanding and can easily lead to confusion across experiments. To avoid this, we recommend generating a unique run_id for every run, and making this ID as readable and time-ordered as possible.
 
@@ -75,6 +80,8 @@ For file organization, you can use the run_id as the directory name and centrall
 With this structure, we can conveniently manage and query experimental results. For instance, when you want to compare multiple experiments, you can directly open metrics.json under the corresponding run_id directory to inspect metrics, or load models from artifacts for analysis.
 
 ### Avoiding “final” chaos:
+
+![避免final混乱](images/comics/02_08_final_chaos.png)
 
 Many people like to use the word “final” when naming experiments, but a common situation is that after completing “experiment_final” they discover a small improvement is needed, leading to “experiment_final_v2” or even “final_final”. In the end, even the author cannot tell which one is truly the final result, causing confusion and misunderstanding. This is a typical consequence of non-standard naming. With the run_id approach, you no longer rely on such vague labels to mark the final outcome; instead, you identify each attempt with clear time and content descriptors. As for which experiment is ultimately adopted, you can simply state in the report which run_id is used. In short, do not let words like “final” interfere with experiment management; with a unified run naming scheme, every experiment is well-grounded—run N is run N—and confusion disappears.
 

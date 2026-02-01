@@ -2,6 +2,8 @@
 
 ## Story Setup: The Nightmare of One Week Before the Deadline
 
+![拆除截止日期炸弹](images/comics/09_bomb_defusal.png)
+
 On Monday morning, you check your calendar and your heart sinks—the paper submission countdown: **7 days**.
 
 You originally planned to do only “final polishing” this week: organize experimental results into figures and tables, write the related work, and check formatting once. It should be easy, right?
@@ -10,8 +12,7 @@ But when you start preparing the paper, problems come rushing in like an avalanc
 
 ### Monday: The Main Experiment Cannot Be Reproduced
 
-![06 Monday Crisis](images/comics/09_06_monday_crisis.png)
-
+![09 04 monday crisis](images/comics/09_04_monday_crisis.png)
 You want to rerun the main experiment to confirm you did not misrecord the numbers. But after running the script, the results differ from three weeks ago—the accuracy drops from 94.3% to 92.1%.
 
 You panic and begin troubleshooting:
@@ -26,16 +27,14 @@ You spend an entire day and still cannot find the cause.
 
 #### Tuesday: The Baseline Turns Out to Be Unfair
 
-![07 Tuesday Baseline](images/comics/09_07_tuesday_baseline.png)
-
+![09 05 tuesday baseline](images/comics/09_05_tuesday_baseline.png)
 Reviewers will certainly focus on your comparison with the baseline. You check carefully and discover a fatal issue: your method uses the latest data preprocessing, but the baseline uses an older version. The evaluation protocol is not consistent at all.
 
 You need to rerun the baseline—but that requires 6 hours of training time.
 
 #### Wednesday: A Key Ablation Study Is Missing
 
-![08 Wednesday Ablation](images/comics/09_08_wednesday_ablation.png)
-
+![09 06 wednesday ablation](images/comics/09_06_wednesday_ablation.png)
 Your advisor reads your first draft and points out: “Your method includes three improvements (A, B, C), but you did not explain how much each contributes. Reviewers will definitely ask.”
 
 You realize you are missing an ablation study. You need to run:
@@ -60,16 +59,14 @@ Each experiment takes 2 hours; 8 experiments = 16 hours. But you have only 4 day
 
 #### Thursday: The Data for Figures Cannot Be Found
 
-![09 Thursday Data](images/comics/09_09_thursday_data.png)
-
+![09 07 thursday data](images/comics/09_07_thursday_data.png)
 You want to generate the paper’s figures, but you discover that the output files for a key experiment are gone—perhaps you accidentally deleted them, or they were lost during some cleanup. You only remember that “the results were good,” but the raw data is gone.
 
 You have no choice but to rerun those experiments.
 
 #### Friday: You Start Questioning Your Life Choices
 
-![10 Friday Doubt](images/comics/09_10_friday_doubt.png)
-
+![09 08 friday doubt](images/comics/09_08_friday_doubt.png)
 You have not slept well for three days. Experiments are still running, the paper has not even started, and the figures are not finished. You begin to wonder: **“Why do I always blow up at the last stage?”**
 
 **The answer is simple: because you did not do three things in advance.**
@@ -98,8 +95,9 @@ So what should you do? The answer is: **expose problems early, solve them early,
 
 ## Proactive Action 1: A Weekly “Reproducibility Self-Check” (15 Minutes)
 
-![03 Self Check](images/comics/09_03_self_check.png)
+![预警系统](images/comics/09_early_warning.png)
 
+![09 09 weekly check](images/comics/09_09_weekly_check.png)
 ### Why It Matters
 
 **Core idea:** you cannot wait until right before submission to discover that results are not reproducible. You must continuously verify reproducibility in day-to-day work.
@@ -358,6 +356,8 @@ python verify.py --check-env
     python verify.py --check-data
     ```
 ## Reproduce Key Experiments (6 Hours)
+
+![成功提交](images/comics/09_victory.png)
 ```bash
     # Reproduce the main experiment (Table 2, ~2 hours)
     make reproduce RUN=main_experiment

@@ -1,6 +1,10 @@
 # Git Is Not for “Saving Code”; It Is for “Proving History”
 
 ## Story Setup: Reviewers Ask for Reproducibility, but You Can’t Find the Code from Back Then
+
+![Git侦探](images/comics/04_git_detective.png)
+
+![04 04 reviewer crisis](images/comics/04_04_reviewer_crisis.png)
 Three months after submitting your paper, the reviews arrive. One comment is blunt: “Please provide the code and data; we would like to reproduce the results in Table 3.”
 
 Your heart sinks—you quickly open the repository. But what you see makes your back go cold:
@@ -35,6 +39,8 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 
 ### Pitfall 1: Commits Are Too Coarse-Grained, and Key Changes Become Untraceable
 
+![04 05 commit too big](images/comics/04_05_commit_too_big.png)
+
 **Symptom:** A single commit includes changes across a dozen files, spanning data processing, model architecture, training pipeline, and more. The commit message says only “improve model.”
 
 **Consequences:**
@@ -51,6 +57,8 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 
 ### Pitfall 2: Misalignment Between Experiment Timing and Code Changes
 
+![04 06 experiment time mismatch](images/comics/04_06_experiment_time_mismatch.png)
+
 **Symptom:** You modify the code and run experiments first; the results look good; you commit two days later. Or you commit, then temporarily tweak a few parameters and rerun.
 
 **Consequences:**
@@ -66,6 +74,8 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 - If you make temporary code changes, either recommit or document the dirty modifications in the run record.
 
 ### Pitfall 3: Improper Branch Usage Leads to a Chaotic Mainline
+
+![04 07 branch chaos](images/comics/04_07_branch_chaos.png)
 **Symptom:** All experiments are conducted on the `main` branch, mixing exploratory changes with stable code; or you create many branches but never clean them up, resulting in a tangled branch structure.
 
 **Consequences:**
@@ -76,8 +86,7 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 
 ## A Git Branching Strategy Suitable for Research
 
-![02 Branch Strategy](images/comics/04_02_branch_strategy.png)
-
+![分支策略](images/comics/04_branch_strategy.png)
 Unlike engineering projects, a research project’s branching strategy must balance two needs:
 
 - **Stability:** the paper’s results must be supported by a clean, stable code version;
@@ -145,6 +154,8 @@ Unlike engineering projects, a research project’s branching strategy must bala
 5.  Delete branches with no value directly
 
 ## Mark Milestones with Tags: Make Paper Results Permanently Traceable
+
+![04 08 tag milestone](images/comics/04_08_tag_milestone.png)
 Tags are a severely underestimated feature in Git. For research projects, the value of tags lies in:
 
 - Assigning permanent markers to every key version of the paper;
@@ -172,6 +183,8 @@ Tags are a severely underestimated feature in Git. For research projects, the va
 
 ### Tag Usage Practices
 #### Tag each important experiment for the paper:
+
+![提交作为证据](images/comics/04_commit_evidence.png)
     # Tag immediately after finishing the main experiment
     git tag -a result-main-experiment -m \
       "Main results reported in Table 2, config: configs/main.yaml"
@@ -195,8 +208,7 @@ Tags are a severely underestimated feature in Git. For research projects, the va
 
 ## Do Not Commit Experimental Artifacts to Git: Keep the Repository Clean with .gitignore
 
-![10 Gitignore](images/comics/04_10_gitignore.png)
-
+![04 09 gitignore clean](images/comics/04_09_gitignore_clean.png)
 **Core principle:** Git manages source code and configuration, not experimental artifacts.
 
 ### What Should Not Be Committed to Git

@@ -1,8 +1,7 @@
 # Why Do You Always Overturn Everything at the End (Exploration Debt / Validation Debt / Reproducibility Debt)
 ## Story Setup: With Only a Few Days Left Before the Deadline, You Suddenly Stop Trusting Your Results
 
-![Deadline Panic](images/comics/01_deadline_panic.png)
-
+![截止日期恐慌](images/comics/01_deadline_panic.png)
 Imagine this scenario: only a few days remain before the paper deadline. After finally finishing all experiments, you are about to write the conclusions. But then doubt creeps in: perhaps a key experiment has not been validated under another data split? Perhaps a baseline was run unfairly? You decide to be cautious and rerun it.
 
 Then the nightmare happens: after rerunning, the metrics differ from before. A method that was previously “significantly better” is suddenly no longer clearly ahead; or you find that changing the random seed makes the result drop. Cold sweat breaks out—months of work feel as if they were built on sand. With an imminent DDL (deadline) on one side and conclusions that no longer hold on the other, you are forced to overturn everything and start over.
@@ -11,8 +10,7 @@ Does this kind of “late-stage explosion” feel familiar?
 
 ## Why This Happens: Three Types of Debt Explode in the Late Stage
 
-![Three Debts](images/comics/01_three_debts.png)
-
+![三类债务](images/comics/01_three_debts.png)
 Why is it that at the very last moment—“about to write the paper / about to defend / about to submit”—we suddenly discover that our results do not hold, and we have to overturn and redo everything?
 
 This is not an isolated case. My observation is that it is usually not caused by a single-point bug, but by **three types of debt** that are tacitly accumulated early and then explode collectively later—exploration debt, validation debt, and reproducibility debt.
@@ -21,8 +19,7 @@ In other words, in order to save effort during the research process, we accumula
 
 ## Symptom Checklist: You May Be Heading Toward a Final Overturn
 
-![04 Symptoms](images/comics/01_04_symptoms.png)
-
+![症状自查](images/comics/01_04_symptoms.png)
 If the following symptoms feel familiar, you are likely accumulating research debt without realizing it, laying the groundwork for a final-stage “explosion”:
 
 - **Your conclusions require “storytelling” to be self-consistent:** You can explain why it works, but cannot clearly state under what conditions it fails; you rarely proactively discuss negative results and boundary conditions.
@@ -41,8 +38,7 @@ The more boxes you tick, the more you are borrowing from the future: trading con
 
 ## A Common Plot: Why “Late-Stage Explosion” Is Almost Inevitable
 
-![Last Minute Chaos](images/comics/01_last_minute_chaos.png)
-
+![最后阶段混乱](images/comics/01_last_minute_chaos.png)
 Looking back at the trajectory of many projects, one finds that a “late-stage explosion” is almost inevitable. The plot often goes like this:
 
 1. **Early sprint:** To see a signal as quickly as possible, you cobble together code in the fastest—but not necessarily disciplined—way: if you can edit a script directly, you do not create a new module; parameters are hard-coded; experimental outputs are scattered everywhere... In short, you just make it run first.
@@ -60,8 +56,7 @@ To explain the above issues more systematically, we introduce the concept of “
 
 ### Exploration Debt
 
-![05 Exploration Debt](images/comics/01_05_exploration_debt.png)
-
+![探索债](images/comics/01_05_exploration_debt.png)
 **Definition:** To iterate faster, we temporarily take nonstandard shortcuts in code and experimental workflows; the accumulated burden of these expedients is exploration debt. Exploration debt is not inherently evil, provided that it is **cleanable, discardable, and recoverable**.
 
 **Typical signals:**
@@ -76,8 +71,7 @@ To explain the above issues more systematically, we introduce the concept of “
 
 ### Validation Debt
 
-![06 Validation Debt](images/comics/01_06_validation_debt.png)
-
+![验证债](images/comics/01_06_validation_debt.png)
 **Definition:** To prove that something “works” as quickly as possible, we skip the control experiments and rigorous tests that should have been done; these skipped validations must be paid back sooner or later, and the closer you are to publication, the higher the cost.
 
 **Typical signals:**
@@ -92,8 +86,7 @@ To explain the above issues more systematically, we introduce the concept of “
 
 ### Reproducibility Debt
 
-![07 Reproducibility Debt](images/comics/01_07_reproducibility_debt.png)
-
+![复现债](images/comics/01_07_reproducibility_debt.png)
 **Definition:** To obtain results quickly, we fail to promptly freeze the environment, data versions, hyperparameter configurations, and sources of randomness; as a result, **the same code may not reproduce the same conclusion**.
 
 **Typical signals:**
@@ -130,8 +123,7 @@ Rather than relying on heavy post hoc remediation, it is better to cultivate lig
 
 ## 10-Minute Actions You Can Do Right Now
 
-![08 Ten Min Action](images/comics/01_08_ten_min_action.png)
-
+![10分钟行动](images/comics/01_08_ten_min_action.png)
 If you do only one thing right now: create a **reproducible minimal entry point** for the current best result.
 
 1. **Centralize Outputs:** Assign a `run_id` to the best experiment and consolidate key outputs into the corresponding directory.

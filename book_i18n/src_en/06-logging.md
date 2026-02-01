@@ -1,6 +1,8 @@
 # Experiment Logging Automation: What’s Missing Is Not Tools, but Default Behavior
 ## Story Setup: “Archaeological Work” Three Months Later
 
+![代码考古](images/comics/06_archaeology.png)
+
 Your paper has been accepted, but the reviewers request supplementary materials explaining the exact setup of a particular experiment in Table 4. You open the code repository and begin “archaeology”:
 
 **Step 1: Find the logs**
@@ -29,8 +31,7 @@ The issue is not a lack of tools (MLflow, W&B, and TensorBoard are all excellent
 
 ## A Two-Layer Logging Strategy: Machine-Precise + Human-Concise
 
-![05 Two Layer](images/comics/06_05_two_layer.png)
-
+![双层日志](images/comics/06_two_layer_logging.png)
 The core challenge of experiment logging is balancing two needs:
 
 - **Machines require complete and precise information** (for reproducibility and automated analysis);
@@ -42,6 +43,8 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 **Solution: two layers of logs, each doing its own job.**
 
 ### Layer 1: Machine Log (run.json)
+
+![06 08 run json structure](images/comics/06_08_run_json_structure.png)
 **Purpose:** Provide complete, structured information for reproducibility and automation.
 
 **Principles:**
@@ -131,6 +134,8 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 - **random.seed:** All random seeds. Ensure that seeds are set for PyTorch, NumPy, and Python’s built-in `random`.
 
 ### Layer 2: Human Log (run.md)
+
+![06 09 run md template](images/comics/06_09_run_md_template.png)
 **Purpose:** Provide a concise summary of the experiment for humans (including your future self) to enable rapid understanding.
 
 **Principles:**
@@ -172,6 +177,8 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 - **Fast review:** Months later, a 5-line summary is more useful than a full log.
 
 ## Automation Tools: Make Logging a Zero-Cost Behavior
+
+![自动记录](images/comics/06_auto_logging.png)
 **Core idea:** Logging should not depend on “remembering to do it”; it should happen automatically.
 
 ### Automatically Generate run.json in the Training Script
@@ -371,6 +378,8 @@ def create_run_md_template(output_dir, run_id):
 [What does this experiment aim to validate? What are the expected results?]
 
 ## Change
+
+![06 10 mlflow integration](images/comics/06_10_mlflow_integration.png)
 [Compared with the previous experiment, what was changed?]
 
 ## Result
@@ -394,9 +403,6 @@ In this way, after each experiment ends, you only need to fill in the blanks rat
 ## Integration with Existing Tools
 
 ### Integration with MLflow
-
-![09 Mlflow](images/comics/06_09_mlflow.png)
-
 If you are already using MLflow, you can synchronize the run.json information to MLflow:
 
 ```python

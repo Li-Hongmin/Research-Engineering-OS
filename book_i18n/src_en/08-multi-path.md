@@ -2,6 +2,8 @@
 
 ## Story Introduction: From “Flexible Exploration” to “Afraid to Touch Anything”
 
+![研究十字路口](images/comics/08_crossroads.png)
+
 Your research project has reached its third month. You are a diligent researcher and have tried many different directions:
 
 - Path A: Improve the model architecture (5 different attention mechanisms)
@@ -54,6 +56,8 @@ You remember that one experiment performed very well, but you cannot recall whic
 `outputs/` already occupies 50GB, but you do not dare delete any directory—what if the one you delete is exactly the experiment needed for the paper? You decide to “keep it for now; the disk is large enough anyway.”
 
 ### Problem 3: You cannot compare different paths
+
+![08 10 path comparison](images/comics/08_10_path_comparison.png)
 You want to compare the effects of “Path A (attention improvements)” and “Path B (learning-rate optimization),” but you discover that:
 
 - They use different baselines (one from three months ago, one from recently)
@@ -202,6 +206,8 @@ outputs/
 - During archiving, you can package by path.
 
 ### Mechanism 2: Explicit Lifecycle Management
+
+![路径管理](images/comics/08_path_management.png)
 
 Each exploration path should have a clearly defined lifecycle:
 
@@ -410,9 +416,6 @@ When comparing all paths, you must use **the same baseline**:
     EOF
 
 #### Standardizing Path Comparisons
-
-![08 Path Compare](images/comics/08_08_path_compare.png)
-
     # Example comparison script
     # compare_paths.py
 
@@ -454,13 +457,14 @@ When comparing all paths, you must use **the same baseline**:
         compare_to_baseline(sys.argv[1])
 
 ## Weekly Cleanup Ritual: Organizing the Experiment Graveyard
-
-![09 Weekly Cleanup](images/comics/08_09_weekly_cleanup.png)
-
 **Core idea:** Regular cleanup is the only way to avoid a junk heap.
 
 ### Friday Afternoon Cleanup Procedure (30 minutes)
+
+![定期清理](images/comics/08_cleanup.png)
 #### Step 1: List All Active Paths (5 minutes)
+
+![08 09 weekly cleanup](images/comics/08_09_weekly_cleanup.png)
 
     # list_active_paths.sh
 

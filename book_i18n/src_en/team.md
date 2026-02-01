@@ -2,11 +2,15 @@
 
 ## Story Setup: From “Fighting Alone” to “Dragging Each Other Down”
 
+![团队站会](images/comics/10_team_standup.png)
+
 Your research team has three people: you (a PhD student), a junior master’s student, and an undergraduate intern. You are working on the same project and should be collaborating.
 
 **But reality looks like this:**
 
 ### Monday Morning Stand-up
+
+![10 05 monday standup](images/comics/10_05_monday_standup.png)
 
 You: “I ran a new model over the weekend. The results look good—95% accuracy.”
 
@@ -24,8 +28,7 @@ Advisor: “What exactly are you three doing? Why are the numbers each of you re
 
 #### Wednesday Code Conflicts
 
-![03 Wednesday Conflict](images/comics/10_03_wednesday_conflict.png)
-
+![10 06 wednesday conflict](images/comics/10_06_wednesday_conflict.png)
 Junior: “Senior, I pushed the code. Pull it.”
 
 You pull the code and get:
@@ -40,8 +43,7 @@ You spend two hours resolving conflicts, only to discover in the end: your code 
 
 #### Friday Data Disaster
 
-![04 Friday Disaster](images/comics/10_04_friday_disaster.png)
-
+![10 07 friday data disaster](images/comics/10_07_friday_data_disaster.png)
 Intern: “Senior, I accidentally deleted the data/ directory. Do you have a backup?”
 
 You: “What?! That directory is 20GB—data I spent three days processing!”
@@ -60,6 +62,8 @@ The counterintuitive part of teamwork is this: **each individual may be highly c
 
 #### Trap 1: Dependence on Tacit Knowledge
 
+![10 08 hidden knowledge](images/comics/10_08_hidden_knowledge.png)
+
 Everyone carries a lot of information in their head that “only they know”:
 
 - Why this parameter is set to this value  
@@ -71,8 +75,7 @@ When collaboration is required, this tacit knowledge becomes a bottleneck—othe
 
 #### Trap 2: Duplicated Work
 
-![05 Duplicate Work](images/comics/10_05_duplicate_work.png)
-
+![10 09 duplicate work](images/comics/10_09_duplicate_work.png)
 Without clear division of labor and interfaces, you end up with:
 
 - Two people writing functionally identical code with different implementations  
@@ -83,8 +86,7 @@ On the surface it looks like “parallel work,” but in reality it is “wasted
 
 #### Trap 3: Exploding Integration Costs
 
-![07 Integration Cost](images/comics/10_07_integration_cost.png)
-
+![10 10 integration explosion](images/comics/10_10_integration_explosion.png)
 Everyone “does well” on their own branch, but when merging you find:
 
 - Incompatible interfaces  
@@ -109,10 +111,11 @@ But a team project requires **explicit standards**:
 
 ## Minimal Standard 1: Coding Standards (From Chaos to Readability)
 
+![代码审查](images/comics/10_code_review.png)
+
 ### Naming Conventions: Make Code Self-Explanatory
 
-![11 Naming Convention](images/comics/10_11_naming_convention.png)
-
+![10 11 naming convention](images/comics/10_11_naming_convention.png)
 #### File Naming
 
     # ❌ Bad naming
@@ -222,8 +225,7 @@ Returns:
 
 ### PR template: use it even when working alone
 
-![10 Pr Template](images/comics/10_10_pr_template.png)
-
+![10 12 pr template](images/comics/10_12_pr_template.png)
 A Pull Request (or Merge Request) template forces you to answer key questions before merging.
 
 #### Create a PR template
@@ -565,9 +567,6 @@ Benefits:
 **Do not only ask “How are the results?” in weekly meetings; check “Is the process standardized?”**
 
 #### Weekly Code Review Checklist
-
-![09 Code Review](images/comics/10_09_code_review.png)
-
     Checklist:
 - [ ] Are all experiments from this week fully documented?
 - [ ] Does the run_id follow the naming convention?
@@ -684,6 +683,8 @@ Clear help requests receive faster and more useful responses.
 
 ```bash
 # Install formatter and linter
+
+![团队胜利](images/comics/10_team_victory.png)
 pip install black flake8 isort
 
 # .pre-commit-config.yaml
