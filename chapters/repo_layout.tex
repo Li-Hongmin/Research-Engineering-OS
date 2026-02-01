@@ -1,0 +1,105 @@
+\chapter{仓库结构就是你的第二大脑}
+\label{ch:repo_layout}
+
+研究代码的“混乱”常常不是因为能力不足，而是因为研究天然是并行探索：同一时间你要维护多个假设、多个实现、多个实验入口、多个输出与多个图表。
+
+当这些东西没有结构地堆在一起，你的大脑就会被迫充当索引：
+\textbf{哪个脚本还能跑？哪个输出可信？哪个改动影响了指标？}
+
+仓库结构的目的不是好看，而是\textbf{降低认知负担}：让你不用靠回忆就能判断“这段代码是否可删、这份输出是否可信、这条路径是否可复现”。
+
+\paragraph{案例：AI 让你快速产出，但最后推倒重写。}
+当你用 AI 快速堆出一个“能跑”的仓库，却没有把可复用代码与一次性实验入口隔离开来，最终常见结局是：每个模块都要重写，AI 生成片段几乎全被替换（见案例~\ref{case:copilot_rewrite_all}、\ref{case:copilot_overdelegation}）。
+结构是避免这种返工的第一道防线。
+
+\section{一个可直接照抄的目录结构（研究友好）}
+\begin{verbatim}
+repo/
+  src/                 # 核心库：可复用、可测试、可维护（慢变量）
+  experiments/         # 实验入口：一次性 glue 代码（快变量，可丢弃）
+  configs/             # 统一配置：yaml/json（可diff，可追溯）
+  data/                # 只放指针或小样本；大数据用外部管理
+  outputs/             # 运行产物：按 run_id 组织（可清理/可归档）
+  reports/             # 论文图表与结论：从 outputs 自动生成
+  scripts/             # 数据准备/下载/评估等工具脚本
+  tests/               # 单测 + smoke test（守住底线）
+  Makefile             # 常用入口：train/eval/reproduce/test
+  README.md
+  CLAUDE.md            # AI 编码规则（建议）
+\end{verbatim}
+
+\section{快变量与慢变量：把“稳定”从“探索”里分离出来}
+建议把仓库里的东西分成两类：
+\begin{itemize}
+  \item \textbf{慢变量（stable）：}会被长期维护、反复复用、需要测试覆盖的部分。
+  \item \textbf{快变量（explore）：}为某个假设快速试错的入口脚本、短命 glue、一次性分析。
+\end{itemize}
+
+在本书的术语里：\texttt{src/} 是慢变量，\texttt{experiments/} 是快变量。
+
+\textbf{经验法则：}探索可以脏，但核心库必须干净；探索可以快，但评估必须稳定。
+
+\section{每个目录的 Definition of Done（DoD）}
+目录名只有在“什么该放、什么不该放”足够清晰时，才会真正降低混乱。
+
+\subsection{src/：核心库（可复用、可测试）}
+\begin{itemize}
+  \item 放可复用模块：数据加载、模型组件、损失、评估、通用工具。
+  \item 必须可测试：至少有 smoke test 覆盖关键链路。
+  \item 禁止硬编码：不要出现只对某个 run 有用的路径/参数。
+\end{itemize}
+
+\subsection{experiments/：实验入口（可丢弃）}
+\begin{itemize}
+  \item 只放入口与 glue：\textbf{允许短命}，用完即删。
+  \item 任何被证明有价值、会复用的逻辑，一旦稳定就迁移到 \texttt{src/}。
+\end{itemize}
+
+\subsection{configs/：配置（可追溯）}
+\begin{itemize}
+  \item 每个“论文候选结论”都必须对应一个 config（或其可追溯的生成方式）。
+  \item config 必须能展开成最终参数（避免默认值漂移）。
+\end{itemize}
+
+\subsection{outputs/：产物（可清理/可归档）}
+\begin{itemize}
+  \item 只放运行产物，并且\textbf{按 run\_id} 组织。
+  \item 禁止覆盖：同一个 run\_id 目录不复用/不手工改。
+  \item 重要产物做归档：进入长期存储，仓库不背大二进制。
+\end{itemize}
+
+\subsection{reports/：图表与结论（可再生成）}
+\begin{itemize}
+  \item 尽量只放脚本生成的图表/表格与结论草稿。
+  \item 论文图表必须能从 \texttt{outputs/} 重新生成，避免手工拖拽。
+\end{itemize}
+
+\subsection{tests/：测试（守住底线）}
+\begin{itemize}
+  \item 至少一个 1--3 分钟的 smoke test：跑通数据加载 $\rightarrow$ 前向 $\rightarrow$ 损失 $\rightarrow$ 评估。
+  \item 关键函数做断言：shape、NaN、范围、数据泄漏信号等。
+\end{itemize}
+
+\section{入口收敛：让“怎么跑”变得显眼}
+研究里最常见的浪费是：别人（包括未来的你）不知道怎么跑。
+
+建议把所有常用入口收敛到 \texttt{Makefile}（或等价任务工具）：
+\begin{itemize}
+  \item \texttt{make test}
+  \item \texttt{make train CONFIG=...}
+  \item \texttt{make eval RUN=...}
+  \item \texttt{make reproduce RUN=...}
+\end{itemize}
+
+当入口足够少、足够稳定时，你就能把复杂性关在内部，把可复现性暴露在外部。
+
+\section{10 分钟动作：把当前项目“分层一次”}
+如果你现在只做一件事：把当前仓库粗略分成慢变量与快变量。
+\begin{enumerate}
+  \item 新建 \texttt{src/}，把确定会复用的模块迁进去。
+  \item 新建 \texttt{experiments/}，把所有入口脚本搬进去，允许它们短命。
+  \item 新建 \texttt{configs/}，把关键参数从脚本里抽出来。
+  \item 规定输出统一进 \texttt{outputs/<run\_id>/}。
+\end{enumerate}
+
+你会立刻感觉“可控性”提升：因为你开始能区分什么是资产、什么是一次性消耗品。

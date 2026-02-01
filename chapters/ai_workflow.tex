@@ -1,0 +1,10 @@
+\chapter{AI 编码助手加入后，工作流必须升级}
+\label{ch:ai_workflow}
+\section{AI 规则页（建议放进 \texttt{CLAUDE.md}）}
+\begin{enumerate}
+  \item 每次只做一个可验证的改动（建议 $\le$ 200 行 diff）。
+  \item 每次改动必须附带：如何验证（命令）、风险点、回滚策略。
+  \item 禁止“顺手重构一大片”。
+  \item 任何影响结果的改动必须更新配置与 run 记录。
+  \item 如果缺测试，先补最小 smoke test 再改核心逻辑。
+\end{enumerate}

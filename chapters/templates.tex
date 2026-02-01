@@ -1,0 +1,28 @@
+\chapter{模板库（今天就能开始用）}
+\label{app:templates}
+\section{PR/提交说明模板（即使一个人也写）}
+\begin{itemize}
+  \item 目的：
+  \item 改动：
+  \item 影响结果？（是/否）：
+  \item 验证命令：
+  \item 预期输出：
+  \item 风险点与回滚：
+\end{itemize}
+
+\section{实验记录 \texttt{run.md}（5 行就够）}
+\begin{itemize}
+  \item Hypothesis：
+  \item Change：
+  \item Result（metric + 结论一句话）：
+  \item Compare-to（baseline run\_id）：
+  \item Next：
+\end{itemize}
+
+\section{Makefile 目标（把复现变成习惯）}
+\begin{itemize}
+  \item \texttt{make test}（smoke test）
+  \item \texttt{make train CONFIG=...}
+  \item \texttt{make eval RUN=...}
+  \item \texttt{make reproduce RUN=...}
+\end{itemize}

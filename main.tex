@@ -1,0 +1,64 @@
+% !TEX program = xelatex
+% NOTE: 为了更好的 Unicode 支持，请使用 XeLaTeX（或 LuaLaTeX）编译。
+\documentclass[11pt,oneside]{book}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+
+% Use a Latin font with full shapes (italic/slanted) to avoid missing font shape warnings.
+\IfFontExistsTF{TeX Gyre Termes}{\setmainfont{TeX Gyre Termes}}{\setmainfont{Latin Modern Roman}}
+
+% CJK fonts usually have no italic; enable fake slant so \textit works consistently.
+\IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont[AutoFakeSlant=0.2]{Noto Serif CJK SC}}{%
+  \IfFontExistsTF{Source Han Serif SC}{\setCJKmainfont[AutoFakeSlant=0.2]{Source Han Serif SC}}{%
+    \setCJKmainfont[AutoFakeSlant=0.2]{FandolSong-Regular}% TeX Live fallback
+  }%
+}%
+
+% Fix xeCJK warning: define CJK monospaced font (\CJKttdefault)
+\IfFontExistsTF{Noto Sans Mono CJK SC}{\setCJKmonofont[AutoFakeSlant=0.2]{Noto Sans Mono CJK SC}}{%
+  \IfFontExistsTF{Source Han Sans SC}{\setCJKmonofont[AutoFakeSlant=0.2]{Source Han Sans SC}}{%
+    \setCJKmonofont[AutoFakeSlant=0.2]{FandolFang-Regular}% TeX Live fallback
+  }%
+}%
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6\baselineskip}
+
+
+\title{Research Engineering OS\\\large 把返工压缩成规范 + 模板 + 检查清单}
+\author{}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\include{chapters/00_preface}
+
+\mainmatter
+
+\include{chapters/01_why_flip}
+\include{chapters/02_experiment_unit}
+\include{chapters/03_repo_layout}
+\include{chapters/04_git_proof}
+\include{chapters/05_dod}
+\include{chapters/06_logging}
+\include{chapters/07_ai_workflow}
+\include{chapters/08_multi_path}
+\include{chapters/no_boom}
+\include{chapters/team}
+
+\appendix
+
+\include{chapters/templates}
+\include{chapters/ai_disasters}
+
+\end{document}
