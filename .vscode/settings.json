@@ -1,0 +1,65 @@
+{
+    // LaTeX Workshop 配置
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "XeLaTeX x2",
+            "tools": [
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+    ],
+    // 设置默认编译方案为 XeLaTeX x2 (编译两次以生成目录)
+    "latex-workshop.latex.recipe.default": "XeLaTeX x2",
+
+    // 保存时自动编译
+    "latex-workshop.latex.autoBuild.run": "onSave",
+
+    // PDF 查看器设置
+    "latex-workshop.view.pdf.viewer": "tab",
+
+    // 清理辅助文件
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.lof",
+        "*.lot",
+        "*.fls",
+        "*.out",
+        "*.toc",
+        "*.fmt",
+        "*.fot",
+        "*.cb",
+        "*.cb2",
+        "*.fdb_latexmk",
+        "*.synctex",
+        "*.synctex(busy)",
+        "*.synctex.gz",
+        "*.synctex.gz(busy)",
+        "*.xdv"
+    ],
+
+    // 出错时继续编译
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": []
+}

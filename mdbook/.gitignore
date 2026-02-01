@@ -1,0 +1,15 @@
+# mdBook构建输出
+book/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# 备份文件
+*.bak

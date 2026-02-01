@@ -1,0 +1,471 @@
+\chapter{从"能跑"到"可信"只差一个 Definition of Done}
+\label{ch:dod}
+
+\section{故事引入：那些"差不多就行"的代价}
+
+凌晨两点，你终于跑出了一个"看起来不错"的结果——测试准确率 94.3\%，比 baseline 高了 3 个百分点。你兴奋地截了图，发到团队群里："新方法有效！"
+
+三天后，当你准备写论文时，想要重新跑一遍验证结果。你打开代码，犹豫了：
+
+\begin{itemize}
+  \item 用的是哪个配置文件？有三个类似的 yaml，记不清了。
+  \item 数据是用的哪个版本？好像临时改过一次划分方式。
+  \item 随机种子是多少？忘了记录。
+  \item 当时的代码是 commit 了吗？还是有临时修改？
+\end{itemize}
+
+你硬着头皮重跑，结果出来了：92.7\%。比之前低了 1.6 个百分点。
+
+心里一沉——到底哪次是对的？还是两次都不可靠？
+
+\textbf{这个场景的问题在于：你没有明确的标准来判断"一个实验是否完成"。}
+
+在软件工程中，有一个概念叫 \textbf{Definition of Done (DoD)}——完成的定义。它回答的问题是："什么时候我可以说这个任务真的完成了？"
+
+在研究中，我们同样需要 DoD，但标准不同：
+\begin{itemize}
+  \item 工程的 DoD：代码能跑、测试通过、文档齐全。
+  \item 研究的 DoD：结果可信、可复现、可对比。
+\end{itemize}
+
+\section{为什么"能跑"不等于"完成"}
+
+在研究过程中，有太多"看似完成，实则埋雷"的情况：
+
+\subsection{埋雷 1："跑出结果"但无法复现}
+
+\textbf{症状：}你看到了一个好结果，但缺少完整的环境记录、配置信息、数据版本。几天后想重跑，结果对不上。
+
+\textbf{真实成本：}
+\begin{itemize}
+  \item 审稿人要求复现时你手足无措；
+  \item 团队成员无法基于你的结果继续工作；
+  \item 最坏情况：论文因为"结果不可复现"被拒。
+\end{itemize}
+
+\subsection{埋雷 2："改进有效"但不知道为什么}
+
+\textbf{症状：}你同时改了三个地方，结果确实变好了，但你不知道是哪个改动起作用，也没有做消融实验。
+
+\textbf{真实成本：}
+\begin{itemize}
+  \item 审稿人要求解释机制时你答不上来；
+  \item 后续改进不知道该保留哪些、舍弃哪些；
+  \item 可能误把无效甚至有害的改动当成关键贡献。
+\end{itemize}
+
+\subsection{埋雷 3："对比实验"但评估口径不一致}
+
+\textbf{症状：}你的方法和 baseline 用了不同的评估脚本，或者后处理方式不同，看起来你的方法更好，但实际上比较不公平。
+
+\textbf{真实成本：}
+\begin{itemize}
+  \item 审稿人指出评估不公平，要求重做；
+  \item 重新跑后发现优势不复存在；
+  \item 浪费大量时间在"公平化"评估上。
+\end{itemize}
+
+\section{论文候选结论的 DoD 清单}
+
+以下清单适用于任何"可能写进论文"的实验结果。建议原样贴到项目 README 里，作为团队共识。
+
+\subsection{最小 DoD（5 项必须满足）}
+
+\begin{enumerate}
+  \item \textbf{一条命令可复现主指标}
+  \begin{verbatim}
+  # 例如：
+  make reproduce RUN=2026-02-01_1030_main_experiment
+  # 或：
+  python reproduce.py --run_id=2026-02-01_1030_main_experiment
+  \end{verbatim}
+  必须能从零开始（给定环境和数据），用一条命令复现出论文报告的指标（允许小幅波动）。
+
+  \item \textbf{run 记录齐全}
+
+  每个重要实验必须有完整的 run 记录，至少包括：
+  \begin{itemize}
+    \item Git commit hash（代码版本）
+    \item Config 文件路径及内容（所有超参数）
+    \item Random seed（随机数种子）
+    \item 数据版本（数据集版本号、哈希或清单文件）
+    \item 环境摘要（Python 版本、关键库版本、GPU 型号等）
+  \end{itemize}
+
+  推荐格式见第6章的 \texttt{run.json} 模板。
+
+  \item \textbf{baseline 与 ablation 使用同一评估脚本}
+
+  所有对比实验必须：
+  \begin{itemize}
+    \item 使用完全相同的评估代码；
+    \item 使用完全相同的数据划分；
+    \item 使用完全相同的后处理方式；
+    \item 指标计算逻辑一致（比如同样的阈值、同样的平均方式）。
+  \end{itemize}
+
+  \textbf{验收标准：}能指出一个统一的评估脚本，所有方法的指标都来自这个脚本。
+
+  \item \textbf{至少一个 smoke test 能在 1-3 分钟跑完}
+
+  Smoke test（冒烟测试）是快速验证核心流程的测试，目的是尽早发现明显错误。
+
+  必须覆盖的关键环节：
+  \begin{itemize}
+    \item 数据加载（能正确读取并返回正确形状的数据）
+    \item 模型前向传播（不崩溃、输出形状正确）
+    \item 损失计算（数值正常、无 NaN）
+    \item 评估流程（指标计算正确）
+  \end{itemize}
+
+  \textbf{实现建议：}用一个极小的数据子集（比如 10 个样本），跑 2-3 个迭代，确保流程完整。
+
+  \item \textbf{结果图表由脚本生成，不手工拖拽}
+
+  论文中的所有图表必须能从 outputs/ 的原始数据自动生成。
+
+  禁止的做法：
+  \begin{itemize}
+    \item 手工从日志里复制数字粘贴到 Excel；
+    \item 手工调整图表样式后截图；
+    \item 图表的源数据文件找不到。
+  \end{itemize}
+
+  推荐做法：
+  \begin{itemize}
+    \item 在 \texttt{reports/} 目录下放置生成脚本（如 \texttt{plot\_main\_results.py}）；
+    \item 脚本读取 \texttt{outputs/<run\_id>/metrics.json}，生成图表；
+    \item 图表保存为可编辑格式（如 PDF）和源数据（如 CSV）；
+    \item 在 Makefile 里加入 \texttt{make plots}，一键生成所有图表。
+  \end{itemize}
+\end{enumerate}
+
+\subsection{增强 DoD（推荐额外满足）}
+
+满足最小 DoD 后，以下几项可以进一步提升结果可信度：
+
+\begin{enumerate}
+  \item \textbf{多次运行的统计结果}
+
+  对于随机性较大的实验，单次运行不足以证明有效性。推荐：
+  \begin{itemize}
+    \item 至少用 3-5 个不同随机种子运行；
+    \item 报告均值和标准差（或置信区间）；
+    \item 在 run 记录里列出所有 seed 对应的 run\_id。
+  \end{itemize}
+
+  \item \textbf{失败案例分析}
+
+  诚实记录方法的局限性：
+  \begin{itemize}
+    \item 哪些情况下方法效果不好？
+    \item 有没有明显的失败样本？
+    \item 对超参数的敏感程度如何？
+  \end{itemize}
+
+  这不仅增强可信度，也为后续改进指明方向。
+
+  \item \textbf{完整的消融实验}
+
+  对于包含多个改进的方法，必须有消融实验（ablation study）回答：
+  \begin{itemize}
+    \item 每个改进单独贡献了多少？
+    \item 哪些改进是关键的，哪些是边际的？
+    \item 改进之间有没有交互作用？
+  \end{itemize}
+
+  \item \textbf{代码质量检查}
+
+  使用自动化工具检查代码质量：
+  \begin{itemize}
+    \item Linter（如 flake8, pylint）：代码风格检查
+    \item Type checker（如 mypy）：类型检查
+    \item 单元测试覆盖率：关键函数必须有测试
+  \end{itemize}
+
+  在 CI 中自动运行这些检查。
+
+  \item \textbf{数据泄漏检查}
+
+  确保训练集和测试集严格隔离：
+  \begin{itemize}
+    \item 数据划分前打印样本数，检查总数是否一致；
+    \item 检查训练集和测试集有无交集（用样本 ID 或哈希）；
+    \item 时间序列数据：确保测试集时间晚于训练集。
+  \end{itemize}
+\end{enumerate}
+
+\section{DoD 检查清单：从"能跑"到"可信"的操作步骤}
+
+\subsection{实验完成后立即做（5 分钟）}
+
+\begin{enumerate}
+  \item \textbf{记录 run 信息}
+  \begin{verbatim}
+  # 自动生成 run.json（见第6章工具）
+  python log_run.py --run_id <id>
+  \end{verbatim}
+
+  \item \textbf{手写 run.md 关键信息}（不超过 5 行）
+  \begin{itemize}
+    \item 这次实验的假设是什么？
+    \item 主要改动是什么？
+    \item 结果如何（用一句话概括）？
+    \item 下一步打算做什么？
+    \item 有什么值得注意的风险或异常？
+  \end{itemize}
+\end{enumerate}
+
+\subsection{准备写论文前做（30 分钟）}
+
+\begin{enumerate}
+  \item \textbf{复现验证}
+
+  在新终端（或新环境）里运行复现命令：
+  \begin{verbatim}
+  make reproduce RUN=<论文候选结果的 run_id>
+  \end{verbatim}
+
+  检查：
+  \begin{itemize}
+    \item 是否能顺利运行（不报错）？
+    \item 结果是否在合理范围内（相差不超过 1-2\% 或一个标准差）？
+    \item 如果差异较大，排查原因（环境、数据、随机性）。
+  \end{itemize}
+
+  \item \textbf{对比实验检查}
+
+  检查所有要对比的方法：
+  \begin{verbatim}
+  ls outputs/
+  # 找到所有 baseline 和 ablation 的 run_id
+  \end{verbatim}
+
+  确认：
+  \begin{itemize}
+    \item 是否使用了同一份评估脚本？（可以通过 run.json 的脚本路径或哈希确认）
+    \item 数据划分是否一致？
+    \item 评估参数是否一致？
+  \end{itemize}
+
+  如果发现不一致，必须重跑其中某些实验，统一评估口径。
+
+  \item \textbf{运行 smoke test}
+  \begin{verbatim}
+  make test
+  # 或：
+  pytest tests/test_smoke.py
+  \end{verbatim}
+
+  确保核心流程没有被后续改动破坏。
+
+  \item \textbf{生成图表}
+  \begin{verbatim}
+  make plots
+  \end{verbatim}
+
+  检查生成的图表：
+  \begin{itemize}
+    \item 是否反映了最新的实验结果？
+    \item 数值是否与 run 记录一致？
+    \item 坐标轴、图例是否清晰？
+  \end{itemize}
+\end{enumerate}
+
+\subsection{论文提交前做（1 小时）}
+
+\begin{enumerate}
+  \item \textbf{完整性自查}
+
+  对照 DoD 清单，逐项确认：
+  \begin{itemize}
+    \item[$\square$] 所有论文引用的实验都有 run\_id
+    \item[$\square$] 所有 run\_id 都有完整的 run.json
+    \item[$\square$] 所有对比实验使用同一评估脚本
+    \item[$\square$] Smoke test 通过
+    \item[$\square$] 所有图表可脚本生成
+  \end{itemize}
+
+  \item \textbf{为关键实验打 Git tag}
+  \begin{verbatim}
+  # 主实验
+  git tag -a result-main-table2 -m \
+    "Main results in Table 2, run_id: 2026-02-01_1030_main"
+
+  # 消融实验
+  git tag -a result-ablation-table3 -m \
+    "Ablation study in Table 3, run_ids: 2026-02-01_14*"
+
+  # 推送 tag
+  git push origin --tags
+  \end{verbatim}
+
+  \item \textbf{编写复现文档}
+
+  在 README 或单独的 REPRODUCE.md 里写清楚：
+  \begin{itemize}
+    \item 环境安装步骤（一条命令或脚本）
+    \item 数据准备步骤（下载、预处理）
+    \item 复现每个表格/图表的命令
+    \item 预期的运行时间和资源需求
+  \end{itemize}
+
+  示例：
+  \begin{verbatim}
+  # 复现说明
+
+  ## 环境安装
+  conda env create -f environment.yaml
+  conda activate research-env
+
+  ## 数据准备
+  bash scripts/download_data.sh
+  python scripts/preprocess.py
+
+  ## 复现主实验（Table 2）
+  make reproduce RUN=2026-02-01_1030_main
+  # 预期时间：2 小时（单卡 V100）
+  # 预期指标：accuracy 94.3% ± 0.5%
+
+  ## 复现消融实验（Table 3）
+  bash scripts/reproduce_ablation.sh
+  # 预期时间：6 小时（单卡 V100）
+  \end{verbatim}
+\end{enumerate}
+
+\section{团队如何使用 DoD}
+
+\subsection{作为合并标准}
+
+在团队协作中，DoD 可以作为代码合并到主分支的门槛：
+
+\begin{enumerate}
+  \item 实验分支想要合并到 main，必须满足最小 DoD；
+  \item Code review 时，reviewer 按照 DoD 清单检查；
+  \item 不满足 DoD 的代码不能合并，必须补充完整。
+\end{enumerate}
+
+\subsection{作为交接标准}
+
+当项目需要交接（比如学生毕业、成员离职）时，DoD 确保知识不流失：
+
+\begin{itemize}
+  \item 所有重要实验都有完整记录，新成员可以复现；
+  \item 代码质量有保证（有测试、有文档）；
+  \item 数据和模型有清晰的存储和访问说明。
+\end{itemize}
+
+\subsection{作为自查标准}
+
+即使是个人项目，DoD 也能帮你避免"自己骗自己"：
+
+\begin{itemize}
+  \item 定期（比如每周）检查未完成 DoD 的实验，补充记录；
+  \item 写论文前批量检查，避免临时抱佛脚；
+  \item 养成习惯后，DoD 会成为自然的工作流程，不再是额外负担。
+\end{itemize}
+
+\section{常见阻碍与解决方案}
+
+\subsection{阻碍 1："我现在只是探索，没必要这么严格"}
+
+\textbf{反驳：}探索阶段可以\textbf{降低 DoD 标准}，但不能没有标准。
+
+推荐的"探索阶段简化 DoD"：
+\begin{itemize}
+  \item 不要求多次运行统计；
+  \item 不要求完整的消融实验；
+  \item \textbf{但必须}：记录 commit、config、seed，确保能重跑。
+\end{itemize}
+
+一旦实验"看起来有价值"，立即升级到完整 DoD。
+
+\subsection{阻碍 2："满足 DoD 太花时间了"}
+
+\textbf{回应：}一次性投入 30 分钟，换来的是：
+\begin{itemize}
+  \item 审稿时不用临时补救（省几天）；
+  \item 后续改进有明确基线（省重复劳动）；
+  \item 论文投稿不用担心"复现不出来"（省心理负担）。
+\end{itemize}
+
+\textbf{实践建议：}
+\begin{itemize}
+  \item 把 DoD 检查脚本化，减少手工操作；
+  \item 在 Git pre-commit hook 里加入检查（见第7章）；
+  \item 熟练后，DoD 会融入日常流程，不再是额外开销。
+\end{itemize}
+
+\subsection{阻碍 3："我们已经有实验管理工具了（如 MLflow、W\&B）"}
+
+\textbf{回应：}工具很好，但 DoD 是\textbf{标准}，不是工具。
+
+工具可以帮你：
+\begin{itemize}
+  \item 自动记录 run 信息（省时间）；
+  \item 可视化实验结果（易于对比）；
+  \item 存储模型和产物（方便管理）。
+\end{itemize}
+
+但工具不能替代：
+\begin{itemize}
+  \item 你对"什么叫完成"的定义；
+  \item 你对"评估是否公平"的检查；
+  \item 你对"代码是否可复现"的验证。
+\end{itemize}
+
+\textbf{建议：}把 DoD 清单和工具结合，比如在 MLflow 的 run 里记录"DoD 满足情况"字段。
+
+\section{10 分钟动作：为当前最好的结果做 DoD 检查}
+
+如果你现在只做一件事：为你目前"最有希望"的实验结果做一次完整的 DoD 检查。
+
+\begin{enumerate}
+  \item \textbf{找到这次实验的 run\_id}（如果没有，现在就创建一个）
+
+  \item \textbf{检查 run 记录}
+  \begin{verbatim}
+  # 查看是否有 run.json
+  ls outputs/<run_id>/run.json
+
+  # 如果没有，立即补救：
+  # 1. 记录 git commit: git log -1 --format="%H"
+  # 2. 记录 config 文件路径
+  # 3. 记录 seed（如果记得）
+  # 4. 记录数据版本（查看数据目录或日志）
+  # 5. 记录环境：pip freeze > requirements_<run_id>.txt
+  \end{verbatim}
+
+  \item \textbf{尝试复现}
+  \begin{verbatim}
+  # 切换到记录的 commit
+  git checkout <commit_hash>
+
+  # 用记录的 config 重跑
+  python train.py --config <config_path> --seed <seed>
+
+  # 检查结果是否在合理范围内
+  \end{verbatim}
+
+  \item \textbf{记录检查结果}
+
+  在 \texttt{outputs/<run\_id>/dod\_check.md} 里记录：
+  \begin{itemize}
+    \item[$\square$] 记录齐全？
+    \item[$\square$] 可复现？（结果差异：\underline{\hspace{2cm}}）
+    \item[$\square$] 评估公平？
+    \item[$\square$] 有测试？
+    \item[$\square$] 图表可生成？
+  \end{itemize}
+
+  \item \textbf{如果发现问题，立即修复}
+  \begin{itemize}
+    \item 记录不全：补充 run.json
+    \item 无法复现：排查差异，重新跑
+    \item 评估不公平：统一评估脚本，重新跑所有对比实验
+  \end{itemize}
+\end{enumerate}
+
+完成这个检查后，你会对这个结果的可信度有清晰的认识。如果通过了 DoD，你可以放心地写进论文；如果没有通过，趁现在修复还来得及。
+
+\textbf{记住：早发现问题，比论文提交前发现要好；论文提交前发现，比审稿时发现要好；审稿时发现，比论文发表后被质疑要好。}
