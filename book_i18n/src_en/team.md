@@ -24,6 +24,8 @@ Advisor: “What exactly are you three doing? Why are the numbers each of you re
 
 #### Wednesday Code Conflicts
 
+![03 Wednesday Conflict](images/comics/10_03_wednesday_conflict.png)
+
 Junior: “Senior, I pushed the code. Pull it.”
 
 You pull the code and get:
@@ -37,6 +39,8 @@ You open the code and see that the junior modified almost every file. And many c
 You spend two hours resolving conflicts, only to discover in the end: your code was overwritten, and last week’s good results can no longer be reproduced.
 
 #### Friday Data Disaster
+
+![04 Friday Disaster](images/comics/10_04_friday_disaster.png)
 
 Intern: “Senior, I accidentally deleted the data/ directory. Do you have a backup?”
 
@@ -67,6 +71,8 @@ When collaboration is required, this tacit knowledge becomes a bottleneck—othe
 
 #### Trap 2: Duplicated Work
 
+![05 Duplicate Work](images/comics/10_05_duplicate_work.png)
+
 Without clear division of labor and interfaces, you end up with:
 
 - Two people writing functionally identical code with different implementations  
@@ -76,6 +82,8 @@ Without clear division of labor and interfaces, you end up with:
 On the surface it looks like “parallel work,” but in reality it is “wasted compute and time.”
 
 #### Trap 3: Exploding Integration Costs
+
+![07 Integration Cost](images/comics/10_07_integration_cost.png)
 
 Everyone “does well” on their own branch, but when merging you find:
 
@@ -102,6 +110,8 @@ But a team project requires **explicit standards**:
 ## Minimal Standard 1: Coding Standards (From Chaos to Readability)
 
 ### Naming Conventions: Make Code Self-Explanatory
+
+![11 Naming Convention](images/comics/10_11_naming_convention.png)
 
 #### File Naming
 
@@ -212,10 +222,11 @@ Returns:
 
 ### PR template: use it even when working alone
 
+![10 Pr Template](images/comics/10_10_pr_template.png)
+
 A Pull Request (or Merge Request) template forces you to answer key questions before merging.
 
 #### Create a PR template
-
     # .github/pull_request_template.md
 
     ## Summary of changes
@@ -555,6 +566,8 @@ Benefits:
 
 #### Weekly Code Review Checklist
 
+![09 Code Review](images/comics/10_09_code_review.png)
+
     Checklist:
 - [ ] Are all experiments from this week fully documented?
 - [ ] Does the run_id follow the naming convention?
@@ -705,7 +718,6 @@ pre-commit install
 Check item by item; you will always find the cause.
 
 ### Issue 3: Unclear Responsibilities Lead to Duplicate Work
-
 **Solution:** Use a Kanban board to visualize tasks.
 
     # You can use GitHub Projects or Trello

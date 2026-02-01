@@ -10,6 +10,8 @@ Simply put, **an experiment = code version + configuration + data version + envi
 
 ### Six Questions That Must Be Answerable
 
+![01 Six Questions](images/comics/02_01_six_questions.png)
+
 To ensure traceability and comparability of experimental results, each experiment must be able to answer at least the following six key questions:
 
 1. **What code was used?** — Specify the code version, such as the Git commit hash, and whether the repository had uncommitted changes at the time (dirty). This ensures we know exactly which version of the code was used to run the experiment.

@@ -1,7 +1,6 @@
 # Git Is Not for “Saving Code”; It Is for “Proving History”
 
 ## Story Setup: Reviewers Ask for Reproducibility, but You Can’t Find the Code from Back Then
-
 Three months after submitting your paper, the reviews arrive. One comment is blunt: “Please provide the code and data; we would like to reproduce the results in Table 3.”
 
 Your heart sinks—you quickly open the repository. But what you see makes your back go cold:
@@ -67,7 +66,6 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 - If you make temporary code changes, either recommit or document the dirty modifications in the run record.
 
 ### Pitfall 3: Improper Branch Usage Leads to a Chaotic Mainline
-
 **Symptom:** All experiments are conducted on the `main` branch, mixing exploratory changes with stable code; or you create many branches but never clean them up, resulting in a tangled branch structure.
 
 **Consequences:**
@@ -78,13 +76,14 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 
 ## A Git Branching Strategy Suitable for Research
 
+![02 Branch Strategy](images/comics/04_02_branch_strategy.png)
+
 Unlike engineering projects, a research project’s branching strategy must balance two needs:
 
 - **Stability:** the paper’s results must be supported by a clean, stable code version;
 - **Exploration:** new ideas require rapid trial-and-error and should not be constrained by heavy process.
 
 ### Recommended Branch Structure
-
     main (or stable):
       - Accept only validated changes
       - Every merge must pass the DoD check (see Chapter 5)
@@ -146,7 +145,6 @@ Unlike engineering projects, a research project’s branching strategy must bala
 5.  Delete branches with no value directly
 
 ## Mark Milestones with Tags: Make Paper Results Permanently Traceable
-
 Tags are a severely underestimated feature in Git. For research projects, the value of tags lies in:
 
 - Assigning permanent markers to every key version of the paper;
@@ -156,7 +154,6 @@ Tags are a severely underestimated feature in Git. For research projects, the va
 - Provide clear version naming to facilitate citation and reproduction.
 
 ### Recommended Tag Naming Conventions
-
     # Paper versions
     paper-<venue>-<version>
     e.g.: paper-icml2026-v1, paper-icml2026-revision
@@ -174,9 +171,7 @@ Tags are a severely underestimated feature in Git. For research projects, the va
     e.g.: milestone-first-sota, milestone-reproducible-baseline
 
 ### Tag Usage Practices
-
 #### Tag each important experiment for the paper:
-
     # Tag immediately after finishing the main experiment
     git tag -a result-main-experiment -m \
       "Main results reported in Table 2, config: configs/main.yaml"
@@ -189,7 +184,6 @@ Tags are a severely underestimated feature in Git. For research projects, the va
        Key finding: attention mechanism contributes 5% improvement"
 
 #### When reproducing, switch directly to the tag:
-
     # List all experiment-related tags
     git tag -l "result-*"
 
@@ -200,6 +194,8 @@ Tags are a severely underestimated feature in Git. For research projects, the va
     make reproduce CONFIG=configs/main.yaml
 
 ## Do Not Commit Experimental Artifacts to Git: Keep the Repository Clean with .gitignore
+
+![10 Gitignore](images/comics/04_10_gitignore.png)
 
 **Core principle:** Git manages source code and configuration, not experimental artifacts.
 
@@ -216,7 +212,6 @@ Tags are a severely underestimated feature in Git. For research projects, the va
 - **Virtual environments:** directories such as venv/ and .conda/; use requirements.txt or environment.yaml instead.
 
 ### Recommended .gitignore Template
-
     # Python
     __pycache__/
     *.py[cod]
@@ -289,7 +284,6 @@ If your repository history is already very messy, do not try to “rewrite histo
 - Use the standardized workflow for new experiments; trace old experiments as much as possible
 
 ### Q2: How do we unify the branching strategy in team collaboration?
-
 - **Write it into the README:** document branch naming conventions and tag usage.
 
 - **Set protection rules:** on GitHub/GitLab, protect the main branch; forbid direct pushes and require PR/MR.

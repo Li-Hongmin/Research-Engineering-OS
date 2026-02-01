@@ -10,6 +10,8 @@ But when you start preparing the paper, problems come rushing in like an avalanc
 
 ### Monday: The Main Experiment Cannot Be Reproduced
 
+![06 Monday Crisis](images/comics/09_06_monday_crisis.png)
+
 You want to rerun the main experiment to confirm you did not misrecord the numbers. But after running the script, the results differ from three weeks ago—the accuracy drops from 94.3% to 92.1%.
 
 You panic and begin troubleshooting:
@@ -24,11 +26,15 @@ You spend an entire day and still cannot find the cause.
 
 #### Tuesday: The Baseline Turns Out to Be Unfair
 
+![07 Tuesday Baseline](images/comics/09_07_tuesday_baseline.png)
+
 Reviewers will certainly focus on your comparison with the baseline. You check carefully and discover a fatal issue: your method uses the latest data preprocessing, but the baseline uses an older version. The evaluation protocol is not consistent at all.
 
 You need to rerun the baseline—but that requires 6 hours of training time.
 
 #### Wednesday: A Key Ablation Study Is Missing
+
+![08 Wednesday Ablation](images/comics/09_08_wednesday_ablation.png)
 
 Your advisor reads your first draft and points out: “Your method includes three improvements (A, B, C), but you did not explain how much each contributes. Reviewers will definitely ask.”
 
@@ -54,11 +60,15 @@ Each experiment takes 2 hours; 8 experiments = 16 hours. But you have only 4 day
 
 #### Thursday: The Data for Figures Cannot Be Found
 
+![09 Thursday Data](images/comics/09_09_thursday_data.png)
+
 You want to generate the paper’s figures, but you discover that the output files for a key experiment are gone—perhaps you accidentally deleted them, or they were lost during some cleanup. You only remember that “the results were good,” but the raw data is gone.
 
 You have no choice but to rerun those experiments.
 
 #### Friday: You Start Questioning Your Life Choices
+
+![10 Friday Doubt](images/comics/09_10_friday_doubt.png)
 
 You have not slept well for three days. Experiments are still running, the paper has not even started, and the figures are not finished. You begin to wonder: **“Why do I always blow up at the last stage?”**
 
@@ -88,6 +98,8 @@ So what should you do? The answer is: **expose problems early, solve them early,
 
 ## Proactive Action 1: A Weekly “Reproducibility Self-Check” (15 Minutes)
 
+![03 Self Check](images/comics/09_03_self_check.png)
+
 ### Why It Matters
 
 **Core idea:** you cannot wait until right before submission to discover that results are not reproducible. You must continuously verify reproducibility in day-to-day work.
@@ -95,7 +107,6 @@ So what should you do? The answer is: **expose problems early, solve them early,
 If you do a self-check every week, problems will be discovered in the week they appear, rather than accumulating until the end.
 
 ### Self-Check Checklist (Finish in 15 Minutes)
-
 #### Item 1: Check Whether This Week’s Most Important Experiment Is Reproducible (5 Minutes)
 
     # Find this week’s best/most important experiment
@@ -154,7 +165,6 @@ Dependency changes are a common cause of reproducibility problems. Recording the
 Unlabeled outputs are “future traps”—you know what they are now, but you will forget a month later.
 
 ### Frequency and Timing of the Self-Check
-
 **Recommended time:** the last 15 minutes on Friday afternoon
 
 **Why Friday?**
@@ -536,7 +546,6 @@ If the paper is accepted and you are asked to provide code:
 - Honestly state the limitations of reproducibility in the paper
 
 ## 10-Minute Action: A Self-Check You Can Do Today
-
 If you do only one thing right now: perform a minimal self-check on the current project.
 
 1.  **Identify the most important experiment** (1 minute)

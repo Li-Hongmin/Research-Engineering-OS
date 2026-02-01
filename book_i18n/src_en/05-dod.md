@@ -2,6 +2,8 @@
 
 ## Story: The Cost of “Good Enough”
 
+![06 Good Enough Trap](images/comics/05_06_good_enough_trap.png)
+
 At 2 a.m., you finally get a “pretty good-looking” result—test accuracy 94.3%, 3 percentage points higher than the baseline. Excited, you take a screenshot and post it to the team chat: “The new method works!”
 
 Three days later, when you are ready to write the paper, you want to rerun the experiment to verify the result. You open the code and hesitate:
@@ -29,7 +31,6 @@ In research, we also need a DoD, but with different standards:
 In research, there are many situations that “look finished but actually plant landmines”:
 
 ### Landmine 1: “Got a result” but cannot reproduce it
-
 **Symptom:** You see a good result, but lack complete records of the environment, configuration, and data version. A few days later, you try to rerun it and the numbers do not match.
 
 **Real cost:**
@@ -49,7 +50,6 @@ In research, there are many situations that “look finished but actually plant 
 - You may mistakenly treat ineffective or even harmful changes as the key contribution.
 
 ### Landmine 3: “Comparative experiments” but inconsistent evaluation protocol
-
 **Symptom:** Your method and the baseline use different evaluation scripts, or different post-processing. Your method appears better, but the comparison is actually unfair.
 
 **Real cost:**
@@ -63,6 +63,8 @@ In research, there are many situations that “look finished but actually plant 
 The following checklist applies to any experimental result that “might go into the paper.” It is recommended to paste it verbatim into the project README as a team consensus.
 
 ### Minimal DoD (5 mandatory items)
+
+![07 Minimal Dod](images/comics/05_07_minimal_dod.png)
 
 1.  **Reproduce the primary metric with a single command**
 
@@ -127,6 +129,8 @@ The following checklist applies to any experimental result that “might go into
 - Add `make plots` to the Makefile to generate all figures with one command.
 
 ### Enhanced DoD (recommended additional items)
+
+![08 Enhanced Dod](images/comics/05_08_enhanced_dod.png)
 
 After meeting the minimal DoD, the following items can further improve result credibility:
 
@@ -295,7 +299,6 @@ After meeting the minimal DoD, the following items can further improve result cr
           # Expected time: 6 hours (single V100 GPU)
 
 ## How Teams Use DoD
-
 ### As a Merge Criterion
 
 In team collaboration, DoD can serve as the threshold for merging code into the main branch:

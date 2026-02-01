@@ -16,6 +16,8 @@ The code did run, and the experiments produced results. Excited, I continued ite
 
 #### The beginning of the collapse:
 
+![08 Collapse](images/comics/03_08_collapse.png)
+
 Two weeks later, when I needed to prepare ablation and comparison experiments for a paper, the problems surfaced:
 
 - I could not tell which script was the latest and which was obsolete;
@@ -53,6 +55,8 @@ This is not an isolated issue. When you use AI to quickly pile up a “runnable�
 
 ## Fast Variables vs. Slow Variables: Separate “Stability” from “Exploration”
 
+![03 Fast Slow](images/comics/03_03_fast_slow.png)
+
 It is recommended to divide the contents of a repository into two categories:
 
 - **Slow variables (stable):** parts that will be maintained long-term, reused repeatedly, and require test coverage.
@@ -76,7 +80,6 @@ In my rewrite experience, the biggest pain point was **being unable to distingui
 A directory name only truly reduces chaos when “what should go in” and “what should not go in” are sufficiently clear.
 
 ### src/: Core Library (Reusable, Testable)
-
 - Store reusable modules: data loading, model components, losses, evaluation, general utilities.
 
 - Must be testable: at minimum, have smoke tests covering key pipelines.
@@ -88,7 +91,6 @@ A directory name only truly reduces chaos when “what should go in” and “wh
 In my rewrite case, the original “data loading” code hard-coded the path and preprocessing for a specific experiment, forcing new experiments to copy-paste and modify it. If the paths and parameters had been passed in as function arguments from the start, this problem would not have occurred.
 
 ### experiments/: Experimental Entry Points (Disposable)
-
 - Store only entry points and glue: **short-lived is allowed**; delete after use.
 
 - Any logic proven valuable and reusable should be migrated to `src/` once it stabilizes.

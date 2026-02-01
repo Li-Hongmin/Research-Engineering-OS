@@ -54,7 +54,6 @@ You remember that one experiment performed very well, but you cannot recall whic
 `outputs/` already occupies 50GB, but you do not dare delete any directory—what if the one you delete is exactly the experiment needed for the paper? You decide to “keep it for now; the disk is large enough anyway.”
 
 #### Problem 3: You cannot compare different paths
-
 You want to compare the effects of “Path A (attention improvements)” and “Path B (learning-rate optimization),” but you discover that:
 
 - They use different baselines (one from three months ago, one from recently)
@@ -138,7 +137,6 @@ If management mechanisms are missing:
 - Paths cannot be clearly compared (inconsistent conditions)
 
 ## Core Mechanisms: Isolation + Discardability + Comparability
-
 ### Mechanism 1: Each Path Must Be Isolated
 
 **Three elements of isolation:**
@@ -374,7 +372,6 @@ Based on the evaluation results, make a clear decision:
     EOF
 
 ## Mechanism 3: A Baseline for Fair Comparisons
-
 When comparing all paths, you must use **the same baseline**:
 
 ### Establish the Baseline Experiment
@@ -413,6 +410,8 @@ When comparing all paths, you must use **the same baseline**:
     EOF
 
 #### Standardizing Path Comparisons
+
+![08 Path Compare](images/comics/08_08_path_compare.png)
 
     # Example comparison script
     # compare_paths.py
@@ -456,10 +455,11 @@ When comparing all paths, you must use **the same baseline**:
 
 ## Weekly Cleanup Ritual: Organizing the Experiment Graveyard
 
+![09 Weekly Cleanup](images/comics/08_09_weekly_cleanup.png)
+
 **Core idea:** Regular cleanup is the only way to avoid a junk heap.
 
 ### Friday Afternoon Cleanup Procedure (30 minutes)
-
 #### Step 1: List All Active Paths (5 minutes)
 
     # list_active_paths.sh
@@ -497,7 +497,6 @@ For each path, ask three questions:
 - Maintenance cost
 
 #### Step 3: Execute Cleanup Actions (10 minutes)
-
     # Example cleanup script
     # weekly_cleanup.sh
 
@@ -534,7 +533,6 @@ du -sh outputs/
 ```
 
 ## Cleanup Decision Tree
-
 For each path, determine:
 
 ```
@@ -621,14 +619,11 @@ Benefits:
 ## Frequently Asked Questions and Solutions
 
 ### Q1: There are too many paths—what if I cannot keep track of them?
-
 **Solution:** Maintain a path tracking table.
 
 ```md
 # docs/EXPLORATION_TRACKER.md
-
 # Exploration Path Tracker
-
 | Path | Status | Hypothesis | Best Result | Decision | Last Updated |
 |------|--------|------------|-------------|----------|--------------|
 | A-attention | In progress | Multi-head attention is more effective | 0.925 (+0.5%) | Continue | 2026-02-10 |

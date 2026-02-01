@@ -1,5 +1,4 @@
 # Experiment Logging Automation: What’s Missing Is Not Tools, but Default Behavior
-
 ## Story Setup: “Archaeological Work” Three Months Later
 
 Your paper has been accepted, but the reviewers request supplementary materials explaining the exact setup of a particular experiment in Table 4. You open the code repository and begin “archaeology”:
@@ -30,6 +29,8 @@ The issue is not a lack of tools (MLflow, W&B, and TensorBoard are all excellent
 
 ## A Two-Layer Logging Strategy: Machine-Precise + Human-Concise
 
+![05 Two Layer](images/comics/06_05_two_layer.png)
+
 The core challenge of experiment logging is balancing two needs:
 
 - **Machines require complete and precise information** (for reproducibility and automated analysis);
@@ -41,7 +42,6 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 **Solution: two layers of logs, each doing its own job.**
 
 ### Layer 1: Machine Log (run.json)
-
 **Purpose:** Provide complete, structured information for reproducibility and automation.
 
 **Principles:**
@@ -131,7 +131,6 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 - **random.seed:** All random seeds. Ensure that seeds are set for PyTorch, NumPy, and Python’s built-in `random`.
 
 ### Layer 2: Human Log (run.md)
-
 **Purpose:** Provide a concise summary of the experiment for humans (including your future self) to enable rapid understanding.
 
 **Principles:**
@@ -173,11 +172,9 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 - **Fast review:** Months later, a 5-line summary is more useful than a full log.
 
 ## Automation Tools: Make Logging a Zero-Cost Behavior
-
 **Core idea:** Logging should not depend on “remembering to do it”; it should happen automatically.
 
 ### Automatically Generate run.json in the Training Script
-
 #### Example implementation (Python):
 
     import json
@@ -363,7 +360,6 @@ remote = subprocess.check_output(
 ```
 
 ### Simplify run.md writing with a template
-
 Automatically generate a `run.md` template in the output directory:
 
 ```python
@@ -398,6 +394,8 @@ In this way, after each experiment ends, you only need to fill in the blanks rat
 ## Integration with Existing Tools
 
 ### Integration with MLflow
+
+![09 Mlflow](images/comics/06_09_mlflow.png)
 
 If you are already using MLflow, you can synchronize the run.json information to MLflow:
 
@@ -561,7 +559,6 @@ if __name__ == "__main__":
 ## Frequently Asked Questions and Solutions
 
 ### Q1: What if run.json is too large?
-
 **Problem:** If you save the full config (including model definitions, data preprocessing details, etc.), run.json may become very large.
 
 **Solutions:**
@@ -573,7 +570,6 @@ if __name__ == "__main__":
 - In run.json, record only the config file path and its hash.
 
 ### Q2: What if you forgot to write run.md?
-
 **Solutions:**
 
 - Add a check in the Makefile or scripts:
@@ -608,7 +604,6 @@ sha256sum data_manifest.txt
 - Record the manifest file path and hash in run.json.
 
 ## 10-Minute Action: Set Up Automatic Logging for Your Next Experiment
-
 If you do only one thing right now: build a minimal system for automatic logging.
 
 1.  **Copy run_logger.py**
