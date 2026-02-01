@@ -1,0 +1,80 @@
+/* Language Picker Styles */
+.language-picker {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.language-toggle {
+    background: transparent;
+    border: 1px solid var(--icons);
+    border-radius: 4px;
+    color: var(--icons);
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.language-toggle:hover {
+    color: var(--icons-hover);
+    border-color: var(--icons-hover);
+}
+
+.language-list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--bg);
+    border: 1px solid var(--icons);
+    border-radius: 4px;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 5px 0;
+    min-width: 150px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.language-list.show {
+    display: block;
+}
+
+.language-list li a {
+    display: block;
+    padding: 8px 15px;
+    color: var(--fg);
+    text-decoration: none;
+}
+
+.language-list li a:hover {
+    background: var(--quote-bg);
+}
+
+.language-list li a.active {
+    font-weight: bold;
+    color: var(--links);
+}
+
+/* Custom Book Styles */
+:root {
+    --content-max-width: 900px;
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    margin-top: 1.5em;
+}
+
+code {
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 15px;
+    border-radius: 5px;
+}

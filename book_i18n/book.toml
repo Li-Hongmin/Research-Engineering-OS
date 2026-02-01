@@ -1,0 +1,22 @@
+[book]
+title = "Research Engineering OS"
+description = "把返工压缩成规范 + 模板 + 检查清单"
+authors = ["Li Hongmin (李鸿敏)"]
+language = "zh"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/Li-Hongmin/Research-Engineering-OS-"
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/language-picker.js"]
+smart-punctuation = true
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true

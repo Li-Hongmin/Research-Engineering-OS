@@ -1,7 +1,5 @@
 # Research Engineering OS
 
-**Language**: [中文](/) | [English](../mdbook_english/)
-
 ![封面](images/cover.png)
 
 **把返工压缩成规范 + 模板 + 检查清单**

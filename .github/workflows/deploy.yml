@@ -3,8 +3,8 @@ name: Deploy mdBook to GitHub Pages
 on:
   push:
     branches:
-      - main  # 或者你的主分支名称
-  workflow_dispatch:  # 允许手动触发
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -28,27 +28,16 @@ jobs:
         with:
           mdbook-version: 'latest'
 
-      - name: Setup Rust (for mdbook-pdf)
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install mdbook-pdf
-        run: cargo install mdbook-pdf
-
-      - name: Build book
+      - name: Build multilingual book
         run: |
-          cd mdbook
-          mdbook build
+          cd book_i18n
+          chmod +x build_all.sh
+          ./build_all.sh
 
-      - name: Upload HTML artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./mdbook/book/html
-
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: book-pdf
-          path: ./mdbook/book/pdf/output.pdf
+          path: ./book_i18n/book
 
   deploy:
     environment:
