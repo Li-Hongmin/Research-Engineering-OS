@@ -6,7 +6,7 @@ Your research team has three people: you (a PhD student), a junior master’s st
 
 **But reality looks like this:**
 
-#### Monday Morning Stand-up
+### Monday Morning Stand-up
 
 You: “I ran a new model over the weekend. The results look good—95% accuracy.”
 
@@ -344,7 +344,7 @@ Benefits:
       related_runs:
         - "2026-02-15_1030_zhangsan_baseline"
 
-### Standardize the logging format
+## Standardize the logging format
 
 **Problem:** Everyone records experiments differently, making it impossible to aggregate and compare.
 
@@ -691,7 +691,7 @@ pre-commit install
 # Now formatting will run automatically before each commit
 ```
 
-### Issue 2: Experimental Results Do Not Match
+## Issue 2: Experimental Results Do Not Match
 
 **Troubleshooting checklist:**
 

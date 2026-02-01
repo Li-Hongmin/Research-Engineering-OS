@@ -8,7 +8,7 @@ You originally planned to do only “final polishing” this week: organize expe
 
 But when you start preparing the paper, problems come rushing in like an avalanche:
 
-#### Monday: The Main Experiment Cannot Be Reproduced
+### Monday: The Main Experiment Cannot Be Reproduced
 
 You want to rerun the main experiment to confirm you did not misrecord the numbers. But after running the script, the results differ from three weeks ago—the accuracy drops from 94.3% to 92.1%.
 
@@ -224,7 +224,7 @@ recorded experiments / total number of directories = record coverage
 - Record coverage 60–80%: Warning
 - Record coverage \<60%: Dangerous (requires immediate cleanup)
 
-#### Validation Debt Review (10 Minutes)
+## Validation Debt Review (10 Minutes)
 
 ```text
 # Check validation completeness
@@ -248,7 +248,7 @@ For each result:
 - Missing 1–2: Warning (fill in next month)
 - Missing 3 or more: Dangerous (the paper cannot be written)
 
-#### Reproducibility Debt Review (10 Minutes)
+## Reproducibility Debt Review (10 Minutes)
 
 ```bash
 # Identify the 3 most important experiments
@@ -279,7 +279,7 @@ done
 - 2 can be reproduced: Warning
 - 1 or 0 can be reproduced: Dangerous (requires urgent fixes)
 
-### Debt Visualization
+## Debt Visualization
 
 It is recommended to maintain a “debt trend chart”:
 
@@ -378,7 +378,7 @@ python verify.py --check-results
 
 See `docs/TROUBLESHOOTING.md`
 
-#### verify.py Example
+### verify.py Example
 
 ```python
 import json
@@ -477,7 +477,7 @@ Instead, do it when:
 # - Worst case: switch to a reproducible, second-best result
 ```
 
-#### Priority 2: Patch the Most Critical Validations (2 days)
+## Priority 2: Patch the Most Critical Validations (2 days)
 
 Only add validations that **reviewers will definitely ask for**:
 
@@ -485,7 +485,7 @@ Only add validations that **reviewers will definitely ask for**:
 - If you can choose two: additionally add the main ablation study  
 - For the rest: you can state “due to time constraints, left for future work”  
 
-#### Priority 3: Write Minimal Reproducibility Documentation (1 day)
+### Priority 3: Write Minimal Reproducibility Documentation (1 day)
 
 ```text
 # Minimal reproducibility documentation includes:
@@ -497,7 +497,7 @@ Only add validations that **reviewers will definitely ask for**:
 4. Expected results (numerical ranges)  
 5. Known issues (honestly describe reproducibility difficulties)
 
-### If There Is Only 1 Week Left Until the Deadline
+## If There Is Only 1 Week Left Until the Deadline
 
 **The brutal truth:** you no longer have time to rerun experiments. You can only do your best to patch the records.
 

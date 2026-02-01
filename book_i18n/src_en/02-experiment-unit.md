@@ -72,7 +72,7 @@ For file organization, you can use the run_id as the directory name and centrall
 
 With this structure, we can conveniently manage and query experimental results. For instance, when you want to compare multiple experiments, you can directly open metrics.json under the corresponding run_id directory to inspect metrics, or load models from artifacts for analysis.
 
-#### Avoiding “final” chaos:
+### Avoiding “final” chaos:
 
 Many people like to use the word “final” when naming experiments, but a common situation is that after completing “experiment_final” they discover a small improvement is needed, leading to “experiment_final_v2” or even “final_final”. In the end, even the author cannot tell which one is truly the final result, causing confusion and misunderstanding. This is a typical consequence of non-standard naming. With the run_id approach, you no longer rely on such vague labels to mark the final outcome; instead, you identify each attempt with clear time and content descriptors. As for which experiment is ultimately adopted, you can simply state in the report which run_id is used. In short, do not let words like “final” interfere with experiment management; with a unified run naming scheme, every experiment is well-grounded—run N is run N—and confusion disappears.
 

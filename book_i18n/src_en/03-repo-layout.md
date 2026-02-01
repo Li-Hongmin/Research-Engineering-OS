@@ -10,7 +10,7 @@ The purpose of a repository structure is not to look nice, but to **reduce cogni
 
 When I first started using AI coding assistants, I learned this lesson the hard way. To quickly validate an idea, I had Copilot generate a large amount of “runnable” code—data loading, model definitions, training loops, evaluation scripts, and so on. Within a few hours, I had built what looked like a complete framework.
 
-#### Early “success”:
+### Early “success”:
 
 The code did run, and the experiments produced results. Excited, I continued iterating, repeatedly asking the AI to add new features: data augmentation, different model variants, various evaluation metrics... Each change had an “immediate effect,” and the codebase expanded rapidly.
 
@@ -63,7 +63,7 @@ In this book’s terminology: `src/` contains slow variables, and `experiments/`
 
 **Rule of thumb:** exploration can be dirty, but the core library must be clean; exploration can be fast, but evaluation must be stable.
 
-#### Why is this separation so important?
+### Why is this separation so important?
 
 In my rewrite experience, the biggest pain point was **being unable to distinguish assets from consumables**. When all code is mixed together, you dare not delete anything (for fear of removing important functionality), and you also dare not refactor aggressively (for fear of affecting other experiments). Once you clearly define `src/` as assets and `experiments/` as consumables, the psychological burden is greatly reduced:
 
@@ -273,6 +273,6 @@ If you do only one thing right now: roughly split the current repository into sl
 
 You will immediately feel an increase in “controllability,” because you begin to distinguish what is an asset versus what is a one-off consumable.
 
-#### From personal experience:
+### From personal experience:
 
 If I had established this structure when I first started using an AI coding assistant, the three-day rewrite could have been entirely avoided. A good structure is not for aesthetics; it is to **stop forcing your brain to remember every detail**, and to make the repository itself your reliable “second brain.”

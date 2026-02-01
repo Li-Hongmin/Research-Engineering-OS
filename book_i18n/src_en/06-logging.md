@@ -22,7 +22,7 @@ After an entire afternoon of struggle, you decide to rerun the experiment. Howev
 
 **Reviewer’s reply:** “We cannot accept a paper where the authors cannot reproduce their own results.”
 
-#### This tragedy could have been avoided.
+### This tragedy could have been avoided.
 
 If you had spent 2 minutes recording key information at the end of the experiment, you would not have faced a nightmare three months later.
 
@@ -506,7 +506,7 @@ print(f"Top {top_k} runs by {metric}:")
         find_best_runs()
 ```
 
-### Comparing Configuration Differences Between Two Experiments
+## Comparing Configuration Differences Between Two Experiments
 
 ```python
 # compare_runs.py

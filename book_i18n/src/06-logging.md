@@ -25,7 +25,7 @@
 
 **审稿人的回复：**"We cannot accept a paper where the authors cannot reproduce their own results."
 
-#### 这个悲剧本可以避免。
+### 这个悲剧本可以避免。
 
 如果你在实验结束时花 2 分钟记录关键信息，就不会有三个月后的噩梦。
 
