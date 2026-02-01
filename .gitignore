@@ -11,21 +11,15 @@
 *.cb
 *.cb2
 .*.lb
-
-# LaTeX intermediate files
 *.dvi
 *.xdv
 *-converted-to.*
-
-# Bibliography auxiliary files
 *.bbl
 *.bcf
 *.blg
 *-blx.aux
 *-blx.bib
 *.run.xml
-
-# Build tool auxiliary files
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)
@@ -33,8 +27,22 @@
 *.synctex.gz(busy)
 *.pdfsync
 
-# XeLaTeX specific
-*.xdv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# mdBook build output
+mdbook/book/
+mdbook_*/book/
+
+# AI generated content (可选择性提交)
+ai_generated/
+illustrations/
 
 # Temporary files
 *~
@@ -51,8 +59,6 @@
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 
-# Keep the final PDF (comment out if you don't want to track it)
-# main.pdf
+# Azure config (sensitive)
+.azure_openai_config

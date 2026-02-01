@@ -1,0 +1,20 @@
+[book]
+title = "Research Engineering OS"
+description = "Compressing Rework into Standards + Templates + Checklists"
+authors = ["Li Hongmin (李鸿敏)"]
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+additional-css = ["theme/custom.css"]
+
+[output.html.search]
+enable = true
+
+[output.pdf]
+optional = true

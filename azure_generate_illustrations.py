@@ -40,7 +40,7 @@ class IllustrationGenerator:
             d.mkdir(exist_ok=True)
 
     def generate_image(self, prompt, filepath, deployment=IMAGE_DEPLOYMENT,
-                      size="1024x1024", quality="standard"):
+                      size="1024x1024", quality="high"):
         """生成并保存图像"""
         try:
             print(f"  🎨 生成中...", end=" ")
@@ -52,18 +52,22 @@ class IllustrationGenerator:
                 n=1
             )
 
-            image_url = response.data[0].url
-            print(f"下载中...", end=" ")
+            import base64
+            image_data = response.data[0]
 
-            # 下载图像
-            img_response = requests.get(image_url, timeout=30)
-            img_response.raise_for_status()
+            # Azure返回base64编码的图像
+            if hasattr(image_data, 'b64_json') and image_data.b64_json:
+                print(f"保存中...", end=" ")
+                img_bytes = base64.b64decode(image_data.b64_json)
 
-            with open(filepath, 'wb') as f:
-                f.write(img_response.content)
+                with open(filepath, 'wb') as f:
+                    f.write(img_bytes)
 
-            print(f"✓ {filepath.name}")
-            return True
+                print(f"✓ {filepath.name} ({len(img_bytes)//1024}KB)")
+                return True
+            else:
+                print(f"❌ 未收到图像数据")
+                return False
 
         except Exception as e:
             print(f"❌ {e}")
@@ -132,7 +136,7 @@ class IllustrationGenerator:
                 filepath=filepath,
                 deployment=FLUX_DEPLOYMENT,
                 size="1024x1024",
-                quality="hd"
+                quality="high"
             )
 
             time.sleep(3)

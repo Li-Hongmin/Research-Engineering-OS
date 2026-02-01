@@ -96,7 +96,7 @@ Output only the translated content, no explanations."""
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt}
                     ],
-                    max_tokens=4000,
+                    max_completion_tokens=4000,  # GPT-5.2 uses max_completion_tokens
                     temperature=0.3  # Lower temperature for more consistent translation
                 )
 
@@ -192,7 +192,7 @@ Output only the translated content, no explanations."""
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": summary_content}
                     ],
-                    max_tokens=1000,
+                    max_completion_tokens=1000,
                     temperature=0.3
                 )
 
@@ -226,7 +226,7 @@ Output only the translated content, no explanations."""
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": readme_content}
                     ],
-                    max_tokens=2000,
+                    max_completion_tokens=2000,
                     temperature=0.3
                 )
 

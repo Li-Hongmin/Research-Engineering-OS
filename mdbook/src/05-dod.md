@@ -1,4 +1,4 @@
-# 从\"能跑\"到\"可信\"只差一个 Definition of Done {#ch:dod**
+# 从\"能跑\"到\"可信\"只差一个 Definition of Done
 
 ## 故事引入：那些\"差不多就行\"的代价
 

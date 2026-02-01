@@ -126,7 +126,7 @@ class AzureAIBatchProcessor:
             d.mkdir(exist_ok=True)
 
     def generate_text(self, prompt, system_prompt="You are a helpful assistant.",
-                     max_tokens=2000):
+                     max_completion_tokens=2000):
         """使用GPT-5.2生成文本"""
         try:
             response = client.chat.completions.create(
@@ -135,7 +135,7 @@ class AzureAIBatchProcessor:
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=max_tokens,
+                max_completion_tokens=max_completion_tokens,
                 temperature=0.7
             )
             return response.choices[0].message.content
@@ -202,7 +202,7 @@ class AzureAIBatchProcessor:
         design_concepts = self.generate_text(
             design_prompt,
             system_prompt="You are a professional book cover designer.",
-            max_tokens=1500
+            max_completion_tokens=1500
         )
 
         if not design_concepts:
@@ -355,7 +355,7 @@ class AzureAIBatchProcessor:
 
                 quote = self.generate_text(
                     quote_prompt,
-                    max_tokens=100
+                    max_completion_tokens=100
                 )
 
                 if quote:
@@ -450,7 +450,7 @@ class AzureAIBatchProcessor:
             code = self.generate_text(
                 code_prompt,
                 system_prompt="You are an expert Python developer specializing in research engineering.",
-                max_tokens=2000
+                max_completion_tokens=2000
             )
 
             if code:
