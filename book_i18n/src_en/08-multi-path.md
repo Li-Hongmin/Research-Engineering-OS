@@ -49,11 +49,11 @@ But when you open the project directory, what you see looks like this:
 
 You remember that one experiment performed very well, but you cannot recall which config it used or which output directory it corresponds to. You start opening directories one by one, checking logs, trying to locate that result. Two hours later, you are still not sure whether you found the right one.
 
-#### Problem 2: You dare not delete anything
+### Problem 2: You dare not delete anything
 
 `outputs/` already occupies 50GB, but you do not dare delete any directory—what if the one you delete is exactly the experiment needed for the paper? You decide to “keep it for now; the disk is large enough anyway.”
 
-#### Problem 3: You cannot compare different paths
+### Problem 3: You cannot compare different paths
 You want to compare the effects of “Path A (attention improvements)” and “Path B (learning-rate optimization),” but you discover that:
 
 - They use different baselines (one from three months ago, one from recently)
@@ -62,7 +62,7 @@ You want to compare the effects of “Path A (attention improvements)” and “
 
 - The data split may also be different (you cannot remember clearly)
 
-#### Problem 4: You cannot merge effective improvements
+### Problem 4: You cannot merge effective improvements
 
 You find an effective improvement in Path A and want to port it to Path B, but you realize that:
 
@@ -371,10 +371,10 @@ Based on the evaluation results, make a clear decision:
 - Lesson: [what was learned]
     EOF
 
-## Mechanism 3: A Baseline for Fair Comparisons
+### Mechanism 3: A Baseline for Fair Comparisons
 When comparing all paths, you must use **the same baseline**:
 
-### Establish the Baseline Experiment
+#### Establish the Baseline Experiment
 
     # 1. Run the baseline experiment on the main branch
     git checkout main
@@ -532,7 +532,7 @@ echo "\nCleanup complete!"
 du -sh outputs/
 ```
 
-## Cleanup Decision Tree
+### Cleanup Decision Tree
 For each path, determine:
 
 ```
