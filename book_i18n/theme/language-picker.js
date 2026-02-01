@@ -1,5 +1,5 @@
-// Language switcher for mdBook multilingual setup
-// Two toggle buttons to switch between /zh/ and /en/ versions
+// Language picker for mdBook multilingual setup
+// Dropdown menu to switch between /zh/ and /en/ versions
 (function() {
     const defined_languages = [
         ["zh", "中文"],
@@ -30,95 +30,148 @@
         return `${basePath}/${targetLang}${pagePath}`;
     }
 
-    function createLanguageSwitcher() {
+    function createLanguagePicker() {
         const currentLang = getCurrentLanguage();
+        const currentName = defined_languages.find(l => l[0] === currentLang)?.[1] || "中文";
 
-        const switcher = document.createElement("div");
-        switcher.className = "language-switcher";
-        switcher.innerHTML = defined_languages.map(([code, name]) => `
-            <a href="${buildLanguageUrl(code)}"
-               class="lang-btn ${code === currentLang ? 'active' : ''}"
-               ${code === currentLang ? 'aria-current="true"' : ''}>
-                ${name}
-            </a>
-        `).join('');
+        const picker = document.createElement("div");
+        picker.className = "language-picker";
+        picker.innerHTML = `
+            <button class="language-toggle" aria-label="切换语言 / Switch language" aria-expanded="false">
+                <span class="language-icon">🌐</span>
+                <span class="language-name">${currentName}</span>
+                <span class="language-arrow">▼</span>
+            </button>
+            <ul class="language-list" role="menu">
+                ${defined_languages.map(([code, name]) => `
+                    <li role="menuitem">
+                        <a href="${buildLanguageUrl(code)}"
+                           class="${code === currentLang ? 'active' : ''}"
+                           ${code === currentLang ? 'aria-current="true"' : ''}>
+                            ${name}
+                        </a>
+                    </li>
+                `).join('')}
+            </ul>
+        `;
 
         const style = document.createElement("style");
         style.textContent = `
-            .language-switcher {
-                display: flex;
-                gap: 0;
+            .language-picker {
+                position: relative;
+                display: inline-block;
                 margin-right: 0.5rem;
-                border-radius: 6px;
-                overflow: hidden;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
-            .lang-btn {
-                padding: 0.5rem 1rem;
-                text-decoration: none;
+            .language-toggle {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                padding: 0.5rem 0.8rem;
+                background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
+                border: none;
+                border-radius: 6px;
+                color: #fff;
+                cursor: pointer;
                 font-size: 0.9rem;
                 font-weight: 500;
                 transition: all 0.2s ease;
-                border: none;
-                background: #e8e8e8;
-                color: #666;
+                box-shadow: 0 2px 4px rgba(74, 144, 217, 0.3);
             }
-            .lang-btn:first-child {
-                border-radius: 6px 0 0 6px;
+            .language-toggle:hover {
+                background: linear-gradient(135deg, #357abd 0%, #2868a9 100%);
+                box-shadow: 0 4px 8px rgba(74, 144, 217, 0.4);
             }
-            .lang-btn:last-child {
-                border-radius: 0 6px 6px 0;
+            .language-icon {
+                font-size: 1.1rem;
             }
-            .lang-btn:hover {
-                background: #d0d0d0;
-                color: #333;
+            .language-arrow {
+                font-size: 0.6rem;
+                transition: transform 0.2s ease;
             }
-            .lang-btn.active {
-                background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
-                color: #fff;
-                cursor: default;
-                box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+            .language-picker.open .language-arrow {
+                transform: rotate(180deg);
             }
-            .lang-btn.active:hover {
-                background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
-                color: #fff;
+            .language-list {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                margin: 0.3rem 0 0 0;
+                padding: 0.3rem 0;
+                list-style: none;
+                background: var(--bg);
+                border: 1px solid var(--icons);
+                border-radius: 6px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                min-width: 120px;
+                z-index: 1000;
             }
-            /* Dark theme support */
-            .navy .lang-btn,
-            .coal .lang-btn,
-            .ayu .lang-btn {
-                background: #3a3a3a;
-                color: #aaa;
+            .language-list.show {
+                display: block;
             }
-            .navy .lang-btn:hover,
-            .coal .lang-btn:hover,
-            .ayu .lang-btn:hover {
-                background: #4a4a4a;
-                color: #fff;
+            .language-list li {
+                margin: 0;
+                padding: 0;
             }
-            .navy .lang-btn.active,
-            .coal .lang-btn.active,
-            .ayu .lang-btn.active {
-                background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
-                color: #fff;
+            .language-list a {
+                display: block;
+                padding: 0.6rem 1rem;
+                color: var(--fg);
+                text-decoration: none;
+                white-space: nowrap;
+                transition: background 0.15s ease;
+            }
+            .language-list a:hover {
+                background: var(--quote-bg);
+            }
+            .language-list a.active {
+                font-weight: bold;
+                color: var(--links);
+            }
+            .language-list a.active::before {
+                content: "✓ ";
             }
         `;
         document.head.appendChild(style);
 
-        return switcher;
+        const toggle = picker.querySelector(".language-toggle");
+        const list = picker.querySelector(".language-list");
+
+        toggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isOpen = list.classList.toggle("show");
+            picker.classList.toggle("open", isOpen);
+            toggle.setAttribute("aria-expanded", isOpen);
+        });
+
+        document.addEventListener("click", () => {
+            list.classList.remove("show");
+            picker.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                list.classList.remove("show");
+                picker.classList.remove("open");
+                toggle.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        return picker;
     }
 
-    function insertLanguageSwitcher() {
+    function insertLanguagePicker() {
         const rightButtons = document.querySelector(".right-buttons");
         if (rightButtons) {
-            const switcher = createLanguageSwitcher();
-            rightButtons.insertBefore(switcher, rightButtons.firstChild);
+            const picker = createLanguagePicker();
+            rightButtons.insertBefore(picker, rightButtons.firstChild);
         }
     }
 
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", insertLanguageSwitcher);
+        document.addEventListener("DOMContentLoaded", insertLanguagePicker);
     } else {
-        insertLanguageSwitcher();
+        insertLanguagePicker();
     }
 })();
