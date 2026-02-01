@@ -26,9 +26,9 @@ To ensure traceability and comparability of experimental results, each experimen
 
 None of these six elements can be omitted. If any one question cannot be answered, the experiment is not fully reproducible, and any conclusion drawn will lack persuasiveness. Only when all six are satisfied can we say “we know where this result came from,” and only then can we precisely reproduce it later or compare it against other experiments.
 
-##### Case: AI Generates “Seemingly Complete” Code That Cannot Run
+#### Case: AI Generates “Seemingly Complete” Code That Cannot Run
 
-In cross-language migration (“code translation”) scenarios, API hallucination frequently occurs: the model generates functions that look reasonable but do not actually exist in the target language’s libraries, causing the generated code to be non-executable. Researchers ultimately have to rewrite and fix files one by one (see case [\[case:code_translation_hallucination\]](#case:code_translation_hallucination){reference-type="ref" reference="case:code_translation_hallucination"**}). If we mistakenly treat “code” as the smallest unit of a project, we may fall into the trap of focusing only on how many files or lines of code were generated. The significance of using “experiment” as the smallest unit is that our acceptance criterion is not how many files were produced, but whether we produced **runnable deliverables and metrics that can be evaluated comparatively**. In other words, whether an experiment succeeds does not depend on how many lines of code were changed, but on whether you obtained an executable model or result, along with clear evaluation metrics to demonstrate the effect of the change.
+In cross-language migration (“code translation”) scenarios, API hallucination frequently occurs: the model generates functions that look reasonable but do not actually exist in the target language’s libraries, causing the generated code to be non-executable. Researchers ultimately have to rewrite and fix files one by one.. If we mistakenly treat “code” as the smallest unit of a project, we may fall into the trap of focusing only on how many files or lines of code were generated. The significance of using “experiment” as the smallest unit is that our acceptance criterion is not how many files were produced, but whether we produced **runnable deliverables and metrics that can be evaluated comparatively**. In other words, whether an experiment succeeds does not depend on how many lines of code were changed, but on whether you obtained an executable model or result, along with clear evaluation metrics to demonstrate the effect of the change.
 
 ## The Experimental Object Model: Decomposing the Research Process into Stable “Five Elements”
 
@@ -72,7 +72,7 @@ For file organization, you can use the run_id as the directory name and centrall
 
 With this structure, we can conveniently manage and query experimental results. For instance, when you want to compare multiple experiments, you can directly open metrics.json under the corresponding run_id directory to inspect metrics, or load models from artifacts for analysis.
 
-##### Avoiding “final” chaos:
+#### Avoiding “final” chaos:
 
 Many people like to use the word “final” when naming experiments, but a common situation is that after completing “experiment_final” they discover a small improvement is needed, leading to “experiment_final_v2” or even “final_final”. In the end, even the author cannot tell which one is truly the final result, causing confusion and misunderstanding. This is a typical consequence of non-standard naming. With the run_id approach, you no longer rely on such vague labels to mark the final outcome; instead, you identify each attempt with clear time and content descriptors. As for which experiment is ultimately adopted, you can simply state in the report which run_id is used. In short, do not let words like “final” interfere with experiment management; with a unified run naming scheme, every experiment is well-grounded—run N is run N—and confusion disappears.
 

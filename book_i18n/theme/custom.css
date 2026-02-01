@@ -1,4 +1,56 @@
-/* Language Picker Styles */
+/* ============================================
+   Research Engineering OS - Custom Theme
+   绿色/青色配色方案
+   ============================================ */
+
+/* 覆盖 mdBook 默认颜色变量 */
+:root {
+    --content-max-width: 900px;
+}
+
+/* Light 主题 */
+.light {
+    --links: #0d9488;           /* teal-600 */
+    --links-hover: #0f766e;     /* teal-700 */
+    --sidebar-active: #0d9488;
+    --search-mark-bg: #99f6e4;  /* teal-200 */
+}
+
+/* Rust 主题 */
+.rust {
+    --links: #14b8a6;           /* teal-500 */
+    --links-hover: #2dd4bf;     /* teal-400 */
+    --sidebar-active: #14b8a6;
+    --search-mark-bg: #0f766e;
+}
+
+/* Coal 主题 (暗色) */
+.coal {
+    --links: #2dd4bf;           /* teal-400 */
+    --links-hover: #5eead4;     /* teal-300 */
+    --sidebar-active: #2dd4bf;
+    --search-mark-bg: #0f766e;
+}
+
+/* Navy 主题 (暗色) */
+.navy {
+    --links: #2dd4bf;           /* teal-400 */
+    --links-hover: #5eead4;     /* teal-300 */
+    --sidebar-active: #2dd4bf;
+    --search-mark-bg: #0f766e;
+}
+
+/* Ayu 主题 (暗色) */
+.ayu {
+    --links: #2dd4bf;           /* teal-400 */
+    --links-hover: #5eead4;     /* teal-300 */
+    --sidebar-active: #2dd4bf;
+    --search-mark-bg: #0f766e;
+}
+
+/* ============================================
+   Language Picker Styles
+   ============================================ */
 .language-picker {
     position: relative;
     display: inline-block;
@@ -13,11 +65,12 @@
     cursor: pointer;
     padding: 5px 10px;
     font-size: 14px;
+    transition: all 0.2s ease;
 }
 
 .language-toggle:hover {
-    color: var(--icons-hover);
-    border-color: var(--icons-hover);
+    color: var(--links);
+    border-color: var(--links);
 }
 
 .language-list {
@@ -45,6 +98,7 @@
     padding: 8px 15px;
     color: var(--fg);
     text-decoration: none;
+    transition: background 0.15s ease;
 }
 
 .language-list li a:hover {
@@ -56,11 +110,9 @@
     color: var(--links);
 }
 
-/* Custom Book Styles */
-:root {
-    --content-max-width: 900px;
-}
-
+/* ============================================
+   Content Styles
+   ============================================ */
 .content {
     font-size: 16px;
     line-height: 1.7;
@@ -70,6 +122,14 @@ h1, h2, h3 {
     margin-top: 1.5em;
 }
 
+/* 标题颜色 */
+.content h1,
+.content h2,
+.content h3 {
+    color: var(--fg);
+}
+
+/* 代码块样式 */
 code {
     font-size: 0.9em;
 }
@@ -77,4 +137,43 @@ code {
 pre {
     padding: 15px;
     border-radius: 5px;
+}
+
+/* 引用块样式 */
+blockquote {
+    border-left: 4px solid var(--links);
+    padding-left: 1em;
+    margin-left: 0;
+    color: var(--fg);
+    opacity: 0.9;
+}
+
+/* 表格样式 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid var(--table-border-color);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background: var(--quote-bg);
+}
+
+/* 侧边栏当前章节高亮 */
+.chapter li.chapter-item a.active {
+    color: var(--sidebar-active);
+    font-weight: 600;
+}
+
+/* 搜索框焦点样式 */
+#searchbar:focus {
+    border-color: var(--links);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.2);
 }

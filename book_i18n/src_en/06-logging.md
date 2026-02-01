@@ -22,7 +22,7 @@ After an entire afternoon of struggle, you decide to rerun the experiment. Howev
 
 **Reviewer’s reply:** “We cannot accept a paper where the authors cannot reproduce their own results.”
 
-##### This tragedy could have been avoided.
+#### This tragedy could have been avoided.
 
 If you had spent 2 minutes recording key information at the end of the experiment, you would not have faced a nightmare three months later.
 
@@ -114,7 +114,7 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
       **
     **
 
-##### Explanation of key fields:
+#### Explanation of key fields:
 
 - **run_id:** A unique identifier; recommended format is timestamp + short description (see Chapter 2).
 
@@ -164,7 +164,7 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
     ## Risk/Anomalies
     No obvious anomalies. Data augmentation may need coordinated adjustment (currently fixed).
 
-##### Why only 5 lines?
+#### Why only 5 lines?
 
 - **Lower the logging barrier:** If you have to write a long document, you will procrastinate; with 5 lines, you can finish in 2 minutes.
 
@@ -178,7 +178,7 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 
 ### Automatically Generate run.json in the Training Script
 
-##### Example implementation (Python):
+#### Example implementation (Python):
 
     import json
     import subprocess
@@ -316,7 +316,7 @@ remote = subprocess.check_output(
         ).hexdigest()[:16]
 ```
 
-##### Usage in the training script:
+#### Usage in the training script:
 
 ```python
     # train.py

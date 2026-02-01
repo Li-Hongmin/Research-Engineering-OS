@@ -21,4 +21,3 @@
 # Appendix
 
 - [Appendix: Templates](./appendix-templates.md)
-- [Appendix: AI Disaster Cases](./appendix-ai-disasters.md)

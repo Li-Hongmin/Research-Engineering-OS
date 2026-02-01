@@ -10,11 +10,11 @@ The purpose of a repository structure is not to look nice, but to **reduce cogni
 
 When I first started using AI coding assistants, I learned this lesson the hard way. To quickly validate an idea, I had Copilot generate a large amount of “runnable” code—data loading, model definitions, training loops, evaluation scripts, and so on. Within a few hours, I had built what looked like a complete framework.
 
-##### Early “success”:
+#### Early “success”:
 
 The code did run, and the experiments produced results. Excited, I continued iterating, repeatedly asking the AI to add new features: data augmentation, different model variants, various evaluation metrics... Each change had an “immediate effect,” and the codebase expanded rapidly.
 
-##### The beginning of the collapse:
+#### The beginning of the collapse:
 
 Two weeks later, when I needed to prepare ablation and comparison experiments for a paper, the problems surfaced:
 
@@ -26,15 +26,15 @@ Two weeks later, when I needed to prepare ablation and comparison experiments fo
 
 - I wanted to reproduce a “very good result,” but could not find the configuration and data version used at the time.
 
-##### Starting over:
+#### Starting over:
 
 In the end, I had to stop all new experiments and spend three full days **rewriting almost all the code**. This rewrite was not because the AI-generated code had bugs, but because of **a lack of structure**: reusable core logic and one-off experimental scripts were mixed together; quick-and-dirty trial code was not cleaned up in time; outputs were scattered everywhere and hard to trace.
 
 This experience made me deeply understand: AI can help you produce code quickly, but **the structure must be designed by humans**. If, from the beginning, you separate “stable” from “exploratory,” and organize outputs by run_id, you will not fall into this kind of chaos later.
 
-##### Case references:
+#### Case references:
 
-This is not an isolated issue. When you use AI to quickly pile up a “runnable” repository but fail to isolate reusable code from one-off experimental entry points, the common ending is: every module must be rewritten, and almost all AI-generated fragments are replaced (see cases [\[case:copilot_rewrite_all\]](#case:copilot_rewrite_all){reference-type="ref" reference="case:copilot_rewrite_all"**、[\[case:copilot_overdelegation\]](#case:copilot_overdelegation){reference-type="ref" reference="case:copilot_overdelegation"**). **Structure is the first line of defense against this kind of rework.**
+This is not an isolated issue. When you use AI to quickly pile up a “runnable” repository but fail to isolate reusable code from one-off experimental entry points, the common ending is: every module must be rewritten, and almost all AI-generated fragments are replaced. **Structure is the first line of defense against this kind of rework.**
 
 ## A Copy-and-Paste Directory Layout (Research-Friendly)
 
@@ -63,7 +63,7 @@ In this book’s terminology: `src/` contains slow variables, and `experiments/`
 
 **Rule of thumb:** exploration can be dirty, but the core library must be clean; exploration can be fast, but evaluation must be stable.
 
-##### Why is this separation so important?
+#### Why is this separation so important?
 
 In my rewrite experience, the biggest pain point was **being unable to distinguish assets from consumables**. When all code is mixed together, you dare not delete anything (for fear of removing important functionality), and you also dare not refactor aggressively (for fear of affecting other experiments). Once you clearly define `src/` as assets and `experiments/` as consumables, the psychological burden is greatly reduced:
 
@@ -83,7 +83,7 @@ A directory name only truly reduces chaos when “what should go in” and “wh
 
 - No hard-coding: do not include paths/parameters that are only useful for a particular run.
 
-##### Anti-example:
+#### Anti-example:
 
 In my rewrite case, the original “data loading” code hard-coded the path and preprocessing for a specific experiment, forcing new experiments to copy-paste and modify it. If the paths and parameters had been passed in as function arguments from the start, this problem would not have occurred.
 
@@ -93,7 +93,7 @@ In my rewrite case, the original “data loading” code hard-coded the path and
 
 - Any logic proven valuable and reusable should be migrated to `src/` once it stabilizes.
 
-##### Practical advice:
+#### Practical advice:
 
 Name each experiment script by date or run_id, e.g., `2026-02-01_baseline.py`. This makes it immediately obvious which experiments are old and which are new. Regularly (e.g., weekly) clean up scripts older than one month that have no value.
 
@@ -163,7 +163,7 @@ If you already have a “messy” legacy project, do not try to tear it down and
 
 3.  **Replace incrementally:** Do not modify all code at once. Instead, refactor one script at a time, and proceed to the next only after confirming it runs correctly.
 
-##### Practical experience:
+#### Practical experience:
 
 During my refactoring, extracting configurations alone helped me uncover three hidden bugs—the “seemingly identical” parameters in different scripts actually had different values, making results incomparable.
 
@@ -183,7 +183,7 @@ During my refactoring, extracting configurations alone helped me uncover three h
 
 3.  **Increase coverage gradually:** As refactoring progresses, gradually add unit tests for critical functions.
 
-##### Key principle:
+#### Key principle:
 
 Progressiveness matters. Do not attempt to finish all refactoring in one go; instead, ensure existing functionality remains intact at each step before moving on. My rewrite took three days, but if I had adopted progressive refactoring from the start, it could have been spread over a week without affecting the normal pace of experiments.
 
@@ -201,7 +201,7 @@ When facing multiple related but independent research tasks, how to organize dir
 
 - Simplify reproduction (each project has its own environment and dependencies).
 
-##### Rule of thumb:
+#### Rule of thumb:
 
 If two projects differ substantially in dependency versions, datasets, or runtime environments, **strongly consider splitting into separate repositories**.
 
@@ -255,7 +255,7 @@ If you truly need to manage multiple related tasks within one repository (e.g., 
 
 - The project is nearing completion and future synchronized updates are unlikely.
 
-##### Practical recommendation:
+#### Practical recommendation:
 
 At the beginning, prefer copying; extract into common/ only after the code is truly stable and you are confident it needs to be shared. Premature abstraction leads to frequent modifications of shared code and increases maintenance burden.
 
@@ -273,6 +273,6 @@ If you do only one thing right now: roughly split the current repository into sl
 
 You will immediately feel an increase in “controllability,” because you begin to distinguish what is an asset versus what is a one-off consumable.
 
-##### From personal experience:
+#### From personal experience:
 
 If I had established this structure when I first started using an AI coding assistant, the three-day rewrite could have been entirely avoided. A good structure is not for aesthetics; it is to **stop forcing your brain to remember every detail**, and to make the repository itself your reliable “second brain.”

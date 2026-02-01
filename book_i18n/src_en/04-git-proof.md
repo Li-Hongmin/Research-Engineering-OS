@@ -103,7 +103,7 @@ Unlike engineering projects, a research project’s branching strategy must bala
 
 ### Typical Workflow
 
-##### Scenario 1: Validating a New Hypothesis
+#### Scenario 1: Validating a New Hypothesis
 
 1.  Create a new branch from main: `git checkout -b exp/new-loss-function`
 
@@ -117,7 +117,7 @@ Unlike engineering projects, a research project’s branching strategy must bala
 
 6.  Delete the experiment branch: `git branch -d exp/new-loss-function`
 
-##### Scenario 2: Paper Submission
+#### Scenario 2: Paper Submission
 
 1.  Ensure all paper experiments on main are reproducible
 
@@ -127,7 +127,7 @@ Unlike engineering projects, a research project’s branching strategy must bala
 
 4.  Push the tag: `git push origin paper-icml2026-v1`
 
-##### Scenario 3: Exploring Multiple Directions in Parallel
+#### Scenario 3: Exploring Multiple Directions in Parallel
 
 1.  Create multiple experiment branches simultaneously:
 
@@ -175,7 +175,7 @@ Tags are a severely underestimated feature in Git. For research projects, the va
 
 ### Tag Usage Practices
 
-##### Tag each important experiment for the paper:
+#### Tag each important experiment for the paper:
 
     # Tag immediately after finishing the main experiment
     git tag -a result-main-experiment -m \
@@ -188,7 +188,7 @@ Tags are a severely underestimated feature in Git. For research projects, the va
        Config: configs/ablation_*.yaml
        Key finding: attention mechanism contributes 5% improvement"
 
-##### When reproducing, switch directly to the tag:
+#### When reproducing, switch directly to the tag:
 
     # List all experiment-related tags
     git tag -l "result-*"

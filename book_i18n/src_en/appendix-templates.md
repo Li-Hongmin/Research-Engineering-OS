@@ -1,5 +1,7 @@
 # Template Library (You Can Start Using It Today)
 
+![Illustration](images/appendix_templates_toolbox.png)
+
 ## PR/Commit Description Template (Write It Even If You Work Alone)
 
 - Purpose:

@@ -45,15 +45,15 @@ But when you open the project directory, what you see looks like this:
 
 **The problems begin to surface:**
 
-##### Problem 1: You cannot find the best result
+#### Problem 1: You cannot find the best result
 
 You remember that one experiment performed very well, but you cannot recall which config it used or which output directory it corresponds to. You start opening directories one by one, checking logs, trying to locate that result. Two hours later, you are still not sure whether you found the right one.
 
-##### Problem 2: You dare not delete anything
+#### Problem 2: You dare not delete anything
 
 `outputs/` already occupies 50GB, but you do not dare delete any directory—what if the one you delete is exactly the experiment needed for the paper? You decide to “keep it for now; the disk is large enough anyway.”
 
-##### Problem 3: You cannot compare different paths
+#### Problem 3: You cannot compare different paths
 
 You want to compare the effects of “Path A (attention improvements)” and “Path B (learning-rate optimization),” but you discover that:
 
@@ -63,7 +63,7 @@ You want to compare the effects of “Path A (attention improvements)” and “
 
 - The data split may also be different (you cannot remember clearly)
 
-##### Problem 4: You cannot merge effective improvements
+#### Problem 4: You cannot merge effective improvements
 
 You find an effective improvement in Path A and want to port it to Path B, but you realize that:
 
@@ -81,7 +81,7 @@ The essence of research is **uncertainty**: you do not know which path will succ
 
 ### Three Stages of Losing Control
 
-##### Stage 1: Rapid Exploration (Weeks 1–4)
+#### Stage 1: Rapid Exploration (Weeks 1–4)
 
 **Behavior:**
 
@@ -93,7 +93,7 @@ The essence of research is **uncertainty**: you do not know which path will succ
 
 **Feeling:** full of energy, rapid progress.
 
-##### Stage 2: Path Divergence (Weeks 5–8)
+#### Stage 2: Path Divergence (Weeks 5–8)
 
 **Behavior:**
 
@@ -105,7 +105,7 @@ The essence of research is **uncertainty**: you do not know which path will succ
 
 **Feeling:** somewhat messy, but you can still remember the rough situation.
 
-##### Stage 3: Uncontrolled Chaos (Week 9+)
+#### Stage 3: Uncontrolled Chaos (Week 9+)
 
 **Behavior:**
 
@@ -209,7 +209,7 @@ Each exploration path should have a clearly defined lifecycle:
 
     Create → Explore → Evaluate → Decide (keep/archive/delete)
 
-##### Creation Phase
+#### Creation Phase
 
     # 1. Create a branch
     git checkout main
@@ -244,7 +244,7 @@ Each exploration path should have a clearly defined lifecycle:
     Exploring
     EOF
 
-##### Exploration Phase
+#### Exploration Phase
 
 Iterate freely on the branch and record each experiment:
 
@@ -258,7 +258,7 @@ Iterate freely on the branch and record each experiment:
     # Continue iterating
     # Use a new run_id for each experiment; do not overwrite previous ones
 
-##### Evaluation Phase
+#### Evaluation Phase
 
 Periodically (e.g., weekly) evaluate the value of the path:
 
@@ -285,7 +285,7 @@ Periodically (e.g., weekly) evaluate the value of the path:
     [ ] Archive (valuable but not the current focus)
     [ ] Delete (no value)
 
-##### Decision Phase
+#### Decision Phase
 
 Based on the evaluation results, make a clear decision:
 
@@ -377,7 +377,7 @@ Based on the evaluation results, make a clear decision:
 
 When comparing all paths, you must use **the same baseline**:
 
-##### Establish the Baseline Experiment
+#### Establish the Baseline Experiment
 
     # 1. Run the baseline experiment on the main branch
     git checkout main
@@ -412,7 +412,7 @@ When comparing all paths, you must use **the same baseline**:
     make reproduce RUN=baseline/2026-02-01_1030_baseline
     EOF
 
-##### Standardizing Path Comparisons
+#### Standardizing Path Comparisons
 
     # Example comparison script
     # compare_paths.py
@@ -460,7 +460,7 @@ When comparing all paths, you must use **the same baseline**:
 
 ### Friday Afternoon Cleanup Procedure (30 minutes)
 
-##### Step 1: List All Active Paths (5 minutes)
+#### Step 1: List All Active Paths (5 minutes)
 
     # list_active_paths.sh
 
@@ -472,7 +472,7 @@ When comparing all paths, you must use **the same baseline**:
     echo "\nOutput directory sizes:"
     du -sh outputs/*/ | sort -rh
 
-##### Step 2: Evaluate Paths One by One (15 minutes)
+#### Step 2: Evaluate Paths One by One (15 minutes)
 
 For each path, ask three questions:
 
@@ -496,7 +496,7 @@ For each path, ask three questions:
 
 - Maintenance cost
 
-##### Step 3: Execute Cleanup Actions (10 minutes)
+#### Step 3: Execute Cleanup Actions (10 minutes)
 
     # Example cleanup script
     # weekly_cleanup.sh
@@ -577,7 +577,7 @@ Before merging a path into main, ensure that:
 
 For complex paths, do not merge everything at once. A step-by-step approach is recommended:
 
-##### Example: Merging "Path A: Attention Improvements"
+#### Example: Merging "Path A: Attention Improvements"
 
 ```sh
 # Path A contains three changes:

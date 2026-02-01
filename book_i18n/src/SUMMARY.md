@@ -21,4 +21,3 @@
 # 附录
 
 - [附录：模板](./appendix-templates.md)
-- [附录：AI灾难案例](./appendix-ai-disasters.md)

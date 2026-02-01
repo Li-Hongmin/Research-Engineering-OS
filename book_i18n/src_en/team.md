@@ -6,7 +6,7 @@ Your research team has three people: you (a PhD student), a junior master’s st
 
 **But reality looks like this:**
 
-##### Monday Morning Stand-up
+#### Monday Morning Stand-up
 
 You: “I ran a new model over the weekend. The results look good—95% accuracy.”
 
@@ -22,7 +22,7 @@ Intern: “The link I posted in the group chat...” (All three scroll through t
 
 Advisor: “What exactly are you three doing? Why are the numbers each of you reports different?”
 
-##### Wednesday Code Conflicts
+#### Wednesday Code Conflicts
 
 Junior: “Senior, I pushed the code. Pull it.”
 
@@ -36,7 +36,7 @@ You open the code and see that the junior modified almost every file. And many c
 
 You spend two hours resolving conflicts, only to discover in the end: your code was overwritten, and last week’s good results can no longer be reproduced.
 
-##### Friday Data Disaster
+#### Friday Data Disaster
 
 Intern: “Senior, I accidentally deleted the data/ directory. Do you have a backup?”
 
@@ -54,7 +54,7 @@ The counterintuitive part of teamwork is this: **each individual may be highly c
 
 ### Three Major Collaboration Traps
 
-##### Trap 1: Dependence on Tacit Knowledge
+#### Trap 1: Dependence on Tacit Knowledge
 
 Everyone carries a lot of information in their head that “only they know”:
 
@@ -65,7 +65,7 @@ Everyone carries a lot of information in their head that “only they know”:
 
 When collaboration is required, this tacit knowledge becomes a bottleneck—others can only “wait until you have time to explain,” while you are interrupted repeatedly.
 
-##### Trap 2: Duplicated Work
+#### Trap 2: Duplicated Work
 
 Without clear division of labor and interfaces, you end up with:
 
@@ -75,7 +75,7 @@ Without clear division of labor and interfaces, you end up with:
 
 On the surface it looks like “parallel work,” but in reality it is “wasted compute and time.”
 
-##### Trap 3: Exploding Integration Costs
+#### Trap 3: Exploding Integration Costs
 
 Everyone “does well” on their own branch, but when merging you find:
 
@@ -103,7 +103,7 @@ But a team project requires **explicit standards**:
 
 ### Naming Conventions: Make Code Self-Explanatory
 
-##### File Naming
+#### File Naming
 
     # ❌ Bad naming
     test.py
@@ -117,7 +117,7 @@ But a team project requires **explicit standards**:
     evaluate_on_testset.py         # Evaluate on the test set
     preprocess_raw_data.py         # Preprocess raw data
 
-##### Variable and Function Naming
+#### Variable and Function Naming
 
     # ❌ Bad naming
     def f(x, y):
@@ -150,7 +150,7 @@ But a team project requires **explicit standards**:
 
 ### Commenting Standards: Written for Future You and Your Teammates
 
-##### Places That Must Be Commented
+#### Places That Must Be Commented
 
 1.  **Function docstrings** (every function must have one)
 
@@ -190,7 +190,7 @@ Returns:
           # NOTE: This hyperparameter has a large impact on the results
           # Be sure to test on a small dataset before making changes
 
-##### Where you should not add comments
+#### Where you should not add comments
 
     # ❌ Do not comment on the obvious
     x = x + 1  # Add 1 to x
@@ -214,7 +214,7 @@ Returns:
 
 A Pull Request (or Merge Request) template forces you to answer key questions before merging.
 
-##### Create a PR template
+#### Create a PR template
 
     # .github/pull_request_template.md
 
@@ -300,7 +300,7 @@ Benefits:
         main_method.yaml
         ablation_*.yaml
 
-##### base.yaml example
+#### base.yaml example
 
     # configs/base.yaml
     # Team baseline configuration; do not modify casually
@@ -325,7 +325,7 @@ Benefits:
       metric: "accuracy"
       eval_every: 1000
 
-##### Personal config example
+#### Personal config example
 
     # configs/people/zhangsan_attention_test.yaml
 
@@ -375,7 +375,7 @@ Benefits:
 
 **Solution:** Discuss only experiments with a run_id.
 
-##### Weekly meeting template
+#### Weekly meeting template
 
     # Weekly Group Meeting (30–45 minutes)
 
@@ -425,7 +425,7 @@ Benefits:
 
 **Solution:** Build a culture of “read the docs first, then ask people.”
 
-##### Team documentation structure
+#### Team documentation structure
 
     docs/
       README.md              # Project overview
@@ -436,7 +436,7 @@ Benefits:
       DECISIONS.md           # Record of important decisions
       CONTACTS.md            # Who owns what
 
-##### FAQ.md example
+#### FAQ.md example
 
     # Frequently Asked Questions
 
@@ -478,7 +478,7 @@ Benefits:
 
 **Solution:** Important issues must be filed as an issue (GitHub/GitLab/Jira).
 
-##### Issue template
+#### Issue template
 
     # Bug Report
     **Problem description**: [briefly describe the issue]
@@ -527,7 +527,7 @@ Benefits:
 
 **Do not assume students will “naturally do it right.”** You must explicitly communicate your expectations.
 
-##### Onboarding checklist
+#### Onboarding checklist
 
     # New Member Onboarding Checklist
 
@@ -553,7 +553,7 @@ Benefits:
 
 **Do not only ask “How are the results?” in weekly meetings; check “Is the process standardized?”**
 
-##### Weekly Code Review Checklist
+#### Weekly Code Review Checklist
 
     Checklist:
 - [ ] Are all experiments from this week fully documented?
@@ -590,7 +590,7 @@ If issues are found, point them out immediately and require corrections. **Do no
 
 **Survival strategies:**
 
-##### Strategy 1: Create a “Clean Zone” for Yourself
+#### Strategy 1: Create a “Clean Zone” for Yourself
 
     # Create your own subproject within a chaotic project
 
@@ -603,7 +603,7 @@ If issues are found, point them out immediately and require corrections. **Do no
 
 Even if the overall project is messy, at least your part is clear.
 
-##### Strategy 2: Write Down Your Understanding
+#### Strategy 2: Write Down Your Understanding
 
     # docs/MY_UNDERSTANDING.md
 
@@ -625,7 +625,7 @@ This document:
 - Provides a record for future handoffs
 - Enables you to align understanding with your advisor
 
-##### Strategy 3: Proactively Establish Standards
+#### Strategy 3: Proactively Establish Standards
 
 Even if the team has no standards, you can **establish standards for yourself**:
 

@@ -8,7 +8,7 @@ You originally planned to do only “final polishing” this week: organize expe
 
 But when you start preparing the paper, problems come rushing in like an avalanche:
 
-##### Monday: The Main Experiment Cannot Be Reproduced
+#### Monday: The Main Experiment Cannot Be Reproduced
 
 You want to rerun the main experiment to confirm you did not misrecord the numbers. But after running the script, the results differ from three weeks ago—the accuracy drops from 94.3% to 92.1%.
 
@@ -22,13 +22,13 @@ You panic and begin troubleshooting:
 
 You spend an entire day and still cannot find the cause.
 
-##### Tuesday: The Baseline Turns Out to Be Unfair
+#### Tuesday: The Baseline Turns Out to Be Unfair
 
 Reviewers will certainly focus on your comparison with the baseline. You check carefully and discover a fatal issue: your method uses the latest data preprocessing, but the baseline uses an older version. The evaluation protocol is not consistent at all.
 
 You need to rerun the baseline—but that requires 6 hours of training time.
 
-##### Wednesday: A Key Ablation Study Is Missing
+#### Wednesday: A Key Ablation Study Is Missing
 
 Your advisor reads your first draft and points out: “Your method includes three improvements (A, B, C), but you did not explain how much each contributes. Reviewers will definitely ask.”
 
@@ -52,13 +52,13 @@ You realize you are missing an ablation study. You need to run:
 
 Each experiment takes 2 hours; 8 experiments = 16 hours. But you have only 4 days left.
 
-##### Thursday: The Data for Figures Cannot Be Found
+#### Thursday: The Data for Figures Cannot Be Found
 
 You want to generate the paper’s figures, but you discover that the output files for a key experiment are gone—perhaps you accidentally deleted them, or they were lost during some cleanup. You only remember that “the results were good,” but the raw data is gone.
 
 You have no choice but to rerun those experiments.
 
-##### Friday: You Start Questioning Your Life Choices
+#### Friday: You Start Questioning Your Life Choices
 
 You have not slept well for three days. Experiments are still running, the paper has not even started, and the figures are not finished. You begin to wonder: **“Why do I always blow up at the last stage?”**
 
@@ -96,7 +96,7 @@ If you do a self-check every week, problems will be discovered in the week they 
 
 ### Self-Check Checklist (Finish in 15 Minutes)
 
-##### Item 1: Check Whether This Week’s Most Important Experiment Is Reproducible (5 Minutes)
+#### Item 1: Check Whether This Week’s Most Important Experiment Is Reproducible (5 Minutes)
 
     # Find this week’s best/most important experiment
     RUN_ID="this week’s best run_id"
@@ -111,7 +111,7 @@ If you do a self-check every week, problems will be discovered in the week they 
 
     # If any item is missing, remediate immediately
 
-##### Item 2: Attempt a Quick Reproduction (5 Minutes)
+#### Item 2: Attempt a Quick Reproduction (5 Minutes)
 
 You do not need to rerun everything (too slow), but you must verify that **the pipeline runs end-to-end**:
 
@@ -131,7 +131,7 @@ You do not need to rerun everything (too slow), but you must verify that **the p
 
 If even this 2-minute test cannot run through, full reproduction will definitely have issues. **Fixing it now is still in time.**
 
-##### Item 3: Check Whether Dependencies Have Drifted (3 Minutes)
+#### Item 3: Check Whether Dependencies Have Drifted (3 Minutes)
 
     # Save current dependencies
     pip freeze > requirements_$(date +%Y%m%d).txt
@@ -143,7 +143,7 @@ If even this 2-minute test cannot run through, full reproduction will definitely
 
 Dependency changes are a common cause of reproducibility problems. Recording them weekly enables rapid localization when issues arise.
 
-##### Item 4: Check Whether Outputs Are Properly Labeled (2 Minutes)
+#### Item 4: Check Whether Outputs Are Properly Labeled (2 Minutes)
 
     # Check whether this week’s outputs all have run_id
     ls outputs/
@@ -175,15 +175,15 @@ Unlabeled outputs are “future traps”—you know what they are now, but you w
 
 ### Common Pitfalls
 
-##### Pitfall 1: “I remember it anyway; no need to check.”
+#### Pitfall 1: “I remember it anyway; no need to check.”
 
 **Reality:** two weeks later you will forget the details. Memory is unreliable; records are reliable.
 
-##### Pitfall 2: “This is just a test; no need to record it.”
+#### Pitfall 2: “This is just a test; no need to record it.”
 
 **Reality:** many “just a test” experiments later become the main results in the paper. If you did not record them at the time, you will regret it in the end.
 
-##### Pitfall 3: “It runs, so it should be reproducible.”
+#### Pitfall 3: “It runs, so it should be reproducible.”
 
 **Reality:** “it runs” and “it can be reproduced on another machine/in another environment/two months later” are completely different things.
 
@@ -201,7 +201,7 @@ A monthly review **forces you to look up and see the whole picture**, rather tha
 
 ### Review Checklist (Complete in 30 Minutes)
 
-##### Exploration Debt Review (10 Minutes)
+#### Exploration Debt Review (10 Minutes)
 
 ```bash
 # 1. Quantify code disorder
@@ -224,7 +224,7 @@ recorded experiments / total number of directories = record coverage
 - Record coverage 60–80%: Warning
 - Record coverage \<60%: Dangerous (requires immediate cleanup)
 
-##### Validation Debt Review (10 Minutes)
+#### Validation Debt Review (10 Minutes)
 
 ```text
 # Check validation completeness
@@ -248,7 +248,7 @@ For each result:
 - Missing 1–2: Warning (fill in next month)
 - Missing 3 or more: Dangerous (the paper cannot be written)
 
-##### Reproducibility Debt Review (10 Minutes)
+#### Reproducibility Debt Review (10 Minutes)
 
 ```bash
 # Identify the 3 most important experiments
@@ -312,7 +312,7 @@ If debt is accumulating (numbers decreasing), it indicates that you are “borro
 
 ### Contents of the Reproducibility Baseline
 
-##### Minimal Reproduction Package (Build in 1 Hour)
+#### Minimal Reproduction Package (Build in 1 Hour)
 
 ```text
 reproduce/
@@ -324,7 +324,7 @@ reproduce/
   verify.py              # verification script
 ```
 
-##### README.md Template
+#### README.md Template
 
 ```markdown
 # Reproduction Guide
@@ -378,7 +378,7 @@ python verify.py --check-results
 
 See `docs/TROUBLESHOOTING.md`
 
-##### verify.py Example
+#### verify.py Example
 
 ```python
 import json
@@ -458,7 +458,7 @@ Instead, do it when:
 
 **Accept reality:** You do not have time to “do everything right.” You must focus on what matters most.
 
-##### Priority 1: Ensure the Main Result Is Reproducible (3 days)
+#### Priority 1: Ensure the Main Result Is Reproducible (3 days)
 
 ```text
 # Day 1: Locate the code version for the main experiment
@@ -477,7 +477,7 @@ Instead, do it when:
 # - Worst case: switch to a reproducible, second-best result
 ```
 
-##### Priority 2: Patch the Most Critical Validations (2 days)
+#### Priority 2: Patch the Most Critical Validations (2 days)
 
 Only add validations that **reviewers will definitely ask for**:
 
@@ -485,7 +485,7 @@ Only add validations that **reviewers will definitely ask for**:
 - If you can choose two: additionally add the main ablation study  
 - For the rest: you can state “due to time constraints, left for future work”  
 
-##### Priority 3: Write Minimal Reproducibility Documentation (1 day)
+#### Priority 3: Write Minimal Reproducibility Documentation (1 day)
 
 ```text
 # Minimal reproducibility documentation includes:
