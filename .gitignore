@@ -37,12 +37,16 @@ __pycache__/
 .pytest_cache/
 
 # mdBook build output
-mdbook/book/
-mdbook_*/book/
+book_i18n/book/
 
 # AI generated content (可选择性提交)
 ai_generated/
-illustrations/
+generated_images/
+ghibli_illustrations/
+
+# Test files
+test_*.png
+test_*.py
 
 # Temporary files
 *~
