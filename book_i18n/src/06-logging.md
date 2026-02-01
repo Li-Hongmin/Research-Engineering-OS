@@ -13,7 +13,7 @@
 
 **第二步：找配置**
 
-终于找到了结果文件，但没有记录配置。你翻遍代码历史，试图找到当时用的超参数。你在某个 commit 里找到了可能的配置，但不确定是不是最终版本------你记得当时临时改过学习率，但不确定改成了多少。
+终于找到了结果文件，但没有记录配置。你翻遍代码历史，试图找到当时用的超参数。你在某个 commit 里找到了可能的配置，但不确定是不是最终版本——你记得当时临时改过学习率，但不确定改成了多少。
 
 **第三步：找数据**
 
@@ -62,13 +62,13 @@
       "timestamp": {
         "start": "2026-02-01T16:30:45",
         "end": "2026-02-01T18:45:12"
-      **,
+      },
       "git": {
         "commit": "a1b2c3d4e5f6",
         "dirty": false,
         "branch": "exp/ablation-lr",
         "remote": "git@github.com:user/project.git"
-      **,
+      },
       "config": {
         "path": "configs/ablation_lr.yaml",
         "hash": "sha256:abcd1234...",
@@ -77,8 +77,8 @@
           "learning_rate": 3e-4,
           "batch_size": 32,
           ...
-        **
-      **,
+        }
+      },
       "data": {
         "name": "dataset_v3",
         "path": "/data/project/v3",
@@ -87,35 +87,35 @@
           "train": 8000,
           "val": 1000,
           "test": 1000
-        **
-      **,
+        }
+      },
       "environment": {
         "python": "3.11.7",
         "cuda": "12.1",
         "platform": "Linux-5.15.0-x86_64",
         "gpu": "NVIDIA A100-SXM4-40GB",
         "pip_freeze_hash": "sha256:12345678..."
-      **,
+      },
       "random": {
         "seed": 42,
         "torch_seed": 42,
         "numpy_seed": 42,
         "python_seed": 42
-      **,
+      },
       "metrics": {
         "val_loss": 0.123,
         "val_acc": 0.943,
         "test_loss": 0.145,
         "test_acc": 0.931,
         "training_time_hours": 2.25
-      **,
+      },
       "artifacts": {
         "model": "outputs/2026-02-01_1630_ablation_lr/model.pt",
         "logs": "outputs/2026-02-01_1630_ablation_lr/train.log",
         "predictions": "outputs/2026-02-01_1630_ablation_lr/predictions.json",
         "plots": "outputs/2026-02-01_1630_ablation_lr/plots/"
-      **
-    **
+      }
+    }
 
 #### 关键字段解释：
 
@@ -203,12 +203,12 @@
             "run_id": run_id,
             "timestamp": {
                 "start": datetime.now().isoformat(),
-            **,
+            },
             "git": get_git_info(),
             "config": {
                 "resolved": config,
                 "hash": hash_dict(config),
-            **,
+            },
             "data": get_data_info(config.get("data_path")),
             "environment": get_env_info(),
             "random": get_random_seeds(config),
@@ -216,15 +216,15 @@
             "artifacts": {
                 "model": str(output_dir / "model.pt"),
                 "logs": str(output_dir / "train.log"),
-            **
-        **
+            }
+        }
 
         # 保存到文件
         run_file = output_dir / "run.json"
         with open(run_file, "w") as f:
             json.dump(run_info, f, indent=2)
 
-        print(f"Run info logged to {run_file**")
+        print(f"Run info logged to {run_file}")
 
     def get_git_info():
         """获取 git 信息"""
@@ -254,7 +254,7 @@
             "dirty": dirty,
             "branch": branch,
             "remote": remote
-        **
+        }
 
     def get_data_info(data_path):
         """获取数据信息"""
@@ -267,7 +267,7 @@
             "name": data_path.name,
             "path": str(data_path.absolute()),
             # "hash": compute_dir_hash(data_path),  # 可选
-        **
+        }
 
     def get_env_info():
         """获取环境信息"""
@@ -277,7 +277,7 @@
         env = {
             "python": sys.version.split()[0],
             "platform": platform.platform(),
-        **
+        }
 
         # 获取 CUDA 版本（如果可用）
         try:
@@ -308,7 +308,7 @@
             "seed": config.get("seed", None),
             "torch_seed": config.get("torch_seed", None),
             "numpy_seed": config.get("numpy_seed", None),
-        **
+        }
 
     def hash_dict(d):
         """计算字典的哈希"""
@@ -329,7 +329,7 @@
         args = parse_args()
 
         # 创建 run_id 和输出目录
-        run_id = f"{datetime.now().strftime('%Y-%m-%d_%H%M')**_{args.exp_name**"
+        run_id = f"{datetime.now().strftime('%Y-%m-%d_%H%M')}_{args.exp_name}"
         output_dir = Path("outputs") / run_id
         output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -353,9 +353,9 @@
 
         # 提示写 run.md
         print(f"\n{'='*60**")
-        print(f"[OK] Experiment completed: {run_id**")
+        print(f"[OK] Experiment completed: {run_id}")
         print(f"[NOTE] Please write a brief summary in:")
-        print(f"    {output_dir / 'run.md'**")
+        print(f"    {output_dir / 'run.md'}")
         print(f"{'='*60**\n")
 
     if __name__ == "__main__":
@@ -367,7 +367,7 @@
 
     def create_run_md_template(output_dir, run_id):
         """创建 run.md 模板"""
-        template = f"""# Run: {run_id**
+        template = f"""# Run: {run_id}
 
     ## 假设 (Hypothesis)
     [这次实验想验证什么？预期结果是什么？]
@@ -388,7 +388,7 @@
         md_file = output_dir / "run.md"
         if not md_file.exists():
             md_file.write_text(template)
-            print(f"[NOTE] run.md template created at {md_file**")
+            print(f"[NOTE] run.md template created at {md_file}")
 
 这样，每次实验结束后，你只需要填空，而不是从零开始写。
 
@@ -484,11 +484,11 @@
         # 排序
         runs.sort(key=lambda x: x[metric], reverse=True)
 
-        print(f"Top {top_k** runs by {metric**:")
+        print(f"Top {top_k} runs by {metric}:")
         for i, run in enumerate(runs[:top_k], 1):
-            print(f"{i**. {run['run_id']**: {run[metric]:.4f**")
-            print(f"   Config: lr={run['config'].get('learning_rate')**, "
-                  f"bs={run['config'].get('batch_size')**")
+            print(f"{i}. {run['run_id']}: {run[metric]:.4f}")
+            print(f"   Config: lr={run['config'].get('learning_rate')}, "
+                  f"bs={run['config'].get('batch_size')}")
 
         return runs[:top_k]
 
@@ -507,7 +507,7 @@
         run1 = load_run(run_id1)
         run2 = load_run(run_id2)
 
-        print(f"Comparing {run_id1** vs {run_id2**\n")
+        print(f"Comparing {run_id1} vs {run_id2}\n")
 
         # 对比配置
         config1 = run1["config"]["resolved"]
@@ -518,7 +518,7 @@
             val1 = config1.get(key, "N/A")
             val2 = config2.get(key, "N/A")
             if val1 != val2:
-                print(f"  {key**: {val1** -> {val2**")
+                print(f"  {key}: {val1} -> {val2}")
 
         # 对比指标
         print("\nMetrics:")
@@ -528,8 +528,8 @@
             val1 = metrics1[key]
             val2 = metrics2[key]
             diff = val2 - val1
-            print(f"  {key**: {val1:.4f** -> {val2:.4f** "
-                  f"({diff:+.4f**, {diff/val1*100:+.2f**%)")
+            print(f"  {key}: {val1:.4f} -> {val2:.4f} "
+                  f"({diff:+.4f}, {diff/val1*100:+.2f}%)")
 
     def load_run(run_id):
         """加载实验信息"""
@@ -621,4 +621,4 @@
 
     花 2 分钟填写五要素模板。
 
-从下一个实验开始，记录就是自动的、零成本的。你唯一要做的就是花 2 分钟写 5 行摘要------这个投入会在三个月后得到百倍回报。
+从下一个实验开始，记录就是自动的、零成本的。你唯一要做的就是花 2 分钟写 5 行摘要——这个投入会在三个月后得到百倍回报。

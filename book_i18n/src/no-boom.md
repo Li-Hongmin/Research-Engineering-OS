@@ -5,7 +5,7 @@
 
 ## 故事引入：离 deadline 只剩一周的噩梦
 
-周一早上，你查看日历，心里一沉------论文截稿倒计时：**7 天**。
+周一早上，你查看日历，心里一沉——论文截稿倒计时：**7 天**。
 
 你原本计划这周只是"最后润色"：把实验结果整理成图表，写好相关工作，检查一遍格式。应该很轻松，对吧？
 
@@ -13,7 +13,7 @@
 
 ### 周一：发现主实验无法复现
 
-你想重新跑一次主实验，确认数字没记错。但运行脚本后，结果和三周前不一样------准确率从 94.3% 降到了 92.1%。
+你想重新跑一次主实验，确认数字没记错。但运行脚本后，结果和三周前不一样——准确率从 94.3% 降到了 92.1%。
 
 你慌了。开始排查：
 
@@ -29,7 +29,7 @@
 
 审稿人肯定会关注你和 baseline 的对比。你仔细检查，发现一个致命问题：你的方法用的是最新的数据预处理，但 baseline 用的是旧版本。评估口径根本不一致。
 
-你需要重新跑 baseline------但这需要 6 小时训练时间。
+你需要重新跑 baseline——但这需要 6 小时训练时间。
 
 #### 周三：发现缺少关键的消融实验
 
@@ -57,7 +57,7 @@
 
 #### 周四：发现图表数据找不到
 
-你想生成论文图表，但发现关键实验的输出文件找不到了------可能被你不小心删了，或者在某次清理时弄丢了。你只记得"结果很好"，但原始数据没了。
+你想生成论文图表，但发现关键实验的输出文件找不到了——可能被你不小心删了，或者在某次清理时弄丢了。你只记得"结果很好"，但原始数据没了。
 
 你不得不重新跑那些实验。
 
@@ -154,7 +154,7 @@
     # 检查是否有"unnamed"、"temp"、"test"这类临时目录
     # 如果有，要么删除，要么给它们起正式名字
 
-无名输出是"未来的坑"------你现在知道它是什么，但一个月后就忘了。
+无名输出是"未来的坑"——你现在知道它是什么，但一个月后就忘了。
 
 ### 自查频率与时机
 
@@ -386,8 +386,8 @@
     def verify_environment():
         """验证环境是否正确"""
         import torch
-        print(f"✅ PyTorch version: {torch.__version__**")
-        print(f"✅ CUDA available: {torch.cuda.is_available()**")
+        print(f"✅ PyTorch version: {torch.__version__}")
+        print(f"✅ CUDA available: {torch.cuda.is_available()}")
         # 更多检查...
 
     def verify_data():
@@ -398,7 +398,7 @@
 
     def verify_results(run_id, expected_metric, tolerance=0.01):
         """验证结果是否在预期范围内"""
-        run_json = Path(f"outputs/{run_id**/run.json")
+        run_json = Path(f"outputs/{run_id}/run.json")
         with open(run_json) as f:
             run_info = json.load(f)
 
@@ -406,12 +406,12 @@
         diff = abs(actual - expected_metric)
 
         if diff <= tolerance:
-            print(f"✅ {run_id**: {actual:.3f** "
-                  f"(expected {expected_metric:.3f** ± {tolerance:.3f**)")
+            print(f"✅ {run_id}: {actual:.3f} "
+                  f"(expected {expected_metric:.3f} ± {tolerance:.3f})")
             return True
         else:
-            print(f"❌ {run_id**: {actual:.3f** "
-                  f"(expected {expected_metric:.3f**, diff {diff:.3f**)")
+            print(f"❌ {run_id}: {actual:.3f} "
+                  f"(expected {expected_metric:.3f}, diff {diff:.3f})")
             return False
 
     if __name__ == "__main__":
@@ -582,11 +582,11 @@
 
 正确的心态是：
 
-- **不要等"确定能用"才记录**------任何"看起来不错"的结果都要立刻记录
+- **不要等"确定能用"才记录**——任何"看起来不错"的结果都要立刻记录
 
-- **不要等"写论文"才验证复现性**------日常就要持续验证
+- **不要等"写论文"才验证复现性**——日常就要持续验证
 
-- **不要等"审稿人要求"才补实验**------提前识别验证债，主动补齐
+- **不要等"审稿人要求"才补实验**——提前识别验证债，主动补齐
 
 **三个提前动作是你的保险**：
 

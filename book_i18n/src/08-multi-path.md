@@ -15,7 +15,7 @@
 
 - 路径 D：调整损失函数（6 种不同的损失组合）
 
-你很兴奋------这么多探索！肯定能找到有效的组合！
+你很兴奋——这么多探索！肯定能找到有效的组合！
 
 但当你打开项目目录，看到的是这样的景象：
 
@@ -54,7 +54,7 @@
 
 #### 问题 2：不敢删除任何东西
 
-outputs/ 已经占了 50GB 空间，但你不敢删除任何目录------万一删掉的正好是论文需要的那个实验呢？你决定"先留着，反正硬盘够大"。
+outputs/ 已经占了 50GB 空间，但你不敢删除任何目录——万一删掉的正好是论文需要的那个实验呢？你决定"先留着，反正硬盘够大"。
 
 #### 问题 3：无法对比不同路径
 
@@ -426,10 +426,10 @@ outputs/ 已经占了 50GB 空间，但你不敢删除任何目录------万一�
     def compare_to_baseline(path_name):
         """对比某条路径和基准的结果"""
         baseline = load_best_run("outputs/baseline")
-        path = load_best_run(f"outputs/{path_name**")
+        path = load_best_run(f"outputs/{path_name}")
 
         print(f"\n{'='*60**")
-        print(f"路径对比：{path_name** vs Baseline")
+        print(f"路径对比：{path_name} vs Baseline")
         print(f"{'='*60**\n")
 
         # 对比配置差异
@@ -447,10 +447,10 @@ outputs/ 已经占了 50GB 空间，但你不敢删除任何目录------万一�
         # 结论
         print("\n结论：")
         if is_improvement(path["metrics"], baseline["metrics"]):
-            print(f"[OK] 路径 {path_name** 成功改进 baseline")
+            print(f"[OK] 路径 {path_name} 成功改进 baseline")
             print(f"   建议：合并到主线")
         else:
-            print(f"[NO] 路径 {path_name** 未能改进 baseline")
+            print(f"[NO] 路径 {path_name} 未能改进 baseline")
             print(f"   建议：归档或删除")
 
     if __name__ == "__main__":
@@ -525,7 +525,7 @@ outputs/ 已经占了 50GB 空间，但你不敢删除任何目录------万一�
     find outputs/ -type d -mtime +30 | while read dir; do
         if [ -f "$dir/run.json" ]; then
             echo "压缩：$dir"
-            tar -czf "${dir**.tar.gz" $dir
+            tar -czf "${dir}.tar.gz" $dir
             rm -rf $dir
         fi
     done

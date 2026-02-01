@@ -387,8 +387,8 @@ from pathlib import Path
 def verify_environment():
     """Verify that the environment is correctly configured"""
     import torch
-    print(f"✅ PyTorch version: {torch.__version__**")
-    print(f"✅ CUDA available: {torch.cuda.is_available()**")
+    print(f"✅ PyTorch version: {torch.__version__}")
+    print(f"✅ CUDA available: {torch.cuda.is_available()}")
     # Additional checks...
 
 def verify_data():
@@ -399,7 +399,7 @@ def verify_data():
 
 def verify_results(run_id, expected_metric, tolerance=0.01):
     """Verify that results fall within the expected range"""
-    run_json = Path(f"outputs/{run_id**/run.json")
+    run_json = Path(f"outputs/{run_id}/run.json")
     with open(run_json) as f:
         run_info = json.load(f)
 
@@ -407,12 +407,12 @@ def verify_results(run_id, expected_metric, tolerance=0.01):
     diff = abs(actual - expected_metric)
 
     if diff <= tolerance:
-        print(f"✅ {run_id**: {actual:.3f** "
-              f"(expected {expected_metric:.3f** ± {tolerance:.3f**)")
+        print(f"✅ {run_id}: {actual:.3f} "
+              f"(expected {expected_metric:.3f} ± {tolerance:.3f})")
         return True
     else:
-        print(f"❌ {run_id**: {actual:.3f** "
-              f"(expected {expected_metric:.3f**, diff {diff:.3f**)")
+        print(f"❌ {run_id}: {actual:.3f} "
+              f"(expected {expected_metric:.3f}, diff {diff:.3f})")
         return False
 
 if __name__ == "__main__":

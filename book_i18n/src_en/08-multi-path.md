@@ -423,10 +423,10 @@ When comparing all paths, you must use **the same baseline**:
     def compare_to_baseline(path_name):
         """Compare the results of a given path against the baseline"""
         baseline = load_best_run("outputs/baseline")
-        path = load_best_run(f"outputs/{path_name**")
+        path = load_best_run(f"outputs/{path_name}")
 
         print(f"\n{'='*60**")
-        print(f"Path comparison: {path_name** vs Baseline")
+        print(f"Path comparison: {path_name} vs Baseline")
         print(f"{'='*60**\n")
 
         # Compare configuration differences
@@ -444,10 +444,10 @@ When comparing all paths, you must use **the same baseline**:
         # Conclusion
         print("\nConclusion:")
         if is_improvement(path["metrics"], baseline["metrics"]):
-            print(f"[OK] Path {path_name** successfully improves the baseline")
+            print(f"[OK] Path {path_name} successfully improves the baseline")
             print(f"   Recommendation: merge into the mainline")
         else:
-            print(f"[NO] Path {path_name** fails to improve the baseline")
+            print(f"[NO] Path {path_name} fails to improve the baseline")
             print(f"   Recommendation: archive or delete")
 
     if __name__ == "__main__":
@@ -523,7 +523,7 @@ For each path, ask three questions:
 find outputs/ -type d -mtime +30 | while read dir; do
     if [ -f "$dir/run.json" ]; then
         echo "Compressing: $dir"
-        tar -czf "${dir**.tar.gz" $dir
+        tar -czf "${dir}.tar.gz" $dir
         rm -rf $dir
     fi
 done
@@ -733,7 +733,7 @@ If you do only one thing right now: inventory and categorize all current explora
 
 5.  **Schedule next week’s cleanup time**
 
-    Add to your calendar: **Every Friday 17:00 – Exploration Path Cleanup (30 minutes)**
+    Add to your calendar: **Every Friday 17:00 – Exploration Path Cleanup (30 minutes)}
 
 After completing this 10-minute action, you will immediately feel:
 

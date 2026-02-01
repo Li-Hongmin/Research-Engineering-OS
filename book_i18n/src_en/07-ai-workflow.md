@@ -280,8 +280,8 @@ Potential risks:
 
     ```bash
 Rollback strategy:
-- If tests fail: git checkout -- <file>
-- If experimental results degrade: revert to commit <hash>
+- If tests fail: git checkout -- `<file>`
+- If experimental results degrade: revert to commit `<hash>`
 - If other functionality is affected: roll back and create a new branch for isolated debugging
 ```
 
@@ -541,7 +541,7 @@ make train CONFIG=configs/baseline_new_loader.yaml  # Use the new version
         pytest tests/ -q || {
             echo "Error: tests failed"
             exit 1
-        **
+        }
 
 - Enforce it in CI (see the next section)
 
