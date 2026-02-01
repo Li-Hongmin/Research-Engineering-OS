@@ -49,6 +49,7 @@
         picker.innerHTML = `
             <button class="language-toggle" aria-label="Select language" aria-expanded="false">
                 <span class="language-icon">🌐</span>
+                <span class="language-label">Language:</span>
                 <span class="language-name">${currentName}</span>
                 <span class="language-arrow">▼</span>
             </button>
@@ -76,24 +77,35 @@
             .language-toggle {
                 display: flex;
                 align-items: center;
-                gap: 0.3rem;
-                padding: 0.4rem 0.6rem;
-                background: transparent;
-                border: 1px solid var(--icons);
-                border-radius: 4px;
-                color: var(--icons);
+                gap: 0.4rem;
+                padding: 0.5rem 0.8rem;
+                background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
+                border: none;
+                border-radius: 6px;
+                color: #fff;
                 cursor: pointer;
-                font-size: 0.9rem;
+                font-size: 0.95rem;
+                font-weight: 500;
                 transition: all 0.2s ease;
+                box-shadow: 0 2px 4px rgba(74, 144, 217, 0.3);
             }
             .language-toggle:hover {
-                background: var(--quote-bg);
-                border-color: var(--links);
-                color: var(--links);
+                background: linear-gradient(135deg, #357abd 0%, #2868a9 100%);
+                box-shadow: 0 4px 8px rgba(74, 144, 217, 0.4);
+                transform: translateY(-1px);
+            }
+            .language-icon {
+                font-size: 1.1rem;
             }
             .language-arrow {
-                font-size: 0.6rem;
+                font-size: 0.65rem;
                 transition: transform 0.2s ease;
+                opacity: 0.9;
+            }
+            .language-label {
+                font-size: 0.75rem;
+                opacity: 0.85;
+                margin-right: 0.2rem;
             }
             .language-picker.open .language-arrow {
                 transform: rotate(180deg);
