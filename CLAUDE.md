@@ -20,11 +20,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # Build multilingual book (Chinese + English + Japanese)
-cd book_i18n
+cd text-book
 ./build_all.sh
 
 # Local preview
-cd book && python -m http.server 8000
+cd text-book/book && python -m http.server 8000
 # Visit http://localhost:8000
 ```
 
@@ -40,10 +40,11 @@ book/
 ## Project Structure
 
 ```
-book_i18n/
+text-book/                 # Multilingual research engineering book
 ├── src/                    # Chinese source (primary)
 ├── src_en/                 # English source
 ├── src_ja/                 # Japanese source
+├── manga/                  # Manga/comics resources for illustrations
 ├── theme/
 │   ├── custom.css          # Custom styles
 │   └── language-picker.js  # Language switcher dropdown
@@ -52,6 +53,13 @@ book_i18n/
 ├── generate_comics_parallel.py  # Manga illustration generator (Azure OpenAI)
 ├── sync_comics_to_en.py    # Sync illustrations across languages
 └── insert_comics_en.py     # Insert comics into English markdown
+
+manga-book/                # Independent manga/comic edition
+├── src/                    # Manga markdown source
+├── images/                 # Manga panel images
+├── theme/
+├── book.toml               # mdBook configuration
+└── CLAUDE.md              # Manga-specific guidance
 ```
 
 ### Source Files (in each src/ directory)
@@ -65,20 +73,28 @@ book_i18n/
 
 ## Key Workflows
 
-### Adding/Editing Content
-1. Edit markdown in `src/` (Chinese primary)
-2. Update corresponding file in `src_en/` and `src_ja/`
-3. Run `./build_all.sh` to verify
+### Adding/Editing Content (text-book/)
+1. Edit markdown in `text-book/src/` (Chinese primary)
+2. Update corresponding file in `text-book/src_en/` and `text-book/src_ja/`
+3. Run `text-book/build_all.sh` to verify
 4. Commit and push (GitHub Actions auto-deploys)
 
-### Syncing Illustrations
+### Working on Manga Edition (manga-book/)
+1. Edit markdown in `manga-book/src/`
+2. Add/update images in `manga-book/images/`
+3. Run `mdbook build` in `manga-book/` directory
+4. See manga-book/CLAUDE.md for detailed guidance
+
+### Syncing Illustrations (for text-book/)
 ```bash
+cd text-book
 # After adding comics to Chinese, sync to English
 python3 sync_comics_to_en.py
 ```
 
-### Generating New Illustrations
+### Generating New Illustrations (for text-book/)
 ```bash
+cd text-book
 # Requires Azure OpenAI credentials in ~/.azure_openai_config
 source ~/.azure_openai_config
 python3 generate_comics_parallel.py --all --workers 8
@@ -95,8 +111,9 @@ python3 generate_comics_parallel.py --all --workers 8
 
 Configured in `.github/workflows/deploy.yml`:
 - Triggers on push to `main`
-- Runs `build_all.sh`
-- Deploys `book_i18n/book/` to GitHub Pages
+- Runs `text-book/build_all.sh` for multilingual book
+- Deploys `text-book/book/` (Chinese + English + Japanese) to GitHub Pages
+- Note: Manga edition (manga-book/) currently requires manual deployment
 
 **GitHub Pages Setup**: Settings → Pages → Source: "GitHub Actions"
 

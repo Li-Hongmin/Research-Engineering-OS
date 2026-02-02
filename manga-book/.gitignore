@@ -1,0 +1,10 @@
+# Build output (can be regenerated)
+book/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.DS_Store

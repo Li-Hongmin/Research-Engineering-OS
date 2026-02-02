@@ -84,7 +84,7 @@ Each chapter is split into individual Markdown files (01.md, 02.md, ... 25.md), 
 
 ### Build the book
 ```bash
-cd /Users/lihongmin/ideas/Research-Engineering-OS-/book_i18n/manga_book
+cd /Users/lihongmin/ideas/Research-Engineering-OS-/manga-book
 mdbook build
 ```
 
@@ -96,7 +96,7 @@ cd book && python -m http.server 8001
 
 ### Complete workflow (from project root)
 ```bash
-cd /Users/lihongmin/ideas/Research-Engineering-OS-/book_i18n/manga_book
+cd /Users/lihongmin/ideas/Research-Engineering-OS-/manga-book
 mdbook build && cd book && python -m http.server 8001
 ```
 
@@ -222,7 +222,7 @@ Minor updates to `book.toml` are safe; major changes (output format, chapter str
 
 ## Technical Notes
 
-- **No multilingual build here**: This is Chinese-only (unlike parent `/book_i18n/` which has zh/en/ja versions)
+- **No multilingual build here**: This is Chinese-only (unlike parent `text-book/` which has zh/en/ja versions)
 - **Image paths**: Relative to each markdown file, pointing to `../images/CHAPTER-ID/`
 - **SUMMARY.md**: Auto-generated from directory structure - do not edit manually
 - **No code compilation**: Pure markdown + HTML, no programming language dependencies

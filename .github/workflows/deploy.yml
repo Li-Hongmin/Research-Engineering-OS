@@ -30,14 +30,14 @@ jobs:
 
       - name: Build multilingual book
         run: |
-          cd book_i18n
+          cd text-book
           chmod +x build_all.sh
           ./build_all.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./book_i18n/book
+          path: ./text-book/book
 
   deploy:
     environment:
