@@ -11,7 +11,8 @@ This directory contains one-time generation and migration scripts that were used
 | `generate_comics.py` | Original comic generation | ✓ Archived | First implementation, superseded by v2/parallel |
 | `generate_comics_v2.py` | Improved comic generation | ✓ Archived | Better quality, but parallel version is preferred |
 | `generate_illustrations.py` | Illustration post-processing | ✓ Archived | Used for refining generated images |
-| `generate_manga.py` | Manga-specific generation | ✓ Archived | Reference implementation for panel generation |
+| `generate_manga.py` | Manga panel generation | ✓ Archived | Reference for panel creation workflow |
+| `generate_manga_book.py` | Generate manga Markdown from YAML | ✓ Archived | Used to create initial 12 chapters from storyboards |
 | `insert_comics_en.py` | Insert comics into English markdown | ✓ Archived | One-time migration tool for content insertion |
 | `sync_comics_to_en.py` | Sync comics across languages | ✓ Archived | Used for initial language synchronization |
 
