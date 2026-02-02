@@ -4,16 +4,25 @@ This directory contains resources shared between the text-book and manga-book pr
 
 ## 📁 Directory Structure
 
-### `scripts/` - Shared Utility Scripts
+### `scripts/` - Active Utility Scripts
 ```
 scripts/
-├── generate_comics.py              # Original comic generation script
-├── generate_comics_v2.py           # Version 2 with improvements
-├── generate_comics_parallel.py     # Parallel generation (Azure OpenAI)
-├── generate_illustrations.py       # Illustration generator
-├── sync_comics_to_en.py           # Sync comics across languages
-└── insert_comics_en.py            # Insert comics into markdown
+├── generate_comics_parallel.py     # Parallel generation (Azure OpenAI) ⭐ ACTIVE
+└── README.md                       # Script documentation
 ```
+
+### `archive/scripts/` - One-Time Generation Tools
+```
+archive/scripts/
+├── generate_comics.py              # Original comic generation (v1)
+├── generate_comics_v2.py           # Version 2 with improvements
+├── generate_illustrations.py       # Illustration post-processor
+├── generate_manga.py              # Manga-specific generator
+├── sync_comics_to_en.py           # Language synchronization tool
+└── insert_comics_en.py            # Markdown insertion tool
+```
+
+**Note:** Archived scripts were used for initial content generation and are kept for reference only. See `archive/README.md` for details.
 
 **Usage:**
 ```bash
@@ -129,16 +138,25 @@ python3 insert_comics_en.py
 
 ## 🛠️ Maintenance
 
-### Adding New Illustrations
+### Adding New Illustrations (If Needed)
 1. Create/update storyboard YAML in `manga-resources/storyboards/`
-2. Run appropriate generation script from `scripts/`
+2. Run generation script:
+   ```bash
+   cd scripts
+   python3 generate_comics_parallel.py --chapter {chapter-name} --workers 4
+   ```
 3. Generated panels stored in `manga-resources/panels/`
 4. Update references in both `text-book/` and `manga-book/`
 
-### Updating Scripts
-- Keep all scripts in `scripts/` directory
-- Document script purpose and usage in this README
-- Update CI/CD pipelines if scripts change
+### Working with Archived Scripts
+- For reference: See `archive/scripts/` and `archive/README.md`
+- To restore: Use `git mv` to bring back from archive
+- To understand alternatives: Check different versions in archive
+
+### Critical Assets (Do Not Delete)
+- ✅ `manga-resources/panels/` - 180+ finished panel images
+- ✅ `manga-resources/storyboards/` - 12 YAML specifications
+- ✅ `scripts/generate_comics_parallel.py` - Active generation tool
 
 ## 📦 Versioning
 
