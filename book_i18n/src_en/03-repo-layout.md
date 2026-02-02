@@ -273,7 +273,19 @@ If you truly need to manage multiple related tasks within one repository (e.g., 
 
 At the beginning, prefer copying; extract into common/ only after the code is truly stable and you are confident it needs to be shared. Premature abstraction leads to frequent modifications of shared code and increases maintenance burden.
 
-## A 10-Minute Action: “Layer Once” Your Current Project
+## Quick Start: Use AI to Generate Your Repository Template
+
+To speed up this process, your advisor suggests using an AI assistant. Simply describe the directory structure and files you need—for example, in one sentence to Claude:
+
+> "Generate a standard research project template with directories: src/, experiments/, configs/, outputs/, data/, reports/, scripts/, tests/. Include a README.md explaining each directory's purpose and a Makefile with targets for test, train, eval, and reproduce."
+
+Within a minute, a complete project structure with all essential files is generated. You now have a solid foundation before writing a single line of code—a perfect example of "standing on the shoulders of giants." Going forward, you decide to initialize every new project this way.
+
+### Why This Matters
+
+Using AI to generate boilerplate is not lazy; it is **structural wisdom**. By outsourcing the tedious template creation, you ensure every project starts with best practices. The human effort is then focused on the unique science, not on redoing infrastructure.
+
+## A 10-Minute Action: "Layer Once" Your Current Project
 
 If you do only one thing right now: roughly split the current repository into slow variables and fast variables.
 
