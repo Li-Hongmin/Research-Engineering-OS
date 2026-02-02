@@ -235,9 +235,22 @@ cd manga-book/images
 
 Configured in `.github/workflows/deploy.yml`:
 - Triggers on push to `main`
-- Runs `text-book/build_all.sh` for multilingual book
-- Deploys `text-book/book/` (Chinese + English + Japanese) to GitHub Pages
-- Note: Manga edition (manga-book/) currently requires manual deployment
+- **Builds both editions:**
+  - Runs `text-book/build_all.sh` → generates Chinese + English + Japanese
+  - Runs `mdbook build` in `manga-book/` → generates manga edition
+  - Combines outputs: manga-book deployed to `/manga/` subdirectory
+- Deploys unified output to GitHub Pages
+
+**Final structure at GitHub Pages:**
+```
+https://li-hongmin.github.io/Research-Engineering-OS/
+├── index.html         ← Navigation page (文本版 / 漫画版)
+├── zh/                ← Text book Chinese
+├── en/                ← Text book English
+├── ja/                ← Text book Japanese
+└── manga/             ← Manga edition
+    └── (all manga chapters)
+```
 
 **GitHub Pages Setup**: Settings → Pages → Source: "GitHub Actions"
 

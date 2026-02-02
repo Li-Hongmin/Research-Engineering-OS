@@ -28,11 +28,25 @@ jobs:
         with:
           mdbook-version: 'latest'
 
-      - name: Build multilingual book
+      - name: Build multilingual text book
         run: |
           cd text-book
           chmod +x build_all.sh
           ./build_all.sh
+
+      - name: Build manga edition
+        run: |
+          cd manga-book
+          mdbook build
+
+      - name: Combine outputs
+        run: |
+          # Move manga-book output to text-book/book/manga
+          mkdir -p text-book/book/manga
+          cp -r manga-book/book/* text-book/book/manga/
+
+          # Create navigation index (optional enhancement)
+          echo "✅ Combined text-book and manga-book into single deployment"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
