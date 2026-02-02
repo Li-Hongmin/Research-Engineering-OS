@@ -6,6 +6,7 @@ description = "用漫画讲述研究工程实践的故事"
 
 [output.html]
 additional-css = ["theme/custom.css"]
+additional-js = ["theme/version-language-picker.js"]
 default-theme = "light"
 preferred-dark-theme = "coal"
 git-repository-url = "https://github.com/li-hongmin/Research-Engineering-OS"
