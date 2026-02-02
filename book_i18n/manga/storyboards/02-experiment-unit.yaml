@@ -1,0 +1,222 @@
+# 第二章「实验才是单元」分镜脚本
+# Chapter 2: "Experiment as the Unit"
+# 20 panels teaching the six elements of an experiment
+
+chapter: "02-experiment-unit"
+title_zh: "实验才是单元"
+title_en: "Experiment as the Unit"
+title_ja: "実験こそが単位"
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  # Opening: The Fundamental Shift (panels 1-4)
+  - id: "02_001"
+    type: "establishing"
+    description_zh: "小研看着复杂的代码文件结构困惑"
+    description_en: "Xiao Yan confused looking at complex code file structure"
+    prompt: |
+      Researcher staring at complex file browser with deep nested folders,
+      hundreds of Python files, confusion on face, hand on chin,
+      trying to understand what belongs to what experiment,
+      overwhelmed expression, cluttered screen.
+
+  - id: "02_002"
+    type: "revelation"
+    description_zh: "导师指出：实验不是代码文件"
+    description_en: "Mentor pointing out: experiment is not code files"
+    prompt: |
+      Split panel showing wrong vs right mental model,
+      left side: scattered code files floating chaotically,
+      right side: cohesive experiment unit glowing as one entity,
+      mentor figure pointing to the right side, enlightenment moment.
+
+  - id: "02_003"
+    type: "concept"
+    description_zh: "实验单元的六个元素浮现"
+    description_en: "Six elements of experiment unit emerging"
+    prompt: |
+      Holographic hexagonal diagram appearing before researcher,
+      six glowing nodes: Code, Data, Config, Environment, Results, Logs,
+      all connected to central "Experiment" core,
+      researcher's eyes widening with understanding, magical visualization.
+
+  - id: "02_004"
+    type: "analogy"
+    description_zh: "比喻：像生物细胞一样完整"
+    description_en: "Analogy: complete like a biological cell"
+    prompt: |
+      Visual metaphor of experiment as living cell,
+      six elements as organelles inside the cell membrane,
+      self-contained, reproducible, complete unit,
+      beautiful scientific illustration style, researcher admiring.
+
+  # Element 1: Code Version (panels 5-7)
+  - id: "02_005"
+    type: "element"
+    description_zh: "元素1：代码版本 - Git Hash作为DNA"
+    description_en: "Element 1: Code version - Git Hash as DNA"
+    prompt: |
+      Researcher examining glowing git commit hash like DNA strand,
+      hash string floating with genetic helix visualization,
+      "abc123" style commit ID highlighted, timestamp attached,
+      scientific examination pose, reverent handling.
+
+  - id: "02_006"
+    type: "problem"
+    description_zh: "问题：哪个版本的代码产生了这个结果？"
+    description_en: "Problem: which code version produced this result?"
+    prompt: |
+      Researcher holding result printout, looking at multiple code versions,
+      question marks floating between results and code versions,
+      uncertainty visualized as fog, frustrated expression,
+      detective trying to connect clues.
+
+  - id: "02_007"
+    type: "solution"
+    description_zh: "解决：每次运行记录commit hash"
+    description_en: "Solution: record commit hash for every run"
+    prompt: |
+      Clean terminal showing run script that logs git hash automatically,
+      researcher nodding approvingly, checklist item checked,
+      git hash being written to run log, satisfaction expression,
+      organized workflow visualization.
+
+  # Element 2: Data Version (panels 8-10)
+  - id: "02_008"
+    type: "element"
+    description_zh: "元素2：数据版本 - 数据也有DNA"
+    description_en: "Element 2: Data version - data has DNA too"
+    prompt: |
+      Researcher examining dataset with hash fingerprint,
+      data files with unique identifiers floating,
+      MD5/SHA checksum visualization as barcode,
+      treating data as first-class versioned citizen.
+
+  - id: "02_009"
+    type: "problem"
+    description_zh: "问题：数据偷偷变了"
+    description_en: "Problem: data changed silently"
+    prompt: |
+      Researcher discovering that training data was modified,
+      comparison showing before/after with subtle differences,
+      horror realization expression, data integrity violation,
+      silent mutation visualized as shadow creeping in.
+
+  - id: "02_010"
+    type: "solution"
+    description_zh: "解决：数据hash + 来源记录"
+    description_en: "Solution: data hash + provenance tracking"
+    prompt: |
+      Researcher setting up data versioning with DVC or similar,
+      data lineage tree visualization, checksums recorded,
+      confident expression, data integrity guaranteed,
+      clean provenance chain from raw to processed.
+
+  # Element 3: Configuration (panels 11-13)
+  - id: "02_011"
+    type: "element"
+    description_zh: "元素3：配置 - 实验的参数设置"
+    description_en: "Element 3: Configuration - experiment parameters"
+    prompt: |
+      Researcher adjusting holographic control panel,
+      sliders for learning_rate, batch_size, epochs,
+      config file floating with YAML/JSON structure,
+      precise parameter tuning visualization.
+
+  - id: "02_012"
+    type: "problem"
+    description_zh: "问题：默认值藏在代码里"
+    description_en: "Problem: default values hidden in code"
+    prompt: |
+      Researcher searching through code for hidden defaults,
+      hardcoded values buried deep in functions,
+      frustrated expression, treasure hunt in wrong place,
+      defaults scattered like hidden traps.
+
+  - id: "02_013"
+    type: "solution"
+    description_zh: "解决：配置文件 + 命令行覆盖"
+    description_en: "Solution: config file + command line override"
+    prompt: |
+      Clean config.yaml file structure on screen,
+      command line showing --override options,
+      researcher satisfied with explicit parameter handling,
+      no hidden values, everything documented.
+
+  # Element 4: Environment (panels 14-16)
+  - id: "02_014"
+    type: "element"
+    description_zh: "元素4：环境 - 完整的运行条件"
+    description_en: "Element 4: Environment - complete runtime conditions"
+    prompt: |
+      Researcher packaging environment in virtual container,
+      Python version, CUDA version, library versions floating,
+      Docker container or conda env visualization,
+      environment as portable capsule.
+
+  - id: "02_015"
+    type: "problem"
+    description_zh: "问题：在我电脑上能跑"
+    description_en: "Problem: works on my machine"
+    prompt: |
+      Classic "works on my machine" scenario,
+      researcher's laptop showing success, server showing failure,
+      environment differences visualized as mismatched puzzle pieces,
+      frustration and confusion.
+
+  - id: "02_016"
+    type: "solution"
+    description_zh: "解决：requirements.txt + Docker"
+    description_en: "Solution: requirements.txt + Docker"
+    prompt: |
+      Researcher creating requirements.txt and Dockerfile,
+      environment now perfectly reproducible crystal cube,
+      same results on any machine visualization,
+      satisfaction of portability.
+
+  # Element 5-6: Results & Logs (panels 17-18)
+  - id: "02_017"
+    type: "element"
+    description_zh: "元素5-6：结果与日志 - 输出的完整记录"
+    description_en: "Elements 5-6: Results & Logs - complete output record"
+    prompt: |
+      Researcher's experiment producing organized outputs,
+      results folder with metrics, models, plots,
+      logs folder with structured JSON and human notes,
+      everything timestamped and organized beautifully.
+
+  - id: "02_018"
+    type: "practice"
+    description_zh: "实践：run_id命名规范"
+    description_en: "Practice: run_id naming convention"
+    prompt: |
+      Clean folder structure with timestamp-based run IDs,
+      2024-01-15_exp001_baseline format visible,
+      researcher organizing experiments like library catalog,
+      satisfaction of order and findability.
+
+  # Closing (panels 19-20)
+  - id: "02_019"
+    type: "synthesis"
+    description_zh: "综合：六要素检查清单"
+    description_en: "Synthesis: six elements checklist"
+    prompt: |
+      Researcher with complete checklist of six elements,
+      all items checked off for current experiment,
+      glowing experiment unit now complete and sealed,
+      confidence and pride in thorough work.
+
+  - id: "02_020"
+    type: "preview"
+    description_zh: "下一章预告：仓库结构"
+    description_en: "Next chapter preview: repository structure"
+    prompt: |
+      Preview of organized repository tree structure,
+      src/, experiments/, configs/ folders glowing,
+      researcher looking forward to next challenge,
+      curiosity and anticipation expression.

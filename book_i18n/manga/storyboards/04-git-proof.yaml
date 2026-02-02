@@ -1,0 +1,268 @@
+# 第四章「Git侦探」分镜脚本
+# Chapter 4: "Git Detective"
+# 25 panels on using Git as evidence and proof
+
+chapter: "04-git-proof"
+title_zh: "Git侦探"
+title_en: "Git Detective"
+title_ja: "Git探偵"
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  # Opening: The Reviewer Crisis (panels 1-5)
+  - id: "04_001"
+    type: "establishing"
+    description_zh: "收到审稿人的邮件，要求证明实验时间线"
+    description_en: "Receiving reviewer email demanding experiment timeline proof"
+    prompt: |
+      Researcher reading email on screen with worried expression,
+      email showing reviewer comments demanding proof of timeline,
+      "Please provide evidence that experiments were conducted before seeing test data",
+      tension building, serious situation.
+
+  - id: "04_002"
+    type: "crisis"
+    description_zh: "惊慌：我怎么证明？"
+    description_en: "Panic: how do I prove it?"
+    prompt: |
+      Researcher panicking, hands in hair,
+      thought bubbles showing fear of rejection,
+      "I did it honestly but how do I prove it?" expression,
+      anxiety and helplessness.
+
+  - id: "04_003"
+    type: "revelation"
+    description_zh: "突然想起：Git有所有记录！"
+    description_en: "Suddenly remembers: Git has all the records!"
+    prompt: |
+      Light bulb moment, researcher remembering Git,
+      relief washing over face, hope returning,
+      Git logo glowing in memory,
+      salvation realized.
+
+  - id: "04_004"
+    type: "action"
+    description_zh: "打开git log，寻找证据"
+    description_en: "Opening git log, searching for evidence"
+    prompt: |
+      Researcher as detective opening git log,
+      commit history scrolling like case files,
+      magnifying glass examining timestamps,
+      investigation beginning.
+
+  - id: "04_005"
+    type: "victory"
+    description_zh: "找到了！带时间戳的提交记录"
+    description_en: "Found it! Timestamped commit records"
+    prompt: |
+      Triumphant researcher pointing at screen,
+      git log showing clear timeline of experiments,
+      timestamps proving chronological order,
+      evidence discovered, case solved.
+
+  # Git as Legal Record (panels 6-10)
+  - id: "04_006"
+    type: "concept"
+    description_zh: "Git提交 = 法律证据"
+    description_en: "Git commits = legal evidence"
+    prompt: |
+      Git commits visualized as legal documents,
+      timestamps as official seals, author signatures,
+      courtroom setting metaphor,
+      commits as immutable evidence.
+
+  - id: "04_007"
+    type: "explanation"
+    description_zh: "每次提交的构成要素"
+    description_en: "Components of each commit"
+    prompt: |
+      Anatomy of a git commit displayed,
+      hash (fingerprint), author, timestamp, message, changes,
+      each component labeled and explained,
+      educational infographic style.
+
+  - id: "04_008"
+    type: "warning"
+    description_zh: "警告：后期修改会留下痕迹"
+    description_en: "Warning: later modifications leave traces"
+    prompt: |
+      Warning visualization of git history manipulation,
+      rebase and amend showing altered history,
+      forensic detective finding the traces,
+      tampering is detectable.
+
+  - id: "04_009"
+    type: "best_practice"
+    description_zh: "最佳实践：频繁的小提交"
+    description_en: "Best practice: frequent small commits"
+    prompt: |
+      Comparison of commit strategies,
+      left: one giant commit (bad), blurry evidence,
+      right: many small commits (good), clear timeline,
+      researcher choosing the right path.
+
+  - id: "04_010"
+    type: "example"
+    description_zh: "好的提交信息示例"
+    description_en: "Example of good commit messages"
+    prompt: |
+      Terminal showing excellent commit messages,
+      "Add baseline model with 78% accuracy",
+      "Fix data preprocessing bug in normalization",
+      clear, descriptive, searchable messages.
+
+  # Branch Strategy (panels 11-15)
+  - id: "04_011"
+    type: "concept"
+    description_zh: "分支策略：研究的平行宇宙"
+    description_en: "Branch strategy: parallel universes of research"
+    prompt: |
+      Beautiful visualization of git branches,
+      main as stable trunk, feature branches as explorations,
+      parallel universe metaphor, multiple timelines,
+      elegant branch diagram.
+
+  - id: "04_012"
+    type: "practice"
+    description_zh: "main分支：只放验证过的代码"
+    description_en: "main branch: only verified code"
+    prompt: |
+      Main branch as fortress with quality gate,
+      only tested code allowed to enter,
+      guardian checking each merge request,
+      stability protected.
+
+  - id: "04_013"
+    type: "practice"
+    description_zh: "实验分支：自由探索"
+    description_en: "Experiment branches: free exploration"
+    prompt: |
+      Experiment branches as playground areas,
+      wild experimentation allowed, creative freedom,
+      researcher happily coding without fear,
+      isolated from main safely.
+
+  - id: "04_014"
+    type: "workflow"
+    description_zh: "工作流：分支→测试→合并"
+    description_en: "Workflow: branch → test → merge"
+    prompt: |
+      Git workflow diagram showing full cycle,
+      create branch, develop, test, review, merge,
+      clean process visualization,
+      sustainable development practice.
+
+  - id: "04_015"
+    type: "tip"
+    description_zh: "技巧：用分支名记录目的"
+    description_en: "Tip: use branch names to record purpose"
+    prompt: |
+      Branch names showing clear purpose,
+      "exp/transformer-baseline", "fix/data-leak-bug",
+      "feature/add-attention-layer" visible,
+      self-documenting branch names.
+
+  # Tags as Milestones (panels 16-19)
+  - id: "04_016"
+    type: "concept"
+    description_zh: "Git标签：重要里程碑"
+    description_en: "Git tags: important milestones"
+    prompt: |
+      Git tags as golden milestone markers,
+      "v1.0-paper-submission", "best-model-checkpoint",
+      researcher planting flags at important points,
+      achievements marked permanently.
+
+  - id: "04_017"
+    type: "use_case"
+    description_zh: "用例：标记论文提交版本"
+    description_en: "Use case: tagging paper submission version"
+    prompt: |
+      Researcher creating tag for paper submission,
+      "submission-2024-01-15" tag being created,
+      peace of mind knowing exact version submitted,
+      reference point for future.
+
+  - id: "04_018"
+    type: "use_case"
+    description_zh: "用例：标记最佳模型"
+    description_en: "Use case: tagging best model"
+    prompt: |
+      Researcher tagging best performing model,
+      "best-accuracy-92.5%" tag with metrics,
+      easy to return to this exact state,
+      checkpoint saved permanently.
+
+  - id: "04_019"
+    type: "benefit"
+    description_zh: "好处：审稿人要求可立即响应"
+    description_en: "Benefit: instant response to reviewer requests"
+    prompt: |
+      Researcher quickly checking out tagged version,
+      responding to reviewer with exact reproducible code,
+      confidence and speed, professional impression.
+
+  # Common Mistakes (panels 20-22)
+  - id: "04_020"
+    type: "mistake"
+    description_zh: "错误：提交太大，信息模糊"
+    description_en: "Mistake: commits too large, messages vague"
+    prompt: |
+      Giant commit blob labeled "fixed stuff",
+      researcher confused trying to find specific change,
+      useless commit message, lost in changes,
+      bad practice example.
+
+  - id: "04_021"
+    type: "mistake"
+    description_zh: "错误：忘记提交重要更改"
+    description_en: "Mistake: forgetting to commit important changes"
+    prompt: |
+      Researcher realizing code was never committed,
+      good results but no proof it existed then,
+      regret expression, lost evidence,
+      hard lesson learned.
+
+  - id: "04_022"
+    type: "mistake"
+    description_zh: "错误：提交敏感信息"
+    description_en: "Mistake: committing sensitive information"
+    prompt: |
+      Horror of discovering API keys in commit history,
+      security warning, password exposed in public repo,
+      immediate panic, .gitignore lesson learned.
+
+  # Closing (panels 23-25)
+  - id: "04_023"
+    type: "summary"
+    description_zh: "总结：Git是研究者最好的律师"
+    description_en: "Summary: Git is researcher's best lawyer"
+    prompt: |
+      Git personified as friendly lawyer defending researcher,
+      holding folder of commit evidence,
+      "I have records of everything you did",
+      protection and trust.
+
+  - id: "04_024"
+    type: "action"
+    description_zh: "10分钟行动：检查最近提交质量"
+    description_en: "10-minute action: check recent commit quality"
+    prompt: |
+      Researcher reviewing own recent commits,
+      checklist: clear messages? small changes? regular frequency?
+      quick audit, improvement opportunity identified.
+
+  - id: "04_025"
+    type: "preview"
+    description_zh: "下一章预告：完成的定义"
+    description_en: "Next chapter preview: Definition of Done"
+    prompt: |
+      Preview of checklist with quality gates,
+      "When is something truly done?" question floating,
+      completion criteria visualization,
+      standards about to be set.

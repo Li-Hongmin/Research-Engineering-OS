@@ -1,7 +1,5 @@
 # テンプレート集（今すぐ使える）
 
-![工具箱](images/appendix_templates_toolbox.png)
-
 ## PR/コミットメッセージのテンプレート（一人でも書く）
 
 - **目的**:

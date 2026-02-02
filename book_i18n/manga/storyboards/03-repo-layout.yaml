@@ -1,0 +1,264 @@
+# 第三章「仓库大改造」分镜脚本
+# Chapter 3: "Repository Renovation"
+# 25 panels on organizing code repository structure
+
+chapter: "03-repo-layout"
+title_zh: "仓库大改造"
+title_en: "Repository Renovation"
+title_ja: "リポジトリ大改造"
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  # Opening: The Mess (panels 1-5)
+  - id: "03_001"
+    type: "establishing"
+    description_zh: "小研面对混乱的项目目录"
+    description_en: "Xiao Yan facing chaotic project directory"
+    prompt: |
+      Researcher opening laptop to chaotic file structure,
+      files scattered everywhere like a tornado hit,
+      train.py, test_old.py, notebook_v2_final_REAL.ipynb visible,
+      overwhelmed expression, head in hands.
+
+  - id: "03_002"
+    type: "problem"
+    description_zh: "文件命名灾难：final_final_v3_REAL"
+    description_en: "File naming disaster: final_final_v3_REAL"
+    prompt: |
+      Close-up on ridiculous file names,
+      model_final.py, model_final_v2.py, model_FINAL_USE_THIS.py,
+      researcher laughing and crying simultaneously,
+      absurdity of the situation, comedy horror.
+
+  - id: "03_003"
+    type: "consequence"
+    description_zh: "找不到上周的代码"
+    description_en: "Can't find last week's code"
+    prompt: |
+      Researcher frantically searching through folders,
+      clock showing deadline approaching, sweat drops,
+      files blurring past as she scrolls,
+      panic building, time running out.
+
+  - id: "03_004"
+    type: "realization"
+    description_zh: "领悟：混乱的代价是时间"
+    description_en: "Realization: chaos costs time"
+    prompt: |
+      Researcher calculating time wasted on searching,
+      clock visualization showing hours lost weekly,
+      sad realization expression, productive time evaporating,
+      money flying away metaphor.
+
+  - id: "03_005"
+    type: "decision"
+    description_zh: "决心：今天就整理"
+    description_en: "Decision: organize today"
+    prompt: |
+      Researcher standing up with determination,
+      sleeves rolled up, cleaning supplies metaphor,
+      ready to tackle the mess, warrior pose,
+      transformation about to begin.
+
+  # The Solution: Standard Structure (panels 6-12)
+  - id: "03_006"
+    type: "concept"
+    description_zh: "标准目录结构概念"
+    description_en: "Standard directory structure concept"
+    prompt: |
+      Beautiful clean directory tree appearing as blueprint,
+      src/, experiments/, configs/, data/, docs/ branches,
+      architect's vision, golden glow, organized dream.
+
+  - id: "03_007"
+    type: "element"
+    description_zh: "src/目录：稳定的核心代码"
+    description_en: "src/ directory: stable core code"
+    prompt: |
+      Researcher carefully placing tested modules into src/,
+      src/ as a reinforced vault, quality-gated entrance,
+      modules must pass tests to enter, guardian at door.
+
+  - id: "03_008"
+    type: "element"
+    description_zh: "experiments/目录：实验性代码"
+    description_en: "experiments/ directory: experimental code"
+    prompt: |
+      Researcher placing messy notebooks into experiments/,
+      experiments/ as playground sandbox, creativity zone,
+      okay to be messy here, disposable nature emphasized.
+
+  - id: "03_009"
+    type: "element"
+    description_zh: "configs/目录：所有配置集中"
+    description_en: "configs/ directory: all configs centralized"
+    prompt: |
+      Researcher organizing config files into configs/,
+      YAML/JSON files neatly stacked and categorized,
+      training configs, model configs, data configs separated,
+      control center visualization.
+
+  - id: "03_010"
+    type: "element"
+    description_zh: "data/目录：数据目录（不提交）"
+    description_en: "data/ directory: data folder (not committed)"
+    prompt: |
+      Researcher setting up data/ directory with .gitignore,
+      large data files with "do not commit" warning,
+      symlinks or DVC pointers instead of actual data,
+      data management best practice.
+
+  - id: "03_011"
+    type: "element"
+    description_zh: "Makefile：一键命令入口"
+    description_en: "Makefile: one-command entry points"
+    prompt: |
+      Researcher at control panel with big buttons,
+      "make train", "make test", "make clean" buttons,
+      simple commands hiding complex workflows,
+      satisfaction of simplicity.
+
+  - id: "03_012"
+    type: "element"
+    description_zh: "README.md：项目首页"
+    description_en: "README.md: project home page"
+    prompt: |
+      Researcher writing welcoming README,
+      quick start guide, installation instructions,
+      future self will thank present self,
+      documentation as gift to future.
+
+  # Fast vs Slow Variables (panels 13-17)
+  - id: "03_013"
+    type: "concept"
+    description_zh: "快变量vs慢变量概念"
+    description_en: "Fast variables vs slow variables concept"
+    prompt: |
+      Two types of code visualized as different speeds,
+      blue slow-moving stable code (src/),
+      red fast-changing experimental code (experiments/),
+      researcher understanding the distinction.
+
+  - id: "03_014"
+    type: "mistake"
+    description_zh: "错误：把实验代码直接放src"
+    description_en: "Mistake: putting experimental code directly in src"
+    prompt: |
+      Researcher making mistake of mixing fast and slow,
+      unstable experimental code contaminating src/,
+      cracks forming in stable foundation,
+      warning visualization, bad practice.
+
+  - id: "03_015"
+    type: "consequence"
+    description_zh: "后果：稳定代码被破坏"
+    description_en: "Consequence: stable code corrupted"
+    prompt: |
+      Previously working code now broken,
+      regression bugs appearing everywhere,
+      researcher despair, tests failing red,
+      contamination spreading.
+
+  - id: "03_016"
+    type: "solution"
+    description_zh: "正确做法：毕业制度"
+    description_en: "Correct approach: graduation system"
+    prompt: |
+      Code graduation ceremony visualization,
+      experimental code passing tests to enter src/,
+      celebration of stable, tested code,
+      quality gate as graduation ceremony.
+
+  - id: "03_017"
+    type: "practice"
+    description_zh: "实践：定期的代码毕业"
+    description_en: "Practice: regular code graduation"
+    prompt: |
+      Calendar showing weekly graduation schedule,
+      researcher reviewing experimental code for promotion,
+      checklist for graduation criteria,
+      sustainable practice established.
+
+  # Transformation (panels 18-22)
+  - id: "03_018"
+    type: "before_after"
+    description_zh: "改造前：混乱的根目录"
+    description_en: "Before: chaotic root directory"
+    prompt: |
+      Split panel left side showing messy root,
+      50+ files in root directory,
+      impossible to navigate, visual chaos.
+
+  - id: "03_019"
+    type: "before_after"
+    description_zh: "改造后：清晰的结构"
+    description_en: "After: clean structure"
+    prompt: |
+      Split panel right side showing organized repo,
+      5-6 top-level directories, clear hierarchy,
+      easy to navigate, visual peace,
+      transformation complete.
+
+  - id: "03_020"
+    type: "benefit"
+    description_zh: "好处：新人5分钟上手"
+    description_en: "Benefit: newcomer onboards in 5 minutes"
+    prompt: |
+      New team member easily understanding project,
+      clear documentation and structure,
+      mentor researcher proudly watching,
+      knowledge transfer successful.
+
+  - id: "03_021"
+    type: "benefit"
+    description_zh: "好处：自己3个月后也能看懂"
+    description_en: "Benefit: you understand it 3 months later"
+    prompt: |
+      Researcher returning to old project months later,
+      immediately finding what she needs,
+      relief and gratitude expression,
+      past self helping future self.
+
+  - id: "03_022"
+    type: "action"
+    description_zh: "10分钟行动：创建基础目录"
+    description_en: "10-minute action: create base directories"
+    prompt: |
+      Researcher quickly creating directory structure,
+      mkdir commands running, folders appearing,
+      timer showing 10 minutes, quick win,
+      foundation laid.
+
+  # Closing (panels 23-25)
+  - id: "03_023"
+    type: "summary"
+    description_zh: "总结：好结构是投资"
+    description_en: "Summary: good structure is investment"
+    prompt: |
+      Researcher looking at organized repo like investment portfolio,
+      future returns visualized as time saved,
+      wise investment metaphor, compound interest.
+
+  - id: "03_024"
+    type: "tip"
+    description_zh: "提示：使用cookiecutter模板"
+    description_en: "Tip: use cookiecutter template"
+    prompt: |
+      Researcher using project template tool,
+      instant professional structure generated,
+      delight at automation, standing on shoulders.
+
+  - id: "03_025"
+    type: "preview"
+    description_zh: "下一章预告：Git作为证据"
+    description_en: "Next chapter preview: Git as evidence"
+    prompt: |
+      Preview of git history as legal evidence,
+      commit trail leading to truth,
+      detective hat and magnifying glass,
+      mystery about to unfold.

@@ -1,7 +1,5 @@
 # 模板库（今天就能开始用）
 
-![插图](images/appendix_templates_toolbox.png)
-
 ## PR/提交说明模板（即使一个人也写）
 
 - 目的：

@@ -20,4 +20,5 @@
 
 # 附录
 
-- [附录：模板](./appendix-templates.md)
+- [附录A：模板](./appendix-templates.md)
+- [附录B：CLAUDE.md 完整模板](./appendix-claude-md.md)

@@ -1,0 +1,206 @@
+# 序章「截止日前3天」分镜脚本
+# Prologue: "3 Days Before Deadline"
+# 15 panels telling the setup story
+
+chapter: "00-prologue"
+title_zh: "截止日前3天"
+title_en: "3 Days Before Deadline"
+title_ja: "締切3日前"
+
+# Character: 小研 (Xiao Yan) - young Asian researcher, early 20s
+# Setting: University research lab, late at night
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  - id: "00_001"
+    type: "establishing"
+    description_zh: "深夜实验室，小研对着电脑，显示多个错误窗口"
+    description_en: "Late night lab, Xiao Yan at computer with multiple error windows"
+    prompt: |
+      Late night university research lab, young Asian female researcher sitting at desk,
+      messy hair from stress, multiple error windows and red warnings on computer screen,
+      empty coffee cups scattered, papers everywhere, clock showing 11:47 PM,
+      dramatic blue monitor light illuminating her worried face, wide establishing shot.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_002"
+    type: "closeup"
+    description_zh: "屏幕特写：实验结果显示不一致的数值"
+    description_en: "Screen closeup: experiment results showing inconsistent values"
+    prompt: |
+      Computer screen closeup showing conflicting experiment results,
+      two result windows side by side with different numbers highlighted in red,
+      "Results don't match" warning popup, terminal showing failed tests,
+      reflection of researcher's concerned face in screen, dramatic lighting.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_003"
+    type: "action"
+    description_zh: "小研翻找代码目录，看到混乱的文件夹结构"
+    description_en: "Xiao Yan searching through messy folder structure"
+    prompt: |
+      Researcher frantically clicking through messy folder structure on screen,
+      folders named "final", "final_v2", "final_REAL", "backup_old" visible,
+      expression of frustration and disbelief, hand on forehead,
+      side view showing both screen and researcher's reaction.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_004"
+    type: "flashback"
+    description_zh: "回忆闪回：三周前的成功，小研开心地看着好结果"
+    description_en: "Flashback: three weeks ago, celebrating good results"
+    prompt: |
+      Flashback panel with dreamy soft edges, bright warm colors,
+      same researcher three weeks ago, happy and excited,
+      computer showing perfect experiment results with green checkmarks,
+      celebratory pose with fist pump, daylight streaming through window,
+      everything clean and organized, stark contrast to present.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_005"
+    type: "transition"
+    description_zh: "回到现实：小研困惑地对比新旧打印稿"
+    description_en: "Back to present: confused comparing old and new printouts"
+    prompt: |
+      Back to dark present, researcher holding two printouts comparing results,
+      left paper (old) showing good numbers, right paper (new) showing different numbers,
+      confused and worried expression, question marks floating around head,
+      dramatic shadow contrast, emotional mid-shot.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_006"
+    type: "dramatic"
+    description_zh: "三个债务怪兽从阴影中浮现"
+    description_en: "Three debt monsters emerging from shadows"
+    prompt: |
+      Three menacing shadow monsters materializing from darkness behind researcher,
+      first monster made of tangled code and spaghetti wires (exploration debt),
+      second monster of broken test tubes and incomplete experiments (validation debt),
+      third monster of scattered puzzle pieces and missing configs (reproducibility debt),
+      researcher turning around in shock, dramatic horror manga composition.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_007"
+    type: "action"
+    description_zh: "探索债怪兽攻击：代码碎片飞舞"
+    description_en: "Exploration debt monster attacks: code fragments flying"
+    prompt: |
+      First shadow monster (exploration debt) attacking with tangled prototype code,
+      chaotic code snippets and hacky solutions flying everywhere,
+      monster made of messy notebooks, quick hacks, and TODO comments,
+      researcher shielding face, dynamic action lines, dramatic manga composition.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_008"
+    type: "action"
+    description_zh: "验证债怪兽逼近：破碎的实验器材"
+    description_en: "Validation debt monster approaching: broken lab equipment"
+    prompt: |
+      Second shadow monster (validation debt) looming closer,
+      made of incomplete test tubes, missing control experiments, broken assertions,
+      floating icons of skipped tests and "TODO: add tests later" notes,
+      researcher backing away, fear in eyes, ominous purple glow.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_009"
+    type: "action"
+    description_zh: "复现债怪兽环绕：散落的配置和版本"
+    description_en: "Reproducibility debt monster surrounding: scattered configs"
+    prompt: |
+      Third shadow monster (reproducibility debt) encircling researcher,
+      made of scattered config files, missing environment specs, version conflicts,
+      floating "requirements.txt" fragments, Docker icons, random seed numbers,
+      researcher trapped in center, claustrophobic composition.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_010"
+    type: "climax"
+    description_zh: "小研被三只怪兽包围，绝望"
+    description_en: "Xiao Yan surrounded by all three monsters, despair"
+    prompt: |
+      Wide shot of researcher completely surrounded by three debt monsters,
+      kneeling on ground in despair, head down, papers scattered around,
+      monsters towering over her casting long shadows,
+      dramatic overhead lighting creating silhouette effect,
+      darkest moment before dawn composition.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_011"
+    type: "turning_point"
+    description_zh: "神秘导师出现：一道光芒驱散阴影"
+    description_en: "Mysterious mentor appears: light dispels shadows"
+    prompt: |
+      Bright light suddenly piercing through darkness from doorway,
+      silhouette of senior researcher/mentor figure standing in light,
+      confident stance, holding something glowing,
+      shadow monsters recoiling from the light,
+      researcher looking up with hope, dramatic lighting contrast.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_012"
+    type: "reveal"
+    description_zh: "导师递出发光的「Research Engineering OS」书"
+    description_en: "Mentor handing over glowing 'Research Engineering OS' book"
+    prompt: |
+      Mentor figure extending hand holding glowing guidebook,
+      book titled "Research Engineering OS" with golden glow,
+      warm light emanating from book pushing back darkness,
+      mentor's face kind but serious, experienced researcher appearance,
+      hopeful composition, light breaking through.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_013"
+    type: "acceptance"
+    description_zh: "小研接过书，眼中重燃希望"
+    description_en: "Xiao Yan receiving book, hope returning to eyes"
+    prompt: |
+      Young researcher reaching out to receive the glowing book,
+      close-up on hands exchanging the book,
+      warm golden light illuminating researcher's face from below,
+      tears of hope in eyes, determined expression forming,
+      shadow monsters fading in background, emotional moment.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_014"
+    type: "revelation"
+    description_zh: "书页展开，章节标题浮现发光"
+    description_en: "Book pages opening, chapter titles emerging with light"
+    prompt: |
+      Book opening with brilliant light bursting from pages,
+      holographic chapter titles floating up: "Three Types of Debt",
+      "Experiment as Unit", "Repository Structure", "Git as Proof",
+      researcher's face illuminated by warm glow, wonder in eyes,
+      magical library atmosphere, knowledge transforming into light.
+    dialogue_zh: null
+    dialogue_en: null
+
+  - id: "00_015"
+    type: "ending"
+    description_zh: "标题页：旅程开始，朝阳升起"
+    description_en: "Title card: journey begins, sunrise"
+    prompt: |
+      Final panel showing researcher standing at lab window at dawn,
+      holding the book close to chest, determined silhouette against sunrise,
+      lab now organized and clean (symbolic of future),
+      text area reserved at bottom for chapter title,
+      hopeful new beginning composition, warm orange and gold colors.
+    dialogue_zh: null
+    dialogue_en: null

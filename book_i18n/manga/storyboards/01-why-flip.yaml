@@ -1,0 +1,270 @@
+# 第一章「三种债务怪兽」分镜脚本
+# Chapter 1: "Three Debt Monsters"
+# 25 panels diving deep into the three types of research debt
+
+chapter: "01-why-flip"
+title_zh: "三种债务怪兽"
+title_en: "Three Debt Monsters"
+title_ja: "三つの負債モンスター"
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  # Opening: The Crisis Deepens (panels 1-5)
+  - id: "01_001"
+    type: "establishing"
+    description_zh: "小研在图书馆深夜阅读Research Engineering OS"
+    description_en: "Xiao Yan reading Research Engineering OS late night in library"
+    prompt: |
+      Late night university library, young researcher at study desk,
+      reading the glowing "Research Engineering OS" book,
+      warm desk lamp light, empty coffee cup beside her,
+      determined expression, taking notes, focused atmosphere.
+
+  - id: "01_002"
+    type: "visualization"
+    description_zh: "书中浮现三种债务的图解"
+    description_en: "Three types of debt visualized from the book"
+    prompt: |
+      Holographic visualization floating from open book pages,
+      three distinct colored zones: blue for exploration debt,
+      orange for validation debt, purple for reproducibility debt,
+      researcher studying the diagram intently, soft glow illuminating face.
+
+  - id: "01_003"
+    type: "flashback"
+    description_zh: "回忆：项目开始时的兴奋"
+    description_en: "Flashback: excitement at project start"
+    prompt: |
+      Bright flashback panel, researcher at beginning of project,
+      whiteboard full of exciting ideas and possibilities,
+      enthusiastic expression, pen in hand drawing diagrams,
+      lab mates gathered around, collaborative energy, warm daylight.
+
+  - id: "01_004"
+    type: "montage"
+    description_zh: "快速推进：日子飞逝的蒙太奇"
+    description_en: "Montage: days flying by"
+    prompt: |
+      Montage panel showing time passing quickly,
+      calendar pages flying, coffee cups multiplying,
+      code windows stacking up, researcher's expression gradually changing,
+      from excitement to stress, clock hands spinning, deadline approaching.
+
+  - id: "01_005"
+    type: "crisis"
+    description_zh: "现实：截止日前发现问题"
+    description_en: "Reality: discovering problems before deadline"
+    prompt: |
+      Back to present darkness, researcher discovering major issues,
+      multiple error messages on screen, failed tests highlighted in red,
+      hands in hair, panic setting in, papers with crossed-out results,
+      deadline calendar visible in background with red circle.
+
+  # Exploration Debt Deep Dive (panels 6-10)
+  - id: "01_006"
+    type: "monster_intro"
+    description_zh: "探索债怪兽详解：由快速原型构成"
+    description_en: "Exploration debt monster explained: made of quick prototypes"
+    prompt: |
+      Detailed view of exploration debt monster materializing,
+      body made of tangled Jupyter notebooks, hacky scripts,
+      tentacles of "just try this" code, floating TODO comments,
+      monster appears almost friendly at first, deceptively helpful looking.
+
+  - id: "01_007"
+    type: "cause"
+    description_zh: "探索债的诞生：快速验证想法"
+    description_en: "Birth of exploration debt: quick idea validation"
+    prompt: |
+      Split panel showing researcher rapidly prototyping ideas,
+      multiple experimental notebooks open simultaneously,
+      excited expression while coding quick solutions,
+      small debt creatures forming unnoticed in shadows behind.
+
+  - id: "01_008"
+    type: "growth"
+    description_zh: "探索债的积累：原型变成依赖"
+    description_en: "Exploration debt grows: prototypes become dependencies"
+    prompt: |
+      Researcher continuing to build on prototype code,
+      cracks forming in the foundation, patches on patches,
+      technical debt visualized as tangled roots spreading underground,
+      researcher oblivious, focused only on results above ground.
+
+  - id: "01_009"
+    type: "consequence"
+    description_zh: "探索债爆发：需要改动时崩溃"
+    description_en: "Exploration debt explodes: collapse when changes needed"
+    prompt: |
+      Researcher trying to modify old prototype code,
+      entire system crumbling like house of cards,
+      domino effect of breaking dependencies visualized,
+      shocked and horrified expression, everything falling apart.
+
+  - id: "01_010"
+    type: "lesson"
+    description_zh: "探索债的解决：定期清理和重构"
+    description_en: "Exploration debt solution: regular cleanup and refactoring"
+    prompt: |
+      Calm researcher methodically organizing prototype code,
+      separating good ideas into clean modules, archiving dead ends,
+      visual of tangled code becoming organized structure,
+      checklist showing "weekly cleanup" routine, peaceful expression.
+
+  # Validation Debt Deep Dive (panels 11-15)
+  - id: "01_011"
+    type: "monster_intro"
+    description_zh: "验证债怪兽详解：由跳过的测试构成"
+    description_en: "Validation debt monster explained: made of skipped tests"
+    prompt: |
+      Detailed view of validation debt monster,
+      body made of broken test tubes, incomplete experiments,
+      floating "test later" sticky notes, crossed-out assertions,
+      deceptively small at first, growing larger in shadows.
+
+  - id: "01_012"
+    type: "cause"
+    description_zh: "验证债的诞生：没时间写测试"
+    description_en: "Birth of validation debt: no time for tests"
+    prompt: |
+      Researcher rushing past testing phase,
+      "skip test" buttons being pressed repeatedly,
+      clock pressure visualized, deadlines looming,
+      small validation debt creatures spawning with each skip.
+
+  - id: "01_013"
+    type: "growth"
+    description_zh: "验证债积累：结果看起来对但是..."
+    description_en: "Validation debt grows: results look right but..."
+    prompt: |
+      Researcher presenting results confidently,
+      but shadows reveal hidden problems beneath the surface,
+      bugs lurking in untested code paths,
+      false confidence visualized as thin ice over deep water.
+
+  - id: "01_014"
+    type: "consequence"
+    description_zh: "验证债爆发：审稿人质疑统计显著性"
+    description_en: "Validation debt explodes: reviewer questions significance"
+    prompt: |
+      Researcher receiving devastating reviewer feedback,
+      paper covered in red marks, "not reproducible" stamps,
+      validation monster fully revealed and massive now,
+      despair and regret expression, surrounded by inadequate evidence.
+
+  - id: "01_015"
+    type: "lesson"
+    description_zh: "验证债解决：测试驱动的研究"
+    description_en: "Validation debt solution: test-driven research"
+    prompt: |
+      Researcher writing tests before experiments,
+      green checkmarks appearing as validation passes,
+      confidence building on solid foundation of tests,
+      calm and methodical approach, validation monster shrinking.
+
+  # Reproducibility Debt Deep Dive (panels 16-20)
+  - id: "01_016"
+    type: "monster_intro"
+    description_zh: "复现债怪兽详解：由丢失的环境构成"
+    description_en: "Reproducibility debt monster explained: made of lost environments"
+    prompt: |
+      Detailed view of reproducibility debt monster,
+      body made of scattered config files, version conflicts,
+      floating pip requirements, missing Docker files,
+      random seeds swirling, environment variables dissolving.
+
+  - id: "01_017"
+    type: "cause"
+    description_zh: "复现债诞生：它在我的电脑上能跑"
+    description_en: "Birth of reproducibility debt: works on my machine"
+    prompt: |
+      Researcher with code working perfectly on their laptop,
+      smug satisfied expression, thumbs up,
+      meanwhile, invisible environment-specific setup swirling around,
+      small reproducibility debt creature forming unnoticed.
+
+  - id: "01_018"
+    type: "growth"
+    description_zh: "复现债积累：依赖变化但没记录"
+    description_en: "Reproducibility debt grows: dependencies change unrecorded"
+    prompt: |
+      Time passing, researcher updating packages without recording,
+      library versions drifting, configuration changing silently,
+      paper trail getting thinner and thinner,
+      debt monster growing in the gaps between versions.
+
+  - id: "01_019"
+    type: "consequence"
+    description_zh: "复现债爆发：三个月后无法复现"
+    description_en: "Reproducibility debt explodes: can't reproduce after 3 months"
+    prompt: |
+      Researcher returning to old project, completely lost,
+      different Python version, missing packages, wrong CUDA,
+      error messages everywhere, nothing works,
+      reproducibility monster fully formed and triumphant.
+
+  - id: "01_020"
+    type: "lesson"
+    description_zh: "复现债解决：环境即代码"
+    description_en: "Reproducibility debt solution: environment as code"
+    prompt: |
+      Researcher setting up Docker container, requirements.txt,
+      version pinning, random seed recording, config files,
+      environment packaged neatly like a gift box,
+      reproducibility monster deflating, confidence restored.
+
+  # Synthesis and Action (panels 21-25)
+  - id: "01_021"
+    type: "synthesis"
+    description_zh: "三种债务的关系：相互放大"
+    description_en: "Relationship between three debts: mutual amplification"
+    prompt: |
+      Diagram showing three debt monsters connected,
+      arrows between them showing how each feeds the others,
+      vicious cycle visualization, researcher understanding the pattern,
+      enlightenment expression, seeing the bigger picture.
+
+  - id: "01_022"
+    type: "realization"
+    description_zh: "小研明白：问题不是最后一刻产生的"
+    description_en: "Xiao Yan realizes: problems don't appear at the last moment"
+    prompt: |
+      Researcher having epiphany moment, light bulb above head,
+      timeline visualization showing debt accumulating over months,
+      deadline is just when debt comes due, not when it's created,
+      understanding dawning on face, revelation composition.
+
+  - id: "01_023"
+    type: "commitment"
+    description_zh: "决心改变：每日小习惯"
+    description_en: "Commitment to change: daily small habits"
+    prompt: |
+      Researcher standing up with determination,
+      writing down daily habits on sticky notes,
+      small actionable items: "commit daily", "test before push",
+      hopeful expression, first steps toward change.
+
+  - id: "01_024"
+    type: "action"
+    description_zh: "10分钟行动：检查你的债务"
+    description_en: "10-minute action: check your debts"
+    prompt: |
+      Researcher at computer doing quick debt audit,
+      checklist visible: exploration debt check, validation check,
+      reproducibility check, timer showing 10 minutes,
+      productive and empowered expression, taking control.
+
+  - id: "01_025"
+    type: "preview"
+    description_zh: "下一章预告：实验才是单元"
+    description_en: "Next chapter preview: experiment as the unit"
+    prompt: |
+      Mysterious preview panel showing glowing experiment unit,
+      six key elements floating around it like a constellation,
+      researcher looking toward it with curiosity,
+      "To be continued" atmosphere, anticipation building.

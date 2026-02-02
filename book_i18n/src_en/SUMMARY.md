@@ -20,4 +20,5 @@
 
 # Appendix
 
-- [Appendix: Templates](./appendix-templates.md)
+- [Appendix A: Templates](./appendix-templates.md)
+- [Appendix B: CLAUDE.md Template](./appendix-claude-md.md)

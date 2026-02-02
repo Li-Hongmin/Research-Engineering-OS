@@ -1,0 +1,220 @@
+# 第六章「日志考古学」分镜脚本
+# Chapter 6: "Logging Archaeology"
+# 20 panels on structured logging and documentation
+
+chapter: "06-logging"
+title_zh: "日志考古学"
+title_en: "Logging Archaeology"
+title_ja: "ログ考古学"
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  # Opening: The Search (panels 1-4)
+  - id: "06_001"
+    type: "establishing"
+    description_zh: "三个月后，小研试图找回实验细节"
+    description_en: "Three months later, Xiao Yan trying to recall experiment details"
+    prompt: |
+      Researcher returning to old project, looking confused,
+      trying to remember why certain decisions were made,
+      thought bubbles with question marks,
+      memory failure, lost in own work.
+
+  - id: "06_002"
+    type: "search"
+    description_zh: "翻找笔记：只有零散片段"
+    description_en: "Searching notes: only scattered fragments"
+    prompt: |
+      Researcher searching through messy notebooks,
+      scattered sticky notes, incomprehensible scribbles,
+      "What did I mean by this?" expression,
+      poor documentation coming back to haunt.
+
+  - id: "06_003"
+    type: "frustration"
+    description_zh: "找配置：到底用的哪个？"
+    description_en: "Finding config: which one was actually used?"
+    prompt: |
+      Multiple config files with similar names,
+      researcher unable to determine which was used,
+      config_v1, config_final, config_best scattered,
+      configuration chaos.
+
+  - id: "06_004"
+    type: "realization"
+    description_zh: "领悟：当时的我对未来的我太残忍"
+    description_en: "Realization: past me was cruel to future me"
+    prompt: |
+      Researcher angry at past self (shown as ghost),
+      "Why didn't you write this down?!" expression,
+      past self shrugging carelessly,
+      self-accountability moment.
+
+  # The Solution: Two-Layer Logging (panels 5-10)
+  - id: "06_005"
+    type: "concept"
+    description_zh: "解决方案：双层日志系统"
+    description_en: "Solution: two-layer logging system"
+    prompt: |
+      Two-layer system visualized beautifully,
+      top layer: human-readable notes (orange),
+      bottom layer: machine-readable JSON (blue),
+      complementary system, yin-yang balance.
+
+  - id: "06_006"
+    type: "layer"
+    description_zh: "第一层：自动记录（JSON）"
+    description_en: "Layer 1: automatic recording (JSON)"
+    prompt: |
+      Automatic logger capturing everything,
+      metrics, configs, timestamps flowing into JSON,
+      robot assistant collecting data diligently,
+      no human effort required.
+
+  - id: "06_007"
+    type: "layer"
+    description_zh: "第二层：人工笔记（Markdown）"
+    description_en: "Layer 2: human notes (Markdown)"
+    prompt: |
+      Researcher writing thoughtful notes,
+      "Why did I try this? What surprised me?",
+      human insights machines can't capture,
+      intuition and reasoning recorded.
+
+  - id: "06_008"
+    type: "structure"
+    description_zh: "run.json结构：机器的完美记忆"
+    description_en: "run.json structure: machine's perfect memory"
+    prompt: |
+      Beautiful JSON structure floating,
+      nested objects with git_hash, config, metrics,
+      perfectly structured data,
+      machine-parseable perfection.
+
+  - id: "06_009"
+    type: "structure"
+    description_zh: "run.md模板：人类的快速记录"
+    description_en: "run.md template: human's quick recording"
+    prompt: |
+      Simple 5-line markdown template,
+      Hypothesis, Changes, Results, Observations, Next,
+      quick to fill, high value,
+      efficient human logging.
+
+  - id: "06_010"
+    type: "workflow"
+    description_zh: "工作流：实验前中后的记录"
+    description_en: "Workflow: logging before, during, after experiment"
+    prompt: |
+      Timeline showing logging at three stages,
+      before: hypothesis and plan,
+      during: observations and surprises,
+      after: results and conclusions.
+
+  # Benefits (panels 11-14)
+  - id: "06_011"
+    type: "benefit"
+    description_zh: "好处1：三个月后立即找到"
+    description_en: "Benefit 1: find immediately after 3 months"
+    prompt: |
+      Researcher returning to old project,
+      immediately finding all needed information,
+      relief and gratitude expression,
+      past self helping future self.
+
+  - id: "06_012"
+    type: "benefit"
+    description_zh: "好处2：审稿人要数据秒回"
+    description_en: "Benefit 2: instant response to reviewer data requests"
+    prompt: |
+      Reviewer email demanding specific data,
+      researcher quickly finding exact information,
+      confident professional response,
+      documentation paying dividends.
+
+  - id: "06_013"
+    type: "benefit"
+    description_zh: "好处3：团队成员能接手"
+    description_en: "Benefit 3: team members can take over"
+    prompt: |
+      New team member reading experiment logs,
+      understanding project quickly,
+      knowledge transfer successful,
+      documentation as onboarding.
+
+  - id: "06_014"
+    type: "benefit"
+    description_zh: "好处4：写论文素材齐全"
+    description_en: "Benefit 4: complete material for paper writing"
+    prompt: |
+      Researcher writing paper with all materials ready,
+      logs providing exact numbers and details,
+      smooth paper writing process,
+      no hunting for data.
+
+  # Tools and Integration (panels 15-18)
+  - id: "06_015"
+    type: "tool"
+    description_zh: "工具：MLflow/W&B集成"
+    description_en: "Tools: MLflow/W&B integration"
+    prompt: |
+      Researcher connecting to experiment tracking dashboard,
+      MLflow or Weights&Biases interface showing,
+      automatic metrics visualization,
+      professional tooling adoption.
+
+  - id: "06_016"
+    type: "tool"
+    description_zh: "工具：自动化脚本"
+    description_en: "Tools: automation scripts"
+    prompt: |
+      Run script automatically capturing metadata,
+      git hash, timestamp, config all logged automatically,
+      zero manual effort for basics,
+      automation freeing mental energy.
+
+  - id: "06_017"
+    type: "practice"
+    description_zh: "实践：5分钟日志习惯"
+    description_en: "Practice: 5-minute logging habit"
+    prompt: |
+      Researcher spending 5 minutes after each experiment,
+      filling quick template, adding observations,
+      low effort, high return habit,
+      sustainable practice.
+
+  - id: "06_018"
+    type: "tip"
+    description_zh: "技巧：记录失败和惊喜"
+    description_en: "Tip: record failures and surprises"
+    prompt: |
+      Researcher noting what didn't work and why,
+      failures as valuable as successes,
+      unexpected observations highlighted,
+      complete picture captured.
+
+  # Closing (panels 19-20)
+  - id: "06_019"
+    type: "action"
+    description_zh: "10分钟行动：为下次实验设置日志"
+    description_en: "10-minute action: set up logging for next experiment"
+    prompt: |
+      Researcher setting up logging template,
+      creating run.md template, configuring auto-logging,
+      preparation for future experiments,
+      foundation laid.
+
+  - id: "06_020"
+    type: "preview"
+    description_zh: "下一章预告：AI助手的陷阱"
+    description_en: "Next chapter preview: AI assistant traps"
+    prompt: |
+      Preview of researcher working with AI assistant,
+      but shadows showing hidden dangers,
+      AI-generated code with lurking bugs,
+      caution about to be learned.

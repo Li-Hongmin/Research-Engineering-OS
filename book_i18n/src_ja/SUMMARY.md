@@ -20,4 +20,5 @@
 
 # 付録
 
-- [付録：テンプレート](./appendix-templates.md)
+- [付録A：テンプレート](./appendix-templates.md)
+- [付録B：CLAUDE.md テンプレート](./appendix-claude-md.md)

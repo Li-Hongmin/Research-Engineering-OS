@@ -1,0 +1,240 @@
+# 第五章「完成的定义」分镜脚本
+# Chapter 5: "Definition of Done"
+# 22 panels on quality gates and completion criteria
+
+chapter: "05-dod"
+title_zh: "完成的定义"
+title_en: "Definition of Done"
+title_ja: "完了の定義"
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  # Opening: The "Almost Done" Trap (panels 1-5)
+  - id: "05_001"
+    type: "establishing"
+    description_zh: "小研宣布：实验做完了！"
+    description_en: "Xiao Yan announces: experiment is done!"
+    prompt: |
+      Researcher triumphantly raising fist, declaring victory,
+      computer showing good results, excitement on face,
+      "Done!" atmosphere, premature celebration,
+      unaware of traps ahead.
+
+  - id: "05_002"
+    type: "challenge"
+    description_zh: "导师问：能复现吗？"
+    description_en: "Mentor asks: can you reproduce it?"
+    prompt: |
+      Mentor figure with raised eyebrow asking question,
+      researcher's confidence wavering slightly,
+      "Can you run it again and get same results?" implied,
+      first doubt creeping in.
+
+  - id: "05_003"
+    type: "challenge"
+    description_zh: "导师问：为什么work？"
+    description_en: "Mentor asks: why does it work?"
+    prompt: |
+      Researcher struggling to explain why results are good,
+      thought bubbles showing confusion,
+      "I don't really know why..." expression,
+      understanding gap revealed.
+
+  - id: "05_004"
+    type: "challenge"
+    description_zh: "导师问：和baseline公平对比了吗？"
+    description_en: "Mentor asks: fair comparison with baseline?"
+    prompt: |
+      Researcher realizing comparison might not be fair,
+      baseline and method shown with different conditions,
+      apples to oranges visualization,
+      fundamental flaw discovered.
+
+  - id: "05_005"
+    type: "realization"
+    description_zh: "原来：差不多≠完成"
+    description_en: "Realization: almost done ≠ done"
+    prompt: |
+      Researcher's confidence collapsing,
+      "Almost done" shown as trap door opening,
+      falling into pit of incomplete work,
+      harsh lesson visualization.
+
+  # The Three Hidden Mines (panels 6-11)
+  - id: "05_006"
+    type: "concept"
+    description_zh: "三颗地雷埋在差不多里"
+    description_en: "Three mines hidden in 'almost done'"
+    prompt: |
+      Three hidden mines under surface of "done" ground,
+      researcher walking carefully, detecting dangers,
+      mines labeled with question marks,
+      danger zone visualization.
+
+  - id: "05_007"
+    type: "mine"
+    description_zh: "地雷1：无法复现"
+    description_en: "Mine 1: cannot reproduce"
+    prompt: |
+      First mine exploding - reproducibility failure,
+      same code, different results scatter everywhere,
+      researcher shocked, results diverging,
+      reproducibility mine detonating.
+
+  - id: "05_008"
+    type: "mine"
+    description_zh: "地雷2：不知道为什么work"
+    description_en: "Mine 2: don't know why it works"
+    prompt: |
+      Second mine exploding - understanding gap,
+      question marks surrounding working code,
+      reviewer asking "why?" and researcher stammering,
+      explanation mine detonating.
+
+  - id: "05_009"
+    type: "mine"
+    description_zh: "地雷3：不公平评估"
+    description_en: "Mine 3: unfair evaluation"
+    prompt: |
+      Third mine exploding - unfair comparison,
+      researcher's method with advantages vs handicapped baseline,
+      scales clearly unbalanced,
+      fairness mine detonating.
+
+  - id: "05_010"
+    type: "consequence"
+    description_zh: "地雷爆炸时机：最关键的时刻"
+    description_en: "Mine explosion timing: most critical moments"
+    prompt: |
+      Timeline showing mines exploding at worst times,
+      paper review, thesis defense, demo day,
+      Murphy's law visualization,
+      critical moment failures.
+
+  - id: "05_011"
+    type: "principle"
+    description_zh: "原则：提前排雷"
+    description_en: "Principle: defuse mines early"
+    prompt: |
+      Researcher as bomb disposal expert,
+      carefully defusing mines during development,
+      better to find problems early,
+      proactive defusing.
+
+  # Definition of Done Checklist (panels 12-17)
+  - id: "05_012"
+    type: "solution"
+    description_zh: "解决方案：DoD检查清单"
+    description_en: "Solution: DoD checklist"
+    prompt: |
+      Golden checklist appearing as protection shield,
+      "Definition of Done" title glowing,
+      researcher receiving the checklist gratefully,
+      quality standard established.
+
+  - id: "05_013"
+    type: "item"
+    description_zh: "DoD项1：结果可复现"
+    description_en: "DoD item 1: results reproducible"
+    prompt: |
+      First checklist item highlighted,
+      running experiment 3 times with same results,
+      checkmark appearing with confidence,
+      reproducibility confirmed.
+
+  - id: "05_014"
+    type: "item"
+    description_zh: "DoD项2：能解释为什么work"
+    description_en: "DoD item 2: can explain why it works"
+    prompt: |
+      Second checklist item highlighted,
+      researcher explaining mechanism clearly,
+      diagram of understanding, no black boxes,
+      understanding confirmed.
+
+  - id: "05_015"
+    type: "item"
+    description_zh: "DoD项3：公平对比baseline"
+    description_en: "DoD item 3: fair baseline comparison"
+    prompt: |
+      Third checklist item highlighted,
+      balanced scales showing fair comparison,
+      same conditions for all methods,
+      fairness confirmed.
+
+  - id: "05_016"
+    type: "item"
+    description_zh: "DoD项4：消融实验完成"
+    description_en: "DoD item 4: ablation study completed"
+    prompt: |
+      Fourth checklist item highlighted,
+      components being tested individually,
+      understanding which parts contribute,
+      ablation confirmed.
+
+  - id: "05_017"
+    type: "item"
+    description_zh: "DoD项5：代码可审查"
+    description_en: "DoD item 5: code is reviewable"
+    prompt: |
+      Fifth checklist item highlighted,
+      clean code being reviewed by peer,
+      readable, documented, organized,
+      code quality confirmed.
+
+  # Applying DoD (panels 18-20)
+  - id: "05_018"
+    type: "practice"
+    description_zh: "实践：每次实验结束时检查"
+    description_en: "Practice: check at end of each experiment"
+    prompt: |
+      Researcher finishing experiment and checking DoD,
+      systematic review before declaring done,
+      ritual of completion,
+      discipline established.
+
+  - id: "05_019"
+    type: "benefit"
+    description_zh: "好处：自信地说完成了"
+    description_en: "Benefit: confidently say it's done"
+    prompt: |
+      Researcher confidently declaring completion,
+      mentor nodding approvingly,
+      all checklist items green,
+      true completion achieved.
+
+  - id: "05_020"
+    type: "benefit"
+    description_zh: "好处：审稿人无法攻击"
+    description_en: "Benefit: reviewers can't attack"
+    prompt: |
+      Researcher shielded from reviewer attacks,
+      DoD checklist as armor,
+      criticisms bouncing off,
+      bulletproof submission.
+
+  # Closing (panels 21-22)
+  - id: "05_021"
+    type: "action"
+    description_zh: "10分钟行动：写下你的DoD"
+    description_en: "10-minute action: write your DoD"
+    prompt: |
+      Researcher writing personal DoD checklist,
+      customizing for their research area,
+      pen on paper, thoughtful expression,
+      personal standard established.
+
+  - id: "05_022"
+    type: "preview"
+    description_zh: "下一章预告：日志考古学"
+    description_en: "Next chapter preview: logging archaeology"
+    prompt: |
+      Preview of researcher as archaeologist,
+      digging through old logs finding treasures,
+      structured logs as ancient artifacts,
+      discovery about to happen.

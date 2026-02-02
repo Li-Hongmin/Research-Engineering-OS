@@ -291,9 +291,9 @@ Rollback strategy:
 
     ## Prohibited Behaviors
 
-    [NO] **Prohibition 1: Blindly accepting large blocks of generated code**
-      - Any AI-generated code exceeding 50 lines must be manually reviewed line by line
-      - Core logic (data, model, evaluation) must be reviewed with extra rigor
+    [NO] **Prohibition 1: Mixing features and refactoring**
+      - Feature changes and refactoring must be in separate commits
+      - This makes it easier to locate problems and rollback
 
     [NO] **Prohibition 2: Modifying too many files**
       - A single commit should not touch more than 5 files (except in special cases)
