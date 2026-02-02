@@ -15,7 +15,7 @@ sedi() {
 }
 
 echo "🧹 清理旧构建..."
-rm -rf book book_zh book_en
+rm -rf book book_zh book_en book_ja
 
 # 保存原始 book.toml
 cp book.toml book.toml.original
@@ -35,6 +35,7 @@ mv src_en src
 
 # 修改语言设置
 sedi 's/language = "zh"/language = "en"/' book.toml
+sedi 's/description = "把返工压缩成规范 + 模板 + 检查清单"/description = "Compress rework into specifications + templates + checklists"/' book.toml
 
 echo "🇺🇸 构建英文版..."
 mdbook build
@@ -48,11 +49,36 @@ mv src_zh src
 # 恢复原始 book.toml
 mv book.toml.original book.toml
 
+echo "🇯🇵 准备日文版..."
+# 保存原始 book.toml
+cp book.toml book.toml.original
+grep -v '\[preprocessor.gettext\]' book.toml.original | grep -v 'after = \["links"\]' > book.toml
+
+mv src src_zh
+mv src_ja src
+
+# 修改语言设置
+sedi 's/language = "zh"/language = "ja"/' book.toml
+sedi 's/description = "把返工压缩成规范 + 模板 + 检查清单"/description = "「やり直し」を「規範＋テンプレート＋チェックリスト」に凝縮する"/' book.toml
+
+echo "🇯🇵 构建日文版..."
+mdbook build
+# 立即重命名为 book_ja
+mv book book_ja
+
+echo "🔄 恢复原始配置..."
+# 恢复源目录
+mv src src_ja
+mv src_zh src
+# 恢复原始 book.toml
+mv book.toml.original book.toml
+
 echo "📦 整合输出..."
 mkdir -p book
 # 移动语言版本到子目录
 mv book_zh book/zh
 mv book_en book/en
+mv book_ja book/ja
 
 # 创建首页重定向（纯跳转，无明文链接）
 cat > book/index.html << 'HTML'
@@ -82,6 +108,10 @@ echo "..."
 echo ""
 echo "📁 book/en/："
 ls book/en/ | head -5
+echo "..."
+echo ""
+echo "📁 book/ja/："
+ls book/ja/ | head -5
 echo "..."
 echo ""
 echo "🌐 本地预览: cd book && python -m http.server 8000"

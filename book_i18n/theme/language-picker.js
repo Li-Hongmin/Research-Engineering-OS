@@ -4,23 +4,24 @@
     const defined_languages = [
         ["zh", "中文"],
         ["en", "English"],
+        ["ja", "日本語"],
     ];
 
     function getCurrentLanguage() {
         const path = window.location.pathname;
-        const match = path.match(/\/(zh|en)(\/|$)/);
+        const match = path.match(/\/(zh|en|ja)(\/|$)/);
         return match ? match[1] : "zh";
     }
 
     function getBasePath() {
         const path = window.location.pathname;
-        const match = path.match(/^(.*?)\/(zh|en)(\/|$)/);
+        const match = path.match(/^(.*?)\/(zh|en|ja)(\/|$)/);
         return match ? match[1] : "";
     }
 
     function getPagePath() {
         const path = window.location.pathname;
-        const match = path.match(/\/(zh|en)(\/.*)?$/);
+        const match = path.match(/\/(zh|en|ja)(\/.*)?$/);
         return match && match[2] ? match[2] : "/";
     }
 
