@@ -17,7 +17,7 @@ panels:
   # Opening: The Fundamental Shift (panels 1-4)
   - id: "02_001"
     type: "establishing"
-    description_zh: "小研看着复杂的代码文件结构困惑"
+    description_zh: "通过上一章的学习，小研明白了债务的根源。现在她迫不及待地想着手改变——可当她打开项目文件夹时，立刻傻眼了。文件命名乱得不行，有些文件不知道什么时候改过，有些函数调用着其他的代码，她完全分不清哪些代码是给哪个实验用的。她盯着这一团乱麻，心想：'要整理这个，得到什么时候啊？'"
     description_en: "Xiao Yan confused looking at complex code file structure"
     prompt: |
       Researcher staring at complex file browser with deep nested folders,
@@ -27,7 +27,7 @@ panels:
 
   - id: "02_002"
     type: "revelation"
-    description_zh: "导师指出：实验不是代码文件"
+    description_zh: "导师走来，看了看她的困惑表情，轻声说：'你的问题在于，把实验和代码混淆了。'小研抬起头，等着听下文。导师继续说：'实验不是代码，实验是一个完整的整体——不仅包括代码，还包括数据、配置、运行环境，以及每次运行的结果和日志。'"
     description_en: "Mentor pointing out: experiment is not code files"
     prompt: |
       Split panel showing wrong vs right mental model,
@@ -37,7 +37,7 @@ panels:
 
   - id: "02_003"
     type: "concept"
-    description_zh: "实验单元的六个元素浮现"
+    description_zh: "导师比划出一个六边形，每个顶点代表实验的一个关键要素：代码版本、数据版本、配置、运行环境、输出结果、执行日志。小研这才明白，她一直在思考'代码'的问题，但其实应该思考的是'实验'的问题。实验才是那个真正需要被完整记录和复现的东西。"
     description_en: "Six elements of experiment unit emerging"
     prompt: |
       Holographic hexagonal diagram appearing before researcher,
@@ -47,7 +47,7 @@ panels:
 
   - id: "02_004"
     type: "analogy"
-    description_zh: "比喻：像生物细胞一样完整"
+    description_zh: "'想象一个活的生物细胞，'导师说，'代码就像细胞核，但单独的核无法活动。你需要细胞膜、线粒体、各种细胞器——它们一起才构成了能够生存和繁殖的生命。实验就像这样的细胞。'小研恍然大悟，自己以前只是把一堆细胞器乱堆在一起，怪不得什么都不工作。"
     description_en: "Analogy: complete like a biological cell"
     prompt: |
       Visual metaphor of experiment as living cell,
@@ -58,7 +58,7 @@ panels:
   # Element 1: Code Version (panels 5-7)
   - id: "02_005"
     type: "element"
-    description_zh: "元素1：代码版本 - Git Hash作为DNA"
+    description_zh: "'第一个元素是代码版本。'导师指着第一个顶点说，'每一份代码都有一个身份证，就像人的DNA一样。Git中每次提交都有一个哈希值，这就是你代码的DNA。只有记录了这个，别人才能说：就是用这个版本的代码，我也能复现你的结果。'"
     description_en: "Element 1: Code version - Git Hash as DNA"
     prompt: |
       Researcher examining glowing git commit hash like DNA strand,
@@ -68,7 +68,7 @@ panels:
 
   - id: "02_006"
     type: "problem"
-    description_zh: "问题：哪个版本的代码产生了这个结果？"
+    description_zh: "小研想起自己最近的经历。三周前做出来的好结果，她想重新跑一遍看看，却发现代码已经改了。她根本不知道三周前用的是哪个版本。手指在文件夹里戳戳戳，文件名都是模糊的，最后干脆放弃了，假装没这回事。"
     description_en: "Problem: which code version produced this result?"
     prompt: |
       Researcher holding result printout, looking at multiple code versions,
@@ -78,7 +78,7 @@ panels:
 
   - id: "02_007"
     type: "solution"
-    description_zh: "解决：每次运行记录commit hash"
+    description_zh: "'解决方案其实很简单。'导师打开终端，展示一个简洁的脚本。每次运行实验时，脚本首先记下当前代码的Git哈希值，存到日志里。这样，日后任何人看到这个结果，都能立刻追踪到当时用的是什么代码。小研点点头，心想这太聪明了——自动化的记录，永远不会遗漏。"
     description_en: "Solution: record commit hash for every run"
     prompt: |
       Clean terminal showing run script that logs git hash automatically,
@@ -89,7 +89,7 @@ panels:
   # Element 2: Data Version (panels 8-10)
   - id: "02_008"
     type: "element"
-    description_zh: "元素2：数据版本 - 数据也有DNA"
+    description_zh: "'第二个元素是数据版本。'导师继续指着第二个顶点。'你可能觉得数据就是数据，没什么好版本的。但错了——数据也会变。如果你不记录当时用的数据是什么，结果可能就没有意义了。'"
     description_en: "Element 2: Data version - data has DNA too"
     prompt: |
       Researcher examining dataset with hash fingerprint,
@@ -99,7 +99,7 @@ panels:
 
   - id: "02_009"
     type: "problem"
-    description_zh: "问题：数据偷偷变了"
+    description_zh: "小研想起一个月前的事。她在一个数据集上跑出了很好的结果，兴高采烈地和同学说。结果一个月后，同学重复她的实验，发现结果完全不同。后来才发现，原来是数据被意外修改过一次——有人删掉了一些坏数据，然后忘了告诉她。这一刻，小研明白了：你再厉害，如果数据都变了，结果也就废了。"
     description_en: "Problem: data changed silently"
     prompt: |
       Researcher discovering that training data was modified,
@@ -109,7 +109,7 @@ panels:
 
   - id: "02_010"
     type: "solution"
-    description_zh: "解决：数据hash + 来源记录"
+    description_zh: "'所以，我们需要给数据做个指纹。'导师展示了数据校验和的概念。每份数据都有一个唯一的哈希值，就像它的身份证。如果数据哪怕改一个像素，这个哈希值就会完全不同。这样，别人一看日志就知道：你用的是那个特定版本的数据，不会搞混。"
     description_en: "Solution: data hash + provenance tracking"
     prompt: |
       Researcher setting up data versioning with DVC or similar,
@@ -120,7 +120,7 @@ panels:
   # Element 3: Configuration (panels 11-13)
   - id: "02_011"
     type: "element"
-    description_zh: "元素3：配置 - 实验的参数设置"
+    description_zh: "'第三个元素是配置。'导师说，'实验不是只有代码和数据，还有一大堆参数。学习速率、批大小、迭代次数……这些都深深影响着结果。就像做菜，同样的材料，火候不同，味道就完全不一样。所以你需要清楚地记录每个参数的值。'"
     description_en: "Element 3: Configuration - experiment parameters"
     prompt: |
       Researcher adjusting holographic control panel,
@@ -130,7 +130,7 @@ panels:
 
   - id: "02_012"
     type: "problem"
-    description_zh: "问题：默认值藏在代码里"
+    description_zh: "小研在自己的代码里翻来覆去地找。参数呢？她看了五分钟才在某个函数的深层嵌套里找到了一个魔法数字。这算什么啊？别人怎么知道要改这个？她又发现另一个参数被迷之地设定为了一个很奇怪的值——她已经记不得为什么这样设定了。这些藏在代码深处的参数，已经变成了陷阱。"
     description_en: "Problem: default values hidden in code"
     prompt: |
       Researcher searching through code for hidden defaults,
@@ -140,7 +140,7 @@ panels:
 
   - id: "02_013"
     type: "solution"
-    description_zh: "解决：配置文件 + 命令行覆盖"
+    description_zh: "'把所有参数提取出来，放到一个配置文件里。'导师创建了一个简洁的YAML文件，每个参数都明确地写着，值是什么，为什么这么设。这样，别人打开一眼就看清楚了，想改参数也只需要改配置文件，不用翻代码。小研抄了一遍，暗想这真是太优雅了。"
     description_en: "Solution: config file + command line override"
     prompt: |
       Clean config.yaml file structure on screen,
@@ -151,7 +151,7 @@ panels:
   # Element 4: Environment (panels 14-16)
   - id: "02_014"
     type: "element"
-    description_zh: "元素4：环境 - 完整的运行条件"
+    description_zh: "'第四个元素是环境。'导师继续说，'代码运行在一个特定的环境里——Python版本、依赖库版本、GPU驱动、系统配置，这些都会影响结果。你需要把整个运行环境打包，让别人能在同样的环境里重现。'"
     description_en: "Element 4: Environment - complete runtime conditions"
     prompt: |
       Researcher packaging environment in virtual container,
@@ -161,7 +161,7 @@ panels:
 
   - id: "02_015"
     type: "problem"
-    description_zh: "问题：在我电脑上能跑"
+    description_zh: "小研苦笑。三个月前她在自己的笔记本上跑通了代码，兴冲冲地在实验室的服务器上运行，结果立刻报错。一堆库版本不一致，Python版本也不对。'明明在我电脑上能跑啊！'她对着屏幕崩溃。这就是那句著名的程序员诗句的现实——我的电脑和你的电脑，显然住着不同的神。"
     description_en: "Problem: works on my machine"
     prompt: |
       Classic "works on my machine" scenario,
@@ -171,7 +171,7 @@ panels:
 
   - id: "02_016"
     type: "solution"
-    description_zh: "解决：requirements.txt + Docker"
+    description_zh: "'所以，我们要把环境本身也记录下来。'导师展示了requirements.txt文件——每一个依赖库的版本都列得清清楚楚。甚至更进一步，用Docker把整个运行环境打包成一个容器。这样，别人只需要用你的Docker，就能得到完全一样的环境，结果自然也就能复现。小研拍了自己的脑袋，怎么没想到这一招呢。"
     description_en: "Solution: requirements.txt + Docker"
     prompt: |
       Researcher creating requirements.txt and Dockerfile,
@@ -182,7 +182,7 @@ panels:
   # Element 5-6: Results & Logs (panels 17-18)
   - id: "02_017"
     type: "element"
-    description_zh: "元素5-6：结果与日志 - 输出的完整记录"
+    description_zh: "'最后两个元素是结果和日志。'导师指向最后两个顶点。'实验最后会产生输出——模型、数据、可视化图表。这些都要保存，而且要和实验的ID绑定在一起。另外，过程中的日志更关键——这是让别人理解你怎么得出这个结果的唯一证据。'小研点点头。她越来越明白，比最终结果更重要的，是那条清晰的推导链条。"
     description_en: "Elements 5-6: Results & Logs - complete output record"
     prompt: |
       Researcher's experiment producing organized outputs,
@@ -192,7 +192,7 @@ panels:
 
   - id: "02_018"
     type: "practice"
-    description_zh: "实践：run_id命名规范"
+    description_zh: "小研开始给每个实验运行一个唯一的ID，通常是时间戳加上实验名称。这样，无论什么时候回头看，都能立刻找到对应的代码版本、数据版本、配置、结果和日志。就像给每个实验拍了个集体照，所有信息都在一个地方。"
     description_en: "Practice: run_id naming convention"
     prompt: |
       Clean folder structure with timestamp-based run IDs,
@@ -203,7 +203,7 @@ panels:
   # Closing (panels 19-20)
   - id: "02_019"
     type: "synthesis"
-    description_zh: "综合：六要素检查清单"
+    description_zh: "导师给了她一个检查清单。每个实验完成前，她都要确认：代码版本？数据版本？参数配置？运行环境？结果输出？执行日志？六个都对了吗？小研逐个标记，每打一个勾，心里就多了一分踏实。这个六边形，就像一个完整的、活着的、能够被复现的实验。"
     description_en: "Synthesis: six elements checklist"
     prompt: |
       Researcher with complete checklist of six elements,
@@ -213,7 +213,7 @@ panels:
 
   - id: "02_020"
     type: "preview"
-    description_zh: "下一章预告：仓库结构"
+    description_zh: "处理好了单个实验的问题，小研意识到一个新的挑战在等着她。当实验越来越多、涉及的代码越来越复杂时，仅仅记录单个实验还不够。她需要一个能够容纳和组织所有这些实验的结构——一个仓库。下一章，她要学的是，如何设计这个仓库的骨架。"
     description_en: "Next chapter preview: repository structure"
     prompt: |
       Preview of organized repository tree structure,

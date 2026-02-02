@@ -17,7 +17,7 @@ panels:
   # Opening: The Crisis Deepens (panels 1-5)
   - id: "01_001"
     type: "establishing"
-    description_zh: "小研振作精神，翻开了《研究工程OS》的第一章。书中写道：'要解决这些问题，我们首先要理解，为什么它们总是会发生。'她深吸一口气，开始阅读。也许，答案就在这里。"
+    description_zh: "天亮了。小研坐在实验室的窗边，翻开了《研究工程OS》的第一章。书中的第一句话击中了她：'为什么有些代码永远都改不完？为什么有些实验永远都无法重复？答案就在于，我们在早期的快速推进中，埋下了太多的债。'她紧紧握着这本书。也许...答案就在这里。"
     description_en: "Xiao Yan reading Research Engineering OS late night in library"
     prompt: |
       Late night university library, young researcher at study desk,
@@ -27,7 +27,7 @@ panels:
 
   - id: "01_002"
     type: "visualization"
-    description_zh: "书中用三个词概括了研究中的债务：探索债、验证债、复现债。小研愣住了。这三个词，就像给她脑海中那团混乱的东西命了名。原来，她经历的痛苦，不是个例，是有规律可循的。"
+    description_zh: "书中用三个词来定义研究债务。小研慢慢地读着这三个词：探索债、验证债、复现债。她的手停住了。对。这就是！这三个词就像三把钥匙，打开了她脑子里那团混乱的锁。原来她经历的所有问题，都不是独特的个案。它们是有名字的。它们是有规律的。"
     description_en: "Three types of debt visualized from the book"
     prompt: |
       Holographic visualization floating from open book pages,
@@ -37,7 +37,7 @@ panels:
 
   - id: "01_003"
     type: "flashback"
-    description_zh: "小研想起三个月前项目启动那天。白板上画满了宏大的构想，每个人都充满干劲。她记得自己信心满满地说：'先把功能做出来，文档和规范以后再补。'现在想想，那时的自己，正在埋下第一颗地雷。"
+    description_zh: "小研脑子里浮现出三个月前的那一幕。项目启动会，白板上全是宏大的计划。那时候的她多自信啊，拍着桌子说：'先快速把框架搭出来，测试和文档以后再补。我们现在要速度！'现在，她看着这几个字，突然意识到：那句话，就是她现在所有问题的源头。"
     description_en: "Flashback: excitement at project start"
     prompt: |
       Bright flashback panel, researcher at beginning of project,
@@ -47,7 +47,7 @@ panels:
 
   - id: "01_004"
     type: "montage"
-    description_zh: "书中继续写道：'探索债，就是为了快速验证想法而积累的技术债。'小研苦笑。这说的不就是她吗？为了赶进度，代码里到处是TODO注释，'先跑通再重构'成了口头禅。当时觉得进展很快，现在想想，只是在给未来挖坑。"
+    description_zh: "书中写道：'探索债就是为了快速验证想法而产生的代码和流程债。你以为你在快速前进，其实你在积累未来的代价。'小研苦笑。这不就是说她吗？代码里到处是TODO、FIXME、先这样跑通再说...她当时有多兴奋进度快了，现在就有多后悔。"
     description_en: "Montage: days flying by"
     prompt: |
       Montage panel showing time passing quickly,

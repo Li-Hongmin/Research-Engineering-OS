@@ -17,7 +17,7 @@ panels:
   # Opening: The Mess (panels 1-5)
   - id: "03_001"
     type: "establishing"
-    description_zh: "小研面对混乱的项目目录"
+    description_zh: "掌握了实验单元的概念后，小研开始应用到自己的项目里。但立刻，她又遇到了新的麻烦。虽然现在她能记录单个实验的六个要素了，可是当实验越来越多、代码文件越来越复杂时，她根本不知道该怎么组织这一切。打开项目根目录，她盯着屏幕发呆。有的文件在根目录，有的在src里，有的在experiment里，每个文件夹的命名规则也不一样。混乱得不像一个项目，倒像一个垃圾堆。"
     description_en: "Xiao Yan facing chaotic project directory"
     prompt: |
       Researcher opening laptop to chaotic file structure,
@@ -27,7 +27,7 @@ panels:
 
   - id: "03_002"
     type: "problem"
-    description_zh: "文件命名灾难：final_final_v3_REAL"
+    description_zh: "文件名更是一场灾难。model.py、model_v2.py、model_final.py、model_FINAL_USE_THIS.py……她甚至找不到上周改的那个版本。每个文件名都在说谎，声称自己是'最终版'，但没有一个真的是。小研指着屏幕，苦笑和绝望混在一起。这些文件，就像扎进心脏的刺。"
     description_en: "File naming disaster: final_final_v3_REAL"
     prompt: |
       Close-up on ridiculous file names,
@@ -37,7 +37,7 @@ panels:
 
   - id: "03_003"
     type: "consequence"
-    description_zh: "找不到上周的代码"
+    description_zh: "每次她需要找一个特定的代码时，都要花上半小时翻阅不同的文件，一个一个尝试。有时候她改了某个文件却忘了，过了两天突然发现代码变了。有时候她需要恢复某个旧版本，却根本不知道哪个文件是。时间一点点被浪费掉，她甚至没有意识到。"
     description_en: "Can't find last week's code"
     prompt: |
       Researcher frantically searching through folders,
@@ -47,7 +47,7 @@ panels:
 
   - id: "03_004"
     type: "realization"
-    description_zh: "领悟：混乱的代价是时间"
+    description_zh: "有一天，小研统计了一下，发现自己每周有四五个小时花在'找文件'和'确认这个是不是最新版'上。那些时间本来可以用来做实验、分析结果，现在全部浪费在了混乱的管理上。她突然感到一阵冷意——混乱，就是在慢慢吞噬她的生产力。"
     description_en: "Realization: chaos costs time"
     prompt: |
       Researcher calculating time wasted on searching,
@@ -57,7 +57,7 @@ panels:
 
   - id: "03_005"
     type: "decision"
-    description_zh: "决心：今天就整理"
+    description_zh: "小研拿起手机，给导师发了消息。导师没有多说，只是回了一个链接，是一篇关于仓库结构的文章。看完之后，小研下定决心：'我一定要把这个项目整理干净。今天就开始。'她卷起袖子，做好了长期战斗的准备。"
     description_en: "Decision: organize today"
     prompt: |
       Researcher standing up with determination,
@@ -68,7 +68,7 @@ panels:
   # The Solution: Standard Structure (panels 6-12)
   - id: "03_006"
     type: "concept"
-    description_zh: "标准目录结构概念"
+    description_zh: "导师给她展示了一个标准的项目结构模板——像一个蓝图，清晰地规定了每种文件应该放在哪里。小研看着这个结构，感到一种秩序的美感。项目的各个部分各得其所，不再拥挤在一个根目录里。这就是工程师们经过无数次失败摸索出来的'黄金标准'。"
     description_en: "Standard directory structure concept"
     prompt: |
       Beautiful clean directory tree appearing as blueprint,
@@ -77,7 +77,7 @@ panels:
 
   - id: "03_007"
     type: "element"
-    description_zh: "src/目录：稳定的核心代码"
+    description_zh: "'这是src/目录，'导师指向第一个文件夹，'这里放的是你最可靠、最经过测试的代码。一旦代码进了这里，就意味着它已经通过了审核，是项目可以依赖的基础。'小研想象着这像一个堡垒，只有经过验证的代码才能踏入。"
     description_en: "src/ directory: stable core code"
     prompt: |
       Researcher carefully placing tested modules into src/,
@@ -86,7 +86,7 @@ panels:
 
   - id: "03_008"
     type: "element"
-    description_zh: "experiments/目录：实验性代码"
+    description_zh: "'这是experiments/目录。'导师继续说，'这里就自由得多了。你的Jupyter笔记本、草稿代码、各种尝试都可以放在这里。混乱是允许的，因为这是创意的空间。但重点是，你永远不要直接从experiments/里引入代码到其他地方。'小研点点头，明白了——这是沙箱，失败和混乱在这里是安全的。"
     description_en: "experiments/ directory: experimental code"
     prompt: |
       Researcher placing messy notebooks into experiments/,
@@ -95,7 +95,7 @@ panels:
 
   - id: "03_009"
     type: "element"
-    description_zh: "configs/目录：所有配置集中"
+    description_zh: "'configs/目录放所有的配置文件。'导师创建了几个YAML文件。'这样，当别人或者未来的你想了解实验的参数时，一眼就能看清楚，不用翻代码。'小研为这种整洁而赞叹。每个配置都有了家，不再四散分布。"
     description_en: "configs/ directory: all configs centralized"
     prompt: |
       Researcher organizing config files into configs/,
@@ -105,7 +105,7 @@ panels:
 
   - id: "03_010"
     type: "element"
-    description_zh: "data/目录：数据目录（不提交）"
+    description_zh: "'data/目录存放所有的数据。但要注意，'导师强调，'数据通常太大了，不应该提交到Git里。我们在data/目录下放一个.gitignore，告诉Git不要跟踪这些文件。'小研在.gitignore里写下了*.csv、*.pkl等规则。数据就像家里的生鲜食材，不能放在冷柜外面太久，所以它们不进入版本库。"
     description_en: "data/ directory: data folder (not committed)"
     prompt: |
       Researcher setting up data/ directory with .gitignore,
@@ -115,7 +115,7 @@ panels:
 
   - id: "03_011"
     type: "element"
-    description_zh: "Makefile：一键命令入口"
+    description_zh: "'最后，创建一个Makefile。'导师展示了一个简洁的Makefile。'make train'就能运行训练，'make test'就能跑测试。这样，复杂的命令被隐藏在漂亮的接口后面。新来的人或者三个月后的你，都不需要记那些冗长的命令行。'小研试试看，敲了'make train'，一切都自动跑起来。这种优雅感让她心里暖暖的。"
     description_en: "Makefile: one-command entry points"
     prompt: |
       Researcher at control panel with big buttons,
@@ -125,7 +125,7 @@ panels:
 
   - id: "03_012"
     type: "element"
-    description_zh: "README.md：项目首页"
+    description_zh: "'最后，写一个README.md。'导师说。'这是项目的首页，告诉新人怎么快速开始。快速开始指南、依赖怎么装、怎么跑第一个实验。想象一下，三个月后的你，完全忘记了这个项目的细节，拿起README就能快速回忆起来。'小研认真地写起来，把自己的项目当作一个送给他人的礼物。"
     description_en: "README.md: project home page"
     prompt: |
       Researcher writing welcoming README,
@@ -136,7 +136,7 @@ panels:
   # Fast vs Slow Variables (panels 13-17)
   - id: "03_013"
     type: "concept"
-    description_zh: "快变量vs慢变量概念"
+    description_zh: "导师提出了一个重要的概念：快变量和慢变量。experiments/里的代码是'快变量'——它们经常变、需要快速迭代。src/里的代码是'慢变量'——它们应该稳定、可靠、变化缓慢。这两者不能混淆，否则整个项目就会陷入混乱。"
     description_en: "Fast variables vs slow variables concept"
     prompt: |
       Two types of code visualized as different speeds,
@@ -146,7 +146,7 @@ panels:
 
   - id: "03_014"
     type: "mistake"
-    description_zh: "错误：把实验代码直接放src"
+    description_zh: "小研想起自己曾经犯过的错误。她把一个还没有充分验证的模型直接放进了src/，觉得反正以后还能改。结果其他部分的代码开始依赖这个模型，改动的时候一改就是一大堆地方跟着出错。这一刻，她明白了为什么要分离快慢变量——这是为了保护那些可靠的代码不被实验的波澜冲垮。"
     description_en: "Mistake: putting experimental code directly in src"
     prompt: |
       Researcher making mistake of mixing fast and slow,
@@ -156,7 +156,7 @@ panels:
 
   - id: "03_015"
     type: "consequence"
-    description_zh: "后果：稳定代码被破坏"
+    description_zh: "混淆快慢变量的代价是什么？整个项目的稳定性就会被破坏。一个不稳定的模块被其他代码依赖了，改这个模块时就要连带改其他地方。改着改着，原本稳定的代码也变得不稳定了。最后，整个项目就像一个被污染的环境，没有一处是干净的。"
     description_en: "Consequence: stable code corrupted"
     prompt: |
       Previously working code now broken,
@@ -166,7 +166,7 @@ panels:
 
   - id: "03_016"
     type: "solution"
-    description_zh: "正确做法：毕业制度"
+    description_zh: "'所以我们需要一个'毕业'制度。'导师说。'实验代码只有经过充分的测试、documentation、代码审查，才能从experiments/毕业进入src/。'这听起来像一个仪式，小研喜欢这个比喻。只有真正成熟的代码，才能成为项目的基石。"
     description_en: "Correct approach: graduation system"
     prompt: |
       Code graduation ceremony visualization,
@@ -176,7 +176,7 @@ panels:
 
   - id: "03_017"
     type: "practice"
-    description_zh: "实践：定期的代码毕业"
+    description_zh: "小研在日历上标记了每周的'代码毕业日'。那天，她会坐下来，认真审视experiments/里的代码。哪些已经足够稳定了？哪些还在迭代中？满足条件的就被挑选出来，经过测试、文档完善后，移入src/。这个过程让她感到自己真的在构建一个工程，而不是在做随意的代码堆积。"
     description_en: "Practice: regular code graduation"
     prompt: |
       Calendar showing weekly graduation schedule,
@@ -187,7 +187,7 @@ panels:
   # Transformation (panels 18-22)
   - id: "03_018"
     type: "before_after"
-    description_zh: "改造前：混乱的根目录"
+    description_zh: "改造前的根目录看起来像一场灾难。超过五十个文件混在一起，文件名各式各样，没有任何规律。甚至有些文件，小研自己都不记得它们是干什么的。看着这个混乱的景象，她叹了口气。这就是她之前花了那么多时间在'找文件'上的原因。"
     description_en: "Before: chaotic root directory"
     prompt: |
       Split panel left side showing messy root,
@@ -196,7 +196,7 @@ panels:
 
   - id: "03_019"
     type: "before_after"
-    description_zh: "改造后：清晰的结构"
+    description_zh: "两天后，改造完成了。根目录现在只有五六个子目录：src、experiments、configs、data、docs。清晰，干净，有序。每个东西都有了自己的位置。小研看着这个新的结构，感到一种满足感——这才是一个真正的项目该有的样子。"
     description_en: "After: clean structure"
     prompt: |
       Split panel right side showing organized repo,
@@ -206,7 +206,7 @@ panels:
 
   - id: "03_020"
     type: "benefit"
-    description_zh: "好处：新人5分钟上手"
+    description_zh: "最快的验证来自于团队的新成员。一个刚加入项目的学妹用了不到五分钟就理解了整个项目的结构，打开README按步骤做，直接就跑起来了。没有'文件在哪？'、'这个干什么用的？'这样的问题。小研第一次感到，好的结构不仅对自己有帮助，对他人也是一份礼物。"
     description_en: "Benefit: newcomer onboards in 5 minutes"
     prompt: |
       New team member easily understanding project,
@@ -216,7 +216,7 @@ panels:
 
   - id: "03_021"
     type: "benefit"
-    description_zh: "好处：自己3个月后也能看懂"
+    description_zh: "三个月后，小研再次打开这个项目。之前那个密密麻麻的文件夹场景不复存在。现在，她立刻就想起来了：实验代码在experiments，模型在src，参数在configs。甚至，她对当时的自己说了句感谢——'感谢那个整理的自己，现在的我能这么快地回到状态。'时间就这样无形中被节省了。"
     description_en: "Benefit: you understand it 3 months later"
     prompt: |
       Researcher returning to old project months later,
@@ -226,7 +226,7 @@ panels:
 
   - id: "03_022"
     type: "action"
-    description_zh: "10分钟行动：创建基础目录"
+    description_zh: "导师最后给了她一个挑战：'用十分钟，给自己的项目创建这个基础结构。'小研没有犹豫。mkdir这里，mkdir那里，简单几个命令，框架就搭好了。十分钟的投资，换来的是未来无数小时的便利。"
     description_en: "10-minute action: create base directories"
     prompt: |
       Researcher quickly creating directory structure,
@@ -237,7 +237,7 @@ panels:
   # Closing (panels 23-25)
   - id: "03_023"
     type: "summary"
-    description_zh: "总结：好结构是投资"
+    description_zh: "小研开始理解一个新的概念：一个好的项目结构，就是一种投资。你现在花在组织上的时间，会在未来的每一天以倍数的形式返还给你。这不是浪费时间，这是最聪明的时间管理。"
     description_en: "Summary: good structure is investment"
     prompt: |
       Researcher looking at organized repo like investment portfolio,
@@ -246,7 +246,7 @@ panels:
 
   - id: "03_024"
     type: "tip"
-    description_zh: "提示：使用cookiecutter模板"
+    description_zh: "为了让这个过程更快，导师推荐了cookiecutter这样的工具。只要一条命令，一个完整的项目模板就会自动生成。小研用了一次，直接就有了标准的目录结构和基础文件。'站在巨人的肩膀上'——她想起这句话，决定以后每个新项目都用这个模板开始。"
     description_en: "Tip: use cookiecutter template"
     prompt: |
       Researcher using project template tool,
@@ -255,7 +255,7 @@ panels:
 
   - id: "03_025"
     type: "preview"
-    description_zh: "下一章预告：Git作为证据"
+    description_zh: "现在，仓库的骨架建好了。下一个问题是：如何追踪这些文件的变化？如何证明某个时刻代码是什么样的？如何让别人相信，你的实验流程是诚实的、可复现的？答案就在Git的历史里。下一章，小研要学的是，如何把Git的提交历史当作一份法律证据。"
     description_en: "Next chapter preview: Git as evidence"
     prompt: |
       Preview of git history as legal evidence,
