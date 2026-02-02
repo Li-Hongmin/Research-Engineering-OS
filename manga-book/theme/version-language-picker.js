@@ -200,83 +200,85 @@
     function injectStyles() {
         const style = document.createElement("style");
         style.textContent = `
-            /* Picker Group Container */
+            /* Picker Group Container - Inline with other buttons */
             .picker-group {
-                display: flex;
-                gap: 0.3rem;
+                display: inline-flex;
+                gap: 0.5rem;
                 align-items: center;
-                margin-right: 0.5rem;
+                margin-right: 0.8rem;
+                vertical-align: middle;
             }
 
             /* Shared Picker Dropdown Styles */
             .picker-dropdown {
                 position: relative;
                 display: inline-block;
+                vertical-align: middle;
             }
 
-            /* Shared Toggle Button Styles - Using page theme colors */
+            /* Shared Toggle Button Styles */
             .picker-toggle {
-                display: flex;
+                display: inline-flex;
                 align-items: center;
                 gap: 0.4rem;
-                padding: 0.4rem 0.7rem;
-                border: 1px solid var(--icons);
-                border-radius: 4px;
-                background: transparent;
-                color: var(--icons);
+                padding: 0.5rem 0.8rem;
+                border: none;
+                border-radius: 6px;
+                color: #fff;
                 cursor: pointer;
-                font-size: 0.85rem;
+                font-size: 0.9rem;
                 font-weight: 500;
-                transition: all 0.15s ease;
+                transition: all 0.2s ease;
                 white-space: nowrap;
+                vertical-align: middle;
             }
 
-            /* Shared Toggle Button Hover */
-            .picker-toggle:hover {
-                color: var(--links);
-                border-color: var(--links);
-                background: var(--quote-bg);
-            }
-
-            /* Version Picker */
+            /* Version Picker (Teal) */
             .version-toggle {
-                /* Using page theme variables */
+                background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+                box-shadow: 0 2px 4px rgba(13, 148, 136, 0.3);
             }
 
-            /* Language Picker */
+            .version-toggle:hover {
+                background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+                box-shadow: 0 4px 8px rgba(13, 148, 136, 0.4);
+            }
+
+            /* Language Picker (Blue) */
             .language-toggle {
-                /* Using page theme variables */
+                background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
+                box-shadow: 0 2px 4px rgba(74, 144, 217, 0.3);
+            }
+
+            .language-toggle:hover {
+                background: linear-gradient(135deg, #357abd 0%, #2868a9 100%);
+                box-shadow: 0 4px 8px rgba(74, 144, 217, 0.4);
             }
 
             /* Arrow Animation */
             .picker-arrow {
-                font-size: 0.5rem;
-                opacity: 0.7;
-                transition: transform 0.15s ease, opacity 0.15s ease;
+                font-size: 0.6rem;
+                transition: transform 0.2s ease;
             }
 
             .picker-dropdown.open .picker-arrow {
                 transform: rotate(180deg);
             }
 
-            .picker-toggle:hover .picker-arrow {
-                opacity: 1;
-            }
-
-            /* Menu Styles - Match mdBook design */
+            /* Menu Styles */
             .picker-menu {
                 display: none;
                 position: absolute;
                 top: 100%;
                 right: 0;
-                margin: 0.2rem 0 0 0;
+                margin: 0.3rem 0 0 0;
                 padding: 0.3rem 0;
                 list-style: none;
                 background: var(--bg);
-                border: 1px solid var(--table-border-color);
-                border-radius: 4px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                min-width: 130px;
+                border: 1px solid var(--icons);
+                border-radius: 6px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                min-width: 140px;
                 z-index: 1000;
             }
 
@@ -291,43 +293,40 @@
 
             .picker-item {
                 display: block;
-                padding: 0.5rem 0.9rem;
+                padding: 0.6rem 1rem;
                 color: var(--fg);
                 text-decoration: none;
                 white-space: nowrap;
-                transition: all 0.1s ease;
-                font-size: 0.9rem;
+                transition: background 0.15s ease;
             }
 
             .picker-item:hover {
                 background: var(--quote-bg);
-                color: var(--links);
             }
 
             .picker-item.active {
+                font-weight: bold;
                 color: var(--links);
-                font-weight: 600;
-                background: var(--quote-bg);
             }
 
             .picker-item.active::before {
                 content: "✓ ";
-                margin-right: 0.3rem;
             }
 
-            /* Mobile Responsive - Keep horizontal on desktop */
+            /* Mobile Responsive */
             @media (max-width: 768px) {
                 .picker-group {
-                    flex-wrap: wrap;
+                    gap: 0.3rem;
+                    margin-right: 0.5rem;
                 }
 
                 .picker-toggle {
-                    padding: 0.35rem 0.6rem;
-                    font-size: 0.8rem;
+                    padding: 0.4rem 0.6rem;
+                    font-size: 0.85rem;
                 }
 
                 .picker-menu {
-                    min-width: 110px;
+                    min-width: 120px;
                 }
             }
         `;
