@@ -11,4 +11,5 @@ preferred-dark-theme = "coal"
 git-repository-url = "https://github.com/li-hongmin/Research-Engineering-OS"
 
 [output.html.fold]
-enable = false
+enable = true
+level = 0

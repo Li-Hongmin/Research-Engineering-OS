@@ -1,269 +1,56 @@
 # 第十章「团队协作」分镜脚本
-# Chapter 10: "Team Collaboration"
-# 25 panels on working effectively in research teams
-
 chapter: "10-team"
 title_zh: "团队协作"
 title_en: "Team Collaboration"
-title_ja: "チーム協力"
-
-style_base: |
-  Japanese manga illustration, clean anime art style,
-  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
-  expressive anime eyes, dynamic composition, professional digital art,
-  cel-shading, cinematic lighting, no text or speech bubbles.
 
 panels:
-  # Opening: Individual vs Team (panels 1-4)
   - id: "10_001"
-    type: "establishing"
-    description_zh: "小研加入研究团队"
-    description_en: "Xiao Yan joins a research team"
-    prompt: |
-      Researcher being welcomed to research team,
-      three other team members greeting her,
-      new chapter beginning, team dynamics,
-      collaborative environment.
-
+    description_zh: "小研的项目越做越好，导师决定让她加入一个大型合作项目。第一天，她打开共享代码库，愣住了。同样的功能，有人用A方法，有人用B方法，命名风格五花八门。这...真的是一个项目吗？"
   - id: "10_002"
-    type: "observation"
-    description_zh: "观察：每个人都很强"
-    description_en: "Observation: everyone is individually strong"
-    prompt: |
-      Each team member shown as skilled individual,
-      impressive individual accomplishments floating,
-      talented group assembled,
-      individual excellence.
-
+    description_zh: "第一次提交代码就遇到了麻烦。merge时满屏的冲突，她花了三个小时才解决。但第二天，又有人的提交和她冲突了。小研盯着屏幕，感到一阵疲惫。这样下去，编码的时间还没解决冲突的时间多。"
   - id: "10_003"
-    type: "problem"
-    description_zh: "问题：但团队产出不如预期"
-    description_en: "Problem: but team output below expectations"
-    prompt: |
-      Team struggling to produce together,
-      1+1+1+1 not equaling 4, more like 2,
-      frustration among members,
-      collaboration friction.
-
+    description_zh: "团队会议上，几个老成员也在抱怨类似的问题。导师敲了敲桌子：'看来，我们需要建立一些规范了。'小研点点头。她终于理解了，为什么大项目都要那么多看似繁琐的规则。"
   - id: "10_004"
-    type: "question"
-    description_zh: "疑问：为什么强者组队却变弱？"
-    description_en: "Question: why does a team of strong people become weak?"
-    prompt: |
-      Question marks around confused team,
-      paradox of individual strength vs team weakness,
-      mystery to be solved,
-      collaboration puzzle.
-
-  # Team Failure Modes (panels 5-11)
+    description_zh: "制定代码规范：统一的格式化、命名约定、注释要求。"
   - id: "10_005"
-    type: "failure"
-    description_zh: "失败模式1：沟通不足"
-    description_en: "Failure mode 1: insufficient communication"
-    prompt: |
-      Team members working in silos,
-      walls between each person,
-      no information flowing,
-      isolation problem.
-
+    description_zh: "使用代码格式化工具：black、prettier，自动保持一致。"
   - id: "10_006"
-    type: "scenario"
-    description_zh: "周一站会：各说各的"
-    description_en: "Monday standup: talking past each other"
-    prompt: |
-      Chaotic team meeting,
-      everyone sharing but no one listening,
-      different priorities, no alignment,
-      communication breakdown.
-
+    description_zh: "建立代码评审流程：Pull Request必须经过审查才能合并。"
   - id: "10_007"
-    type: "failure"
-    description_zh: "失败模式2：代码冲突"
-    description_en: "Failure mode 2: code conflicts"
-    prompt: |
-      Two team members discovering their code conflicts,
-      merge conflicts everywhere,
-      incompatible changes,
-      integration nightmare.
-
+    description_zh: "小研提交第一个PR，收到详细的review反馈。"
   - id: "10_008"
-    type: "scenario"
-    description_zh: "周三：发现两人改了同一文件"
-    description_en: "Wednesday: discovering two people modified same file"
-    prompt: |
-      Horror of discovering duplicated effort,
-      two different versions of same improvement,
-      wasted work, frustration,
-      coordination failure.
-
+    description_zh: "学习如何给出建设性的代码评审意见。"
   - id: "10_009"
-    type: "failure"
-    description_zh: "失败模式3：隐性知识依赖"
-    description_en: "Failure mode 3: hidden knowledge dependency"
-    prompt: |
-      One team member holding all the knowledge,
-      others stuck waiting, knowledge bottleneck,
-      bus factor = 1, danger,
-      knowledge silo.
-
+    description_zh: "建立分支策略：feature分支、develop分支、main分支。"
   - id: "10_010"
-    type: "scenario"
-    description_zh: "周五：唯一知道的人请假了"
-    description_en: "Friday: the only person who knows is on leave"
-    prompt: |
-      Team blocked because key person is absent,
-      critical deadline approaching,
-      desperation, single point of failure,
-      knowledge dependency crisis.
-
+    description_zh: "使用CI/CD自动化测试和部署。"
   - id: "10_011"
-    type: "failure"
-    description_zh: "失败模式4：重复劳动"
-    description_en: "Failure mode 4: duplicated work"
-    prompt: |
-      Two team members built same thing independently,
-      discovery of wasted effort,
-      "I already did that!" moment,
-      coordination waste.
-
-  # The Solutions (panels 12-20)
+    description_zh: "建立issue追踪系统：清晰记录任务和bug。"
   - id: "10_012"
-    type: "principle"
-    description_zh: "原则：团队需要约定"
-    description_en: "Principle: teams need conventions"
-    prompt: |
-      Team agreeing on shared conventions,
-      handshake symbolizing agreement,
-      common ground established,
-      foundation of collaboration.
-
+    description_zh: "使用项目看板：可视化任务进度。"
   - id: "10_013"
-    type: "solution"
-    description_zh: "解决1：每日短站会"
-    description_en: "Solution 1: daily short standup"
-    prompt: |
-      Quick 15-minute standup meeting,
-      each person sharing: did, doing, blocked,
-      information flowing between members,
-      daily sync.
-
+    description_zh: "编写团队文档：README、CONTRIBUTING、架构说明。"
   - id: "10_014"
-    type: "solution"
-    description_zh: "解决2：共享代码规范"
-    description_en: "Solution 2: shared code conventions"
-    prompt: |
-      Team following same coding standards,
-      consistent style across all code,
-      easy to read each other's work,
-      coding harmony.
-
+    description_zh: "建立定期会议机制：站会、周会、里程碑评审。"
   - id: "10_015"
-    type: "solution"
-    description_zh: "解决3：PR Review流程"
-    description_en: "Solution 3: PR review process"
-    prompt: |
-      Team doing code reviews before merge,
-      constructive feedback, knowledge sharing,
-      quality gate and learning opportunity,
-      review culture.
-
+    description_zh: "使用异步沟通工具：减少打扰，提高效率。"
   - id: "10_016"
-    type: "solution"
-    description_zh: "解决4：共享实验追踪"
-    description_en: "Solution 4: shared experiment tracking"
-    prompt: |
-      Team using shared experiment dashboard,
-      everyone can see all experiments,
-      no duplicate work, transparency,
-      shared visibility.
-
+    description_zh: "建立知识库：记录团队的决策和经验。"
   - id: "10_017"
-    type: "solution"
-    description_zh: "解决5：文档即知识共享"
-    description_en: "Solution 5: documentation as knowledge sharing"
-    prompt: |
-      Team maintaining shared documentation,
-      knowledge captured in wiki,
-      no single point of failure for knowledge,
-      collective memory.
-
+    description_zh: "实施结对编程：解决复杂问题时协同工作。"
   - id: "10_018"
-    type: "solution"
-    description_zh: "解决6：分工明确+接口清晰"
-    description_en: "Solution 6: clear division + clean interfaces"
-    prompt: |
-      Team with clear responsibility areas,
-      well-defined interfaces between work,
-      independent but compatible,
-      modular collaboration.
-
+    description_zh: "建立导师制度：老成员帮助新成员快速上手。"
   - id: "10_019"
-    type: "practice"
-    description_zh: "实践：共同维护的约定文档"
-    description_en: "Practice: jointly maintained conventions document"
-    prompt: |
-      Team contributing to shared conventions doc,
-      CONVENTIONS.md being updated together,
-      living document, evolving standards,
-      shared ownership.
-
+    description_zh: "处理团队冲突：技术分歧用数据说话。"
   - id: "10_020"
-    type: "culture"
-    description_zh: "文化：互相帮助，而非互相阻碍"
-    description_en: "Culture: help each other, don't block each other"
-    prompt: |
-      Team members actively helping each other,
-      collaborative spirit, shared success,
-      supportive environment,
-      team synergy.
-
-  # Team Victory (panels 21-25)
+    description_zh: "庆祝里程碑：团队一起完成了第一个大版本。"
   - id: "10_021"
-    type: "transformation"
-    description_zh: "转变：1+1+1+1 > 4"
-    description_en: "Transformation: 1+1+1+1 > 4"
-    prompt: |
-      Team now producing more than sum of parts,
-      synergy visible, combined strength,
-      super-additive output,
-      collaboration multiplier.
-
+    description_zh: "回顾会议：总结经验，持续改进流程。"
   - id: "10_022"
-    type: "victory"
-    description_zh: "胜利：团队论文提交成功"
-    description_en: "Victory: team paper submitted successfully"
-    prompt: |
-      Team celebrating successful submission together,
-      everyone contributed, shared victory,
-      high-fives all around,
-      team achievement.
-
+    description_zh: "小研从团队新手成长为可以独当一面的contributor。"
   - id: "10_023"
-    type: "growth"
-    description_zh: "成长：每个人都学到了新东西"
-    description_en: "Growth: everyone learned something new"
-    prompt: |
-      Each team member showing what they learned from others,
-      knowledge transfer happened naturally,
-      everyone grew together,
-      collective learning.
-
+    description_zh: "她开始指导新加入的学生。"
   - id: "10_024"
-    type: "action"
-    description_zh: "10分钟行动：提议一个团队约定"
-    description_en: "10-minute action: propose one team convention"
-    prompt: |
-      Researcher proposing improvement to team,
-      taking initiative for better collaboration,
-      leadership moment,
-      proactive contribution.
-
+    description_zh: "导师欣慰：'团队协作能力和技术能力同样重要。'"
   - id: "10_025"
-    type: "finale"
-    description_zh: "终章预告：小研的完整成长"
-    description_en: "Finale preview: Xiao Yan's complete growth"
-    prompt: |
-      Preview of epilogue,
-      Xiao Yan's journey summary teased,
-      full circle about to complete,
-      story climax approaching.
+    description_zh: "结尾：团队照片，小研站在中间，自信地微笑。"

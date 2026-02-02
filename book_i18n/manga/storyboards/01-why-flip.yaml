@@ -17,7 +17,7 @@ panels:
   # Opening: The Crisis Deepens (panels 1-5)
   - id: "01_001"
     type: "establishing"
-    description_zh: "小研在图书馆深夜阅读Research Engineering OS"
+    description_zh: "小研振作精神，翻开了《研究工程OS》的第一章。书中写道：'要解决这些问题，我们首先要理解，为什么它们总是会发生。'她深吸一口气，开始阅读。也许，答案就在这里。"
     description_en: "Xiao Yan reading Research Engineering OS late night in library"
     prompt: |
       Late night university library, young researcher at study desk,
@@ -27,7 +27,7 @@ panels:
 
   - id: "01_002"
     type: "visualization"
-    description_zh: "书中浮现三种债务的图解"
+    description_zh: "书中用三个词概括了研究中的债务：探索债、验证债、复现债。小研愣住了。这三个词，就像给她脑海中那团混乱的东西命了名。原来，她经历的痛苦，不是个例，是有规律可循的。"
     description_en: "Three types of debt visualized from the book"
     prompt: |
       Holographic visualization floating from open book pages,
@@ -37,7 +37,7 @@ panels:
 
   - id: "01_003"
     type: "flashback"
-    description_zh: "回忆：项目开始时的兴奋"
+    description_zh: "小研想起三个月前项目启动那天。白板上画满了宏大的构想，每个人都充满干劲。她记得自己信心满满地说：'先把功能做出来，文档和规范以后再补。'现在想想，那时的自己，正在埋下第一颗地雷。"
     description_en: "Flashback: excitement at project start"
     prompt: |
       Bright flashback panel, researcher at beginning of project,
@@ -47,7 +47,7 @@ panels:
 
   - id: "01_004"
     type: "montage"
-    description_zh: "快速推进：日子飞逝的蒙太奇"
+    description_zh: "书中继续写道：'探索债，就是为了快速验证想法而积累的技术债。'小研苦笑。这说的不就是她吗？为了赶进度，代码里到处是TODO注释，'先跑通再重构'成了口头禅。当时觉得进展很快，现在想想，只是在给未来挖坑。"
     description_en: "Montage: days flying by"
     prompt: |
       Montage panel showing time passing quickly,
@@ -57,7 +57,7 @@ panels:
 
   - id: "01_005"
     type: "crisis"
-    description_zh: "现实：截止日前发现问题"
+    description_zh: "终于，最可怕的时刻降临了。在那个原本预定要提交最终版本的清晨，一个微小的修改引发了灾难性的连锁反应。报错信息像潮水般涌现，辛苦跑了一周的数据竟然因为环境漂移而无法对齐。小研颓然地抱着头，截稿日的红色圆圈在墙上像是一只嘲弄的眼睛，冷冷地注视着她的一败涂地。"
     description_en: "Reality: discovering problems before deadline"
     prompt: |
       Back to present darkness, researcher discovering major issues,
@@ -68,7 +68,7 @@ panels:
   # Exploration Debt Deep Dive (panels 6-10)
   - id: "01_006"
     type: "monster_intro"
-    description_zh: "探索债怪兽详解：由快速原型构成"
+    description_zh: "在书页的插画中，一个被称为‘探索债’的怪物显现了。它的身体由纠缠在一起的 Jupyter Notebook 和杂乱的脚本组成，无数‘再试一次’的代码碎片像触手一样扭动。它看起来甚至有些亲切，像是在诱惑她：‘只要快，什么都好。’"
     description_en: "Exploration debt monster explained: made of quick prototypes"
     prompt: |
       Detailed view of exploration debt monster materializing,
@@ -78,7 +78,7 @@ panels:
 
   - id: "01_007"
     type: "cause"
-    description_zh: "探索债的诞生：快速验证想法"
+    description_zh: "小研想起了项目初期，为了快速验证灵感，她写下了无数‘一次性’的代码。那是怪物的幼年期，它藏在桌角的阴影里，随着她每一次点击‘运行’而窃笑着生长。"
     description_en: "Birth of exploration debt: quick idea validation"
     prompt: |
       Split panel showing researcher rapidly prototyping ideas,
@@ -88,7 +88,7 @@ panels:
 
   - id: "01_008"
     type: "growth"
-    description_zh: "探索债的积累：原型变成依赖"
+    description_zh: "渐渐地，这些本该被抛弃的原型变成了项目的地基。就像在流沙上盖楼，每增加一层逻辑，地基下的裂痕就加深一分。当时的她只顾着看屏幕上的曲线，却忘了回头拉住正在崩塌的架构。"
     description_en: "Exploration debt grows: prototypes become dependencies"
     prompt: |
       Researcher continuing to build on prototype code,
@@ -98,7 +98,7 @@ panels:
 
   - id: "01_009"
     type: "consequence"
-    description_zh: "探索债爆发：需要改动时崩溃"
+    description_zh: "轰然一声。当她试图修改一个微小的参数时，整个系统像多米诺骨牌一样倒下了。报错信息刷满了屏幕，每一个红色的字符都在嘲笑她之前的贪快。"
     description_en: "Exploration debt explodes: collapse when changes needed"
     prompt: |
       Researcher trying to modify old prototype code,
@@ -108,7 +108,7 @@ panels:
 
   - id: "01_010"
     type: "lesson"
-    description_zh: "探索债的解决：定期清理和重构"
+    description_zh: "‘我需要修剪这些乱掉的根。’小研对着空气说道。她开始在脑海中演练：不是禁止探索，而是要有节奏地清理。就像园丁修剪杂草，只有勇敢剪掉死路，新芽才能茁壮成长。"
     description_en: "Exploration debt solution: regular cleanup and refactoring"
     prompt: |
       Calm researcher methodically organizing prototype code,
@@ -119,7 +119,7 @@ panels:
   # Validation Debt Deep Dive (panels 11-15)
   - id: "01_011"
     type: "monster_intro"
-    description_zh: "验证债怪兽详解：由跳过的测试构成"
+    description_zh: "第二个怪物出现了，它是‘验证债’。相比探索债的混乱，它显得更加阴森。它的身体由破碎的试管和未完成的实验构成，无数张写着‘以后再测’的便签纸像鳞片一样覆盖在它身上。它会在你最得意的时候，悄悄抽掉成功的底座。"
     description_en: "Validation debt monster explained: made of skipped tests"
     prompt: |
       Detailed view of validation debt monster,
@@ -129,7 +129,7 @@ panels:
 
   - id: "01_012"
     type: "cause"
-    description_zh: "验证债的诞生：没时间写测试"
+    description_zh: "为了赶超对手，小研曾无数次跳过验证环节。手指在键盘上飞速掠过，每一次按下‘Skip’，都像是在和这个魔鬼签下契约。‘既然结果是对的，为什么还要浪费时间测过程呢？’她当时的自言自语，现在想来寒意入骨。"
     description_en: "Birth of validation debt: no time for tests"
     prompt: |
       Researcher rushing past testing phase,
@@ -139,7 +139,7 @@ panels:
 
   - id: "01_013"
     type: "growth"
-    description_zh: "验证债积累：结果看起来对但是..."
+    description_zh: "成功的光环掩盖了脆弱。小研昂着头，自信地向前走去。然而在聚光灯照射不到的脚下，冰面已经薄如蝉翼。那些被跳过的测试变成了深渊里的巨口，等待着最后的一击。"
     description_en: "Validation debt grows: results look right but..."
     prompt: |
       Researcher presenting results confidently,
@@ -149,7 +149,7 @@ panels:
 
   - id: "01_014"
     type: "consequence"
-    description_zh: "验证债爆发：审稿人质疑统计显著性"
+    description_zh: "毁灭性的质疑到来了。审稿人的意见每一行都苍白有力：‘结果无法复现，统计显著性存疑。’小研看着那张满是红叉的论文，感觉全身的力气都被抽走了。那个巨大的验证怪物，终于露出了狰狞的全貌。"
     description_en: "Validation debt explodes: reviewer questions significance"
     prompt: |
       Researcher receiving devastating reviewer feedback,
@@ -159,7 +159,7 @@ panels:
 
   - id: "01_015"
     type: "lesson"
-    description_zh: "验证债解决：测试驱动的研究"
+    description_zh: "‘必须从最底层重建信任。’小研重新坐下，目光变得前所未有的坚定。她不再急于得到那个诱人的结果，而是先写下严谨的测试。随着绿色的对勾一个接一个亮起，那个庞大的阴影开始在阳光下崩溃缩减。"
     description_en: "Validation debt solution: test-driven research"
     prompt: |
       Researcher writing tests before experiments,
@@ -170,7 +170,7 @@ panels:
   # Reproducibility Debt Deep Dive (panels 16-20)
   - id: "01_016"
     type: "monster_intro"
-    description_zh: "复现债怪兽详解：由丢失的环境构成"
+    description_zh: "最后，也是最难缠的怪物——‘复现债’浮出了水面。它的身体由支离破碎的配置文件、冲突的版本和消失的随机种子组成。它像一股无形的灰色迷雾，笼罩在每一行‘在我的电脑上运行良好’的代码周围。"
     description_en: "Reproducibility debt monster explained: made of lost environments"
     prompt: |
       Detailed view of reproducibility debt monster,
@@ -180,7 +180,7 @@ panels:
 
   - id: "01_017"
     type: "cause"
-    description_zh: "复现债诞生：它在我的电脑上能跑"
+    description_zh: "‘明明昨天还能运行的！’小研对着屏幕尖叫。她想起了那些随手安装的库，那些从未被记录的私有路径。每一个偷懒的瞬间，都在代码里埋下了一颗定时炸弹。那个灰色的怪物，正抓着炸弹的引线，对她报以冷笑。"
     description_en: "Birth of reproducibility debt: works on my machine"
     prompt: |
       Researcher with code working perfectly on their laptop,
@@ -190,7 +190,7 @@ panels:
 
   - id: "01_018"
     type: "growth"
-    description_zh: "复现债积累：依赖变化但没记录"
+    description_zh: "随着月份的流逝，那些‘环境变量’已经模糊不清。小研试图找回当初的运行方案，却发现自己像是在翻译一门消失的古文明语言。怪物在书房的角落里越长越高，几乎触到了天花板。"
     description_en: "Reproducibility debt grows: dependencies change unrecorded"
     prompt: |
       Time passing, researcher updating packages without recording,
@@ -200,7 +200,7 @@ panels:
 
   - id: "01_019"
     type: "consequence"
-    description_zh: "复现债爆发：三个月后无法复现"
+    description_zh: "当她尝试在服务器上复现那个奇迹般的最高分时，现实给了她重重一击。报错、冲突、无法解释的性能大幅度下降。三个月前的成功，竟然像海市蜃楼一样无法在另一台机器上重建。"
     description_en: "Reproducibility debt explodes: can't reproduce after 3 months"
     prompt: |
       Researcher returning to old project, completely lost,
@@ -210,7 +210,7 @@ panels:
 
   - id: "01_020"
     type: "lesson"
-    description_zh: "复现债解决：环境即代码"
+    description_zh: "‘代码和环境必须是命运共同体。’小研咬紧牙关，开始学习将环境打包。不再依赖脆弱的个人记忆，而是将其固化在配置文件中。随着 Docker 容器的成功锁定，灰色的迷雾终于被这道‘规则之光’驱散。"
     description_en: "Reproducibility debt solution: environment as code"
     prompt: |
       Researcher setting up Docker container, requirements.txt,
@@ -221,7 +221,7 @@ panels:
   # Synthesis and Action (panels 21-25)
   - id: "01_021"
     type: "synthesis"
-    description_zh: "三种债务的关系：相互放大"
+    description_zh: "小研合上这一页，三种怪物正在她脑海中相互交织。探索债滋生验证债，验证债又放大了复现债。这是一个致命的螺旋。如果不打破它，未来的每一天都将在这个无休止的噩梦中循环。"
     description_en: "Relationship between three debts: mutual amplification"
     prompt: |
       Diagram showing three debt monsters connected,
@@ -231,7 +231,7 @@ panels:
 
   - id: "01_022"
     type: "realization"
-    description_zh: "小研明白：问题不是最后一刻产生的"
+    description_zh: "她终于意识到，崩溃并不是在最后一刻发生的，而是在过去的每一个‘明天再弄’中缓慢积累的。那个红色的截稿日期，只是债务到期的催款单，而非不幸的开端。"
     description_en: "Xiao Yan realizes: problems don't appear at the last moment"
     prompt: |
       Researcher having epiphany moment, light bulb above head,
@@ -241,7 +241,7 @@ panels:
 
   - id: "01_023"
     type: "commitment"
-    description_zh: "决心改变：每日小习惯"
+    description_zh: "‘哪怕每天只改一点点……’小研在白板上重重地写下：每日习惯。不再追求那种虚幻的爆发，而是要用每一天的规范化操作，将债务扼杀在摇篮里。她的步伐从未像现在这样踏实过。"
     description_en: "Commitment to change: daily small habits"
     prompt: |
       Researcher standing up with determination,
@@ -251,7 +251,7 @@ panels:
 
   - id: "01_024"
     type: "action"
-    description_zh: "10分钟行动：检查你的债务"
+    description_zh: "她转过身，重新看向屏幕上的代码。这一次，她的目光不再是绝望，而是充满了手术刀般的冷静。清理、测试、记录，这是她作为‘研究工程师’重生的第一步。第一个十分钟，从现在的审计开始。"
     description_en: "10-minute action: check your debts"
     prompt: |
       Researcher at computer doing quick debt audit,
@@ -261,7 +261,7 @@ panels:
 
   - id: "01_025"
     type: "preview"
-    description_zh: "下一章预告：实验才是单元"
+    description_zh: "窗外，晨曦微露。小研翻到了书的下一章：‘实验才是单元’。一个全新的武器正在向她招手。这场战斗，她才刚刚意识到赢的方法。前方，还有更广阔的工程世界等待她去探索。"
     description_en: "Next chapter preview: experiment as the unit"
     prompt: |
       Mysterious preview panel showing glowing experiment unit,

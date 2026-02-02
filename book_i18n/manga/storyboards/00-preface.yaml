@@ -1,0 +1,74 @@
+# 序章「截止日前3天」分镜脚本
+# Prologue: "3 Days Before Deadline"
+
+chapter: "00-preface"
+title_zh: "截止日前3天"
+title_en: "3 Days Before Deadline"
+title_ja: "締切3日前"
+
+style_base: |
+  Japanese manga illustration, clean anime art style,
+  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
+  expressive anime eyes, dynamic composition, professional digital art,
+  cel-shading, cinematic lighting, no text or speech bubbles.
+
+panels:
+  - id: "00_001"
+    type: "establishing"
+    description_zh: "深夜实验室，小研对着电脑，显示多个错误窗口。她的头发凌乱，眼神疲惫，桌上散落着空咖啡杯和便利贴，屏幕上红色的报错信息像警报一样闪烁。"
+
+  - id: "00_002"
+    type: "closeup"
+    description_zh: "屏幕特写：实验结果显示不一致。同一个实验，上周还是漂亮的数据，今天重跑却完全不同。小研的心一沉，这种恐惧她太熟悉了——代码明明没改，结果却变了。"
+
+  - id: "00_003"
+    type: "action"
+    description_zh: "小研疯狂地翻找代码目录，想找到三周前那个版本。但满屏的文件夹让她崩溃：final、final_v2、final_REAL、backup_old...她的手停在鼠标上，突然意识到，自己根本不知道哪个才是对的。"
+
+  - id: "00_004"
+    type: "flashback"
+    description_zh: "三周前，当实验第一次成功时，小研兴奋得跳了起来。她记得那天阳光很好，同事们都过来祝贺。那时的她觉得，只要结果对了，其他都不重要。现在想想，那时候为什么不多做点记录呢？"
+
+  - id: "00_005"
+    type: "transition"
+    description_zh: "回到现实，小研把两份打印稿并排放在桌上。左边是三周前的完美结果，右边是今天的失败。她盯着这两张纸，试图找出哪里不同。环境？参数？随机种子？还是...其实她根本不知道三周前用的是什么配置？"
+
+  - id: "00_006"
+    type: "dramatic"
+    description_zh: "三个债务怪兽从阴影中浮现。第一只怪兽由纠缠的代码和电线组成（探索债），第二只由破碎的试管和测试构成（验证债），第三只由散落的配置文件碎片拼凑（复现债），它们在小研身后慢慢显现。"
+
+  - id: "00_007"
+    type: "action"
+    description_zh: "探索债怪兽攻击：代码碎片飞舞。混乱的原型代码、快速hack、TODO注释像子弹一样向小研射来，她用手臂挡在脸前，碎片在空中形成'技术债'的字样。"
+
+  - id: "00_008"
+    type: "action"
+    description_zh: "验证债怪兽逼近：破碎的实验器材。不完整的测试用例、缺失的对照实验、被跳过的断言测试化作紫色的迷雾包围着小研，她的眼神中充满恐惧。"
+
+  - id: "00_009"
+    type: "action"
+    description_zh: "复现债怪兽环绕：散落的配置和版本。缺失的环境配置、版本冲突、随机种子问题像锁链一样缠住小研的手脚，'requirements.txt在哪？'、'用的哪个版本？'的问号在空中漂浮。"
+
+  - id: "00_010"
+    type: "climax"
+    description_zh: "小研被三只怪兽完全包围，绝望地跪倒在地。探索债、验证债、复现债，它们就像三座大山压在她身上。距离deadline还有72小时，但她连第一步都不知道该怎么走。难道，就这样放弃了吗？"
+
+  - id: "00_011"
+    type: "turning_point"
+    description_zh: "就在这时，实验室的门被轻轻推开。一道光从门外射进来，怪兽们像怕光的幽灵一样开始后退。小研抬起头，看到导师站在门口，手里拿着什么东西。导师平静的声音响起：'我想，你需要这个。'"
+
+  - id: "00_012"
+    type: "reveal"
+    description_zh: "导师递出发光的《研究工程OS》书。一本散发金色光芒的书籍缓缓伸向小研，书名'Research Engineering OS'清晰可见，光芒像驱散黑暗的利剑。"
+
+  - id: "00_013"
+    type: "acceptance"
+    description_zh: "小研接过书，眼中重燃希望。她伸出颤抖的双手接住书，温暖的金光照亮她的脸庞，眼中的绝望逐渐被希望取代，背景中的怪兽开始消散。"
+
+  - id: "00_014"
+    type: "revelation"
+    description_zh: "书页展开，章节标题浮现发光。书页自动翻开，全息投影般的章节标题升起：'三种债务'、'实验单元'、'仓库结构'、'Git证明'，每个标题都散发着智慧之光。"
+
+  - id: "00_015"
+    type: "ending"
+    description_zh: "天快亮了。小研站在窗前，紧紧抱着那本《研究工程OS》。窗外朝阳初升，新的一天即将开始。她深吸一口气，翻开了第一章的页面。距离deadline还有72小时，但现在的她，不再是一个人在战斗了。"

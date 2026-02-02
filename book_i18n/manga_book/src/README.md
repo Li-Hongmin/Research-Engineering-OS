@@ -2,7 +2,7 @@
 
 <div class="intro-section">
 
-## 用漫画讲述研究工程实践的故事
+## 📚 用漫画讲述研究工程实践的故事
 
 </div>
 
@@ -21,7 +21,7 @@
 
 ---
 
-## 人物介绍
+## 👤 人物介绍
 
 ### 小研（Xiao Yan）
 - 计算生物学博士生
@@ -34,18 +34,20 @@
 
 ---
 
-## 阅读提示
+## 📖 阅读提示
 
-每一章包含 15-25 格漫画，建议按顺序阅读。
+本书采用**翻页模式**，每一页包含一幅漫画和故事描述。
 
-**开始阅读 →** [序章：截止日前3天](00-prologue.md)
+点击底部的"下一页"按钮翻页，或使用键盘左右箭头键。
+
+**开始阅读 →** [序章：截止日前3天](00-preface/01.md)
 
 ---
 
-<div style="text-align: center; color: #666; font-size: 0.9em;">
+<div style="text-align: center; color: #666; font-size: 0.9em; margin-top: 3em;">
 
 作者：李鸿敏 | 东京大学计算生物学研究科
 
-[完整版阅读](https://li-hongmin.github.io/Research-Engineering-OS/)
+[完整文字版阅读](https://li-hongmin.github.io/Research-Engineering-OS/)
 
 </div>

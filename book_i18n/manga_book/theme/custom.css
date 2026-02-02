@@ -1,123 +1,93 @@
-/* 研究工程 OS 漫画版 - 自定义样式 */
+/* 研究工程 OS 漫画版 - 简洁优雅样式 */
 
 /* 页面整体布局 */
 .content {
   max-width: 900px;
   margin: 0 auto;
+  padding: 2em 1em;
 }
 
-/* 章节标题样式 */
-h1 {
-  text-align: center;
-  border-bottom: 3px solid #333;
-  padding-bottom: 0.5em;
-  margin-bottom: 1.5em;
-}
-
-/* 漫画格子容器 */
-.manga-panel {
+/* 漫画布局容器 */
+.manga-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   margin: 2em 0;
-  padding: 1em;
-  background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 漫画图片样式 */
-.content img {
-  max-width: 600px;
+/* 故事描述区域 */
+.manga-story {
   width: 100%;
-  display: block;
-  margin: 0 auto 1em auto;
-  border: 3px solid #333;
+  max-width: 800px;
+  background: linear-gradient(135deg, #fff9e6 0%, #fff5cc 100%);
+  border-left: 5px solid #f39c12;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* 图片说明文字 */
-.content p em {
+.manga-story-label {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #e67e22;
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.manga-story-content {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #2c3e50;
+  margin: 0;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+/* 漫画图片容器 */
+.manga-image-container {
+  width: 100%;
+  max-width: 800px;
+  background: #000;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.manga-image-container img {
+  width: 100%;
+  height: auto;
   display: block;
+  border-radius: 4px;
+}
+
+/* 页脚导航 */
+.manga-footer {
   text-align: center;
-  color: #555;
-  font-size: 1.1em;
-  font-style: normal;
-  padding: 0.8em 1em;
-  background: #fff;
-  border-left: 4px solid #4a90d9;
-  border-radius: 0 8px 8px 0;
-  margin: 0.5em auto;
-  max-width: 600px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-/* 格子编号标题 */
-h3 {
-  color: #4a90d9;
-  font-size: 1em;
-  text-align: center;
-  margin: 2em 0 0.5em 0;
-  padding: 0.3em 0;
-  border-bottom: 1px dashed #ccc;
-}
-
-/* 分隔线 */
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ddd, transparent);
-  margin: 2em 0;
-}
-
-/* 移动端响应式 */
-@media (max-width: 768px) {
-  .content img {
-    max-width: 100%;
-    border-width: 2px;
-  }
-
-  .content p em {
-    font-size: 1em;
-    padding: 0.6em 0.8em;
-  }
-
-  h3 {
-    font-size: 0.9em;
-  }
-}
-
-/* 暗色主题适配 */
-.coal .content p em,
-.navy .content p em,
-.ayu .content p em {
-  background: #2a2a2a;
-  color: #ddd;
-  border-left-color: #6ab0f3;
-}
-
-.coal .manga-panel,
-.navy .manga-panel,
-.ayu .manga-panel {
-  background: linear-gradient(135deg, #2a2a2a 0%, #222 100%);
-}
-
-.coal h3,
-.navy h3,
-.ayu h3 {
-  color: #6ab0f3;
-}
-
-/* 章节封面样式 */
-.chapter-cover {
-  text-align: center;
-  padding: 2em 0;
-}
-
-.chapter-cover img {
-  max-width: 400px;
+  margin: 3em 0 5em 0;
+  padding: 1.5em;
+  background: #f8f9fa;
   border-radius: 12px;
+  border: 2px solid #e9ecef;
+  font-size: 1.1em;
 }
 
-/* 序言页特殊样式 */
+.manga-footer a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.manga-footer a:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* 封面样式 */
 .intro-section {
   text-align: center;
   padding: 2em;
@@ -125,9 +95,79 @@ hr {
   color: white;
   border-radius: 12px;
   margin: 2em 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .intro-section h2 {
   color: white;
   border: none;
+  margin: 0;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .content {
+    padding: 1em 0.5em;
+  }
+
+  .manga-story {
+    padding: 1em;
+  }
+
+  .manga-story-content {
+    font-size: 1em;
+  }
+
+  .manga-image-container {
+    padding: 5px;
+  }
+
+  .manga-footer {
+    padding: 1em;
+    font-size: 0.95em;
+  }
+
+  .manga-footer a {
+    display: inline-block;
+    margin: 0.3em;
+  }
+}
+
+/* 暗色主题适配 */
+.coal .manga-story,
+.navy .manga-story,
+.ayu .manga-story {
+  background: linear-gradient(135deg, #2c2510 0%, #3a3020 100%);
+  border-left-color: #f39c12;
+}
+
+.coal .manga-story-label,
+.navy .manga-story-label,
+.ayu .manga-story-label {
+  color: #f39c12;
+}
+
+.coal .manga-story-content,
+.navy .manga-story-content,
+.ayu .manga-story-content {
+  color: #e8e8e8;
+}
+
+.coal .manga-footer,
+.navy .manga-footer,
+.ayu .manga-footer {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+}
+
+.coal .manga-footer a,
+.navy .manga-footer a,
+.ayu .manga-footer a {
+  color: #6ab0f3;
+}
+
+.coal .intro-section,
+.navy .intro-section,
+.ayu .intro-section {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
 }

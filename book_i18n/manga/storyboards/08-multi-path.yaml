@@ -1,240 +1,50 @@
-# 第八章「多路探索」分镜脚本
-# Chapter 8: "Multi-Path Exploration"
-# 22 panels on managing multiple research directions
-
+# 第八章「多路径探索」分镜脚本
 chapter: "08-multi-path"
-title_zh: "多路探索"
+title_zh: "多路径探索"
 title_en: "Multi-Path Exploration"
-title_ja: "複数経路探索"
-
-style_base: |
-  Japanese manga illustration, clean anime art style,
-  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
-  expressive anime eyes, dynamic composition, professional digital art,
-  cel-shading, cinematic lighting, no text or speech bubbles.
 
 panels:
-  # Opening: The Crossroads (panels 1-4)
   - id: "08_001"
-    type: "establishing"
-    description_zh: "研究的十字路口：多个方向同时存在"
-    description_en: "Research crossroads: multiple directions exist simultaneously"
-    prompt: |
-      Researcher standing at crossroads with multiple paths,
-      path A, path B, path C diverging ahead,
-      each path representing different research approach,
-      decision point visualization.
-
+    description_zh: "新的难题来了。小研手里有两个可能的研究方向，各有优劣。选A？还是选B？她盯着两份实验方案，迟迟下不了决心。因为她知道，一旦选错，就要推倒重来。"
   - id: "08_002"
-    type: "dilemma"
-    description_zh: "困境：每条路都看起来有希望"
-    description_en: "Dilemma: every path looks promising"
-    prompt: |
-      All paths glowing with potential,
-      researcher unable to decide which to follow,
-      FOMO (fear of missing out) expression,
-      analysis paralysis.
-
+    description_zh: "上次的教训还历历在目。那时她押宝在一个方向上，写了两周代码，最后发现走不通。重来的时候，之前的工作全废了。她不想再经历那种感觉。"
   - id: "08_003"
-    type: "decision"
-    description_zh: "决定：同时探索多条路"
-    description_en: "Decision: explore multiple paths simultaneously"
-    prompt: |
-      Researcher deciding to explore multiple paths,
-      splitting into multiple versions of self,
-      parallel exploration beginning,
-      ambitious strategy.
-
+    description_zh: "导师看出了她的纠结，笑着说：'谁说必须二选一？Git的分支功能，就是让你能同时探索多条路。'小研眼睛一亮。对啊，为什么要赌？可以都试试！"
   - id: "08_004"
-    type: "warning"
-    description_zh: "但是：多路探索有陷阱"
-    description_en: "But: multi-path exploration has traps"
-    prompt: |
-      Warning signs appearing along paths,
-      complexity growing, confusion looming,
-      danger of spreading too thin,
-      caution visualization.
-
-  # The Deterioration (panels 5-10)
+    description_zh: "Git分支策略：main分支保持稳定，实验分支并行探索。"
   - id: "08_005"
-    type: "week1"
-    description_zh: "第1周：兴奋地开始ABC三条路"
-    description_en: "Week 1: excitedly starting paths A, B, C"
-    prompt: |
-      Researcher enthusiastically starting three paths,
-      fresh energy, organized notebooks for each,
-      excitement and optimism,
-      strong beginning.
-
+    description_zh: "创建experiment-A和experiment-B两个分支。"
   - id: "08_006"
-    type: "week2"
-    description_zh: "第2周：每条路都有进展"
-    description_en: "Week 2: progress on every path"
-    prompt: |
-      Progress bars showing advancement on all paths,
-      researcher switching between them confidently,
-      everything under control feeling,
-      false sense of mastery.
-
+    description_zh: "在分支A中实现方法1，记录初步结果。"
   - id: "08_007"
-    type: "week3"
-    description_zh: "第3周：开始混淆不同路的代码"
-    description_en: "Week 3: starting to confuse code between paths"
-    prompt: |
-      Researcher accidentally mixing code from different paths,
-      wrong file in wrong directory,
-      confusion beginning, small mistakes,
-      organization slipping.
-
+    description_zh: "在分支B中实现方法2，同时进行。"
   - id: "08_008"
-    type: "week4"
-    description_zh: "第4周：忘记每条路的状态"
-    description_en: "Week 4: forgetting status of each path"
-    prompt: |
-      Researcher trying to remember where each path was,
-      "Where did I leave off?" expression,
-      context switching overhead visible,
-      memory failure.
-
+    description_zh: "使用实验追踪系统对比两种方法的性能。"
   - id: "08_009"
-    type: "week5"
-    description_zh: "第5周：路径之间相互干扰"
-    description_en: "Week 5: paths interfering with each other"
-    prompt: |
-      Paths tangling together, creating confusion,
-      dependencies crossing between paths,
-      researcher untangling mess,
-      complexity explosion.
-
+    description_zh: "发现方法A在某些case下更好，方法B在另外的case下更优。"
   - id: "08_010"
-    type: "week6"
-    description_zh: "第6周：完全迷失，都没推进"
-    description_en: "Week 6: completely lost, none advancing"
-    prompt: |
-      Researcher surrounded by abandoned half-finished paths,
-      no path completed, all in limbo,
-      exhaustion and despair,
-      total paralysis.
-
-  # The Solution: Structured Multi-Path (panels 11-17)
+    description_zh: "创建混合方案分支experiment-C，结合两者优势。"
   - id: "08_011"
-    type: "principle"
-    description_zh: "原则：多路探索需要结构"
-    description_en: "Principle: multi-path exploration needs structure"
-    prompt: |
-      Order emerging from chaos,
-      structured approach to multiple paths,
-      clear organization system appearing,
-      hope returning.
-
+    description_zh: "使用git worktree同时在多个分支工作。"
   - id: "08_012"
-    type: "practice"
-    description_zh: "实践1：路径命名规范"
-    description_en: "Practice 1: path naming convention"
-    prompt: |
-      Clear path naming system,
-      "exp/transformer-v1", "exp/cnn-baseline", "exp/hybrid-approach",
-      instantly understandable names,
-      naming as documentation.
-
+    description_zh: "定期同步各分支的通用改进。"
   - id: "08_013"
-    type: "practice"
-    description_zh: "实践2：路径追踪表"
-    description_en: "Practice 2: path tracking table"
-    prompt: |
-      Beautiful tracking table showing all paths,
-      columns: path name, status, last updated, priority, notes,
-      researcher maintaining the table,
-      visibility into all paths.
-
+    description_zh: "记录每个分支的实验结果和洞察。"
   - id: "08_014"
-    type: "practice"
-    description_zh: "实践3：每周一路径审查"
-    description_en: "Practice 3: weekly path review"
-    prompt: |
-      Weekly ritual of reviewing all paths,
-      deciding which to continue, pause, or kill,
-      pruning dead paths, focusing energy,
-      sustainable multi-path management.
-
+    description_zh: "最终决策：方法C表现最好，准备合并到main。"
   - id: "08_015"
-    type: "practice"
-    description_zh: "实践4：主焦点+探索的平衡"
-    description_en: "Practice 4: main focus + exploration balance"
-    prompt: |
-      Pie chart showing time allocation,
-      70% main path, 30% explorations,
-      not spreading equally thin,
-      strategic resource allocation.
-
+    description_zh: "清理合并：只保留必要的代码，移除实验痕迹。"
   - id: "08_016"
-    type: "practice"
-    description_zh: "实践5：定期归档不活跃路径"
-    description_en: "Practice 5: regularly archive inactive paths"
-    prompt: |
-      Researcher archiving paused paths cleanly,
-      notes for future self on why paused,
-      easy to resume later,
-      clean archival practice.
-
+    description_zh: "文档化：记录为什么选择方法C，其他方法的优缺点。"
   - id: "08_017"
-    type: "workflow"
-    description_zh: "工作流：路径生命周期管理"
-    description_en: "Workflow: path lifecycle management"
-    prompt: |
-      Lifecycle diagram of a research path,
-      spawn → explore → evaluate → continue/pause/kill,
-      healthy path management cycle,
-      sustainable exploration.
-
-  # Comparison and Evaluation (panels 18-20)
+    description_zh: "保留失败的实验分支作为参考，不要删除历史。"
   - id: "08_018"
-    type: "skill"
-    description_zh: "技能：路径对比决策"
-    description_en: "Skill: path comparison decisions"
-    prompt: |
-      Researcher objectively comparing paths,
-      metrics, progress, potential, effort required,
-      making informed decision on which to prioritize,
-      data-driven path selection.
-
+    description_zh: "建立分支命名规范：experiment/、feature/、bugfix/。"
   - id: "08_019"
-    type: "courage"
-    description_zh: "勇气：杀死不工作的路径"
-    description_en: "Courage: killing paths that don't work"
-    prompt: |
-      Researcher decisively closing a path,
-      not sunk cost fallacy, rational decision,
-      freeing energy for promising paths,
-      courage to abandon.
-
+    description_zh: "使用标签标记重要的实验节点。"
   - id: "08_020"
-    type: "wisdom"
-    description_zh: "智慧：知道何时合并路径"
-    description_en: "Wisdom: knowing when to merge paths"
-    prompt: |
-      Researcher combining learnings from multiple paths,
-      best ideas from A + B creating better C,
-      synthesis of explorations,
-      convergence strategy.
-
-  # Closing (panels 21-22)
+    description_zh: "导师赞许：'并行探索让你看到了完整的解空间。'"
   - id: "08_021"
-    type: "action"
-    description_zh: "10分钟行动：列出当前所有路径"
-    description_en: "10-minute action: list all current paths"
-    prompt: |
-      Researcher creating inventory of current paths,
-      writing down status of each exploration,
-      first step to organization,
-      awareness building.
-
+    description_zh: "小研分享经验：'分支让我勇于尝试，失败也不可怕。'"
   - id: "08_022"
-    type: "preview"
-    description_zh: "下一章预告：炸弹拆除"
-    description_en: "Next chapter preview: bomb defusal"
-    prompt: |
-      Preview of deadline bomb with countdown timer,
-      researcher preparing to defuse,
-      proactive crisis prevention,
-      dramatic tension building.
+    description_zh: "结尾：小研的git图谱展示了完整的探索历程，像一棵茂盛的树。"

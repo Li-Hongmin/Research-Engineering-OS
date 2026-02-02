@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Manga Build Task",
+			"type": "shell",
+			"command": "python3 /Users/lihongmin/ideas/Research-Engineering-OS-/book_i18n/manga_book/generate_manga_book.py && mdbook build /Users/lihongmin/ideas/Research-Engineering-OS-/book_i18n/manga_book"
+		}
+	]
+}

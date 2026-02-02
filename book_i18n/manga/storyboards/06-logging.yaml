@@ -1,220 +1,46 @@
-# 第六章「日志考古学」分镜脚本
-# Chapter 6: "Logging Archaeology"
-# 20 panels on structured logging and documentation
-
+# 第六章「记录的艺术」分镜脚本
 chapter: "06-logging"
-title_zh: "日志考古学"
-title_en: "Logging Archaeology"
-title_ja: "ログ考古学"
-
-style_base: |
-  Japanese manga illustration, clean anime art style,
-  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
-  expressive anime eyes, dynamic composition, professional digital art,
-  cel-shading, cinematic lighting, no text or speech bubbles.
+title_zh: "记录的艺术"
+title_en: "The Art of Logging"
 
 panels:
-  # Opening: The Search (panels 1-4)
   - id: "06_001"
-    type: "establishing"
-    description_zh: "三个月后，小研试图找回实验细节"
-    description_en: "Three months later, Xiao Yan trying to recall experiment details"
-    prompt: |
-      Researcher returning to old project, looking confused,
-      trying to remember why certain decisions were made,
-      thought bubbles with question marks,
-      memory failure, lost in own work.
-
+    description_zh: "学会了前面的技巧后，小研的项目逐渐步入正轨。但这天，她遇到了一个诡异的bug。程序明明运行了，但执行到哪一步了？数据从哪来的？面对满屏的print输出，她突然意识到：自己看不懂自己的日志。"
   - id: "06_002"
-    type: "search"
-    description_zh: "翻找笔记：只有零散片段"
-    description_en: "Searching notes: only scattered fragments"
-    prompt: |
-      Researcher searching through messy notebooks,
-      scattered sticky notes, incomprehensible scribbles,
-      "What did I mean by this?" expression,
-      poor documentation coming back to haunt.
-
+    description_zh: "她想起几周前，为了调试方便，到处加print语句。当时觉得很简单：'能看到输出不就行了吗？'现在想想，那时的自己太天真了。"
   - id: "06_003"
-    type: "frustration"
-    description_zh: "找配置：到底用的哪个？"
-    description_en: "Finding config: which one was actually used?"
-    prompt: |
-      Multiple config files with similar names,
-      researcher unable to determine which was used,
-      config_v1, config_final, config_best scattered,
-      configuration chaos.
-
+    description_zh: "数千行日志混在一起，有的是调试信息，有的是错误，有的根本不知道是什么。小研盯着屏幕，感到一阵眩晕。她需要的信息，就像埋在沙子里的针。"
   - id: "06_004"
-    type: "realization"
-    description_zh: "领悟：当时的我对未来的我太残忍"
-    description_en: "Realization: past me was cruel to future me"
-    prompt: |
-      Researcher angry at past self (shown as ghost),
-      "Why didn't you write this down?!" expression,
-      past self shrugging carelessly,
-      self-accountability moment.
-
-  # The Solution: Two-Layer Logging (panels 5-10)
+    description_zh: "导师展示结构化日志的概念：每条日志都有清晰的级别、时间戳和上下文信息。"
   - id: "06_005"
-    type: "concept"
-    description_zh: "解决方案：双层日志系统"
-    description_en: "Solution: two-layer logging system"
-    prompt: |
-      Two-layer system visualized beautifully,
-      top layer: human-readable notes (orange),
-      bottom layer: machine-readable JSON (blue),
-      complementary system, yin-yang balance.
-
+    description_zh: "小研开始重构日志系统，使用统一的logging框架。"
   - id: "06_006"
-    type: "layer"
-    description_zh: "第一层：自动记录（JSON）"
-    description_en: "Layer 1: automatic recording (JSON)"
-    prompt: |
-      Automatic logger capturing everything,
-      metrics, configs, timestamps flowing into JSON,
-      robot assistant collecting data diligently,
-      no human effort required.
-
+    description_zh: "添加日志级别：DEBUG、INFO、WARNING、ERROR、CRITICAL，像交通信号灯一样清晰。"
   - id: "06_007"
-    type: "layer"
-    description_zh: "第二层：人工笔记（Markdown）"
-    description_en: "Layer 2: human notes (Markdown)"
-    prompt: |
-      Researcher writing thoughtful notes,
-      "Why did I try this? What surprised me?",
-      human insights machines can't capture,
-      intuition and reasoning recorded.
-
+    description_zh: "为每个实验添加唯一ID，方便追踪整个实验流程。"
   - id: "06_008"
-    type: "structure"
-    description_zh: "run.json结构：机器的完美记忆"
-    description_en: "run.json structure: machine's perfect memory"
-    prompt: |
-      Beautiful JSON structure floating,
-      nested objects with git_hash, config, metrics,
-      perfectly structured data,
-      machine-parseable perfection.
-
+    description_zh: "记录关键参数和决策点，就像科学实验的实验记录本。"
   - id: "06_009"
-    type: "structure"
-    description_zh: "run.md模板：人类的快速记录"
-    description_en: "run.md template: human's quick recording"
-    prompt: |
-      Simple 5-line markdown template,
-      Hypothesis, Changes, Results, Observations, Next,
-      quick to fill, high value,
-      efficient human logging.
-
+    description_zh: "配置日志输出：控制台显示重要信息，文件保存详细记录。"
   - id: "06_010"
-    type: "workflow"
-    description_zh: "工作流：实验前中后的记录"
-    description_en: "Workflow: logging before, during, after experiment"
-    prompt: |
-      Timeline showing logging at three stages,
-      before: hypothesis and plan,
-      during: observations and surprises,
-      after: results and conclusions.
-
-  # Benefits (panels 11-14)
+    description_zh: "添加性能监控日志，记录每个步骤的耗时。"
   - id: "06_011"
-    type: "benefit"
-    description_zh: "好处1：三个月后立即找到"
-    description_en: "Benefit 1: find immediately after 3 months"
-    prompt: |
-      Researcher returning to old project,
-      immediately finding all needed information,
-      relief and gratitude expression,
-      past self helping future self.
-
+    description_zh: "使用结构化格式（JSON）使日志易于解析和分析。"
   - id: "06_012"
-    type: "benefit"
-    description_zh: "好处2：审稿人要数据秒回"
-    description_en: "Benefit 2: instant response to reviewer data requests"
-    prompt: |
-      Reviewer email demanding specific data,
-      researcher quickly finding exact information,
-      confident professional response,
-      documentation paying dividends.
-
+    description_zh: "集成异常追踪：自动记录错误堆栈和上下文。"
   - id: "06_013"
-    type: "benefit"
-    description_zh: "好处3：团队成员能接手"
-    description_en: "Benefit 3: team members can take over"
-    prompt: |
-      New team member reading experiment logs,
-      understanding project quickly,
-      knowledge transfer successful,
-      documentation as onboarding.
-
+    description_zh: "实现日志轮转：避免日志文件无限增长。"
   - id: "06_014"
-    type: "benefit"
-    description_zh: "好处4：写论文素材齐全"
-    description_en: "Benefit 4: complete material for paper writing"
-    prompt: |
-      Researcher writing paper with all materials ready,
-      logs providing exact numbers and details,
-      smooth paper writing process,
-      no hunting for data.
-
-  # Tools and Integration (panels 15-18)
+    description_zh: "添加过滤器：敏感信息自动脱敏。"
   - id: "06_015"
-    type: "tool"
-    description_zh: "工具：MLflow/W&B集成"
-    description_en: "Tools: MLflow/W&B integration"
-    prompt: |
-      Researcher connecting to experiment tracking dashboard,
-      MLflow or Weights&Biases interface showing,
-      automatic metrics visualization,
-      professional tooling adoption.
-
+    description_zh: "创建日志分析脚本：快速统计和可视化。"
   - id: "06_016"
-    type: "tool"
-    description_zh: "工具：自动化脚本"
-    description_en: "Tools: automation scripts"
-    prompt: |
-      Run script automatically capturing metadata,
-      git hash, timestamp, config all logged automatically,
-      zero manual effort for basics,
-      automation freeing mental energy.
-
+    description_zh: "设置告警规则：关键错误立即通知。"
   - id: "06_017"
-    type: "practice"
-    description_zh: "实践：5分钟日志习惯"
-    description_en: "Practice: 5-minute logging habit"
-    prompt: |
-      Researcher spending 5 minutes after each experiment,
-      filling quick template, adding observations,
-      low effort, high return habit,
-      sustainable practice.
-
+    description_zh: "三个月后，小研轻松定位到一个复杂的并发问题，多亏了详细的日志。"
   - id: "06_018"
-    type: "tip"
-    description_zh: "技巧：记录失败和惊喜"
-    description_en: "Tip: record failures and surprises"
-    prompt: |
-      Researcher noting what didn't work and why,
-      failures as valuable as successes,
-      unexpected observations highlighted,
-      complete picture captured.
-
-  # Closing (panels 19-20)
+    description_zh: "导师赞许地点头：'好的日志系统是研究的第二双眼睛。'"
   - id: "06_019"
-    type: "action"
-    description_zh: "10分钟行动：为下次实验设置日志"
-    description_en: "10-minute action: set up logging for next experiment"
-    prompt: |
-      Researcher setting up logging template,
-      creating run.md template, configuring auto-logging,
-      preparation for future experiments,
-      foundation laid.
-
+    description_zh: "小研分享经验：'记录不仅是为了调试，更是为了理解和证明。'"
   - id: "06_020"
-    type: "preview"
-    description_zh: "下一章预告：AI助手的陷阱"
-    description_en: "Next chapter preview: AI assistant traps"
-    prompt: |
-      Preview of researcher working with AI assistant,
-      but shadows showing hidden dangers,
-      AI-generated code with lurking bugs,
-      caution about to be learned.
+    description_zh: "结尾：小研的笔记本上写着：'Log everything that matters, nothing that doesn't.'"

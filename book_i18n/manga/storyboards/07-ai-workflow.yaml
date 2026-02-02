@@ -1,269 +1,56 @@
-# 第七章「AI助手的陷阱」分镜脚本
-# Chapter 7: "AI Assistant Traps"
-# 25 panels on working correctly with AI coding assistants
-
+# 第七章「AI协作工作流」分镜脚本
 chapter: "07-ai-workflow"
-title_zh: "AI助手的陷阱"
-title_en: "AI Assistant Traps"
-title_ja: "AIアシスタントの罠"
-
-style_base: |
-  Japanese manga illustration, clean anime art style,
-  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
-  expressive anime eyes, dynamic composition, professional digital art,
-  cel-shading, cinematic lighting, no text or speech bubbles.
+title_zh: "AI协作工作流"
+title_en: "AI Collaboration Workflow"
 
 panels:
-  # Opening: The AI Promise (panels 1-5)
   - id: "07_001"
-    type: "establishing"
-    description_zh: "小研发现AI编程助手，效率飙升"
-    description_en: "Xiao Yan discovers AI coding assistant, productivity soars"
-    prompt: |
-      Researcher excitedly using AI coding assistant,
-      code appearing magically fast on screen,
-      AI robot helper working alongside,
-      productivity visualization soaring upward.
-
+    description_zh: "这天，小研第一次用ChatGPT生成代码。看着屏幕上瞬间出现的完整函数，她简直不敢相信：'这...几秒钟就搞定了？太神奇了！'她兴奋地把代码复制进项目，连看都没仔细看。"
   - id: "07_002"
-    type: "excitement"
-    description_zh: "一天完成一周的工作量"
-    description_en: "One day's work equals one week"
-    prompt: |
-      Researcher amazed at speed of development,
-      progress bar filling rapidly,
-      features being implemented at lightning speed,
-      euphoria of AI-assisted coding.
-
+    description_zh: "一周后。小研盯着满屏的错误信息，想要修改AI生成的代码，却发现自己根本看不懂。逻辑是怎么走的？为什么这里要这样写？她感到一阵无力——这是她自己的项目，但她却像个外人。"
   - id: "07_003"
-    type: "warning"
-    description_zh: "但是...代码真的对吗？"
-    description_en: "But... is the code actually correct?"
-    prompt: |
-      First seeds of doubt appearing,
-      researcher looking more closely at AI code,
-      small question marks forming around code,
-      suspicion beginning.
-
+    description_zh: "导师走过来，看了看屏幕，平静地说：'AI可以写代码，但不能替你理解代码。出了问题，还是你来背锅。'小研愣住了。她突然意识到，自己把最重要的东西——理解和掌控——拱手让给了AI。"
   - id: "07_004"
-    type: "discovery"
-    description_zh: "发现：AI代码里藏着bug"
-    description_en: "Discovery: bugs hidden in AI code"
-    prompt: |
-      Researcher finding subtle bug in AI-generated code,
-      code looking correct on surface but logic flaw inside,
-      bug revealed under magnifying glass,
-      hidden danger exposed.
-
+    description_zh: "回顾：盲目信任AI的后果，难以调试、难以维护的代码。"
   - id: "07_005"
-    type: "crisis"
-    description_zh: "危机：整个系统建立在有bug的基础上"
-    description_en: "Crisis: entire system built on buggy foundation"
-    prompt: |
-      Researcher realizing the scope of the problem,
-      building collapsing because foundation was flawed,
-      domino effect of bugs spreading,
-      house of cards falling.
-
-  # The Five AI Traps (panels 6-15)
+    description_zh: "建立AI协作规范：第一步，明确定义需求和约束。"
   - id: "07_006"
-    type: "trap_intro"
-    description_zh: "AI的五个陷阱"
-    description_en: "Five traps of AI"
-    prompt: |
-      Five trap doors appearing on path to success,
-      each labeled with a trap type,
-      researcher must navigate carefully,
-      danger visualization.
-
+    description_zh: "使用AI生成代码框架，但保持人工审查每一部分。"
   - id: "07_007"
-    type: "trap"
-    description_zh: "陷阱1：速度的诱惑"
-    description_en: "Trap 1: temptation of speed"
-    prompt: |
-      Researcher running too fast toward goal,
-      speed lines but approaching cliff edge,
-      "fast" doesn't mean "correct",
-      speed trap visualization.
-
+    description_zh: "对AI生成的代码进行代码评审，就像对待同事的代码一样。"
   - id: "07_008"
-    type: "trap"
-    description_zh: "陷阱2：隐藏的逻辑错误"
-    description_en: "Trap 2: hidden logic errors"
-    prompt: |
-      AI code that looks perfect but has subtle logic bug,
-      correct syntax, wrong semantics,
-      bug camouflaged in reasonable-looking code,
-      deceptive correctness.
-
+    description_zh: "添加测试用例验证AI代码的正确性。"
   - id: "07_009"
-    type: "trap"
-    description_zh: "陷阱3：过时的知识"
-    description_en: "Trap 3: outdated knowledge"
-    prompt: |
-      AI suggesting deprecated library usage,
-      old API calls, outdated patterns,
-      warning symbols on suggested code,
-      knowledge cutoff problem.
-
+    description_zh: "记录AI生成代码的prompt，作为设计文档的一部分。"
   - id: "07_010"
-    type: "trap"
-    description_zh: "陷阱4：幻觉代码"
-    description_en: "Trap 4: hallucinated code"
-    prompt: |
-      AI confidently suggesting non-existent function,
-      function that doesn't exist in the library,
-      researcher trying to use it and failing,
-      hallucination trap.
-
+    description_zh: "建立迭代流程：生成→审查→测试→改进。"
   - id: "07_011"
-    type: "trap"
-    description_zh: "陷阱5：失去理解"
-    description_en: "Trap 5: losing understanding"
-    prompt: |
-      Researcher surrounded by AI code she doesn't understand,
-      complexity growing but comprehension shrinking,
-      lost in own codebase,
-      ownership loss.
-
+    description_zh: "使用AI辅助文档编写，提高效率但保持准确性。"
   - id: "07_012"
-    type: "consequence"
-    description_zh: "后果：无法debug自己的代码"
-    description_en: "Consequence: can't debug your own code"
-    prompt: |
-      Researcher unable to fix bug in AI-generated code,
-      code is foreign even though it's in her repo,
-      helplessness and frustration,
-      understanding debt.
-
+    description_zh: "让AI帮助生成测试用例，覆盖边界条件。"
   - id: "07_013"
-    type: "consequence"
-    description_zh: "后果：无法解释给审稿人"
-    description_en: "Consequence: can't explain to reviewers"
-    prompt: |
-      Reviewer asking "why did you do X?",
-      researcher stammering, can't explain AI's choice,
-      credibility loss, embarrassment,
-      knowledge gap exposed.
-
+    description_zh: "使用AI进行代码解释，帮助理解复杂逻辑。"
   - id: "07_014"
-    type: "reflection"
-    description_zh: "反思：AI让代码生成容易，验证变难"
-    description_en: "Reflection: AI makes generation easy, verification hard"
-    prompt: |
-      Balance scale showing paradigm shift,
-      "writing code" becoming lighter,
-      "verifying code" becoming heavier,
-      new challenge of AI era.
-
+    description_zh: "AI协助重构，但保持人工决策权。"
   - id: "07_015"
-    type: "principle"
-    description_zh: "原则：AI是助手，不是替代"
-    description_en: "Principle: AI is assistant, not replacement"
-    prompt: |
-      Healthy relationship with AI assistant,
-      researcher in driver's seat, AI as co-pilot,
-      human making decisions, AI helping execute,
-      proper collaboration model.
-
-  # The Right Way (panels 16-22)
+    description_zh: "建立prompt库：记录有效的提示词模板。"
   - id: "07_016"
-    type: "solution"
-    description_zh: "正确方式1：理解再使用"
-    description_en: "Right way 1: understand before using"
-    prompt: |
-      Researcher carefully reading AI-generated code,
-      line by line understanding before accepting,
-      thoughtful evaluation, not blind acceptance,
-      comprehension first.
-
+    description_zh: "版本控制AI交互记录，追踪决策过程。"
   - id: "07_017"
-    type: "solution"
-    description_zh: "正确方式2：小块验证"
-    description_en: "Right way 2: verify in small pieces"
-    prompt: |
-      Researcher testing AI code piece by piece,
-      unit tests for each function,
-      incremental validation, building confidence,
-      small verified blocks.
-
+    description_zh: "设置AI使用边界：哪些可以用AI，哪些必须人工。"
   - id: "07_018"
-    type: "solution"
-    description_zh: "正确方式3：写测试在前"
-    description_en: "Right way 3: write tests first"
-    prompt: |
-      Researcher writing test before asking AI for implementation,
-      test defines expected behavior,
-      AI code must pass researcher's tests,
-      test-driven AI usage.
-
+    description_zh: "培养critical thinking：质疑AI的每一个输出。"
   - id: "07_019"
-    type: "solution"
-    description_zh: "正确方式4：保持可回退"
-    description_en: "Right way 4: keep ability to rollback"
-    prompt: |
-      Researcher maintaining clean git history with AI code,
-      easy to revert AI-generated changes,
-      safety net always ready,
-      rollback capability.
-
+    description_zh: "小研现在的工作流：AI辅助起草，人工精细打磨。"
   - id: "07_020"
-    type: "solution"
-    description_zh: "正确方式5：教AI你的风格"
-    description_en: "Right way 5: teach AI your style"
-    prompt: |
-      Researcher providing context and examples to AI,
-      AI learning project conventions,
-      customized AI assistance,
-      trained collaboration.
-
+    description_zh: "导师评价：'你学会了最重要的一课——保持主导权。'"
   - id: "07_021"
-    type: "practice"
-    description_zh: "实践：AI代码Review清单"
-    description_en: "Practice: AI code review checklist"
-    prompt: |
-      Checklist for reviewing AI-generated code,
-      logic correct? tests pass? understood? documented?,
-      systematic AI code evaluation,
-      quality assurance process.
-
+    description_zh: "小研帮助其他同学建立AI协作规范。"
   - id: "07_022"
-    type: "workflow"
-    description_zh: "工作流：人+AI的协作循环"
-    description_en: "Workflow: human+AI collaboration cycle"
-    prompt: |
-      Circular workflow diagram,
-      Human defines → AI generates → Human verifies → Human refines,
-      healthy collaboration cycle,
-      sustainable AI partnership.
-
-  # Closing (panels 23-25)
+    description_zh: "实验室建立了AI使用最佳实践文档。"
   - id: "07_023"
-    type: "benefit"
-    description_zh: "好处：AI提升效率，人保持掌控"
-    description_en: "Benefit: AI boosts efficiency, human keeps control"
-    prompt: |
-      Best of both worlds visualization,
-      researcher benefiting from AI speed,
-      but maintaining understanding and ownership,
-      empowered researcher.
-
+    description_zh: "讨论：AI时代的研究诚信和透明度。"
   - id: "07_024"
-    type: "action"
-    description_zh: "10分钟行动：为AI代码写一个测试"
-    description_en: "10-minute action: write a test for AI code"
-    prompt: |
-      Researcher writing test for recently accepted AI code,
-      verification of existing AI-generated code,
-      quick quality check,
-      practical first step.
-
+    description_zh: "小研的感悟：'AI让我们更高效，但思考不能外包。'"
   - id: "07_025"
-    type: "preview"
-    description_zh: "下一章预告：多路探索"
-    description_en: "Next chapter preview: multi-path exploration"
-    prompt: |
-      Preview of multiple research paths diverging,
-      researcher at crossroads,
-      how to manage parallel explorations,
-      path management about to be learned.
+    description_zh: "结尾：小研在白板上写下：'Human in the loop, AI as the tool.'"

@@ -1,268 +1,56 @@
-# 第九章「炸弹拆除」分镜脚本
-# Chapter 9: "Bomb Defusal"
-# 25 panels on preventing deadline disasters
-
+# 第九章「不爆炸的科学」分镜脚本
 chapter: "09-no-boom"
-title_zh: "炸弹拆除"
-title_en: "Bomb Defusal"
-title_ja: "爆弾解除"
-
-style_base: |
-  Japanese manga illustration, clean anime art style,
-  young Asian female researcher protagonist (casual clothes or lab coat, glasses optional),
-  expressive anime eyes, dynamic composition, professional digital art,
-  cel-shading, cinematic lighting, no text or speech bubbles.
+title_zh: "不爆炸的科学"
+title_en: "No-Boom Science"
 
 panels:
-  # Opening: The Countdown (panels 1-4)
   - id: "09_001"
-    type: "establishing"
-    description_zh: "截止日期倒计时：5天"
-    description_en: "Deadline countdown: 5 days"
-    prompt: |
-      Dramatic countdown timer showing 5 days remaining,
-      researcher aware of approaching deadline,
-      tension beginning to build,
-      ominous countdown visualization.
-
+    description_zh: "又是一个deadline前夜。小研准备最后测试一遍，然后提交。她按下回车键，满怀信心地等待结果。然后...程序崩溃了。屏幕上跳出致命错误。她脑子一片空白，崩溃地抱住了头。"
   - id: "09_002"
-    type: "calm"
-    description_zh: "但是小研很平静：她已经准备好了"
-    description_en: "But Xiao Yan is calm: she's already prepared"
-    prompt: |
-      Researcher calmly working, organized setup,
-      checklist mostly completed, no panic,
-      contrast to chapter 1's chaos,
-      preparedness visualization.
-
+    description_zh: "'为什么又是deadline前夜！'小研想哭。这已经是第三次了。每次都是测试时好好的，一到关键时刻就炸。她知道问题出在哪——代码里埋着无数隐形的雷，只是碰巧没踩到而已。"
   - id: "09_003"
-    type: "flashback"
-    description_zh: "闪回：记得曾经的自己..."
-    description_en: "Flashback: remembering her past self..."
-    prompt: |
-      Flashback to beginning of book, panicking researcher,
-      contrast with current calm self,
-      growth visualization,
-      how far she's come.
-
+    description_zh: "导师端着咖啡走进来，看了看崩溃的程序，平静地说：'你需要学会一件事：防御性编程。不是假设代码会正常运行，而是假设一切都可能出错。'小研抬起头，若有所思。"
   - id: "09_004"
-    type: "theme"
-    description_zh: "主题：提前拆除炸弹，而非最后抢救"
-    description_en: "Theme: defuse bombs early, don't rescue at the end"
-    prompt: |
-      Split panel: bomb disposal expert vs firefighter,
-      proactive vs reactive approaches,
-      prevention better than cure visualization,
-      core principle.
-
-  # The Crisis Week (What Could Have Been) (panels 5-13)
+    description_zh: "第一原则：永远验证输入数据。"
   - id: "09_005"
-    type: "scenario"
-    description_zh: "假设场景：如果没学这些..."
-    description_en: "Hypothetical: if she hadn't learned these..."
-    prompt: |
-      Dream sequence starting, "what if" scenario,
-      alternative timeline where she didn't improve,
-      warning visualization, ghost of past.
-
+    description_zh: "添加断言检查：确保数据符合预期。"
   - id: "09_006"
-    type: "monday"
-    description_zh: "周一危机：实验无法复现"
-    description_en: "Monday crisis: experiment won't reproduce"
-    prompt: |
-      Monday morning shock, experiment results different,
-      no record of original environment or config,
-      panic setting in, reproducibility crisis.
-
+    description_zh: "实现优雅降级：部分失败不应导致全盘崩溃。"
   - id: "09_007"
-    type: "tuesday"
-    description_zh: "周二baseline问题：比较不公平"
-    description_en: "Tuesday baseline problem: unfair comparison"
-    prompt: |
-      Discovering baseline comparison was flawed,
-      different preprocessing, different seeds,
-      fundamental validity questioned,
-      evaluation crisis.
-
+    description_zh: "使用异常处理：明确每个可能的失败点。"
   - id: "09_008"
-    type: "wednesday"
-    description_zh: "周三消融缺失：审稿人会问为什么"
-    description_en: "Wednesday ablation missing: reviewers will ask why"
-    prompt: |
-      Realizing no ablation study was done,
-      can't explain which components matter,
-      rushing to run ablations too late,
-      analysis crisis.
-
+    description_zh: "添加类型检查：在运行前发现类型错误。"
   - id: "09_009"
-    type: "thursday"
-    description_zh: "周四数据丢失：找不到处理过的数据"
-    description_en: "Thursday data missing: can't find processed data"
-    prompt: |
-      Researcher searching for data that was lost,
-      no version control on data, no backup,
-      data completely gone,
-      data crisis.
-
+    description_zh: "实现检查点机制：可以从中间恢复，不必从头开始。"
   - id: "09_010"
-    type: "friday"
-    description_zh: "周五崩溃：一切都来不及了"
-    description_en: "Friday collapse: everything is too late"
-    prompt: |
-      Complete breakdown, deadline tomorrow,
-      everything broken, nothing fixable in time,
-      despair and regret,
-      worst case visualization.
-
+    description_zh: "使用配置验证：启动前检查所有配置是否合法。"
   - id: "09_011"
-    type: "wake"
-    description_zh: "醒来！这只是假设场景"
-    description_en: "Wake up! This was just a hypothetical"
-    prompt: |
-      Snapping back to reality from nightmare,
-      relief washing over face,
-      it was just a warning of what could have been,
-      gratitude for preparedness.
-
+    description_zh: "添加smoke test：部署前的快速健康检查。"
   - id: "09_012"
-    type: "contrast"
-    description_zh: "现实中的小研：每一项都提前检查过"
-    description_en: "Real Xiao Yan: every item checked in advance"
-    prompt: |
-      Real timeline showing proactive checks,
-      each potential crisis addressed weeks ago,
-      systematic prevention,
-      preparedness in action.
-
+    description_zh: "实现资源限制：防止内存泄漏和无限循环。"
   - id: "09_013"
-    type: "principle"
-    description_zh: "原则：截止日期只暴露问题，不产生问题"
-    description_en: "Principle: deadline exposes problems, doesn't create them"
-    prompt: |
-      Visualization of deadline as spotlight,
-      revealing problems that were always there,
-      problems existed before, deadline just showed them,
-      insight visualization.
-
-  # The Prevention System (panels 14-21)
+    description_zh: "使用超时机制：避免永远等待。"
   - id: "09_014"
-    type: "system"
-    description_zh: "预防系统：每周自查"
-    description_en: "Prevention system: weekly self-check"
-    prompt: |
-      Weekly ritual of self-checking,
-      systematic review of all potential issues,
-      calm preventive maintenance,
-      sustainable practice.
-
+    description_zh: "添加进度监控：实时了解执行状态。"
   - id: "09_015"
-    type: "check"
-    description_zh: "检查1：复现性验证"
-    description_en: "Check 1: reproducibility verification"
-    prompt: |
-      Weekly reproducibility check,
-      running key experiments to verify they still work,
-      catching drift early,
-      reproducibility maintenance.
-
+    description_zh: "实现回滚机制：出错时能够安全恢复。"
   - id: "09_016"
-    type: "check"
-    description_zh: "检查2：baseline公平性"
-    description_en: "Check 2: baseline fairness"
-    prompt: |
-      Reviewing baseline comparison setup,
-      ensuring apples-to-apples comparison,
-      fairness validation,
-      evaluation integrity.
-
+    description_zh: "使用幂等操作：重复执行不会造成副作用。"
   - id: "09_017"
-    type: "check"
-    description_zh: "检查3：消融实验状态"
-    description_en: "Check 3: ablation study status"
-    prompt: |
-      Tracking ablation study progress,
-      ensuring all important ablations planned,
-      understanding component contributions,
-      analysis completeness.
-
+    description_zh: "添加依赖检查：启动前验证所有依赖可用。"
   - id: "09_018"
-    type: "check"
-    description_zh: "检查4：数据和环境备份"
-    description_en: "Check 4: data and environment backup"
-    prompt: |
-      Verifying data backups and environment snapshots,
-      everything recoverable if needed,
-      safety net maintained,
-      backup verification.
-
+    description_zh: "实现金丝雀测试：小规模验证再全面部署。"
   - id: "09_019"
-    type: "check"
-    description_zh: "检查5：论文写作进度"
-    description_en: "Check 5: paper writing progress"
-    prompt: |
-      Paper writing progress tracking,
-      draft sections completed early,
-      not leaving writing to last minute,
-      writing progress maintenance.
-
+    description_zh: "建立部署清单：上线前的检查列表。"
   - id: "09_020"
-    type: "timing"
-    description_zh: "时机：离截止日越远，修复成本越低"
-    description_en: "Timing: further from deadline, lower fix cost"
-    prompt: |
-      Graph showing fix cost vs time to deadline,
-      exponential cost increase near deadline,
-      early detection = cheap fixes,
-      economic visualization.
-
+    description_zh: "三个月后的deadline前夜，小研的代码稳定运行。"
   - id: "09_021"
-    type: "mindset"
-    description_zh: "心态：把每周当成小截止日"
-    description_en: "Mindset: treat every week as mini-deadline"
-    prompt: |
-      Weekly milestones as checkpoints,
-      continuous progress instead of last-minute rush,
-      sustainable pace,
-      healthy rhythm.
-
-  # Victory (panels 22-25)
+    description_zh: "她平静地提前两天提交了论文。"
   - id: "09_022"
-    type: "submission"
-    description_zh: "提交日：从容地点击submit"
-    description_en: "Submission day: calmly clicking submit"
-    prompt: |
-      Researcher calmly submitting paper,
-      no last-minute panic, everything ready,
-      confident click on submit button,
-      peaceful submission.
-
+    description_zh: "导师微笑：'这就是工程思维的力量。'"
   - id: "09_023"
-    type: "celebration"
-    description_zh: "庆祝：还有时间喝杯咖啡"
-    description_en: "Celebration: still time for a coffee"
-    prompt: |
-      Researcher leaning back in chair with both hands behind head,
-      steaming coffee cup on desk beside laptop,
-      eyes closed with satisfied smile, stretching and relaxing,
-      sunlight streaming through window, peaceful afternoon,
-      plenty of time to spare, no rush, earned rest.
-
+    description_zh: "小研的经验分享：'预防胜于治疗。'"
   - id: "09_024"
-    type: "action"
-    description_zh: "10分钟行动：设置每周自查提醒"
-    description_en: "10-minute action: set up weekly self-check reminder"
-    prompt: |
-      Researcher setting up calendar reminder,
-      "Weekly research check" recurring event,
-      automation of good habits,
-      system building.
-
+    description_zh: "实验室采用了小研的防御性编程checklist。"
   - id: "09_025"
-    type: "preview"
-    description_zh: "下一章预告：团队协作"
-    description_en: "Next chapter preview: team collaboration"
-    prompt: |
-      Preview of team working together,
-      multiple researchers coordinating,
-      team dynamics about to be explored,
-      collaboration visualization.
+    description_zh: "结尾：小研的格言：'代码会失败，但我们可以优雅地处理失败。'"
