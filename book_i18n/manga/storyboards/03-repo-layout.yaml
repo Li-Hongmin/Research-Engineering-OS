@@ -246,8 +246,8 @@ panels:
 
   - id: "03_024"
     type: "tip"
-    description_zh: "为了让这个过程更快，导师推荐了cookiecutter这样的工具。只要一条命令，一个完整的项目模板就会自动生成。小研用了一次，直接就有了标准的目录结构和基础文件。'站在巨人的肩膀上'——她想起这句话，决定以后每个新项目都用这个模板开始。"
-    description_en: "Tip: use cookiecutter template"
+    description_zh: "为了让这个过程更快，导师建议她用AI助手来生成项目模板。小研打开Claude，简单描述了一下：'为我生成一个标准的研究项目模板，包括src/、experiments/、configs/、outputs/这样的目录结构，以及README和Makefile。'一分钟后，完整的项目框架和所有基础文件就生成了。小研看着屏幕上整洁的文件列表，想起了那句话——'站在巨人的肩膀上'——决定以后每个新项目都用AI这样快速开始。"
+    description_en: "Tip: use AI to generate project template"
     prompt: |
       Researcher using project template tool,
       instant professional structure generated,
