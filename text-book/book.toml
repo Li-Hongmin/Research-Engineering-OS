@@ -13,7 +13,7 @@ default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/Li-Hongmin/Research-Engineering-OS-"
 additional-css = ["theme/custom.css"]
-additional-js = ["theme/language-picker.js"]
+additional-js = ["theme/version-language-picker.js"]
 smart-punctuation = true
 
 [output.html.search]
