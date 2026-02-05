@@ -1,224 +1,224 @@
-# 第五章：完成的定义
+# Chapter 5: Definition of Done
 
 
-**完成的定义**
+**Definition of Done**
 
 
-### 第1格
+### Panel 1
 
-![小研宣布：实验做完了！](../src/images/05-dod/05_001.png)
+![Xiao Yan announces: The experiment is done!](../images/05-dod/05_001.png)
 
-*小研宣布：实验做完了！*
-
-
----
-
-
-### 第2格
-
-![导师问：能复现吗？](../src/images/05-dod/05_002.png)
-
-*导师问：能复现吗？*
+*Xiao Yan announces: The experiment is done!*
 
 
 ---
 
 
-### 第3格
+### Panel 2
 
-![导师问：为什么work？](../src/images/05-dod/05_003.png)
+![Advisor asks: Can you reproduce it?](../images/05-dod/05_002.png)
 
-*导师问：为什么work？*
-
-
----
-
-
-### 第4格
-
-![导师问：和baseline公平对比了吗？](../src/images/05-dod/05_004.png)
-
-*导师问：和baseline公平对比了吗？*
+*Advisor asks: Can you reproduce it?*
 
 
 ---
 
 
-### 第5格
+### Panel 3
 
-![原来：差不多≠完成](../src/images/05-dod/05_005.png)
+![Advisor asks: Why does it work?](../images/05-dod/05_003.png)
 
-*原来：差不多≠完成*
-
-
----
-
-
-### 第6格
-
-![三颗地雷埋在差不多里](../src/images/05-dod/05_006.png)
-
-*三颗地雷埋在差不多里*
+*Advisor asks: Why does it work?*
 
 
 ---
 
 
-### 第7格
+### Panel 4
 
-![地雷1：无法复现](../src/images/05-dod/05_007.png)
+![Advisor asks: Did you compare fairly with baseline?](../images/05-dod/05_004.png)
 
-*地雷1：无法复现*
-
-
----
-
-
-### 第8格
-
-![地雷2：不知道为什么work](../src/images/05-dod/05_008.png)
-
-*地雷2：不知道为什么work*
+*Advisor asks: Did you compare fairly with baseline?*
 
 
 ---
 
 
-### 第9格
+### Panel 5
 
-![地雷3：不公平评估](../src/images/05-dod/05_009.png)
+![Realization: Almost done ≠ Done](../images/05-dod/05_005.png)
 
-*地雷3：不公平评估*
-
-
----
-
-
-### 第10格
-
-![地雷爆炸时机：最关键的时刻](../src/images/05-dod/05_010.png)
-
-*地雷爆炸时机：最关键的时刻*
+*Realization: Almost done ≠ Done*
 
 
 ---
 
 
-### 第11格
+### Panel 6
 
-![原则：提前排雷](../src/images/05-dod/05_011.png)
+![Three landmines hidden in "almost done"](../images/05-dod/05_006.png)
 
-*原则：提前排雷*
-
-
----
-
-
-### 第12格
-
-![解决方案：DoD检查清单](../src/images/05-dod/05_012.png)
-
-*解决方案：DoD检查清单*
+*Three landmines hidden in "almost done"*
 
 
 ---
 
 
-### 第13格
+### Panel 7
 
-![DoD项1：结果可复现](../src/images/05-dod/05_013.png)
+![Landmine 1: Cannot reproduce](../images/05-dod/05_007.png)
 
-*DoD项1：结果可复现*
-
-
----
-
-
-### 第14格
-
-![DoD项2：能解释为什么work](../src/images/05-dod/05_014.png)
-
-*DoD项2：能解释为什么work*
+*Landmine 1: Cannot reproduce*
 
 
 ---
 
 
-### 第15格
+### Panel 8
 
-![DoD项3：公平对比baseline](../src/images/05-dod/05_015.png)
+![Landmine 2: Don't know why it works](../images/05-dod/05_008.png)
 
-*DoD项3：公平对比baseline*
-
-
----
-
-
-### 第16格
-
-![DoD项4：消融实验完成](../src/images/05-dod/05_016.png)
-
-*DoD项4：消融实验完成*
+*Landmine 2: Don't know why it works*
 
 
 ---
 
 
-### 第17格
+### Panel 9
 
-![DoD项5：代码可审查](../src/images/05-dod/05_017.png)
+![Landmine 3: Unfair evaluation](../images/05-dod/05_009.png)
 
-*DoD项5：代码可审查*
-
-
----
-
-
-### 第18格
-
-![实践：每次实验结束时检查](../src/images/05-dod/05_018.png)
-
-*实践：每次实验结束时检查*
+*Landmine 3: Unfair evaluation*
 
 
 ---
 
 
-### 第19格
+### Panel 10
 
-![好处：自信地说完成了](../src/images/05-dod/05_019.png)
+![When landmines explode: At the most critical moment](../images/05-dod/05_010.png)
 
-*好处：自信地说完成了*
-
-
----
-
-
-### 第20格
-
-![好处：审稿人无法攻击](../src/images/05-dod/05_020.png)
-
-*好处：审稿人无法攻击*
+*When landmines explode: At the most critical moment*
 
 
 ---
 
 
-### 第21格
+### Panel 11
 
-![10分钟行动：写下你的DoD](../src/images/05-dod/05_021.png)
+![Principle: Defuse early](../images/05-dod/05_011.png)
 
-*10分钟行动：写下你的DoD*
+*Principle: Defuse early*
 
 
 ---
 
 
-### 第22格
+### Panel 12
 
-![下一章预告：日志考古学](../src/images/05-dod/05_022.png)
+![Solution: DoD checklist](../images/05-dod/05_012.png)
 
-*下一章预告：日志考古学*
+*Solution: DoD checklist*
+
+
+---
+
+
+### Panel 13
+
+![DoD item 1: Results are reproducible](../images/05-dod/05_013.png)
+
+*DoD item 1: Results are reproducible*
+
+
+---
+
+
+### Panel 14
+
+![DoD item 2: Can explain why it works](../images/05-dod/05_014.png)
+
+*DoD item 2: Can explain why it works*
+
+
+---
+
+
+### Panel 15
+
+![DoD item 3: Fair comparison with baseline](../images/05-dod/05_015.png)
+
+*DoD item 3: Fair comparison with baseline*
+
+
+---
+
+
+### Panel 16
+
+![DoD item 4: Ablation studies complete](../images/05-dod/05_016.png)
+
+*DoD item 4: Ablation studies complete*
+
+
+---
+
+
+### Panel 17
+
+![DoD item 5: Code is reviewable](../images/05-dod/05_017.png)
+
+*DoD item 5: Code is reviewable*
+
+
+---
+
+
+### Panel 18
+
+![Practice: Check after each experiment](../images/05-dod/05_018.png)
+
+*Practice: Check after each experiment*
+
+
+---
+
+
+### Panel 19
+
+![Benefit: Confidently say it's done](../images/05-dod/05_019.png)
+
+*Benefit: Confidently say it's done*
+
+
+---
+
+
+### Panel 20
+
+![Benefit: Reviewers can't attack](../images/05-dod/05_020.png)
+
+*Benefit: Reviewers can't attack*
+
+
+---
+
+
+### Panel 21
+
+![10-minute action: Write your DoD](../images/05-dod/05_021.png)
+
+*10-minute action: Write your DoD*
+
+
+---
+
+
+### Panel 22
+
+![Next chapter preview: The art of logging](../images/05-dod/05_022.png)
+
+*Next chapter preview: The art of logging*
 
 
 ---

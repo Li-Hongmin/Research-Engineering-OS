@@ -1,204 +1,204 @@
-# 第六章：记录的艺术
+# Chapter 6: The Art of Logging
 
 
-**日志考古学**
+**Log Archaeology**
 
 
-### 第1格
+### Panel 1
 
-![三个月后，小研试图找回实验细节](../images/06-logging/06_001.png)
+![Three months later, Xiao Yan tries to recall experiment details](../images/06-logging/06_001.png)
 
-*三个月后，小研试图找回实验细节*
-
-
----
-
-
-### 第2格
-
-![翻找笔记：只有零散片段](../images/06-logging/06_002.png)
-
-*翻找笔记：只有零散片段*
+*Three months later, Xiao Yan tries to recall experiment details*
 
 
 ---
 
 
-### 第3格
+### Panel 2
 
-![找配置：到底用的哪个？](../images/06-logging/06_003.png)
+![Searching notes: Only scattered fragments](../images/06-logging/06_002.png)
 
-*找配置：到底用的哪个？*
-
-
----
-
-
-### 第4格
-
-![领悟：当时的我对未来的我太残忍](../images/06-logging/06_004.png)
-
-*领悟：当时的我对未来的我太残忍*
+*Searching notes: Only scattered fragments*
 
 
 ---
 
 
-### 第5格
+### Panel 3
 
-![解决方案：双层日志系统](../images/06-logging/06_005.png)
+![Looking for config: Which one was used?](../images/06-logging/06_003.png)
 
-*解决方案：双层日志系统*
-
-
----
-
-
-### 第6格
-
-![第一层：自动记录（JSON）](../images/06-logging/06_006.png)
-
-*第一层：自动记录（JSON）*
+*Looking for config: Which one was used?*
 
 
 ---
 
 
-### 第7格
+### Panel 4
 
-![第二层：人工笔记（Markdown）](../images/06-logging/06_007.png)
+![Realization: Past me was too cruel to future me](../images/06-logging/06_004.png)
 
-*第二层：人工笔记（Markdown）*
-
-
----
-
-
-### 第8格
-
-![run.json结构：机器的完美记忆](../images/06-logging/06_008.png)
-
-*run.json结构：机器的完美记忆*
+*Realization: Past me was too cruel to future me*
 
 
 ---
 
 
-### 第9格
+### Panel 5
 
-![run.md模板：人类的快速记录](../images/06-logging/06_009.png)
+![Solution: Two-layer logging system](../images/06-logging/06_005.png)
 
-*run.md模板：人类的快速记录*
-
-
----
-
-
-### 第10格
-
-![工作流：实验前中后的记录](../images/06-logging/06_010.png)
-
-*工作流：实验前中后的记录*
+*Solution: Two-layer logging system*
 
 
 ---
 
 
-### 第11格
+### Panel 6
 
-![好处1：三个月后立即找到](../images/06-logging/06_011.png)
+![Layer 1: Automatic logging (JSON)](../images/06-logging/06_006.png)
 
-*好处1：三个月后立即找到*
-
-
----
-
-
-### 第12格
-
-![好处2：审稿人要数据秒回](../images/06-logging/06_012.png)
-
-*好处2：审稿人要数据秒回*
+*Layer 1: Automatic logging (JSON)*
 
 
 ---
 
 
-### 第13格
+### Panel 7
 
-![好处3：团队成员能接手](../images/06-logging/06_013.png)
+![Layer 2: Manual notes (Markdown)](../images/06-logging/06_007.png)
 
-*好处3：团队成员能接手*
-
-
----
-
-
-### 第14格
-
-![好处4：写论文素材齐全](../images/06-logging/06_014.png)
-
-*好处4：写论文素材齐全*
+*Layer 2: Manual notes (Markdown)*
 
 
 ---
 
 
-### 第15格
+### Panel 8
 
-![工具：MLflow/W&B集成](../images/06-logging/06_015.png)
+![run.json structure: Machine's perfect memory](../images/06-logging/06_008.png)
 
-*工具：MLflow/W&B集成*
-
-
----
-
-
-### 第16格
-
-![工具：自动化脚本](../images/06-logging/06_016.png)
-
-*工具：自动化脚本*
+*run.json structure: Machine's perfect memory*
 
 
 ---
 
 
-### 第17格
+### Panel 9
 
-![实践：5分钟日志习惯](../images/06-logging/06_017.png)
+![run.md template: Human's quick notes](../images/06-logging/06_009.png)
 
-*实践：5分钟日志习惯*
-
-
----
-
-
-### 第18格
-
-![技巧：记录失败和惊喜](../images/06-logging/06_018.png)
-
-*技巧：记录失败和惊喜*
+*run.md template: Human's quick notes*
 
 
 ---
 
 
-### 第19格
+### Panel 10
 
-![10分钟行动：为下次实验设置日志](../images/06-logging/06_019.png)
+![Workflow: Logging before, during, and after experiments](../images/06-logging/06_010.png)
 
-*10分钟行动：为下次实验设置日志*
+*Workflow: Logging before, during, and after experiments*
 
 
 ---
 
 
-### 第20格
+### Panel 11
 
-![下一章预告：AI助手的陷阱](../images/06-logging/06_020.png)
+![Benefit 1: Find it instantly three months later](../images/06-logging/06_011.png)
 
-*下一章预告：AI助手的陷阱*
+*Benefit 1: Find it instantly three months later*
+
+
+---
+
+
+### Panel 12
+
+![Benefit 2: Instant response when reviewer asks for data](../images/06-logging/06_012.png)
+
+*Benefit 2: Instant response when reviewer asks for data*
+
+
+---
+
+
+### Panel 13
+
+![Benefit 3: Team members can take over](../images/06-logging/06_013.png)
+
+*Benefit 3: Team members can take over*
+
+
+---
+
+
+### Panel 14
+
+![Benefit 4: Complete materials for paper writing](../images/06-logging/06_014.png)
+
+*Benefit 4: Complete materials for paper writing*
+
+
+---
+
+
+### Panel 15
+
+![Tools: MLflow/W&B integration](../images/06-logging/06_015.png)
+
+*Tools: MLflow/W&B integration*
+
+
+---
+
+
+### Panel 16
+
+![Tools: Automation scripts](../images/06-logging/06_016.png)
+
+*Tools: Automation scripts*
+
+
+---
+
+
+### Panel 17
+
+![Practice: 5-minute logging habit](../images/06-logging/06_017.png)
+
+*Practice: 5-minute logging habit*
+
+
+---
+
+
+### Panel 18
+
+![Tips: Record failures and surprises](../images/06-logging/06_018.png)
+
+*Tips: Record failures and surprises*
+
+
+---
+
+
+### Panel 19
+
+![10-minute action: Set up logging for next experiment](../images/06-logging/06_019.png)
+
+*10-minute action: Set up logging for next experiment*
+
+
+---
+
+
+### Panel 20
+
+![Next chapter preview: AI assistant traps](../images/06-logging/06_020.png)
+
+*Next chapter preview: AI assistant traps*
 
 
 ---

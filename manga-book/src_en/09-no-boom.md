@@ -1,254 +1,254 @@
-# 第九章：不爆炸的科学
+# Chapter 9: The Science of Not Exploding
 
 
-**炸弹拆除**
+**Bomb Defusal**
 
 
-### 第1格
+### Panel 1
 
-![截止日期倒计时：5天](../src/images/09-no-boom/09_001.png)
+![Deadline countdown: 5 days](../images/09-no-boom/09_001.png)
 
-*截止日期倒计时：5天*
-
-
----
-
-
-### 第2格
-
-![但是小研很平静：她已经准备好了](../src/images/09-no-boom/09_002.png)
-
-*但是小研很平静：她已经准备好了*
+*Deadline countdown: 5 days*
 
 
 ---
 
 
-### 第3格
+### Panel 2
 
-![闪回：记得曾经的自己...](../src/images/09-no-boom/09_003.png)
+![But Xiao Yan is calm: She's already prepared](../images/09-no-boom/09_002.png)
 
-*闪回：记得曾经的自己...*
-
-
----
-
-
-### 第4格
-
-![主题：提前拆除炸弹，而非最后抢救](../src/images/09-no-boom/09_004.png)
-
-*主题：提前拆除炸弹，而非最后抢救*
+*But Xiao Yan is calm: She's already prepared*
 
 
 ---
 
 
-### 第5格
+### Panel 3
 
-![假设场景：如果没学这些...](../src/images/09-no-boom/09_005.png)
+![Flashback: Remembering her former self...](../images/09-no-boom/09_003.png)
 
-*假设场景：如果没学这些...*
-
-
----
-
-
-### 第6格
-
-![周一危机：实验无法复现](../src/images/09-no-boom/09_006.png)
-
-*周一危机：实验无法复现*
+*Flashback: Remembering her former self...*
 
 
 ---
 
 
-### 第7格
+### Panel 4
 
-![周二baseline问题：比较不公平](../src/images/09-no-boom/09_007.png)
+![Theme: Defuse bombs early, not last-minute rescue](../images/09-no-boom/09_004.png)
 
-*周二baseline问题：比较不公平*
-
-
----
-
-
-### 第8格
-
-![周三消融缺失：审稿人会问为什么](../src/images/09-no-boom/09_008.png)
-
-*周三消融缺失：审稿人会问为什么*
+*Theme: Defuse bombs early, not last-minute rescue*
 
 
 ---
 
 
-### 第9格
+### Panel 5
 
-![周四数据丢失：找不到处理过的数据](../src/images/09-no-boom/09_009.png)
+![Hypothetical scenario: If she hadn't learned these...](../images/09-no-boom/09_005.png)
 
-*周四数据丢失：找不到处理过的数据*
-
-
----
-
-
-### 第10格
-
-![周五崩溃：一切都来不及了](../src/images/09-no-boom/09_010.png)
-
-*周五崩溃：一切都来不及了*
+*Hypothetical scenario: If she hadn't learned these...*
 
 
 ---
 
 
-### 第11格
+### Panel 6
 
-![醒来！这只是假设场景](../src/images/09-no-boom/09_011.png)
+![Monday crisis: Experiment cannot be reproduced](../images/09-no-boom/09_006.png)
 
-*醒来！这只是假设场景*
-
-
----
-
-
-### 第12格
-
-![现实中的小研：每一项都提前检查过](../src/images/09-no-boom/09_012.png)
-
-*现实中的小研：每一项都提前检查过*
+*Monday crisis: Experiment cannot be reproduced*
 
 
 ---
 
 
-### 第13格
+### Panel 7
 
-![原则：截止日期只暴露问题，不产生问题](../src/images/09-no-boom/09_013.png)
+![Tuesday baseline problem: Unfair comparison](../images/09-no-boom/09_007.png)
 
-*原则：截止日期只暴露问题，不产生问题*
-
-
----
-
-
-### 第14格
-
-![预防系统：每周自查](../src/images/09-no-boom/09_014.png)
-
-*预防系统：每周自查*
+*Tuesday baseline problem: Unfair comparison*
 
 
 ---
 
 
-### 第15格
+### Panel 8
 
-![检查1：复现性验证](../src/images/09-no-boom/09_015.png)
+![Wednesday missing ablation: Reviewer will ask why](../images/09-no-boom/09_008.png)
 
-*检查1：复现性验证*
-
-
----
-
-
-### 第16格
-
-![检查2：baseline公平性](../src/images/09-no-boom/09_016.png)
-
-*检查2：baseline公平性*
+*Wednesday missing ablation: Reviewer will ask why*
 
 
 ---
 
 
-### 第17格
+### Panel 9
 
-![检查3：消融实验状态](../src/images/09-no-boom/09_017.png)
+![Thursday data loss: Can't find processed data](../images/09-no-boom/09_009.png)
 
-*检查3：消融实验状态*
-
-
----
-
-
-### 第18格
-
-![检查4：数据和环境备份](../src/images/09-no-boom/09_018.png)
-
-*检查4：数据和环境备份*
+*Thursday data loss: Can't find processed data*
 
 
 ---
 
 
-### 第19格
+### Panel 10
 
-![检查5：论文写作进度](../src/images/09-no-boom/09_019.png)
+![Friday meltdown: Everything is too late](../images/09-no-boom/09_010.png)
 
-*检查5：论文写作进度*
-
-
----
-
-
-### 第20格
-
-![时机：离截止日越远，修复成本越低](../src/images/09-no-boom/09_020.png)
-
-*时机：离截止日越远，修复成本越低*
+*Friday meltdown: Everything is too late*
 
 
 ---
 
 
-### 第21格
+### Panel 11
 
-![心态：把每周当成小截止日](../src/images/09-no-boom/09_021.png)
+![Wake up! This is just a hypothetical](../images/09-no-boom/09_011.png)
 
-*心态：把每周当成小截止日*
-
-
----
-
-
-### 第22格
-
-![提交日：从容地点击submit](../src/images/09-no-boom/09_022.png)
-
-*提交日：从容地点击submit*
+*Wake up! This is just a hypothetical*
 
 
 ---
 
 
-### 第23格
+### Panel 12
 
-![庆祝：还有时间喝杯咖啡](../src/images/09-no-boom/09_023.png)
+![Real Xiao Yan: Checked everything in advance](../images/09-no-boom/09_012.png)
 
-*庆祝：还有时间喝杯咖啡*
-
-
----
-
-
-### 第24格
-
-![10分钟行动：设置每周自查提醒](../src/images/09-no-boom/09_024.png)
-
-*10分钟行动：设置每周自查提醒*
+*Real Xiao Yan: Checked everything in advance*
 
 
 ---
 
 
-### 第25格
+### Panel 13
 
-![下一章预告：团队协作](../src/images/09-no-boom/09_025.png)
+![Principle: Deadlines expose problems, not create them](../images/09-no-boom/09_013.png)
 
-*下一章预告：团队协作*
+*Principle: Deadlines expose problems, not create them*
+
+
+---
+
+
+### Panel 14
+
+![Prevention system: Weekly self-check](../images/09-no-boom/09_014.png)
+
+*Prevention system: Weekly self-check*
+
+
+---
+
+
+### Panel 15
+
+![Check 1: Reproducibility verification](../images/09-no-boom/09_015.png)
+
+*Check 1: Reproducibility verification*
+
+
+---
+
+
+### Panel 16
+
+![Check 2: Baseline fairness](../images/09-no-boom/09_016.png)
+
+*Check 2: Baseline fairness*
+
+
+---
+
+
+### Panel 17
+
+![Check 3: Ablation study status](../images/09-no-boom/09_017.png)
+
+*Check 3: Ablation study status*
+
+
+---
+
+
+### Panel 18
+
+![Check 4: Data and environment backup](../images/09-no-boom/09_018.png)
+
+*Check 4: Data and environment backup*
+
+
+---
+
+
+### Panel 19
+
+![Check 5: Paper writing progress](../images/09-no-boom/09_019.png)
+
+*Check 5: Paper writing progress*
+
+
+---
+
+
+### Panel 20
+
+![Timing: Farther from deadline, lower repair cost](../images/09-no-boom/09_020.png)
+
+*Timing: Farther from deadline, lower repair cost*
+
+
+---
+
+
+### Panel 21
+
+![Mindset: Treat each week as a mini deadline](../images/09-no-boom/09_021.png)
+
+*Mindset: Treat each week as a mini deadline*
+
+
+---
+
+
+### Panel 22
+
+![Submission day: Calmly click submit](../images/09-no-boom/09_022.png)
+
+*Submission day: Calmly click submit*
+
+
+---
+
+
+### Panel 23
+
+![Celebration: Still time for coffee](../images/09-no-boom/09_023.png)
+
+*Celebration: Still time for coffee*
+
+
+---
+
+
+### Panel 24
+
+![10-minute action: Set weekly self-check reminder](../images/09-no-boom/09_024.png)
+
+*10-minute action: Set weekly self-check reminder*
+
+
+---
+
+
+### Panel 25
+
+![Next chapter preview: Team collaboration](../images/09-no-boom/09_025.png)
+
+*Next chapter preview: Team collaboration*
 
 
 ---

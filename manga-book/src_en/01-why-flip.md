@@ -1,254 +1,254 @@
-# 第一章：为什么翻车
+# Chapter 1: Why Projects Fail
 
 
-**三种债务怪兽**
+**Three Debt Monsters**
 
 
-### 第1格
+### Panel 1
 
-![小研在图书馆深夜阅读Research Engineering OS](../images/01-why-flip/01_001.png)
+![Xiao Yan reading Research Engineering OS late at night in the library](../images/01-why-flip/01_001.png)
 
-*小研在图书馆深夜阅读Research Engineering OS*
-
-
----
-
-
-### 第2格
-
-![书中浮现三种债务的图解](../images/01-why-flip/01_002.png)
-
-*书中浮现三种债务的图解*
+*Xiao Yan reading Research Engineering OS late at night in the library*
 
 
 ---
 
 
-### 第3格
+### Panel 2
 
-![回忆：项目开始时的兴奋](../images/01-why-flip/01_003.png)
+![Diagram of three types of debt emerging from the book](../images/01-why-flip/01_002.png)
 
-*回忆：项目开始时的兴奋*
-
-
----
-
-
-### 第4格
-
-![快速推进：日子飞逝的蒙太奇](../images/01-why-flip/01_004.png)
-
-*快速推进：日子飞逝的蒙太奇*
+*Diagram of three types of debt emerging from the book*
 
 
 ---
 
 
-### 第5格
+### Panel 3
 
-![现实：截止日前发现问题](../images/01-why-flip/01_005.png)
+![Flashback: Excitement at project start](../images/01-why-flip/01_003.png)
 
-*现实：截止日前发现问题*
-
-
----
-
-
-### 第6格
-
-![探索债怪兽详解：由快速原型构成](../images/01-why-flip/01_006.png)
-
-*探索债怪兽详解：由快速原型构成*
+*Flashback: Excitement at project start*
 
 
 ---
 
 
-### 第7格
+### Panel 4
 
-![探索债的诞生：快速验证想法](../images/01-why-flip/01_007.png)
+![Fast forward: Montage of days flying by](../images/01-why-flip/01_004.png)
 
-*探索债的诞生：快速验证想法*
-
-
----
-
-
-### 第8格
-
-![探索债的积累：原型变成依赖](../images/01-why-flip/01_008.png)
-
-*探索债的积累：原型变成依赖*
+*Fast forward: Montage of days flying by*
 
 
 ---
 
 
-### 第9格
+### Panel 5
 
-![探索债爆发：需要改动时崩溃](../images/01-why-flip/01_009.png)
+![Reality: Discovering problems before deadline](../images/01-why-flip/01_005.png)
 
-*探索债爆发：需要改动时崩溃*
-
-
----
-
-
-### 第10格
-
-![探索债的解决：定期清理和重构](../images/01-why-flip/01_010.png)
-
-*探索债的解决：定期清理和重构*
+*Reality: Discovering problems before deadline*
 
 
 ---
 
 
-### 第11格
+### Panel 6
 
-![验证债怪兽详解：由跳过的测试构成](../images/01-why-flip/01_011.png)
+![Exploration Debt Monster explained: Built from quick prototypes](../images/01-why-flip/01_006.png)
 
-*验证债怪兽详解：由跳过的测试构成*
-
-
----
-
-
-### 第12格
-
-![验证债的诞生：没时间写测试](../images/01-why-flip/01_012.png)
-
-*验证债的诞生：没时间写测试*
+*Exploration Debt Monster explained: Built from quick prototypes*
 
 
 ---
 
 
-### 第13格
+### Panel 7
 
-![验证债积累：结果看起来对但是...](../images/01-why-flip/01_013.png)
+![Birth of Exploration Debt: Quick validation of ideas](../images/01-why-flip/01_007.png)
 
-*验证债积累：结果看起来对但是...*
-
-
----
-
-
-### 第14格
-
-![验证债爆发：审稿人质疑统计显著性](../images/01-why-flip/01_014.png)
-
-*验证债爆发：审稿人质疑统计显著性*
+*Birth of Exploration Debt: Quick validation of ideas*
 
 
 ---
 
 
-### 第15格
+### Panel 8
 
-![验证债解决：测试驱动的研究](../images/01-why-flip/01_015.png)
+![Accumulation of Exploration Debt: Prototype becomes dependency](../images/01-why-flip/01_008.png)
 
-*验证债解决：测试驱动的研究*
-
-
----
-
-
-### 第16格
-
-![复现债怪兽详解：由丢失的环境构成](../images/01-why-flip/01_016.png)
-
-*复现债怪兽详解：由丢失的环境构成*
+*Accumulation of Exploration Debt: Prototype becomes dependency*
 
 
 ---
 
 
-### 第17格
+### Panel 9
 
-![复现债诞生：它在我的电脑上能跑](../images/01-why-flip/01_017.png)
+![Exploration Debt explosion: Crashes when changes needed](../images/01-why-flip/01_009.png)
 
-*复现债诞生：它在我的电脑上能跑*
-
-
----
-
-
-### 第18格
-
-![复现债积累：依赖变化但没记录](../images/01-why-flip/01_018.png)
-
-*复现债积累：依赖变化但没记录*
+*Exploration Debt explosion: Crashes when changes needed*
 
 
 ---
 
 
-### 第19格
+### Panel 10
 
-![复现债爆发：三个月后无法复现](../images/01-why-flip/01_019.png)
+![Solving Exploration Debt: Regular cleanup and refactoring](../images/01-why-flip/01_010.png)
 
-*复现债爆发：三个月后无法复现*
-
-
----
-
-
-### 第20格
-
-![复现债解决：环境即代码](../images/01-why-flip/01_020.png)
-
-*复现债解决：环境即代码*
+*Solving Exploration Debt: Regular cleanup and refactoring*
 
 
 ---
 
 
-### 第21格
+### Panel 11
 
-![三种债务的关系：相互放大](../images/01-why-flip/01_021.png)
+![Validation Debt Monster explained: Built from skipped tests](../images/01-why-flip/01_011.png)
 
-*三种债务的关系：相互放大*
-
-
----
-
-
-### 第22格
-
-![小研明白：问题不是最后一刻产生的](../images/01-why-flip/01_022.png)
-
-*小研明白：问题不是最后一刻产生的*
+*Validation Debt Monster explained: Built from skipped tests*
 
 
 ---
 
 
-### 第23格
+### Panel 12
 
-![决心改变：每日小习惯](../images/01-why-flip/01_023.png)
+![Birth of Validation Debt: No time to write tests](../images/01-why-flip/01_012.png)
 
-*决心改变：每日小习惯*
-
-
----
-
-
-### 第24格
-
-![10分钟行动：检查你的债务](../images/01-why-flip/01_024.png)
-
-*10分钟行动：检查你的债务*
+*Birth of Validation Debt: No time to write tests*
 
 
 ---
 
 
-### 第25格
+### Panel 13
 
-![下一章预告：实验才是单元](../images/01-why-flip/01_025.png)
+![Validation Debt accumulates: Results look right but...](../images/01-why-flip/01_013.png)
 
-*下一章预告：实验才是单元*
+*Validation Debt accumulates: Results look right but...*
+
+
+---
+
+
+### Panel 14
+
+![Validation Debt explosion: Reviewer questions statistical significance](../images/01-why-flip/01_014.png)
+
+*Validation Debt explosion: Reviewer questions statistical significance*
+
+
+---
+
+
+### Panel 15
+
+![Solving Validation Debt: Test-driven research](../images/01-why-flip/01_015.png)
+
+*Solving Validation Debt: Test-driven research*
+
+
+---
+
+
+### Panel 16
+
+![Reproducibility Debt Monster explained: Built from lost environments](../images/01-why-flip/01_016.png)
+
+*Reproducibility Debt Monster explained: Built from lost environments*
+
+
+---
+
+
+### Panel 17
+
+![Birth of Reproducibility Debt: It works on my machine](../images/01-why-flip/01_017.png)
+
+*Birth of Reproducibility Debt: It works on my machine*
+
+
+---
+
+
+### Panel 18
+
+![Reproducibility Debt accumulates: Dependencies change but not recorded](../images/01-why-flip/01_018.png)
+
+*Reproducibility Debt accumulates: Dependencies change but not recorded*
+
+
+---
+
+
+### Panel 19
+
+![Reproducibility Debt explosion: Can't reproduce three months later](../images/01-why-flip/01_019.png)
+
+*Reproducibility Debt explosion: Can't reproduce three months later*
+
+
+---
+
+
+### Panel 20
+
+![Solving Reproducibility Debt: Environment as code](../images/01-why-flip/01_020.png)
+
+*Solving Reproducibility Debt: Environment as code*
+
+
+---
+
+
+### Panel 21
+
+![Relationship of three debts: Mutually amplifying](../images/01-why-flip/01_021.png)
+
+*Relationship of three debts: Mutually amplifying*
+
+
+---
+
+
+### Panel 22
+
+![Xiao Yan understands: Problems don't arise at the last moment](../images/01-why-flip/01_022.png)
+
+*Xiao Yan understands: Problems don't arise at the last moment*
+
+
+---
+
+
+### Panel 23
+
+![Determination to change: Daily small habits](../images/01-why-flip/01_023.png)
+
+*Determination to change: Daily small habits*
+
+
+---
+
+
+### Panel 24
+
+![10-minute action: Check your debt](../images/01-why-flip/01_024.png)
+
+*10-minute action: Check your debt*
+
+
+---
+
+
+### Panel 25
+
+![Next chapter preview: Experiments are the unit](../images/01-why-flip/01_025.png)
+
+*Next chapter preview: Experiments are the unit*
 
 
 ---
