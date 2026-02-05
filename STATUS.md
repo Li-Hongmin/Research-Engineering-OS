@@ -58,6 +58,8 @@
 ## 下一步计划
 
 ### 短期（接下来工作时间）
+- [x] ✅ 创建自动化健康检查脚本（2026-02-06 03:15 完成）
+- [ ] 将 check_health.sh 集成到 GitHub Actions CI/CD
 - [ ] 检查 text-book 和 manga-book 的 GitHub Pages 部署状态
 - [ ] 验证三语言版本的构建是否正常
 - [ ] 检查是否有待翻译的内容
