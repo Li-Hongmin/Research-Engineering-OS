@@ -275,6 +275,8 @@ See `.github/workflows/` for details.
 
 ## 🤝 Code of Conduct
 
+> 📖 **Full Code of Conduct**: See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for the complete version.
+
 ### Our Pledge
 We are committed to providing a welcoming and inclusive environment for all contributors, regardless of:
 - Experience level (student, researcher, engineer)

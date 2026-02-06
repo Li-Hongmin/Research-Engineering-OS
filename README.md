@@ -2,6 +2,8 @@
 
 A story-driven educational resource series for researchers in AI/ML/computational biology who need reproducible, traceable research practices.
 
+[![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md) [![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 ## 📚 Project Overview
 
 **Research Engineering OS** teaches practical research engineering practices through two complementary formats:
