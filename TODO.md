@@ -117,9 +117,15 @@
   - ✅ question.yml (2.8 KB) - 问题咨询
   - ✅ config.yml (559 B) - 配置文件
   - 双语支持（中英文）+ 结构化表单
-- [ ] 添加代码行为准则（CODE_OF_CONDUCT.md）
-  - 注：已在 CONTRIBUTING.md 中包含简化版本
-  - 可考虑独立创建完整版本（可选）
+- [x] ✅ **创建独立的 Code of Conduct（CODE_OF_CONDUCT.md）**（2026-02-07 03:05 完成）
+  - ✅ 基于 Contributor Covenant 2.1（业界标准）
+  - ✅ 适配 REOS 多语言、学术-工业界融合特点
+  - ✅ 完整的举报流程和执行指南
+  - ✅ 双语支持（英文完整版 + 中文摘要）
+  - ✅ 集成到 CONTRIBUTING.md 和 README.md
+  - ✅ 添加 GitHub 徽章
+  - Commit: c69f144
+  - 文件: CODE_OF_CONDUCT.md (7.1 KB)
 - [ ] 准备宣传材料（社交媒体、论文）
 
 ## 💡 想法池（未排期）
