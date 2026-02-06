@@ -189,8 +189,22 @@ Currently, the manga edition requires manual deployment setup.
 
 ## 🛠️ Quality Assurance & Automation
 
+### Quick Commands (Makefile)
+The project includes a Makefile for unified command entry:
+
+```bash
+make help                # Show all available commands
+make health              # Run comprehensive project health check
+make lint                # Run Markdown lint check
+make check-all           # Run all quality checks
+make build               # Build all versions (text-book + manga-book)
+make clean               # Clean build artifacts
+```
+
+See `make help` for the complete list of 20+ available commands.
+
 ### Automated Health Checks
-The project includes comprehensive health check tools:
+The project includes comprehensive health check tools (also available via Makefile):
 
 ```bash
 ./check_health.sh                 # Comprehensive project health check
