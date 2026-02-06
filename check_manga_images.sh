@@ -41,16 +41,29 @@ for lang_dir in src src_en src_ja; do
             [[ -z "$link" ]] && continue
             ((total_image_links++))
             
-            # Check if image file exists
-            dir=$(dirname "$file")
-            full_path="$dir/$link"
+            # Resolve relative path correctly using pushd/popd
+            file_dir=$(dirname "$file")
+            link_dir=$(dirname "$link")
+            link_file=$(basename "$link")
             
-            if [[ ! -f "$full_path" ]]; then
-                echo -e "${RED}✗ Missing image:${NC}"
-                echo -e "  File: $file"
-                echo -e "  Link: $link"
-                echo -e "  Expected: $full_path"
-                echo ""
+            # Navigate to file directory and then resolve the link
+            (
+                cd "$file_dir" 2>/dev/null || exit 1
+                cd "$link_dir" 2>/dev/null || exit 1
+                target_path="$(pwd)/$link_file"
+                
+                if [[ ! -f "$target_path" ]]; then
+                    echo -e "${RED}✗ Missing image:${NC}"
+                    echo -e "  File: $file"
+                    echo -e "  Link: $link"
+                    echo -e "  Resolved: $target_path"
+                    echo ""
+                    exit 2
+                fi
+            )
+            
+            result=$?
+            if [[ $result -eq 2 ]]; then
                 ((broken_image_links++))
                 broken_files+=("$file")
             fi
