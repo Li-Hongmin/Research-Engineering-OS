@@ -94,7 +94,7 @@
 
 ![验证债的诞生：没时间写测试](../../images/01-why-flip/01_012.png)
 
-*The Birth of Verification Debt: No Time to Write Tests*
+*The Birth of Validation Debt: No Time to Write Tests*
 
 ---
 
