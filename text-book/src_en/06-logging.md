@@ -1,7 +1,6 @@
 # Experiment Logging Automation: What’s Missing Is Not Tools, but Default Behavior
-## Story Setup: “Archaeological Work” Three Months Later
 
-![代码考古](images/comics/06_archaeology.png)
+## Story Setup: “Archaeological Work” Three Months Later
 
 Your paper has been accepted, but the reviewers request supplementary materials explaining the exact setup of a particular experiment in Table 4. You open the code repository and begin “archaeology”:
 
@@ -23,7 +22,7 @@ After an entire afternoon of struggle, you decide to rerun the experiment. Howev
 
 **Reviewer’s reply:** “We cannot accept a paper where the authors cannot reproduce their own results.”
 
-### This tragedy could have been avoided.
+##### This tragedy could have been avoided.
 
 If you had spent 2 minutes recording key information at the end of the experiment, you would not have faced a nightmare three months later.
 
@@ -31,7 +30,6 @@ The issue is not a lack of tools (MLflow, W&B, and TensorBoard are all excellent
 
 ## A Two-Layer Logging Strategy: Machine-Precise + Human-Concise
 
-![双层日志](images/comics/06_two_layer_logging.png)
 The core challenge of experiment logging is balancing two needs:
 
 - **Machines require complete and precise information** (for reproducibility and automated analysis);
@@ -44,7 +42,6 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 
 ### Layer 1: Machine Log (run.json)
 
-![06 08 run json structure](images/comics/06_08_run_json_structure.png)
 **Purpose:** Provide complete, structured information for reproducibility and automation.
 
 **Principles:**
@@ -62,13 +59,13 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
       "timestamp": {
         "start": "2026-02-01T16:30:45",
         "end": "2026-02-01T18:45:12"
-      },
+      **,
       "git": {
         "commit": "a1b2c3d4e5f6",
         "dirty": false,
         "branch": "exp/ablation-lr",
         "remote": "git@github.com:user/project.git"
-      },
+      **,
       "config": {
         "path": "configs/ablation_lr.yaml",
         "hash": "sha256:abcd1234...",
@@ -77,8 +74,8 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
           "learning_rate": 3e-4,
           "batch_size": 32,
           ...
-        }
-      },
+        **
+      **,
       "data": {
         "name": "dataset_v3",
         "path": "/data/project/v3",
@@ -87,37 +84,37 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
           "train": 8000,
           "val": 1000,
           "test": 1000
-        }
-      },
+        **
+      **,
       "environment": {
         "python": "3.11.7",
         "cuda": "12.1",
         "platform": "Linux-5.15.0-x86_64",
         "gpu": "NVIDIA A100-SXM4-40GB",
         "pip_freeze_hash": "sha256:12345678..."
-      },
+      **,
       "random": {
         "seed": 42,
         "torch_seed": 42,
         "numpy_seed": 42,
         "python_seed": 42
-      },
+      **,
       "metrics": {
         "val_loss": 0.123,
         "val_acc": 0.943,
         "test_loss": 0.145,
         "test_acc": 0.931,
         "training_time_hours": 2.25
-      },
+      **,
       "artifacts": {
         "model": "outputs/2026-02-01_1630_ablation_lr/model.pt",
         "logs": "outputs/2026-02-01_1630_ablation_lr/train.log",
         "predictions": "outputs/2026-02-01_1630_ablation_lr/predictions.json",
         "plots": "outputs/2026-02-01_1630_ablation_lr/plots/"
-      }
-    }
+      **
+    **
 
-#### Explanation of key fields:
+##### Explanation of key fields:
 
 - **run_id:** A unique identifier; recommended format is timestamp + short description (see Chapter 2).
 
@@ -135,7 +132,6 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 
 ### Layer 2: Human Log (run.md)
 
-![06 09 run md template](images/comics/06_09_run_md_template.png)
 **Purpose:** Provide a concise summary of the experiment for humans (including your future self) to enable rapid understanding.
 
 **Principles:**
@@ -168,7 +164,7 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
     ## Risk/Anomalies
     No obvious anomalies. Data augmentation may need coordinated adjustment (currently fixed).
 
-#### Why only 5 lines?
+##### Why only 5 lines?
 
 - **Lower the logging barrier:** If you have to write a long document, you will procrastinate; with 5 lines, you can finish in 2 minutes.
 
@@ -178,11 +174,11 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 
 ## Automation Tools: Make Logging a Zero-Cost Behavior
 
-![自动记录](images/comics/06_auto_logging.png)
 **Core idea:** Logging should not depend on “remembering to do it”; it should happen automatically.
 
 ### Automatically Generate run.json in the Training Script
-#### Example implementation (Python):
+
+##### Example implementation (Python):
 
     import json
     import subprocess
@@ -204,12 +200,12 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
             "run_id": run_id,
             "timestamp": {
                 "start": datetime.now().isoformat(),
-            },
+            **,
             "git": get_git_info(),
             "config": {
                 "resolved": config,
                 "hash": hash_dict(config),
-            },
+            **,
             "data": get_data_info(config.get("data_path")),
             "environment": get_env_info(),
             "random": get_random_seeds(config),
@@ -217,15 +213,15 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
             "artifacts": {
                 "model": str(output_dir / "model.pt"),
                 "logs": str(output_dir / "train.log"),
-            }
-        }
+            **
+        **
 
         # Save to file
         run_file = output_dir / "run.json"
         with open(run_file, "w") as f:
             json.dump(run_info, f, indent=2)
 
-        print(f"Run info logged to {run_file}")
+        print(f"Run info logged to {run_file**")
 
     def get_git_info():
         """Retrieve git information"""
@@ -256,7 +252,7 @@ remote = subprocess.check_output(
             "dirty": dirty,
             "branch": branch,
             "remote": remote
-        }
+        **
 
     def get_data_info(data_path):
         """Retrieve dataset information"""
@@ -269,7 +265,7 @@ remote = subprocess.check_output(
             "name": data_path.name,
             "path": str(data_path.absolute()),
             # "hash": compute_dir_hash(data_path),  # Optional
-        }
+        **
 
     def get_env_info():
         """Retrieve environment information"""
@@ -279,7 +275,7 @@ remote = subprocess.check_output(
         env = {
             "python": sys.version.split()[0],
             "platform": platform.platform(),
-        }
+        **
 
         # Retrieve the CUDA version (if available)
         try:
@@ -310,7 +306,7 @@ remote = subprocess.check_output(
             "seed": config.get("seed", None),
             "torch_seed": config.get("torch_seed", None),
             "numpy_seed": config.get("numpy_seed", None),
-        }
+        **
 
     def hash_dict(d):
         """Compute a hash of a dictionary"""
@@ -320,7 +316,7 @@ remote = subprocess.check_output(
         ).hexdigest()[:16]
 ```
 
-#### Usage in the training script:
+##### Usage in the training script:
 
 ```python
     # train.py
@@ -333,7 +329,7 @@ remote = subprocess.check_output(
         args = parse_args()
 
         # Create run_id and the output directory
-        run_id = f"{datetime.now().strftime('%Y-%m-%d_%H%M')}_{args.exp_name}"
+        run_id = f"{datetime.now().strftime('%Y-%m-%d_%H%M')**_{args.exp_name**"
         output_dir = Path("outputs") / run_id
         output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -357,9 +353,9 @@ remote = subprocess.check_output(
 
         # Prompt to write run.md
         print(f"\n{'='*60**")
-        print(f"[OK] Experiment completed: {run_id}")
+        print(f"[OK] Experiment completed: {run_id**")
         print(f"[NOTE] Please write a brief summary in:")
-        print(f"    {output_dir / 'run.md'}")
+        print(f"    {output_dir / 'run.md'**")
         print(f"{'='*60**\n")
 
     if __name__ == "__main__":
@@ -367,19 +363,18 @@ remote = subprocess.check_output(
 ```
 
 ### Simplify run.md writing with a template
+
 Automatically generate a `run.md` template in the output directory:
 
 ```python
 def create_run_md_template(output_dir, run_id):
     """Create a run.md template"""
-    template = f"""# Run: {run_id}
+    template = f"""# Run: {run_id**
 
 ## Hypothesis
 [What does this experiment aim to validate? What are the expected results?]
 
 ## Change
-
-![06 10 mlflow integration](images/comics/06_10_mlflow_integration.png)
 [Compared with the previous experiment, what was changed?]
 
 ## Result
@@ -395,7 +390,7 @@ def create_run_md_template(output_dir, run_id):
     md_file = output_dir / "run.md"
     if not md_file.exists():
         md_file.write_text(template)
-        print(f"[NOTE] run.md template created at {md_file}")
+        print(f"[NOTE] run.md template created at {md_file**")
 ```
 
 In this way, after each experiment ends, you only need to fill in the blanks rather than writing from scratch.
@@ -403,6 +398,7 @@ In this way, after each experiment ends, you only need to fill in the blanks rat
 ## Integration with Existing Tools
 
 ### Integration with MLflow
+
 If you are already using MLflow, you can synchronize the run.json information to MLflow:
 
 ```python
@@ -510,7 +506,7 @@ print(f"Top {top_k} runs by {metric}:")
         find_best_runs()
 ```
 
-## Comparing Configuration Differences Between Two Experiments
+### Comparing Configuration Differences Between Two Experiments
 
 ```python
 # compare_runs.py
@@ -565,6 +561,7 @@ if __name__ == "__main__":
 ## Frequently Asked Questions and Solutions
 
 ### Q1: What if run.json is too large?
+
 **Problem:** If you save the full config (including model definitions, data preprocessing details, etc.), run.json may become very large.
 
 **Solutions:**
@@ -576,6 +573,7 @@ if __name__ == "__main__":
 - In run.json, record only the config file path and its hash.
 
 ### Q2: What if you forgot to write run.md?
+
 **Solutions:**
 
 - Add a check in the Makefile or scripts:
@@ -610,6 +608,7 @@ sha256sum data_manifest.txt
 - Record the manifest file path and hash in run.json.
 
 ## 10-Minute Action: Set Up Automatic Logging for Your Next Experiment
+
 If you do only one thing right now: build a minimal system for automatic logging.
 
 1.  **Copy run_logger.py**

@@ -2,15 +2,11 @@
 
 ## Story Setup: From “Fighting Alone” to “Dragging Each Other Down”
 
-![团队站会](images/comics/10_team_standup.png)
-
 Your research team has three people: you (a PhD student), a junior master’s student, and an undergraduate intern. You are working on the same project and should be collaborating.
 
 **But reality looks like this:**
 
-### Monday Morning Stand-up
-
-![10 05 monday standup](images/comics/10_05_monday_standup.png)
+##### Monday Morning Stand-up
 
 You: “I ran a new model over the weekend. The results look good—95% accuracy.”
 
@@ -26,9 +22,8 @@ Intern: “The link I posted in the group chat...” (All three scroll through t
 
 Advisor: “What exactly are you three doing? Why are the numbers each of you reports different?”
 
-#### Wednesday Code Conflicts
+##### Wednesday Code Conflicts
 
-![10 06 wednesday conflict](images/comics/10_06_wednesday_conflict.png)
 Junior: “Senior, I pushed the code. Pull it.”
 
 You pull the code and get:
@@ -41,9 +36,8 @@ You open the code and see that the junior modified almost every file. And many c
 
 You spend two hours resolving conflicts, only to discover in the end: your code was overwritten, and last week’s good results can no longer be reproduced.
 
-#### Friday Data Disaster
+##### Friday Data Disaster
 
-![10 07 friday data disaster](images/comics/10_07_friday_data_disaster.png)
 Intern: “Senior, I accidentally deleted the data/ directory. Do you have a backup?”
 
 You: “What?! That directory is 20GB—data I spent three days processing!”
@@ -60,9 +54,7 @@ The counterintuitive part of teamwork is this: **each individual may be highly c
 
 ### Three Major Collaboration Traps
 
-#### Trap 1: Dependence on Tacit Knowledge
-
-![10 08 hidden knowledge](images/comics/10_08_hidden_knowledge.png)
+##### Trap 1: Dependence on Tacit Knowledge
 
 Everyone carries a lot of information in their head that “only they know”:
 
@@ -73,9 +65,8 @@ Everyone carries a lot of information in their head that “only they know”:
 
 When collaboration is required, this tacit knowledge becomes a bottleneck—others can only “wait until you have time to explain,” while you are interrupted repeatedly.
 
-#### Trap 2: Duplicated Work
+##### Trap 2: Duplicated Work
 
-![10 09 duplicate work](images/comics/10_09_duplicate_work.png)
 Without clear division of labor and interfaces, you end up with:
 
 - Two people writing functionally identical code with different implementations  
@@ -84,9 +75,8 @@ Without clear division of labor and interfaces, you end up with:
 
 On the surface it looks like “parallel work,” but in reality it is “wasted compute and time.”
 
-#### Trap 3: Exploding Integration Costs
+##### Trap 3: Exploding Integration Costs
 
-![10 10 integration explosion](images/comics/10_10_integration_explosion.png)
 Everyone “does well” on their own branch, but when merging you find:
 
 - Incompatible interfaces  
@@ -111,12 +101,9 @@ But a team project requires **explicit standards**:
 
 ## Minimal Standard 1: Coding Standards (From Chaos to Readability)
 
-![代码审查](images/comics/10_code_review.png)
-
 ### Naming Conventions: Make Code Self-Explanatory
 
-![10 11 naming convention](images/comics/10_11_naming_convention.png)
-#### File Naming
+##### File Naming
 
     # ❌ Bad naming
     test.py
@@ -130,7 +117,7 @@ But a team project requires **explicit standards**:
     evaluate_on_testset.py         # Evaluate on the test set
     preprocess_raw_data.py         # Preprocess raw data
 
-#### Variable and Function Naming
+##### Variable and Function Naming
 
     # ❌ Bad naming
     def f(x, y):
@@ -163,7 +150,7 @@ But a team project requires **explicit standards**:
 
 ### Commenting Standards: Written for Future You and Your Teammates
 
-#### Places That Must Be Commented
+##### Places That Must Be Commented
 
 1.  **Function docstrings** (every function must have one)
 
@@ -203,7 +190,7 @@ Returns:
           # NOTE: This hyperparameter has a large impact on the results
           # Be sure to test on a small dataset before making changes
 
-#### Where you should not add comments
+##### Where you should not add comments
 
     # ❌ Do not comment on the obvious
     x = x + 1  # Add 1 to x
@@ -225,10 +212,10 @@ Returns:
 
 ### PR template: use it even when working alone
 
-![10 12 pr template](images/comics/10_12_pr_template.png)
 A Pull Request (or Merge Request) template forces you to answer key questions before merging.
 
-#### Create a PR template
+##### Create a PR template
+
     # .github/pull_request_template.md
 
     ## Summary of changes
@@ -313,7 +300,7 @@ Benefits:
         main_method.yaml
         ablation_*.yaml
 
-#### base.yaml example
+##### base.yaml example
 
     # configs/base.yaml
     # Team baseline configuration; do not modify casually
@@ -338,7 +325,7 @@ Benefits:
       metric: "accuracy"
       eval_every: 1000
 
-#### Personal config example
+##### Personal config example
 
     # configs/people/zhangsan_attention_test.yaml
 
@@ -357,7 +344,7 @@ Benefits:
       related_runs:
         - "2026-02-15_1030_zhangsan_baseline"
 
-## Standardize the logging format
+### Standardize the logging format
 
 **Problem:** Everyone records experiments differently, making it impossible to aggregate and compare.
 
@@ -388,7 +375,7 @@ Benefits:
 
 **Solution:** Discuss only experiments with a run_id.
 
-#### Weekly meeting template
+##### Weekly meeting template
 
     # Weekly Group Meeting (30–45 minutes)
 
@@ -438,7 +425,7 @@ Benefits:
 
 **Solution:** Build a culture of “read the docs first, then ask people.”
 
-#### Team documentation structure
+##### Team documentation structure
 
     docs/
       README.md              # Project overview
@@ -449,7 +436,7 @@ Benefits:
       DECISIONS.md           # Record of important decisions
       CONTACTS.md            # Who owns what
 
-#### FAQ.md example
+##### FAQ.md example
 
     # Frequently Asked Questions
 
@@ -491,7 +478,7 @@ Benefits:
 
 **Solution:** Important issues must be filed as an issue (GitHub/GitLab/Jira).
 
-#### Issue template
+##### Issue template
 
     # Bug Report
     **Problem description**: [briefly describe the issue]
@@ -540,7 +527,7 @@ Benefits:
 
 **Do not assume students will “naturally do it right.”** You must explicitly communicate your expectations.
 
-#### Onboarding checklist
+##### Onboarding checklist
 
     # New Member Onboarding Checklist
 
@@ -566,7 +553,8 @@ Benefits:
 
 **Do not only ask “How are the results?” in weekly meetings; check “Is the process standardized?”**
 
-#### Weekly Code Review Checklist
+##### Weekly Code Review Checklist
+
     Checklist:
 - [ ] Are all experiments from this week fully documented?
 - [ ] Does the run_id follow the naming convention?
@@ -602,7 +590,7 @@ If issues are found, point them out immediately and require corrections. **Do no
 
 **Survival strategies:**
 
-#### Strategy 1: Create a “Clean Zone” for Yourself
+##### Strategy 1: Create a “Clean Zone” for Yourself
 
     # Create your own subproject within a chaotic project
 
@@ -615,7 +603,7 @@ If issues are found, point them out immediately and require corrections. **Do no
 
 Even if the overall project is messy, at least your part is clear.
 
-#### Strategy 2: Write Down Your Understanding
+##### Strategy 2: Write Down Your Understanding
 
     # docs/MY_UNDERSTANDING.md
 
@@ -637,7 +625,7 @@ This document:
 - Provides a record for future handoffs
 - Enables you to align understanding with your advisor
 
-#### Strategy 3: Proactively Establish Standards
+##### Strategy 3: Proactively Establish Standards
 
 Even if the team has no standards, you can **establish standards for yourself**:
 
@@ -683,8 +671,6 @@ Clear help requests receive faster and more useful responses.
 
 ```bash
 # Install formatter and linter
-
-![团队胜利](images/comics/10_team_victory.png)
 pip install black flake8 isort
 
 # .pre-commit-config.yaml
@@ -705,7 +691,7 @@ pre-commit install
 # Now formatting will run automatically before each commit
 ```
 
-## Issue 2: Experimental Results Do Not Match
+### Issue 2: Experimental Results Do Not Match
 
 **Troubleshooting checklist:**
 
@@ -719,6 +705,7 @@ pre-commit install
 Check item by item; you will always find the cause.
 
 ### Issue 3: Unclear Responsibilities Lead to Duplicate Work
+
 **Solution:** Use a Kanban board to visualize tasks.
 
     # You can use GitHub Projects or Trello
