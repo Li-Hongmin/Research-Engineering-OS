@@ -172,8 +172,15 @@ The multilingual text book is automatically deployed to GitHub Pages on every pu
 ### Manga Book (Manual)
 Currently, the manga edition requires manual deployment setup.
 
-## 📋 Content Guidelines
+## 📋 Documentation & Guidelines
 
+### Quick Links
+- 📚 **[Documentation Index](DOCS_INDEX.md)** - Complete navigation to all project docs
+- ✅ **[Content Review Checklist](CONTENT_REVIEW_CHECKLIST.md)** - Systematic quality review guide
+- 🤝 **[Contributing Guide](CONTRIBUTING.md)** - How to contribute (5 ways + workflows)
+- 📜 **[Code of Conduct](CODE_OF_CONDUCT.md)** - Community guidelines
+
+### Content Guidelines
 - **Language**: Chinese primary with English technical terms
 - **Structure**: Problem → Symptoms → Cost → Solution
 - **Heading Levels**: No jumps (# → ## → ### → ####)
@@ -186,11 +193,12 @@ Currently, the manga edition requires manual deployment setup.
 The project includes comprehensive health check tools:
 
 ```bash
-./check_health.sh              # Comprehensive project health check
-./check_markdown_lint.sh       # Markdown quality verification
-./check_links.sh --fast        # Link validity check
-./check_translation_sync.sh    # Translation completeness check
-./check_manga_images.sh        # Manga image asset verification
+./check_health.sh                 # Comprehensive project health check
+./check_markdown_lint.sh          # Markdown quality verification
+./check_links.sh --fast           # Link validity check
+./check_translation_sync.sh       # Translation completeness check
+./check_manga_images.sh           # Manga image asset verification
+./check_content_consistency.sh    # Three-language content consistency check
 ```
 
 ### Continuous Integration
@@ -219,5 +227,5 @@ For questions or contributions, please reach out through:
 
 ---
 
-**Last Updated**: 2026-02-06
-**Version**: 2.1 (Added automation tools & CI/CD enhancements)
+**Last Updated**: 2026-02-07
+**Version**: 2.2 (Added content consistency checker + comprehensive documentation index)
