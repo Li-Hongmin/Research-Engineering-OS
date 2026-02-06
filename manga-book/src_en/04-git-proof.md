@@ -1,254 +1,203 @@
-# 第四章：Git 作为证明
+# Chapter 4: Git as Proof
 
+**Git Detective**
 
-**Git侦探**
-
-
-### 第1格
+### Cell 1
 
 ![收到审稿人的邮件，要求证明实验时间线](../images/04-git-proof/04_001.png)
 
-*收到审稿人的邮件，要求证明实验时间线*
-
+*Received an email from the reviewer requesting proof of the experimental timeline*
 
 ---
 
-
-### 第2格
+### Cell 2
 
 ![惊慌：我怎么证明？](../images/04-git-proof/04_002.png)
 
-*惊慌：我怎么证明？*
-
+*Panic: How do I prove it?*
 
 ---
 
-
-### 第3格
+### Panel 3
 
 ![突然想起：Git有所有记录！](../images/04-git-proof/04_003.png)
 
-*突然想起：Git有所有记录！*
-
+*Suddenly remembered: Git has all the records!*
 
 ---
 
-
-### 第4格
+### Panel 4
 
 ![打开git log，寻找证据](../images/04-git-proof/04_004.png)
 
-*打开git log，寻找证据*
-
+*Open `git log` and look for evidence*
 
 ---
 
-
-### 第5格
+### Panel 5
 
 ![找到了！带时间戳的提交记录](../images/04-git-proof/04_005.png)
 
-*找到了！带时间戳的提交记录*
-
+*Found it! A commit record with a timestamp*
 
 ---
 
-
-### 第6格
+### Panel 6
 
 ![Git提交 = 法律证据](../images/04-git-proof/04_006.png)
 
-*Git提交 = 法律证据*
-
+*Git commits = legal evidence*
 
 ---
 
-
-### 第7格
+### Panel 7
 
 ![每次提交的构成要素](../images/04-git-proof/04_007.png)
 
-*每次提交的构成要素*
-
+*Components of each commit*
 
 ---
 
-
-### 第8格
+### Panel 8
 
 ![警告：后期修改会留下痕迹](../images/04-git-proof/04_008.png)
 
-*警告：后期修改会留下痕迹*
-
+*Warning: edits made later will leave traces*
 
 ---
 
-
-### 第9格
+### Panel 9
 
 ![最佳实践：频繁的小提交](../images/04-git-proof/04_009.png)
 
-*最佳实践：频繁的小提交*
-
+*Best Practice: Frequent Small Commits*
 
 ---
 
-
-### 第10格
+### Panel 10
 
 ![好的提交信息示例](../images/04-git-proof/04_010.png)
 
-*好的提交信息示例*
-
+*Examples of good commit messages*
 
 ---
 
-
-### 第11格
+### Grid 11
 
 ![分支策略：研究的平行宇宙](../images/04-git-proof/04_011.png)
 
-*分支策略：研究的平行宇宙*
-
+*Branching Strategy: The Parallel Universe of Research*
 
 ---
 
-
-### 第12格
+### Grid 12
 
 ![main分支：只放验证过的代码](../images/04-git-proof/04_012.png)
 
-*main分支：只放验证过的代码*
-
+*Main branch: only verified code is kept*
 
 ---
 
-
-### 第13格
+### Grid 13
 
 ![实验分支：自由探索](../images/04-git-proof/04_013.png)
 
-*实验分支：自由探索*
-
+*Experimental Branch: Free Exploration*
 
 ---
 
-
-### 第14格
+### Panel 14
 
 ![工作流：分支→测试→合并](../images/04-git-proof/04_014.png)
 
-*工作流：分支→测试→合并*
-
+*Workflow: Branch → Test → Merge*
 
 ---
 
-
-### 第15格
+### Grid 15
 
 ![技巧：用分支名记录目的](../images/04-git-proof/04_015.png)
 
-*技巧：用分支名记录目的*
-
+*Tip: Use branch names to record the purpose*
 
 ---
 
-
-### 第16格
+### Panel 16
 
 ![Git标签：重要里程碑](../images/04-git-proof/04_016.png)
 
-*Git标签：重要里程碑*
-
+*Git Tags: Important Milestones*
 
 ---
 
-
-### 第17格
+### Panel 17
 
 ![用例：标记论文提交版本](../images/04-git-proof/04_017.png)
 
-*用例：标记论文提交版本*
-
+*Use case: Mark the paper submission version*
 
 ---
 
-
-### 第18格
+### Grid 18
 
 ![用例：标记最佳模型](../images/04-git-proof/04_018.png)
 
-*用例：标记最佳模型*
-
+*Use case: Mark the best model*
 
 ---
 
-
-### 第19格
+### Grid 19
 
 ![好处：审稿人要求可立即响应](../images/04-git-proof/04_019.png)
 
-*好处：审稿人要求可立即响应*
-
+*Benefit: reviewers’ requests can be responded to immediately*
 
 ---
 
-
-### 第20格
+### Grid 20
 
 ![错误：提交太大，信息模糊](../images/04-git-proof/04_020.png)
 
-*错误：提交太大，信息模糊*
-
+*Error: submission too large, message unclear*
 
 ---
 
-
-### 第21格
+### Grid 21
 
 ![错误：忘记提交重要更改](../images/04-git-proof/04_021.png)
 
-*错误：忘记提交重要更改*
-
+*Error: Forgot to submit important changes*
 
 ---
 
-
-### 第22格
+### Panel 22
 
 ![错误：提交敏感信息](../images/04-git-proof/04_022.png)
 
-*错误：提交敏感信息*
-
+*Error: Submitting sensitive information*
 
 ---
 
-
-### 第23格
+### Panel 23
 
 ![总结：Git是研究者最好的律师](../images/04-git-proof/04_023.png)
 
-*总结：Git是研究者最好的律师*
-
+*Summary: Git is the best lawyer for researchers*
 
 ---
 
-
-### 第24格
+### Panel 24
 
 ![10分钟行动：检查最近提交质量](../images/04-git-proof/04_024.png)
 
-*10分钟行动：检查最近提交质量*
-
+*10-Minute Action: Check the Quality of Recent Commits*
 
 ---
 
-
-### 第25格
+### Panel 25
 
 ![下一章预告：完成的定义](../images/04-git-proof/04_025.png)
 
-*下一章预告：完成的定义*
-
+*Next Chapter Preview: The Definition of Completion*
 
 ---
