@@ -66,10 +66,19 @@
         let pagePath = context.pagePath;
 
         if (targetVersion === "manga") {
-            return `${basePath}/manga${pagePath}`;
+            // Fix path mapping: text has single-page structure (e.g., /00-preface.html)
+            // while manga has multi-page structure (e.g., /00-preface/01.html)
+            if (!context.isManga) {
+                // Extract chapter name from text path: /00-preface.html → /00-preface/01.html
+                const chapterMatch = pagePath.match(/\/([\w-]+)\.html$/);
+                if (chapterMatch) {
+                    pagePath = `/${chapterMatch[1]}/01.html`;
+                }
+            }
+            return `${basePath}/manga/${context.language}${pagePath}`;
         } else {
-            // When switching from manga to text, use English as default
-            const lang = context.isManga ? "en" : context.language;
+            // When switching from manga to text, preserve the same language
+            const lang = context.language;
             
             // Fix path mapping: manga has multi-page structure (e.g., /00-preface/01.html)
             // while text has single-page structure (e.g., /00-preface.html)

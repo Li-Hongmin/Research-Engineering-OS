@@ -26,21 +26,26 @@
         const langMatch = pathname.match(/\/(zh|en|ja)(\/|$)/);
         const currentLang = langMatch ? langMatch[1] : "en";
 
-        // Extract page path (everything after /version/lang/)
+        // Extract page path (everything after /manga/lang/ or /lang/)
         let pagePath = "/";
         if (isManga) {
-            const match = pathname.match(/^.*\/manga(\/.*)?$/);
-            pagePath = match && match[1] ? match[1] : "/";
+            // For manga: /manga/zh/00-preface/03.html → /00-preface/03.html
+            const match = pathname.match(/\/manga\/(zh|en|ja)(\/.*)?$/);
+            pagePath = match && match[2] ? match[2] : "/";
         } else {
+            // For text: /en/00-preface.html → /00-preface.html
             const match = pathname.match(/\/(zh|en|ja)(\/.*)?$/);
             pagePath = match && match[2] ? match[2] : "/";
         }
 
-        // Calculate base path (everything before version/language)
+        // Calculate base path (everything before manga/ or lang/)
         let basePath = "";
-        const baseMatch = pathname.match(/^(.*?)\/(zh|en|ja|manga)(\/|$)/);
-        if (baseMatch) {
-            basePath = baseMatch[1];
+        if (isManga) {
+            const baseMatch = pathname.match(/^(.*?)\/manga\//);
+            basePath = baseMatch ? baseMatch[1] : "";
+        } else {
+            const baseMatch = pathname.match(/^(.*?)\/(zh|en|ja)\//);
+            basePath = baseMatch ? baseMatch[1] : "";
         }
 
         return {
@@ -58,13 +63,35 @@
 
     function buildVersionUrl(targetVersion, context) {
         const basePath = context.basePath;
-        const pagePath = context.pagePath;
+        let pagePath = context.pagePath;
 
         if (targetVersion === "manga") {
-            return `${basePath}/manga${pagePath}`;
+            // Fix path mapping: text has single-page structure (e.g., /00-preface.html)
+            // while manga has multi-page structure (e.g., /00-preface/01.html)
+            if (!context.isManga) {
+                // Extract chapter name from text path: /00-preface.html → /00-preface/01.html
+                const chapterMatch = pagePath.match(/\/([\w-]+)\.html$/);
+                if (chapterMatch) {
+                    pagePath = `/${chapterMatch[1]}/01.html`;
+                }
+            }
+            return `${basePath}/manga/${context.language}${pagePath}`;
         } else {
-            // When switching from manga to text, use English as default
-            const lang = context.isManga ? "en" : context.language;
+            // When switching from manga to text, preserve the same language
+            const lang = context.language;
+            
+            // Fix path mapping: manga has multi-page structure (e.g., /00-preface/01.html)
+            // while text has single-page structure (e.g., /00-preface.html)
+            if (context.isManga) {
+                // Extract chapter name from manga path: /00-preface/01.html → /00-preface.html
+                const chapterMatch = pagePath.match(/\/([\w-]+)\//);
+                if (chapterMatch) {
+                    pagePath = `/${chapterMatch[1]}.html`;
+                } else if (pagePath === "/" || pagePath === "") {
+                    pagePath = "/";
+                }
+            }
+            
             return `${basePath}/${lang}${pagePath}`;
         }
     }
