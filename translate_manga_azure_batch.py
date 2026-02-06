@@ -81,13 +81,13 @@ Text to translate:
                 {'role': 'user', 'content': prompt}
             ],
             'temperature': 0.3,
-            'max_tokens': min(len(text) * 2, 2000),
+            'max_completion_tokens': min(len(text) * 2, 2000),
             'top_p': 0.95
         }
 
         try:
             async with aiohttp.ClientSession() as session:
-                url = f"{self.endpoint}/openai/deployments/gpt-4/chat/completions?api-version={self.version}"
+                url = f"{self.endpoint}/openai/deployments/gpt-5.2/chat/completions?api-version={self.version}"
                 async with session.post(
                     url,
                     headers=headers,
