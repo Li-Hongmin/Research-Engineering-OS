@@ -1,6 +1,69 @@
 # REOS Project Status
 
-**Last Updated**: 2026-02-07 07:07 JST (Created Makefile for unified command entry)
+**Last Updated**: 2026-02-07 08:06 JST (Promoted Makefile usage in CONTRIBUTING.md)
+
+## 本小时工作（2026-02-07 08:05-08:15）
+
+### ✅ 完成任务：在文档中推广 Makefile 使用
+**时间**: 08:05-08:15 (约 10 分钟)  
+**目的**: REOS "自动化优先" + 改善贡献者体验
+
+**完成内容**:
+1. 🔧 **更新 CONTRIBUTING.md（72 insertions, 6 deletions）**
+   - 在 "Getting Started" 添加 "Quick Start with Makefile" 小节
+   - 推荐使用 `make help` 查看所有可用命令（20+ 命令）
+   - 在 "Build Locally" 部分：
+     - Makefile 命令作为推荐方式（`make build`, `make serve-text/manga`）
+     - 直接脚本执行作为替代方案
+   - 在 "Run Quality Checks" 部分：
+     - 强调 `make check-all` 一键运行所有检查
+     - 提供单独的 make 命令（`make health`, `make lint` 等）
+     - 直接脚本执行作为替代方案
+   - 在 "Quality Checks" 章节：
+     - 列出所有 7 个 make 命令（check-all, health, lint, check-links, check-translation, check-consistency, check-manga）
+     - 提供对应的直接脚本命令
+     - 添加 💡 Tip 强调 `make check-all` 的便利性
+   - 在 "Translation Workflow" 部分：
+     - 推荐使用 `make check-translation` 检查翻译同步
+     - 提供直接脚本执行作为替代
+
+2. 📊 **统计**
+   - CONTRIBUTING.md: 342 → 410 lines (+68 lines, +19.8%)
+   - Makefile 命令引用: 30 次
+   - 新增小节: "Quick Start with Makefile"
+   - 保持兼容性: 保留所有直接脚本执行方法
+
+3. ✅ **验证与提交**
+   - 健康检查: `make health` → ✅ GOOD（仅工作树未提交）
+   - Git commit: `ba8ac08` - "docs: promote Makefile usage in CONTRIBUTING.md"
+   - Pre-commit hook: ✅ 自动运行并通过
+   - 推送到远程: `caf82d5..ba8ac08 main -> main`
+
+**可追溯**:
+- 修改文件: `CONTRIBUTING.md` (+72 lines, -6 lines)
+- Commit SHA: ba8ac08
+- 健康检查: 2026-02-07 08:06:45 JST → GOOD
+- 执行时间: 2026-02-07 08:05-08:15 JST
+
+**产出**:
+- ✅ CONTRIBUTING.md v2.0（增加 Makefile 使用指南）
+- ✅ 统一推荐 Makefile 命令（降低贡献者认知负担）
+- ✅ 保留直接脚本执行方式（灵活性）
+- ✅ 10 分钟完成完整循环（修改 → 验证 → 提交 → 推送）
+
+**后续操作**:
+- 🎯 观察贡献者反馈（是否更容易上手）
+- 📋 考虑在 README.md 中也强调 Makefile（已有，无需修改）
+- ✅ 完成上小时（07:07）的后续任务："考虑在 CONTRIBUTING.md 中推荐使用 Makefile"
+
+**教训**:
+- ✅ 早晨选择文档改进任务（低风险、高价值）
+- ✅ "推荐 + 替代" 模式：既推广新工具（Makefile），又保留旧方法（脚本）
+- ✅ 一致性很重要：在多个章节中统一推荐 Makefile
+- ✅ 10 分钟快速完成（符合小步快跑原则）
+- ✅ Pre-commit hook 持续保障质量（自动运行健康检查）
+
+---
 
 ## 本小时工作（2026-02-07 07:05-07:10）
 
