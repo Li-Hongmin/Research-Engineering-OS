@@ -26,9 +26,18 @@ jobs:
         mdbook-version: 'latest'
     
     - name: Run REOS health check
+      id: health-check
       run: |
         chmod +x check_health.sh
         ./check_health.sh
+      continue-on-error: true
+    
+    - name: Run Markdown lint check
+      id: markdown-lint
+      run: |
+        chmod +x check_markdown_lint.sh
+        ./check_markdown_lint.sh
+      continue-on-error: true
     
     - name: Upload health report
       if: always()
@@ -37,6 +46,7 @@ jobs:
         name: health-report
         path: |
           check_health.sh
+          check_markdown_lint.sh
         retention-days: 7
     
     - name: Comment health status on PR
@@ -44,13 +54,13 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
-          const fs = require('fs');
-          const exitCode = process.env.EXIT_CODE || '0';
-          const status = exitCode === '0' ? '✅ EXCELLENT' : '⚠️ NEEDS ATTENTION';
+          const healthStatus = '${{ steps.health-check.outcome }}' === 'success' ? '✅ PASSED' : '⚠️ FAILED';
+          const lintStatus = '${{ steps.markdown-lint.outcome }}' === 'success' ? '✅ PASSED' : '⚠️ FAILED';
+          const overallStatus = (healthStatus === '✅ PASSED' && lintStatus === '✅ PASSED') ? '✅ EXCELLENT' : '⚠️ NEEDS ATTENTION';
           
           github.rest.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: `## 🔍 REOS Health Check\n\n**Status**: ${status}\n\nFull health report available in workflow artifacts.`
+            body: `## 🔍 REOS Quality Checks\n\n**Overall Status**: ${overallStatus}\n\n### Check Results\n- **Health Check**: ${healthStatus}\n- **Markdown Lint**: ${lintStatus}\n\nFull reports available in workflow artifacts.`
           });
