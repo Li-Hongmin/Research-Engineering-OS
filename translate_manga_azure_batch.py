@@ -25,7 +25,7 @@ SRC_JA_PATH = BASE_PATH / "src_ja"
 SRC_PATH = BASE_PATH / "src"
 
 # 最大并发数
-MAX_CONCURRENT = 128
+MAX_CONCURRENT = 10  # 降低到 10 避免过载
 
 class TranslationCache:
     """翻译缓存"""
