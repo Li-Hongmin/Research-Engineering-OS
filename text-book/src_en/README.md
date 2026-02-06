@@ -1,6 +1,6 @@
 # Research Engineering OS
 
-![Book Cover](images/cover.png)
+![Book Cover](../images/cover.png)
 
 **Compress rework into standards + templates + checklists**
 

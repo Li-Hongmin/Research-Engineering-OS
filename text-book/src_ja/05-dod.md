@@ -1,12 +1,12 @@
 # 「動く」から「信頼できる」への差は、一つのDefinition of Doneにある
 
-![插图](images/05_checklist_complete.png)
+![插图](../images/05_checklist_complete.png)
 
 ## ストーリー：「だいたい終わった」の代償
 
-![05 03 almost done trap](images/comics/05_03_almost_done_trap.png)
+![05 03 almost done trap](../images/comics/05_03_almost_done_trap.png)
 
-![完成清单](images/comics/05_checklist_hero.png)
+![完成清单](../images/comics/05_checklist_hero.png)
 
 深夜2時、ようやく「良さそう」な結果が出ました。テスト精度は94.3%、ベースラインより3ポイント向上しています。興奮してスクリーンショットを撮り、チームのグループチャットに投稿しました：「新手法の効果あり！」
 
@@ -36,7 +36,7 @@
 
 ### 地雷1：「結果は出た」が再現できない
 
-![05 04 mine reproduce](images/comics/05_04_mine_reproduce.png)
+![05 04 mine reproduce](../images/comics/05_04_mine_reproduce.png)
 
 **症状**：良い結果は見たが、完全な環境記録、設定情報、データバージョンが欠けている。数日後に再試行しても結果が一致しない。
 
@@ -47,7 +47,7 @@
 
 ### 地雷2：「改善はした」が理由が分からない
 
-![05 05 mine unknown why](images/comics/05_05_mine_unknown_why.png)
+![05 05 mine unknown why](../images/comics/05_05_mine_unknown_why.png)
 
 **症状**：3つの場所を同時に変更し、結果は確かに良くなったが、どの変更が効いたのか分からず、アブレーション（消融）実験も行っていない。
 
@@ -58,7 +58,7 @@
 
 ### 地雷3：「対照実験」だが評価基準がバラバラ
 
-![05 06 mine unfair eval](images/comics/05_06_mine_unfair_eval.png)
+![05 06 mine unfair eval](../images/comics/05_06_mine_unfair_eval.png)
 
 **症状**：自分の手法とベースラインで異なる評価スクリプトを使っているか、後処理方法が異なる。自分の手法の方が良く見えるが、実際には不公平な比較である。
 
@@ -73,7 +73,7 @@
 
 ### 最小DoD（満たすべき5項目）
 
-![05 07 minimal dod](images/comics/05_07_minimal_dod.png)
+![05 07 minimal dod](../images/comics/05_07_minimal_dod.png)
 
 1.  **コマンド一つで主要指標を再現できる**
 
@@ -134,7 +134,7 @@
 
 ### 強化DoD（推奨される追加項目）
 
-![05 08 enhanced dod](images/comics/05_08_enhanced_dod.png)
+![05 08 enhanced dod](../images/comics/05_08_enhanced_dod.png)
 
 最小DoDを満たした上で、以下の項目を満たすことで、結果の信頼性をさらに高めることができます：
 
@@ -172,7 +172,7 @@
 
 ## DoDチェックリスト： 「動く」から「信頼できる」への操作手順
 
-![质量门](images/comics/05_quality_gate.png)
+![质量门](../images/comics/05_quality_gate.png)
 
 ### 実験終了直後に行うこと（5分）
 
@@ -264,7 +264,7 @@
 
 ## チームでのDoD活用法
 
-![05 09 team dod](images/comics/05_09_team_dod.png)
+![05 09 team dod](../images/comics/05_09_team_dod.png)
 
 ### マージ基準として
 チーム開発において、DoDをメインブランチへのマージ基準にできます：

@@ -1,11 +1,11 @@
 # 実験記録の自動化：足りないのはツールではなく、「デフォルトの動作」だ
 
-![イラスト](images/06_logging_path.png)
+![イラスト](../images/06_logging_path.png)
 
 
 ## イントロダクション：3ヶ月後の「考古学」
 
-![コード考古学](images/comics/06_archaeology.png)
+![コード考古学](../images/comics/06_archaeology.png)
 
 論文が採択されました。しかし、査読者から補足資料として、表4のある実験の具体的な設定を説明するよう求められました。あなたはコードリポジトリを開き、「考古学」を始めます。
 
@@ -35,7 +35,7 @@
 
 ## 2層ログ戦略：機械の正確さと人間の簡潔さ
 
-![2層ログ](images/comics/06_two_layer_logging.png)
+![2層ログ](../images/comics/06_two_layer_logging.png)
 
 実験記録における最大の課題は、2つのニーズのバランスを取ることにあります。
 
@@ -49,7 +49,7 @@
 
 ### 第1層：機械用ログ（run.json）
 
-![06 08 run json structure](images/comics/06_08_run_json_structure.png)
+![06 08 run json structure](../images/comics/06_08_run_json_structure.png)
 
 **目的**：再現と自動化のために、完全で構造化された情報を提供する。
 
@@ -143,7 +143,7 @@
 
 ### 第2層：人間用ログ（run.md）
 
-![06 09 run md template](images/comics/06_09_run_md_template.png)
+![06 09 run md template](../images/comics/06_09_run_md_template.png)
 
 **目的**：人間（未来の自分を含む）のために、実験内容を即座に理解するための要約を提供する。
 
@@ -189,7 +189,7 @@ Learning rate warmup 戦略を検討する。
 
 ## 自動化ツール：記録を「コストゼロ」の行動にする
 
-![自動記録](images/comics/06_auto_logging.png)
+![自動記録](../images/comics/06_auto_logging.png)
 
 **核心的な考え方**：記録は「忘れずにやること」ではなく、「自動的に行われること」であるべきです。
 
@@ -413,7 +413,7 @@ def create_run_md_template(output_dir, run_id):
 
 ### MLflow との統合
 
-![06 10 mlflow integration](images/comics/06_10_mlflow_integration.png)
+![06 10 mlflow integration](../images/comics/06_10_mlflow_integration.png)
 
 すでに MLflow を使用している場合は、`run.json` の情報を MLflow に同期できます：
 

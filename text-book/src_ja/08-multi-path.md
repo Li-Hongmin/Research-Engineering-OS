@@ -1,11 +1,11 @@
 # マルチパス探索を「ゴミの山」にしない方法
 
-![イラスト](images/08_exploration_branches.png)
+![イラスト](../images/08_exploration_branches.png)
 
 
 ## イントロダクション：「柔軟な探索」から「何も動かせない状態」へ
 
-![研究の分かれ道](images/comics/08_crossroads.png)
+![研究の分かれ道](../images/comics/08_crossroads.png)
 
 研究プロジェクトが始まって3ヶ月。あなたは勤勉な研究者として、多くの異なる方向性を試してきました。
 
@@ -59,7 +59,7 @@ configs/
 
 ### 問題3：異なるパスを比較できない
 
-![08 10 path comparison](images/comics/08_10_path_comparison.png)
+![08 10 path comparison](../images/comics/08_10_path_comparison.png)
 
 「パス A（アテンションの改善）」と「パス B（学習率の最適化）」の効果を比較したいと考えましたが、次のことに気づきます。
 
@@ -187,7 +187,7 @@ configs/
 
 ### メカニズム2：明確なライフサイクル管理
 
-![パス管理](images/comics/08_path_management.png)
+![パス管理](../images/comics/08_path_management.png)
 
 すべての探索パスは、明確なライフサイクルを持つべきです。
 
@@ -319,7 +319,7 @@ python train.py --config configs/path_E_new_idea.yaml \
 
 ### 毎週金曜午後のクリーンアップ・フロー（30分）
 
-![08 09 weekly cleanup](images/comics/08_09_weekly_cleanup.png)
+![08 09 weekly cleanup](../images/comics/08_09_weekly_cleanup.png)
 
 #### ステップ1：すべてのアクティブなパスをリストアップ（5分）
 ```bash

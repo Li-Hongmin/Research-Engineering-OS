@@ -1,6 +1,6 @@
 # Research Engineering OS
 
-![表紙](images/cover.png)
+![表紙](../images/cover.png)
 
 **「やり直し」を「規範＋テンプレート＋チェックリスト」に凝縮する**
 

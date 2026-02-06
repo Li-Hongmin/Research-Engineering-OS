@@ -1,5 +1,7 @@
 # Why Do You Always Overturn Everything at the End (Exploration Debt / Validation Debt / Reproducibility Debt)
 
+![Illustration](../images/01_researcher_workspace.png)
+
 ## Story Setup: With Only a Few Days Left Before the Deadline, You Suddenly Stop Trusting Your Results
 
 Imagine this scenario: only a few days remain before the paper deadline. After finally finishing all experiments, you are about to write the conclusions. But then doubt creeps in: perhaps a key experiment has not been validated under another data split? Perhaps a baseline was run unfairly? You decide to be cautious and rerun it.

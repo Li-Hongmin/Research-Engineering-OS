@@ -8,19 +8,19 @@ The purpose of a repository structure is not to look nice, but to **reduce cogni
 
 ## Real Case: The Cost of Rapidly Piling Up Code
 
-![从混乱到整洁](images/comics/03_messy_to_clean.png)
+![从混乱到整洁](../images/comics/03_messy_to_clean.png)
 
 When I first started using AI coding assistants, I learned this lesson the hard way. To quickly validate an idea, I had Copilot generate a large amount of “runnable” code—data loading, model definitions, training loops, evaluation scripts, and so on. Within a few hours, I had built what looked like a complete framework.
 
 ### Early “success”:
 
-![03 04 early success](images/comics/03_04_early_success.png)
+![03 04 early success](../images/comics/03_04_early_success.png)
 
 The code did run, and the experiments produced results. Excited, I continued iterating, repeatedly asking the AI to add new features: data augmentation, different model variants, various evaluation metrics... Each change had an “immediate effect,” and the codebase expanded rapidly.
 
 #### The beginning of the collapse:
 
-![03 05 collapse begins](images/comics/03_05_collapse_begins.png)
+![03 05 collapse begins](../images/comics/03_05_collapse_begins.png)
 Two weeks later, when I needed to prepare ablation and comparison experiments for a paper, the problems surfaced:
 
 - I could not tell which script was the latest and which was obsolete;
@@ -33,7 +33,7 @@ Two weeks later, when I needed to prepare ablation and comparison experiments fo
 
 #### Starting over:
 
-![03 06 rewrite pain](images/comics/03_06_rewrite_pain.png)
+![03 06 rewrite pain](../images/comics/03_06_rewrite_pain.png)
 
 In the end, I had to stop all new experiments and spend three full days **rewriting almost all the code**. This rewrite was not because the AI-generated code had bugs, but because of **a lack of structure**: reusable core logic and one-off experimental scripts were mixed together; quick-and-dirty trial code was not cleaned up in time; outputs were scattered everywhere and hard to trace.
 
@@ -45,7 +45,7 @@ This is not an isolated issue. When you use AI to quickly pile up a “runnable�
 
 ## A Copy-and-Paste Directory Layout (Research-Friendly)
 
-![完美的目录结构](images/comics/03_folder_tree.png)
+![完美的目录结构](../images/comics/03_folder_tree.png)
 
     repo/
       src/                 # Core library: reusable, testable, maintainable (slow variables)
@@ -62,7 +62,7 @@ This is not an isolated issue. When you use AI to quickly pile up a “runnable�
 
 ## Fast Variables vs. Slow Variables: Separate “Stability” from “Exploration”
 
-![快慢变量分离](images/comics/03_fast_slow_variables.png)
+![快慢变量分离](../images/comics/03_fast_slow_variables.png)
 It is recommended to divide the contents of a repository into two categories:
 
 - **Slow variables (stable):** parts that will be maintained long-term, reused repeatedly, and require test coverage.
@@ -87,7 +87,7 @@ A directory name only truly reduces chaos when “what should go in” and “wh
 
 ### src/: Core Library (Reusable, Testable)
 
-![03 07 src directory](images/comics/03_07_src_directory.png)
+![03 07 src directory](../images/comics/03_07_src_directory.png)
 - Store reusable modules: data loading, model components, losses, evaluation, general utilities.
 
 - Must be testable: at minimum, have smoke tests covering key pipelines.
@@ -100,7 +100,7 @@ In my rewrite case, the original “data loading” code hard-coded the path and
 
 ### experiments/: Experimental Entry Points (Disposable)
 
-![03 08 experiments directory](images/comics/03_08_experiments_directory.png)
+![03 08 experiments directory](../images/comics/03_08_experiments_directory.png)
 - Store only entry points and glue: **short-lived is allowed**; delete after use.
 
 - Any logic proven valuable and reusable should be migrated to `src/` once it stabilizes.
@@ -137,7 +137,7 @@ Name each experiment script by date or run_id, e.g., `2026-02-01_baseline.py`. T
 
 ## Converge Entry Points: Make “How to Run” Obvious
 
-![03 09 makefile entry](images/comics/03_09_makefile_entry.png)
+![03 09 makefile entry](../images/comics/03_09_makefile_entry.png)
 
 The most common waste in research is that others (including your future self) do not know how to run the code.
 

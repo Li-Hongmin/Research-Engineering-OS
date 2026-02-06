@@ -1,6 +1,6 @@
 # リポジトリ構造はあなたの第二の脳である
 
-![插图](images/03_code_repository.png)
+![插图](../images/03_code_repository.png)
 
 研究コードの「混乱」は、能力不足から生じるのではなく、研究が本質的に並行した探索であることから生じます。同時に、複数の仮説、複数の実装、複数の実験エントリ、複数の出力、そして複数の図表を維持しなければなりません。
 
@@ -10,19 +10,19 @@
 
 ## リアルな事例：場当たり的にコードを積み上げた代償
 
-![从混乱到整洁](images/comics/03_messy_to_clean.png)
+![从混乱到整洁](../images/comics/03_messy_to_clean.png)
 
 私がAIコーディングアシスタントを使い始めたばかりの頃、このような教訓を得ました。あるアイデアを素早く検証するために、私はCopilotに「動く」コードを大量に生成させました。データ読み込み、モデル定義、トレーニングループ、評価スクリプトなど、数時間のうちに一見完全なフレームワークが出来上がりました。
 
 ### 初期段階の「成功」：
 
-![03 04 early success](images/comics/03_04_early_success.png)
+![03 04 early success](../images/comics/03_04_early_success.png)
 
 コードは確かに動き、実験結果も出ました。私は興奮してイテレーションを続け、AIに新しい機能を次々と追加させました：データ拡張、異なるモデル変種、様々な評価指標……。変更のたびに「即効性」があり、コード量は急速に膨れ上がりました。
 
 #### 崩壊の始まり：
 
-![03 05 collapse begins](images/comics/03_05_collapse_begins.png)
+![03 05 collapse begins](../images/comics/03_05_collapse_begins.png)
 
 2週間後、論文用の対照実験を準備しようとしたとき、問題が表面化しました：
 
@@ -33,7 +33,7 @@
 
 #### 白紙からのやり直し：
 
-![03 06 rewrite pain](images/comics/03_06_rewrite_pain.png)
+![03 06 rewrite pain](../images/comics/03_06_rewrite_pain.png)
 
 結局、私はすべての新しい実験を停止し、丸3日間かけて**ほぼすべてのコードを書き直す**ことになりました。この書き直しはAIが生成したコードにバグがあったからではなく、**構造が欠如していた**ためです。再利用可能なコアロジックと使い捨ての実験スクリプトが混在し、素早い試行錯誤のためのコードが整理らず、出力が各所に散らばって追跡不能になっていました。
 
@@ -45,7 +45,7 @@
 
 ## そのまま真似できるディレクトリ構造（研究向け）
 
-![完美的目录结构](images/comics/03_folder_tree.png)
+![完美的目录结构](../images/comics/03_folder_tree.png)
 
     repo/
       src/                 # コアライブラリ：再利用可能、テスト可能、保守可能（慢变量）
@@ -62,7 +62,7 @@
 
 ## 快変数と遅変数：「安定」を「探索」から分離する
 
-![快慢变量分离](images/comics/03_fast_slow_variables.png)
+![快慢变量分离](../images/comics/03_fast_slow_variables.png)
 
 リポジトリ内の要素を二つのカテゴリーに分けることをお勧めします：
 
@@ -86,7 +86,7 @@
 
 ### src/：コアライブラリ（再利用可能、テスト可能）
 
-![03 07 src directory](images/comics/03_07_src_directory.png)
+![03 07 src directory](../images/comics/03_07_src_directory.png)
 
 - 再利用可能なモジュール：データ読み込み、モデルコンポーネント、損失関数、評価指標、共通ユーティリティを置きます。
 - テスト可能であること：少なくとも重要なパスをカバーするスモークテストが必要です。
@@ -98,7 +98,7 @@
 
 ### experiments/：実験エントリ（破棄可能）
 
-![03 08 experiments directory](images/comics/03_08_experiments_directory.png)
+![03 08 experiments directory](../images/comics/03_08_experiments_directory.png)
 
 - 入口と接着コードのみを置く：**短命であることを許容し**、使い終わったら削除します。
 - 価値が認められ、再利用されることが決まったロジックは、安定した時点で `src/` へ移行させます。
@@ -130,7 +130,7 @@
 
 ## 入口の収束：「どう動かすか」を目立たせる
 
-![03 09 makefile entry](images/comics/03_09_makefile_entry.png)
+![03 09 makefile entry](../images/comics/03_09_makefile_entry.png)
 
 研究における最も一般的な無駄は、他の人（未来の自分を含む）が「どうやって動かすか」を知らないことです。
 

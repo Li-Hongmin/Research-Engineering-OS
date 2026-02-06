@@ -1,13 +1,13 @@
 # Gitは「コードの保存」のためではなく、「履歴の証明」のためにある
 
-![插图](images/04_git_timeline.png)
+![插图](../images/04_git_timeline.png)
 
 
 ## ストーリー：査読コメントで再現を求められたが、当時のコードが見つからない
 
-![04 04 reviewer crisis](images/comics/04_04_reviewer_crisis.png)
+![04 04 reviewer crisis](../images/comics/04_04_reviewer_crisis.png)
 
-![Git侦探](images/comics/04_git_detective.png)
+![Git侦探](../images/comics/04_git_detective.png)
 
 論文の投稿から3ヶ月後、査読結果が返ってきました。そのうちの一つのコメントにはこう書かれていました：「コードとデータを提供してください。表3の結果を再現したいと考えています。」
 
@@ -43,7 +43,7 @@
 
 ### 罠1：コミットの粒度が大きすぎて、重要な変更が見つからない
 
-![04 05 commit too big](images/comics/04_05_commit_too_big.png)
+![04 05 commit too big](../images/comics/04_05_commit_too_big.png)
 
 **症状**：1つのコミットに10個以上のファイルの変更が含まれており、データ処理、モデル構造、トレーニングプロセスなど多岐にわたる変更が含まれている。コミットメッセージには単に "improve model" とだけ書かれている。
 
@@ -59,7 +59,7 @@
 
 ### 罠2：実験とコード変更のタイミングのズレ
 
-![04 06 experiment time mismatch](images/comics/04_06_experiment_time_mismatch.png)
+![04 06 experiment time mismatch](../images/comics/04_06_experiment_time_mismatch.png)
 
 **症状**：先にコードを変更して実験を行い、結果が良かったので2日後にコミットする。あるいは、コミットした後に一時的にパラメータを変更して再実行する。
 
@@ -75,7 +75,7 @@
 
 ### 罠3：不適切なブランチ利用によるメインラインの混乱
 
-![04 07 branch chaos](images/comics/04_07_branch_chaos.png)
+![04 07 branch chaos](../images/comics/04_07_branch_chaos.png)
 
 **症状**：すべての実験を main ブランチで行い、試行錯誤的な変更と安定したコードが混在している。あるいは、大量のブランチを作成したが一度も整理せず、ブランチ間の関係が混乱している。
 
@@ -86,7 +86,7 @@
 
 ## 研究に適したGitブランチ戦略
 
-![分支策略](images/comics/04_branch_strategy.png)
+![分支策略](../images/comics/04_branch_strategy.png)
 
 エンジニアリングプロジェクトとは異なり、研究プロジェクトのブランチ戦略には二つのニーズのバランスが必要です：
 
@@ -142,7 +142,7 @@
 
 ## タグでマイルストーンを記録する：論文の結果を永久に追跡可能にする
 
-![04 08 tag milestone](images/comics/04_08_tag_milestone.png)
+![04 08 tag milestone](../images/comics/04_08_tag_milestone.png)
 
 タグ（Tag）はGitの中で過小評価されている機能の一つです。研究プロジェクトにおいて、タグの価値は以下の点にあります：
 
@@ -172,7 +172,7 @@
 
 #### 論文の各重要実験にタグを打つ：
 
-![提交作为证据](images/comics/04_commit_evidence.png)
+![提交作为证据](../images/comics/04_commit_evidence.png)
 
     # 主要な実験が終わったらすぐにタグを打つ
     git tag -a result-main-experiment -m \
@@ -198,7 +198,7 @@
 
 ## 実験産物はGitに入れない：.gitignore でリポジトリを清潔に保つ
 
-![04 09 gitignore clean](images/comics/04_09_gitignore_clean.png)
+![04 09 gitignore clean](../images/comics/04_09_gitignore_clean.png)
 
 **核心原則**：Gitはソースコードと設定を管理し、実験産物は管理しない。
 

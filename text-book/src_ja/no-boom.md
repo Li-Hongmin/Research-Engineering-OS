@@ -1,11 +1,11 @@
 # 最終段階で「爆発」しないための3つの先行アクション
 
-![イラスト](images/09_quality_shield.png)
+![イラスト](../images/09_quality_shield.png)
 
 
 ## イントロダクション：締め切りまで残り1週間の悪夢
 
-![締め切り爆弾の解体](images/comics/09_bomb_defusal.png)
+![締め切り爆弾の解体](../images/comics/09_bomb_defusal.png)
 
 月曜日の朝、カレンダーを確認してあなたは青ざめました。論文投稿の締め切りまで、残り **7日**。
 
@@ -15,7 +15,7 @@
 
 ### 月曜日：本実験が再現できない
 
-![09 04 monday crisis](images/comics/09_04_monday_crisis.png)
+![09 04 monday crisis](../images/comics/09_04_monday_crisis.png)
 
 本実験をもう一度走らせて、数値に間違いがないか確認しようとしました。しかし、スクリプトを実行すると、3週間前と同じ結果が出ません。精度が 94.3% から 92.1% にまで下がっています。
 
@@ -27,14 +27,14 @@
 
 ### 火曜日：ベースラインが不公平であることに気づく
 
-![09 05 tuesday baseline](images/comics/09_05_tuesday_baseline.png)
+![09 05 tuesday baseline](../images/comics/09_05_tuesday_baseline.png)
 
 査読者は必ずベースラインとの比較に注目します。精査してみると、致命的な問題が見つかりました。あなたの手法には最新のデータ前処理を使っていますが、ベースラインには旧バージョンの前処理が使われていたのです。評価の基準が全く一致していません。
 ベースラインを最初からやり直さなければなりませんが、それには6時間の訓練時間が必要です。
 
 ### 水曜日：重要なアブレーション研究（消融実験）の欠如
 
-![09 06 wednesday ablation](images/comics/09_06_wednesday_ablation.png)
+![09 06 wednesday ablation](../images/comics/09_06_wednesday_ablation.png)
 
 指導教官が下書きを見て指摘しました。「君の手法には3つの改善点 (A, B, C) が含まれているが、それぞれの改善がどれだけ貢献しているかの説明がない。査読者は必ずそこを突いてくるぞ。」
 アブレーション研究（ablation study）が圧倒的に足りないことに気づきました。以下の実験をすべて走らせる必要があります：
@@ -43,14 +43,14 @@
 
 ### 木曜日：グラフのデータが見つからない
 
-![09 07 thursday data](images/comics/09_07_thursday_data.png)
+![09 07 thursday data](../images/comics/09_07_thursday_data.png)
 
 論文のグラフを作ろうとしたところ、肝心な実験の出力ファイルが見当たりません。誤って削除してしまったのか、何かの拍子に失くしてしまったのでしょう。結果が良かったことは覚えていますが、元データがありません。
 結局、それらの実験をまたやり直すしかありませんでした。
 
 ### 金曜日：自分の人生を疑い始める
 
-![09 08 friday doubt](images/comics/09_08_friday_doubt.png)
+![09 08 friday doubt](../images/comics/09_08_friday_doubt.png)
 
 ここ3日間、まともに眠れていません。実験はまだ走っており、論文の本文は白いまま、グラフも未完成です。あなたは自問します。**「なぜいつも最終段階で爆発してしまうのか？」**
 
@@ -76,9 +76,9 @@
 
 ## 先行アクション1：週に一度の「再現性セルフチェック」（15分）
 
-![09 09 weekly check](images/comics/09_09_weekly_check.png)
+![09 09 weekly check](../images/comics/09_09_weekly_check.png)
 
-![早期警告システム](images/comics/09_early_warning.png)
+![早期警告システム](../images/comics/09_early_warning.png)
 
 ### なぜ重要か
 
@@ -175,7 +175,7 @@ diff requirements_先週の日付.txt requirements_今日の日付.txt
 
 ## 10分間アクション：今すぐできるセルフチェック
 
-![投稿成功](images/comics/09_victory.png)
+![投稿成功](../images/comics/09_victory.png)
 
 今すぐ一つのアクションを取るとすれば、自分のプロジェクトの「最小限のセルフチェック」を行うことです。
 

@@ -1,11 +1,11 @@
 # 学生・共同研究者向け：チームの最小限の規範
 
-![イラスト](images/10_team_collaboration.png)
+![イラスト](../images/10_team_collaboration.png)
 
 
 ## イントロダクション：「個別の戦い」から「互いの足を引っ張り合う関係」へ
 
-![チームミーティング](images/comics/10_team_standup.png)
+![チームミーティング](../images/comics/10_team_standup.png)
 
 あなたの研究チームには3人のメンバーがいます。あなた（博士課程）、修士課程の後輩、そして学部生のインターンです。同じプロジェクトに取り組んでおり、本来は協力関係にあるはずです。
 
@@ -13,7 +13,7 @@
 
 ### 月曜朝のスタンドアップミーティング
 
-![10 05 monday standup](images/comics/10_05_monday_standup.png)
+![10 05 monday standup](../images/comics/10_05_monday_standup.png)
 
 あなた：「週末に新しいモデルを回してみたよ。結果は良好で、精度は 95% だった。」
 後輩：「すごいですね！ そのコードを共有してもらえませんか？ 私もそれをベースに変更を加えたいです。」
@@ -25,7 +25,7 @@
 
 ### 水曜日のコードの衝突（コンフリクト）
 
-![10 06 wednesday conflict](images/comics/10_06_wednesday_conflict.png)
+![10 06 wednesday conflict](../images/comics/10_06_wednesday_conflict.png)
 
 後輩：「先輩、コードをプッシュしたので、プルしてください。」
 あなたがプルした結果：
@@ -39,7 +39,7 @@ CONFLICT (content): Merge conflict in train.py
 
 ### 金曜日のデータの災難
 
-![10 07 friday data disaster](images/comics/10_07_friday_data_disaster.png)
+![10 07 friday data disaster](../images/comics/10_07_friday_data_disaster.png)
 
 インターン：「先輩、間違えて `data/` ディレクトリを消してしまいました。バックアップはありますか？」
 あなた：「何だって？！ あのディレクトリには 20GB もあって、僕が3日間かけて処理したデータが入っていたんだぞ！」
@@ -55,7 +55,7 @@ CONFLICT (content): Merge conflict in train.py
 ### 3つのコラボレーションの落とし穴
 
 #### 落とし穴1：暗黙知への依存
-![10 08 hidden knowledge](images/comics/10_08_hidden_knowledge.png)
+![10 08 hidden knowledge](../images/comics/10_08_hidden_knowledge.png)
 人々の頭の中には「その人しか知らない」情報が詰まっています。
 - なぜこのパラメータをこの値にしたのか
 - なぜこのコードはこのように書かれているのか
@@ -64,7 +64,7 @@ CONFLICT (content): Merge conflict in train.py
 協力が必要になったとき、これらの暗黙知がボトルネックになります。他人は「あなたが説明してくれるのを待つ」しかなく、あなたは何度も作業を中断されることになります。
 
 #### 落とし穴2：重複作業
-![10 09 duplicate work](images/comics/10_09_duplicate_work.png)
+![10 09 duplicate work](../images/comics/10_09_duplicate_work.png)
 明確な分担やインターフェースがないと、以下のようなことが起こります。
 - 目的は同じだが実装が異なるコードを複数人が書く。
 - 同じデータに対して異なる方法で前処理を行う。
@@ -72,7 +72,7 @@ CONFLICT (content): Merge conflict in train.py
 表面上は「並行作業」ですが、実際には計算資源と時間の無駄遣いです。
 
 #### 落とし穴3：統合コストの爆発
-![10 10 integration explosion](images/comics/10_10_integration_explosion.png)
+![10 10 integration explosion](../images/comics/10_10_integration_explosion.png)
 各自が自分のブランチで「素晴らしい仕事」をしていても、マージの段階で問題が露呈します。
 - インターフェースの不整合。
 - 依存ライブラリのバージョン衝突。
@@ -91,11 +91,11 @@ CONFLICT (content): Merge conflict in train.py
 
 ## 最小限の規範1：コード規範（混乱から可読性へ）
 
-![コードレビュー](images/comics/10_code_review.png)
+![コードレビュー](../images/comics/10_code_review.png)
 
 ### 命名規則：コードに語らせる
 
-![10 11 naming convention](images/comics/10_11_naming_convention.png)
+![10 11 naming convention](../images/comics/10_11_naming_convention.png)
 
 #### ファイル命名
 ❌ **悪い例**：
@@ -159,7 +159,7 @@ def compute_weighted_loss(prediction, target, weight):
 
 ### PR テンプレート：一人の時でも使う
 
-![10 12 pr template](images/comics/10_12_pr_template.png)
+![10 12 pr template](../images/comics/10_12_pr_template.png)
 
 Pull Request（または Merge Request）のテンプレートは、マージ前に重要な質問に答えることを強制します。
 
@@ -261,7 +261,7 @@ configs/
 
 ## 本章のまとめ：規範は束縛ではなく、効率的な協力の基盤である
 
-![チームの勝利](images/comics/10_team_victory.png)
+![チームの勝利](../images/comics/10_team_victory.png)
 
 チーム開発のパラドックスはこうです。
 - **規範がない**：全員が「自由」だが、チームとしての効率は極めて低い。
