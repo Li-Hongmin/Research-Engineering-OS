@@ -5,7 +5,7 @@
 ---
 
 - [Preface](./00-preface.md)
-- [Why It Always Fails at the End](./01-why-flip.md)
+- [Why It Always Blows Up at the End](./01-why-flip.md)
 - [Experiments Are the Unit](./02-experiment-unit.md)
 - [Repository Structure](./03-repo-layout.md)
 - [Git as a Chain of Evidence](./04-git-proof.md)

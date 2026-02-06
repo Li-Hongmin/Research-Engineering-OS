@@ -6,7 +6,7 @@
 
 - [前書き](./00-preface.md)
 - [なぜいつも最後に失敗するのか](./01-why-flip.md)
-- [実験こそが最小単位](./02-experiment-unit.md)
+- [実験こそが単位](./02-experiment-unit.md)
 - [リポジトリ構成](./03-repo-layout.md)
 - [証拠チェーンとしてのGit](./04-git-proof.md)
 - [Definition of Done (DoD: 完了定義)](./05-dod.md)
