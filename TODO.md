@@ -14,20 +14,30 @@
   - 注：检查脚本可能有误报，需要进一步调查剩余 broken links
 
 ### 部署与验证
-- [ ] 检查 text-book 和 manga-book 的 GitHub Pages 部署状态
-  - 验证 https://li-hongmin.github.io/Research-Engineering-OS/ 是否正常
-  - 检查三语言版本（中/英/日）是否都能访问
-  - 确认最新提交是否已部署
-- [ ] 验证三语言版本的构建是否正常
-  - 运行 `./text-book/build_all.sh` 测试本地构建
-  - 检查构建输出是否完整
+- [x] ✅ 检查 text-book 和 manga-book 的 GitHub Pages 部署状态（2026-02-06 16:07）
+  - ✅ 验证 4 个端点全部正常（主站 + en + ja + manga）
+  - ✅ Last-Modified: 2026-02-06 06:37 GMT
+- [x] ✅ 验证三语言版本的构建是否正常（2026-02-06 16:07）
+  - ✅ text-book: 中/英/日三版全部构建成功
+  - ✅ manga-book: 构建成功（无警告）
+  - ⚠️ 发现3个未闭合HTML标签（见下方新任务）
 - [x] ✅ 检查是否有待翻译的内容（2026-02-06 11:15）
   - 对比 `src/`、`src_en/`、`src_ja/` 的章节完整性 ✅
   - 使用工具自动检测翻译缺失 ✅
   - 结果: 三语言版本完全同步（14 文件 × 3 语言）
 
+### 质量改进
+- [ ] **修复未闭合的 HTML 标签**（2026-02-06 发现）
+  - `src_en/07-ai-workflow.md`: 修复 `<file>`, `<hash>` 标签
+  - `src_ja/05-dod.md`: 修复 `<id>` 标签
+  - 这些标签在 mdbook 中应该使用反引号包裹：`` `<file>` ``
+  - 影响：构建时有警告，但不影响输出
+
 ### 自动化改进
 - [ ] 考虑将健康检查集成到 pre-commit hook
+- [ ] 添加 Markdown lint 检查到 CI
+  - 自动检测未闭合的 HTML 标签
+  - 检查常见 Markdown 格式问题
 - [x] ✅ 添加链接有效性检查到 CI workflow（2026-02-06 13:10 创建工具）
   - check_links.sh: 通用链接检查器（支持 --fast 模式）
   - check_manga_images.sh: 专用 manga 图片检查器
