@@ -54,6 +54,28 @@ We welcome contributions from researchers, engineers, educators, translators, an
 - **Python 3.x** (optional, for translation scripts)
 - **Rust toolchain** (optional, for mdBook plugins)
 
+### 🛠️ Quick Start with Makefile (Recommended)
+
+The project includes a **Makefile** that provides unified command entry for all common tasks. This reduces cognitive load and improves developer experience.
+
+**View all available commands:**
+```bash
+make help     # Shows 20+ commands with descriptions
+# or simply
+make          # Same as 'make help'
+```
+
+**Most commonly used:**
+```bash
+make health           # Comprehensive project health check
+make build            # Build all versions (text-book + manga-book)
+make check-all        # Run all quality checks
+make serve-text       # Preview text-book locally (port 8000)
+make serve-manga      # Preview manga-book locally (port 8001)
+```
+
+For contributors who prefer direct script execution, see the detailed commands below.
+
 ### Fork & Clone
 ```bash
 # 1. Fork the repository on GitHub
@@ -69,6 +91,18 @@ git checkout -b feature/your-feature-name
 ```
 
 ### Build Locally
+
+**Using Makefile (Recommended):**
+```bash
+make build            # Build all versions (text-book + manga-book)
+make build-text       # Build only text-book (Chinese + English + Japanese)
+make build-manga      # Build only manga-book
+
+make serve-text       # Build + serve text-book on http://localhost:8000
+make serve-manga      # Build + serve manga-book on http://localhost:8001
+```
+
+**Direct Script Execution (Alternative):**
 
 #### Text Book (All Languages)
 ```bash
@@ -104,7 +138,18 @@ This helps avoid duplicate work and ensures alignment with project goals.
 - **Write clear commit messages** (see [Commit Guidelines](#commit-guidelines))
 
 ### 3. Run Quality Checks
-Before committing, run automated checks:
+
+**Using Makefile (Recommended):**
+```bash
+make check-all        # Run ALL quality checks (comprehensive)
+make health           # Health check (structure, paths, consistency)
+make lint             # Markdown lint (HTML tags, formatting)
+make check-links      # Link validation (fast mode)
+make check-translation # Translation sync check
+make check-manga      # Manga image paths check
+```
+
+**Direct Script Execution (Alternative):**
 ```bash
 # Health check (structure, paths, consistency)
 ./check_health.sh
@@ -121,6 +166,8 @@ Before committing, run automated checks:
 # Translation sync (text-book only)
 ./check_translation_sync.sh
 ```
+
+💡 **Tip**: Use `make check-all` before committing to catch all issues at once.
 
 **Pre-commit Hook**: `check_health.sh` runs automatically before each commit.
 
@@ -184,7 +231,9 @@ Use consistent terms across languages. See `GLOSSARY.md` for key terms:
 3. **Update SUMMARY.md** in the language directory
 4. **Run sync check**:
    ```bash
-   ./check_translation_sync.sh
+   make check-translation   # Using Makefile (recommended)
+   # or
+   ./check_translation_sync.sh   # Direct script execution
    ```
 
 ### Translation Principles
@@ -206,10 +255,27 @@ python translate_manga_azure_batch.py --source src/ --target src_en/ --lang en
 ## 🧪 Quality Checks
 
 ### Automated Checks (Must Pass)
-- **Health Check**: Structure, paths, file consistency
-- **Markdown Lint**: Unclosed HTML tags, formatting issues
-- **Link Validation**: Broken internal/external links
-- **Translation Sync**: Chapter structure across languages
+
+**Using Makefile (Recommended):**
+```bash
+make check-all        # Run ALL checks at once (recommended before PR)
+make health           # Health Check (structure, paths, file consistency)
+make lint             # Markdown Lint (unclosed HTML tags, formatting)
+make check-links      # Link Validation (broken internal/external links)
+make check-translation # Translation Sync (chapter structure across languages)
+make check-consistency # Content Consistency (three-language alignment)
+make check-manga      # Manga Image Paths (image references in manga-book)
+```
+
+**Direct Script Execution:**
+- **Health Check**: `./check_health.sh`
+- **Markdown Lint**: `./check_markdown_lint.sh`
+- **Link Validation**: `./check_links.sh --fast`
+- **Translation Sync**: `./check_translation_sync.sh`
+- **Content Consistency**: `./check_content_consistency.sh`
+- **Manga Images**: `./check_manga_images.sh`
+
+💡 **Tip**: Use `make check-all` to run all checks with a single command.
 
 ### Manual Review (Recommended)
 See `CONTENT_REVIEW_CHECKLIST.md` for comprehensive review areas:
