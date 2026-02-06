@@ -82,6 +82,10 @@ mv book_zh book/zh
 mv book_en book/en
 mv book_ja book/ja
 
+# 复制图片目录到构建输出（所有语言版本共享）
+echo "🖼️  复制图片资源..."
+cp -r images book/images
+
 # 创建根页面重定向至中文版本
 cat > book/index.html << 'HTML'
 <!DOCTYPE html>
