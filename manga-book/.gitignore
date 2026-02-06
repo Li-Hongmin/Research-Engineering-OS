@@ -8,3 +8,5 @@ __pycache__/
 # IDE
 .vscode/
 .DS_Store
+book/
+.translation_progress.json
