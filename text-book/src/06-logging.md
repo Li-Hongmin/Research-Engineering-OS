@@ -1,6 +1,6 @@
 # 实验记录自动化：缺的不是工具，是默认行为
 
-![插图](images/06_logging_path.png)
+![插图](../images/06_logging_path.png)
 
 
 ## 故事引入：三个月后的\"考古工作\"

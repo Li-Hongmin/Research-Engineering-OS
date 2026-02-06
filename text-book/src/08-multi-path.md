@@ -1,11 +1,11 @@
 # 多路径探索如何不变垃圾堆
 
-![插图](images/08_exploration_branches.png)
+![插图](../images/08_exploration_branches.png)
 
 
 ## 故事引入：从"灵活探索"到"不敢动任何东西"
 
-![研究十字路口](images/comics/08_crossroads.png)
+![研究十字路口](../images/comics/08_crossroads.png)
 
 你的研究项目进行到第三个月。你是一个勤奋的研究者，尝试了很多不同的方向：
 
@@ -60,7 +60,7 @@ outputs/ 已经占了 50GB 空间，但你不敢删除任何目录——万一�
 
 ### 问题 3：无法对比不同路径
 
-![08 10 path comparison](images/comics/08_10_path_comparison.png)
+![08 10 path comparison](../images/comics/08_10_path_comparison.png)
 
 你想对比"路径 A（注意力改进）"和"路径 B（学习率优化）"的效果，但你发现：
 
@@ -212,7 +212,7 @@ outputs/ 已经占了 50GB 空间，但你不敢删除任何目录——万一�
 
 ### 机制 2：明确的生命周期管理
 
-![路径管理](images/comics/08_path_management.png)
+![路径管理](../images/comics/08_path_management.png)
 
 每条探索路径都应该有明确的生命周期：
 
@@ -465,13 +465,13 @@ EOF
 
 ## 每周清理仪式：实验墓地整理
 
-![定期清理](images/comics/08_cleanup.png)
+![定期清理](../images/comics/08_cleanup.png)
 
 **核心理念**：定期清理是避免垃圾堆的唯一方法。
 
 ### 每周五下午的清理流程（30 分钟）
 
-![08 09 weekly cleanup](images/comics/08_09_weekly_cleanup.png)
+![08 09 weekly cleanup](../images/comics/08_09_weekly_cleanup.png)
 
 #### Step 1：列出所有活跃路径（5 分钟）
 

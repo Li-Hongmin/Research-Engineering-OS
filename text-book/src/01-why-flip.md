@@ -1,6 +1,6 @@
 # 你为什么总在最后推翻（探索债 / 验证债 / 复现债）
 
-![插图](images/01_researcher_workspace.png)
+![插图](../images/01_researcher_workspace.png)
 
 
 ## 故事引入：离截稿只剩几天，你突然不敢相信自己的结果

@@ -1,6 +1,6 @@
 # AI 编码助手加入后，工作流必须升级
 
-![插图](images/07_ai_collaboration.png)
+![插图](../images/07_ai_collaboration.png)
 
 
 ## 故事引入：当 AI 从提速器变成地雷制造机

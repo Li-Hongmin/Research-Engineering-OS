@@ -1,6 +1,6 @@
 # 带学生/合作者的版本：团队最小规范
 
-![插图](images/10_team_collaboration.png)
+![插图](../images/10_team_collaboration.png)
 
 
 ## 故事引入：从\"各自为战\"到\"互相拖累\"

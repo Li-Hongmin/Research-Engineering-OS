@@ -8,19 +8,19 @@
 
 ## 真实案例：快速堆积代码的代价
 
-![从混乱到整洁](images/comics/03_messy_to_clean.png)
+![从混乱到整洁](../images/comics/03_messy_to_clean.png)
 
 当我刚开始用AI编码助手时，就学到了这个惨痛的教训。为了快速验证一个想法，我让Copilot生成了大量"能跑"的代码——数据加载、模型定义、训练循环、评估脚本等等。几小时内，我就建立了看起来完整的框架。
 
 ### 早期的"成功"：
 
-![03 04 early success](images/comics/03_04_early_success.png)
+![03 04 early success](../images/comics/03_04_early_success.png)
 
 代码确实能跑，实验产生了结果。兴奋之余，我继续迭代，不断要求AI添加新功能：数据增强、不同的模型变体、各种评估指标...每个改动都有"立竿见影"的效果，代码库迅速膨胀。
 
 #### 崩溃的开始：
 
-![03 05 collapse begins](images/comics/03_05_collapse_begins.png)
+![03 05 collapse begins](../images/comics/03_05_collapse_begins.png)
 
 两周后，当我需要为论文准备消融实验和对比实验时，问题浮出水面：
 
@@ -34,7 +34,7 @@
 
 #### 重新开始：
 
-![03 06 rewrite pain](images/comics/03_06_rewrite_pain.png)
+![03 06 rewrite pain](../images/comics/03_06_rewrite_pain.png)
 
 最后，我不得不停止所有新实验，花了三整天**重写几乎所有代码**。这个重写不是因为AI生成的代码有bug，而是因为**缺乏结构**：可复用的核心逻辑和一次性的实验脚本混在一起；临时凑合的试验代码没有及时清理；输出散落各地难以追踪。
 
@@ -46,7 +46,7 @@
 
 ## 抄作业式的目录布局（对研究友好）
 
-![完美的目录结构](images/comics/03_folder_tree.png)
+![完美的目录结构](../images/comics/03_folder_tree.png)
 
 ```
 repo/
@@ -65,7 +65,7 @@ repo/
 
 ## 快变量 vs. 慢变量：分离"稳定"和"探索"
 
-![快慢变量分离](images/comics/03_fast_slow_variables.png)
+![快慢变量分离](../images/comics/03_fast_slow_variables.png)
 
 建议把仓库的内容分成两类：
 
@@ -91,7 +91,7 @@ repo/
 
 ### src/：核心库（可复用、可测试）
 
-![03 07 src directory](images/comics/03_07_src_directory.png)
+![03 07 src directory](../images/comics/03_07_src_directory.png)
 
 - 放可复用的模块：数据加载、模型组件、损失函数、评估、通用工具。
 
@@ -105,7 +105,7 @@ repo/
 
 ### experiments/：实验入口（可丢弃）
 
-![03 08 experiments directory](images/comics/03_08_experiments_directory.png)
+![03 08 experiments directory](../images/comics/03_08_experiments_directory.png)
 
 - 只放入口和胶水：**允许短生命周期**；用完就删。
 
@@ -143,7 +143,7 @@ repo/
 
 ## 汇聚入口：让"怎么跑"显而易见
 
-![03 09 makefile entry](images/comics/03_09_makefile_entry.png)
+![03 09 makefile entry](../images/comics/03_09_makefile_entry.png)
 
 研究中最常见的浪费是：别人（包括未来的你）不知道怎么跑代码。
 

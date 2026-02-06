@@ -1,6 +1,6 @@
 # 让最后阶段不爆炸的 3 个提前动作
 
-![插图](images/09_quality_shield.png)
+![插图](../images/09_quality_shield.png)
 
 
 ## 故事引入：离 deadline 只剩一周的噩梦

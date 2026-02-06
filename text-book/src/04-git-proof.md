@@ -1,13 +1,13 @@
 # Git 不是用来"保存代码"，是用来"证明历史"
 
-![插图](images/04_git_timeline.png)
+![插图](../images/04_git_timeline.png)
 
 
 ## 故事引入：审稿意见要求复现，你却找不回当时的代码
 
-![04 04 reviewer crisis](images/comics/04_04_reviewer_crisis.png)
+![04 04 reviewer crisis](../images/comics/04_04_reviewer_crisis.png)
 
-![Git侦探](images/comics/04_git_detective.png)
+![Git侦探](../images/comics/04_git_detective.png)
 
 论文提交三个月后，审稿意见回来了。其中一条写得很直接："请提供代码和数据，我们想要复现表3的结果。"
 
@@ -51,7 +51,7 @@
 
 ### 陷阱 1：commit 粒度太大，找不到关键改动
 
-![04 05 commit too big](images/comics/04_05_commit_too_big.png)
+![04 05 commit too big](../images/comics/04_05_commit_too_big.png)
 
 **症状**：一个 commit 包含了十几个文件的改动，涉及数据处理、模型结构、训练流程等多个方面。commit message 只写了"improve model"。
 
@@ -73,7 +73,7 @@
 
 ### 陷阱 2：实验和代码改动时间错位
 
-![04 06 experiment time mismatch](images/comics/04_06_experiment_time_mismatch.png)
+![04 06 experiment time mismatch](../images/comics/04_06_experiment_time_mismatch.png)
 
 **症状**：先改代码跑实验，结果不错，过了两天才 commit；或者 commit 之后又临时改了几个参数重跑。
 
@@ -95,7 +95,7 @@
 
 ### 陷阱 3：分支使用不当，主线混乱
 
-![04 07 branch chaos](images/comics/04_07_branch_chaos.png)
+![04 07 branch chaos](../images/comics/04_07_branch_chaos.png)
 
 **症状**：所有实验都在 main 分支上做，各种尝试性改动和稳定代码混在一起；或者创建了很多分支但从不清理，分支之间关系混乱。
 
@@ -109,7 +109,7 @@
 
 ## 适合研究的 Git 分支策略
 
-![分支策略](images/comics/04_branch_strategy.png)
+![分支策略](../images/comics/04_branch_strategy.png)
 
 与工程项目不同，研究项目的分支策略需要平衡两个需求：
 
@@ -181,7 +181,7 @@
 
 ## 用 Tag 标记里程碑：让论文结果永久可追溯
 
-![04 08 tag milestone](images/comics/04_08_tag_milestone.png)
+![04 08 tag milestone](../images/comics/04_08_tag_milestone.png)
 
 Tag 是 Git 中被严重低估的功能。对于研究项目，tag 的价值在于：
 
@@ -213,7 +213,7 @@ Tag 是 Git 中被严重低估的功能。对于研究项目，tag 的价值在�
 
 #### 为论文的每个重要实验打 tag：
 
-![提交作为证据](images/comics/04_commit_evidence.png)
+![提交作为证据](../images/comics/04_commit_evidence.png)
 
     # 跑完主实验后立即打 tag
     git tag -a result-main-experiment -m \
@@ -239,7 +239,7 @@ Tag 是 Git 中被严重低估的功能。对于研究项目，tag 的价值在�
 
 ## 实验产物不进 Git：用 .gitignore 保持仓库干净
 
-![04 09 gitignore clean](images/comics/04_09_gitignore_clean.png)
+![04 09 gitignore clean](../images/comics/04_09_gitignore_clean.png)
 
 **核心原则**：Git 管理源代码和配置，不管理实验产物。
 
