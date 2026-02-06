@@ -178,6 +178,32 @@ Currently, the manga edition requires manual deployment setup.
 - **Bold Formatting**: `**text**：` (colon outside) not `**text：**`
 - **10-Minute Actions**: Practical steps at chapter ends
 
+## 🛠️ Quality Assurance & Automation
+
+### Automated Health Checks
+The project includes comprehensive health check tools:
+
+```bash
+./check_health.sh              # Comprehensive project health check
+./check_markdown_lint.sh       # Markdown quality verification
+./check_links.sh --fast        # Link validity check
+./check_translation_sync.sh    # Translation completeness check
+./check_manga_images.sh        # Manga image asset verification
+```
+
+### Continuous Integration
+- **GitHub Actions**: Automatic health check + deployment on every push
+- **Pre-commit Hook**: Local validation before commits
+- **Daily Health Reports**: Automatic daily project status check (09:00 JST)
+- **PR Comments**: Automated health status feedback on pull requests
+
+### Project Health Status
+Current status: ✅ **EXCELLENT**
+- 905 Markdown files validated
+- 264 manga images verified
+- 3 language versions synchronized
+- All builds passing
+
 ## ⚖️ License
 
 [Specify license information here]
@@ -191,5 +217,5 @@ For questions or contributions, please reach out through:
 
 ---
 
-**Last Updated**: 2026-02-02
-**Version**: 2.0 (Restructured with manga-book separation)
+**Last Updated**: 2026-02-06
+**Version**: 2.1 (Added automation tools & CI/CD enhancements)
