@@ -99,7 +99,14 @@
     function buildLanguageUrl(targetLang, context) {
         const basePath = context.basePath;
         const pagePath = context.pagePath;
-        return `${basePath}/${targetLang}${pagePath}`;
+        
+        if (context.isManga) {
+            // For manga: /manga/zh/chapter/page.html → /manga/en/chapter/page.html
+            return `${basePath}/manga/${targetLang}${pagePath}`;
+        } else {
+            // For text: /zh/chapter.html → /en/chapter.html
+            return `${basePath}/${targetLang}${pagePath}`;
+        }
     }
 
     // ============================================
@@ -138,11 +145,6 @@
     }
 
     function createLanguagePicker(context) {
-        // Hide language picker if we're in manga mode
-        if (context.isManga) {
-            return null;
-        }
-
         const currentLang = context.language;
         const currentLangName = languages.find(l => l[0] === currentLang)?.[1] || "English";
 
