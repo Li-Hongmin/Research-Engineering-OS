@@ -1,254 +1,203 @@
 # Chapter 9: The Science of Not Exploding
 
-
-**Bomb Defusal**
-
+**Bomb Disposal**
 
 ### Panel 1
 
-![Deadline countdown: 5 days](../../images/09-no-boom/09_001.png)
+![截止日期倒计时：5天](../images/09-no-boom/09_001.png)
 
 *Deadline countdown: 5 days*
 
+---
+
+### Cell 2
+
+![但是小研很平静：她已经准备好了](../images/09-no-boom/09_002.png)
+
+*But Xiaoyan was very calm: she was already prepared.*
 
 ---
 
+### Cell 3
 
-### Panel 2
+![闪回：记得曾经的自己...](../images/09-no-boom/09_003.png)
 
-![But Xiao Yan is calm: She's already prepared](../../images/09-no-boom/09_002.png)
-
-*But Xiao Yan is calm: She's already prepared*
-
+*Flashback: remembering who I used to be...*
 
 ---
-
-
-### Panel 3
-
-![Flashback: Remembering her former self...](../../images/09-no-boom/09_003.png)
-
-*Flashback: Remembering her former self...*
-
-
----
-
 
 ### Panel 4
 
-![Theme: Defuse bombs early, not last-minute rescue](../../images/09-no-boom/09_004.png)
+![主题：提前拆除炸弹，而非最后抢救](../images/09-no-boom/09_004.png)
 
-*Theme: Defuse bombs early, not last-minute rescue*
-
-
----
-
-
-### Panel 5
-
-![Hypothetical scenario: If she hadn't learned these...](../../images/09-no-boom/09_005.png)
-
-*Hypothetical scenario: If she hadn't learned these...*
-
+*Topic: Defuse the bomb early, rather than scrambling to save it at the last minute*
 
 ---
 
+### Grid 5
+
+![假设场景：如果没学这些...](../images/09-no-boom/09_005.png)
+
+*Hypothetical scenario: If you hadn’t learned these...*
+
+---
 
 ### Panel 6
 
-![Monday crisis: Experiment cannot be reproduced](../../images/09-no-boom/09_006.png)
+![周一危机：实验无法复现](../images/09-no-boom/09_006.png)
 
-*Monday crisis: Experiment cannot be reproduced*
-
+*Monday Crisis: The Experiment Can’t Be Reproduced*
 
 ---
-
 
 ### Panel 7
 
-![Tuesday baseline problem: Unfair comparison](../../images/09-no-boom/09_007.png)
+![周二baseline问题：比较不公平](../images/09-no-boom/09_007.png)
 
-*Tuesday baseline problem: Unfair comparison*
-
+*Tuesday baseline issue: relatively unfair*
 
 ---
-
 
 ### Panel 8
 
-![Wednesday missing ablation: Reviewer will ask why](../../images/09-no-boom/09_008.png)
+![周三消融缺失：审稿人会问为什么](../images/09-no-boom/09_008.png)
 
-*Wednesday missing ablation: Reviewer will ask why*
-
+*Missing Wednesday ablation: reviewers will ask why*
 
 ---
-
 
 ### Panel 9
 
-![Thursday data loss: Can't find processed data](../../images/09-no-boom/09_009.png)
+![周四数据丢失：找不到处理过的数据](../images/09-no-boom/09_009.png)
 
-*Thursday data loss: Can't find processed data*
-
-
----
-
-
-### Panel 10
-
-![Friday meltdown: Everything is too late](../../images/09-no-boom/09_010.png)
-
-*Friday meltdown: Everything is too late*
-
+*Thursday data loss: unable to find the processed data*
 
 ---
 
+### Grid 10
 
-### Panel 11
+![周五崩溃：一切都来不及了](../images/09-no-boom/09_010.png)
 
-![Wake up! This is just a hypothetical](../../images/09-no-boom/09_011.png)
-
-*Wake up! This is just a hypothetical*
-
+*Friday Breakdown: Everything Is Too Late*
 
 ---
 
+### Grid 11
 
-### Panel 12
+![醒来！这只是假设场景](../images/09-no-boom/09_011.png)
 
-![Real Xiao Yan: Checked everything in advance](../../images/09-no-boom/09_012.png)
-
-*Real Xiao Yan: Checked everything in advance*
-
+*Wake up! This is just a hypothetical scenario*
 
 ---
 
+### Grid 12
+
+![现实中的小研：每一项都提前检查过](../images/09-no-boom/09_012.png)
+
+*Xiaoyan in real life: checked every item in advance*
+
+---
 
 ### Panel 13
 
-![Principle: Deadlines expose problems, not create them](../../images/09-no-boom/09_013.png)
+![原则：截止日期只暴露问题，不产生问题](../images/09-no-boom/09_013.png)
 
-*Principle: Deadlines expose problems, not create them*
-
+*Principle: deadlines only expose problems; they don’t create them.*
 
 ---
-
 
 ### Panel 14
 
-![Prevention system: Weekly self-check](../../images/09-no-boom/09_014.png)
+![预防系统：每周自查](../images/09-no-boom/09_014.png)
 
-*Prevention system: Weekly self-check*
-
-
----
-
-
-### Panel 15
-
-![Check 1: Reproducibility verification](../../images/09-no-boom/09_015.png)
-
-*Check 1: Reproducibility verification*
-
+*Preventive System: Weekly Self-Check*
 
 ---
 
+### Square 15
+
+![检查1：复现性验证](../images/09-no-boom/09_015.png)
+
+*Check 1: Reproducibility Verification*
+
+---
 
 ### Panel 16
 
-![Check 2: Baseline fairness](../../images/09-no-boom/09_016.png)
+![检查2：baseline公平性](../images/09-no-boom/09_016.png)
 
-*Check 2: Baseline fairness*
-
+*Check 2: Baseline Fairness*
 
 ---
-
 
 ### Panel 17
 
-![Check 3: Ablation study status](../../images/09-no-boom/09_017.png)
+![检查3：消融实验状态](../images/09-no-boom/09_017.png)
 
-*Check 3: Ablation study status*
-
-
----
-
-
-### Panel 18
-
-![Check 4: Data and environment backup](../../images/09-no-boom/09_018.png)
-
-*Check 4: Data and environment backup*
-
+*Check 3: Ablation Experiment Status*
 
 ---
 
+### Grid 18
+
+![检查4：数据和环境备份](../images/09-no-boom/09_018.png)
+
+*Check 4: Data and Environment Backup*
+
+---
 
 ### Panel 19
 
-![Check 5: Paper writing progress](../../images/09-no-boom/09_019.png)
+![检查5：论文写作进度](../images/09-no-boom/09_019.png)
 
-*Check 5: Paper writing progress*
-
+*Check 5: Thesis Writing Progress*
 
 ---
-
 
 ### Panel 20
 
-![Timing: Farther from deadline, lower repair cost](../../images/09-no-boom/09_020.png)
+![时机：离截止日越远，修复成本越低](../images/09-no-boom/09_020.png)
 
-*Timing: Farther from deadline, lower repair cost*
-
-
----
-
-
-### Panel 21
-
-![Mindset: Treat each week as a mini deadline](../../images/09-no-boom/09_021.png)
-
-*Mindset: Treat each week as a mini deadline*
-
+*Timing: the farther from the deadline, the lower the cost of fixing*
 
 ---
 
+### Square 21
+
+![心态：把每周当成小截止日](../images/09-no-boom/09_021.png)
+
+*Mindset: Treat each week as a small deadline*
+
+---
 
 ### Panel 22
 
-![Submission day: Calmly click submit](../../images/09-no-boom/09_022.png)
+![提交日：从容地点击submit](../images/09-no-boom/09_022.png)
 
-*Submission day: Calmly click submit*
-
+*Submission date: click submit calmly*
 
 ---
-
 
 ### Panel 23
 
-![Celebration: Still time for coffee](../../images/09-no-boom/09_023.png)
+![庆祝：还有时间喝杯咖啡](../images/09-no-boom/09_023.png)
 
-*Celebration: Still time for coffee*
-
+*Celebration: there’s still time to have a cup of coffee*
 
 ---
-
 
 ### Panel 24
 
-![10-minute action: Set weekly self-check reminder](../../images/09-no-boom/09_024.png)
+![10分钟行动：设置每周自查提醒](../images/09-no-boom/09_024.png)
 
-*10-minute action: Set weekly self-check reminder*
-
+*10-Minute Action: Set Up a Weekly Self-Check Reminder*
 
 ---
 
+### Square 25
 
-### Panel 25
+![下一章预告：团队协作](../images/09-no-boom/09_025.png)
 
-![Next chapter preview: Team collaboration](../../images/09-no-boom/09_025.png)
-
-*Next chapter preview: Team collaboration*
-
+*Next Chapter Preview: Team Collaboration*
 
 ---

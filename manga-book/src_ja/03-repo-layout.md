@@ -1,254 +1,203 @@
-# 第三章：仓库结构
+# 第三章：倉庫構造
 
+**倉庫の大改造**
 
-**仓库大改造**
+### 第1マス
 
+![小研面对混乱的项目目录](../images/03-repo-layout/03_001.png)
 
-### 第1格
-
-![小研面对混乱的项目目录](images/03-repo-layout/03_001.png)
-
-*小研面对混乱的项目目录*
-
+*小研が混乱したプロジェクトディレクトリに直面している*
 
 ---
 
+### 第2マス
 
-### 第2格
+![文件命名灾难：final_final_v3_REAL](../images/03-repo-layout/03_002.png)
 
-![文件命名灾难：final_final_v3_REAL](images/03-repo-layout/03_002.png)
-
-*文件命名灾难：final_final_v3_REAL*
-
+*ファイル命名の惨事：final_final_v3_REAL*
 
 ---
 
+### 第3マス
 
-### 第3格
+![找不到上周的代码](../images/03-repo-layout/03_003.png)
 
-![找不到上周的代码](images/03-repo-layout/03_003.png)
-
-*找不到上周的代码*
-
+*先週のコードが見つからない*
 
 ---
 
+### 第4コマ
 
-### 第4格
+![领悟：混乱的代价是时间](../images/03-repo-layout/03_004.png)
 
-![领悟：混乱的代价是时间](images/03-repo-layout/03_004.png)
-
-*领悟：混乱的代价是时间*
-
+*悟り：混乱の代償は時間*
 
 ---
 
+### 第5コマ
 
-### 第5格
+![决心：今天就整理](../images/03-repo-layout/03_005.png)
 
-![决心：今天就整理](images/03-repo-layout/03_005.png)
-
-*决心：今天就整理*
-
+*決意：今日は整理する*
 
 ---
 
+### 第6マス
 
-### 第6格
+![标准目录结构概念](../images/03-repo-layout/03_006.png)
 
-![标准目录结构概念](images/03-repo-layout/03_006.png)
-
-*标准目录结构概念*
-
+*標準ディレクトリ構造の概念*
 
 ---
 
+### 第7コマ
 
-### 第7格
+![src/目录：稳定的核心代码](../images/03-repo-layout/03_007.png)
 
-![src/目录：稳定的核心代码](images/03-repo-layout/03_007.png)
-
-*src/目录：稳定的核心代码*
-
+*src/ディレクトリ：安定したコアコード*
 
 ---
 
+### 第8コマ
 
-### 第8格
+![experiments/目录：实验性代码](../images/03-repo-layout/03_008.png)
 
-![experiments/目录：实验性代码](images/03-repo-layout/03_008.png)
-
-*experiments/目录：实验性代码*
-
+*experiments/ディレクトリ：実験的なコード*
 
 ---
 
+### 第9コマ
 
-### 第9格
+![configs/目录：所有配置集中](../images/03-repo-layout/03_009.png)
 
-![configs/目录：所有配置集中](images/03-repo-layout/03_009.png)
-
-*configs/目录：所有配置集中*
-
+*configs/ディレクトリ：すべての設定を集約*
 
 ---
 
+### 第10コマ
 
-### 第10格
+![data/目录：数据目录（不提交）](../images/03-repo-layout/03_010.png)
 
-![data/目录：数据目录（不提交）](images/03-repo-layout/03_010.png)
-
-*data/目录：数据目录（不提交）*
-
+*data/ディレクトリ：データディレクトリ（提出しない）*
 
 ---
 
+### 第11コマ
 
-### 第11格
+![Makefile：一键命令入口](../images/03-repo-layout/03_011.png)
 
-![Makefile：一键命令入口](images/03-repo-layout/03_011.png)
-
-*Makefile：一键命令入口*
-
+*Makefile：ワンコマンドのエントリーポイント*
 
 ---
 
+### 第12マス
 
-### 第12格
+![README.md：项目首页](../images/03-repo-layout/03_012.png)
 
-![README.md：项目首页](images/03-repo-layout/03_012.png)
-
-*README.md：项目首页*
-
+*README.md：プロジェクトのホームページ*
 
 ---
 
+### 第13コマ
 
-### 第13格
+![快变量vs慢变量概念](../images/03-repo-layout/03_013.png)
 
-![快变量vs慢变量概念](images/03-repo-layout/03_013.png)
-
-*快变量vs慢变量概念*
-
+*速い変数 vs 遅い変数の概念*
 
 ---
 
+### 第14コマ
 
-### 第14格
+![错误：把实验代码直接放src](../images/03-repo-layout/03_014.png)
 
-![错误：把实验代码直接放src](images/03-repo-layout/03_014.png)
-
-*错误：把实验代码直接放src*
-
+*エラー：実験コードをそのままsrcに置く*
 
 ---
 
+### 第15コマ
 
-### 第15格
+![后果：稳定代码被破坏](../images/03-repo-layout/03_015.png)
 
-![后果：稳定代码被破坏](images/03-repo-layout/03_015.png)
-
-*后果：稳定代码被破坏*
-
+*結果：安定したコードが破壊される*
 
 ---
 
+### 第16コマ
 
-### 第16格
+![正确做法：毕业制度](../images/03-repo-layout/03_016.png)
 
-![正确做法：毕业制度](images/03-repo-layout/03_016.png)
-
-*正确做法：毕业制度*
-
+*正しいやり方：卒業制度*
 
 ---
 
+### 第17コマ
 
-### 第17格
+![实践：定期的代码毕业](../images/03-repo-layout/03_017.png)
 
-![实践：定期的代码毕业](images/03-repo-layout/03_017.png)
-
-*实践：定期的代码毕业*
-
+*実践：定期的なコードの卒業*
 
 ---
 
+### 第18コマ
 
-### 第18格
+![改造前：混乱的根目录](../images/03-repo-layout/03_018.png)
 
-![改造前：混乱的根目录](images/03-repo-layout/03_018.png)
-
-*改造前：混乱的根目录*
-
+*改造前：混乱したルートディレクトリ*
 
 ---
 
+### 第19コマ
 
-### 第19格
+![改造后：清晰的结构](../images/03-repo-layout/03_019.png)
 
-![改造后：清晰的结构](images/03-repo-layout/03_019.png)
-
-*改造后：清晰的结构*
-
+*改造後：明確な構造*
 
 ---
 
+### 第20コマ
 
-### 第20格
+![好处：新人5分钟上手](../images/03-repo-layout/03_020.png)
 
-![好处：新人5分钟上手](images/03-repo-layout/03_020.png)
-
-*好处：新人5分钟上手*
-
+*メリット：新人でも5分で使いこなせる*
 
 ---
 
+### 第21コマ
 
-### 第21格
+![好处：自己3个月后也能看懂](../images/03-repo-layout/03_021.png)
 
-![好处：自己3个月后也能看懂](images/03-repo-layout/03_021.png)
-
-*好处：自己3个月后也能看懂*
-
+*メリット：自分でも3か月後に理解できる*
 
 ---
 
+### 第22コマ
 
-### 第22格
+![10分钟行动：创建基础目录](../images/03-repo-layout/03_022.png)
 
-![10分钟行动：创建基础目录](images/03-repo-layout/03_022.png)
-
-*10分钟行动：创建基础目录*
-
+*10分間アクション：基本ディレクトリを作成*
 
 ---
 
+### 第23コマ
 
-### 第23格
+![总结：好结构是投资](../images/03-repo-layout/03_023.png)
 
-![总结：好结构是投资](images/03-repo-layout/03_023.png)
-
-*总结：好结构是投资*
-
+*まとめ：良い構造は投資である*
 
 ---
 
+### 第24コマ
 
-### 第24格
+![提示：使用cookiecutter模板](../images/03-repo-layout/03_024.png)
 
-![提示：使用cookiecutter模板](images/03-repo-layout/03_024.png)
-
-*提示：使用cookiecutter模板*
-
+*ヒント：cookiecutterテンプレートを使用*
 
 ---
 
+### 第25マス
 
-### 第25格
+![下一章预告：Git作为证据](../images/03-repo-layout/03_025.png)
 
-![下一章预告：Git作为证据](images/03-repo-layout/03_025.png)
-
-*下一章预告：Git作为证据*
-
+*次章予告：証拠としてのGit*
 
 ---

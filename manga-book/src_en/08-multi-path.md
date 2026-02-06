@@ -1,224 +1,179 @@
-# 第八章：多路径探索
+# Chapter 8: Multi-Path Exploration
 
+**Multi-Path Exploration**
 
-**多路探索**
+### Cell 1
 
+![研究的十字路口：多个方向同时存在](../images/08-multi-path/08_001.png)
 
-### 第1格
-
-![研究的十字路口：多个方向同时存在](../../images/08-multi-path/08_001.png)
-
-*研究的十字路口：多个方向同时存在*
-
+*Crossroads of Research: Multiple Directions Coexisting Simultaneously*
 
 ---
 
+### Cell 2
 
-### 第2格
+![困境：每条路都看起来有希望](../images/08-multi-path/08_002.png)
 
-![困境：每条路都看起来有希望](../../images/08-multi-path/08_002.png)
-
-*困境：每条路都看起来有希望*
-
+*Dilemma: Every path seems promising*
 
 ---
 
+### Cell 3
 
-### 第3格
+![决定：同时探索多条路](../images/08-multi-path/08_003.png)
 
-![决定：同时探索多条路](../../images/08-multi-path/08_003.png)
-
-*决定：同时探索多条路*
-
+*Decision: Explore multiple paths simultaneously*
 
 ---
 
+### Panel 4
 
-### 第4格
+![但是：多路探索有陷阱](../images/08-multi-path/08_004.png)
 
-![但是：多路探索有陷阱](../../images/08-multi-path/08_004.png)
-
-*但是：多路探索有陷阱*
-
+*However: Multi-path exploration has pitfalls*
 
 ---
 
+### Panel 5
 
-### 第5格
+![第1周：兴奋地开始ABC三条路](../images/08-multi-path/08_005.png)
 
-![第1周：兴奋地开始ABC三条路](../../images/08-multi-path/08_005.png)
-
-*第1周：兴奋地开始ABC三条路*
-
+*Week 1: Excitedly starting the three ABC paths*
 
 ---
 
+### Grid 6
 
-### 第6格
+![第2周：每条路都有进展](../images/08-multi-path/08_006.png)
 
-![第2周：每条路都有进展](../../images/08-multi-path/08_006.png)
-
-*第2周：每条路都有进展*
-
+*Week 2: Every path shows progress*
 
 ---
 
+### Cell 7
 
-### 第7格
+![第3周：开始混淆不同路的代码](../images/08-multi-path/08_007.png)
 
-![第3周：开始混淆不同路的代码](../../images/08-multi-path/08_007.png)
-
-*第3周：开始混淆不同路的代码*
-
+*Week 3: Start obfuscating code from different paths*
 
 ---
 
+### Panel 8
 
-### 第8格
+![第4周：忘记每条路的状态](../images/08-multi-path/08_008.png)
 
-![第4周：忘记每条路的状态](../../images/08-multi-path/08_008.png)
-
-*第4周：忘记每条路的状态*
-
+*Week 4: Forget the Condition of Every Road*
 
 ---
 
+### Panel 9
 
-### 第9格
+![第5周：路径之间相互干扰](../images/08-multi-path/08_009.png)
 
-![第5周：路径之间相互干扰](../../images/08-multi-path/08_009.png)
-
-*第5周：路径之间相互干扰*
-
+*Week 5: Interference Between Paths*
 
 ---
 
+### Panel 10
 
-### 第10格
+![第6周：完全迷失，都没推进](../images/08-multi-path/08_010.png)
 
-![第6周：完全迷失，都没推进](../../images/08-multi-path/08_010.png)
-
-*第6周：完全迷失，都没推进*
-
+*Week 6: Completely lost, no progress made*
 
 ---
 
+### Panel 11
 
-### 第11格
+![原则：多路探索需要结构](../images/08-multi-path/08_011.png)
 
-![原则：多路探索需要结构](../../images/08-multi-path/08_011.png)
-
-*原则：多路探索需要结构*
-
+*Principle: Multi-path exploration requires structure*
 
 ---
 
+### Panel 12
 
-### 第12格
+![实践1：路径命名规范](../images/08-multi-path/08_012.png)
 
-![实践1：路径命名规范](../../images/08-multi-path/08_012.png)
-
-*实践1：路径命名规范*
-
+*Practice 1: Path Naming Conventions*
 
 ---
 
+### Grid 13
 
-### 第13格
+![实践2：路径追踪表](../images/08-multi-path/08_013.png)
 
-![实践2：路径追踪表](../../images/08-multi-path/08_013.png)
-
-*实践2：路径追踪表*
-
+*Practice 2: Path Tracing Table*
 
 ---
 
+### Panel 14
 
-### 第14格
+![实践3：每周一路径审查](../images/08-multi-path/08_014.png)
 
-![实践3：每周一路径审查](../../images/08-multi-path/08_014.png)
-
-*实践3：每周一路径审查*
-
+*Practice 3: Weekly Path Review*
 
 ---
 
+### Grid 15
 
-### 第15格
+![实践4：主焦点+探索的平衡](../images/08-multi-path/08_015.png)
 
-![实践4：主焦点+探索的平衡](../../images/08-multi-path/08_015.png)
-
-*实践4：主焦点+探索的平衡*
-
+*Practice 4: Balancing the Main Focus and Exploration*
 
 ---
 
+### Panel 16
 
-### 第16格
+![实践5：定期归档不活跃路径](../images/08-multi-path/08_016.png)
 
-![实践5：定期归档不活跃路径](../../images/08-multi-path/08_016.png)
-
-*实践5：定期归档不活跃路径*
-
+*Practice 5: Regularly archive inactive paths*
 
 ---
 
+### Panel 17
 
-### 第17格
+![工作流：路径生命周期管理](../images/08-multi-path/08_017.png)
 
-![工作流：路径生命周期管理](../../images/08-multi-path/08_017.png)
-
-*工作流：路径生命周期管理*
-
+*Workflow: Path Lifecycle Management*
 
 ---
 
+### Panel 18
 
-### 第18格
+![技能：路径对比决策](../images/08-multi-path/08_018.png)
 
-![技能：路径对比决策](../../images/08-multi-path/08_018.png)
-
-*技能：路径对比决策*
-
+*Skill: Path Comparison Decision*
 
 ---
 
+### Grid 19
 
-### 第19格
+![勇气：杀死不工作的路径](../images/08-multi-path/08_019.png)
 
-![勇气：杀死不工作的路径](../../images/08-multi-path/08_019.png)
-
-*勇气：杀死不工作的路径*
-
+*Courage: Killing Paths That Don’t Work*
 
 ---
 
+### Panel 20
 
-### 第20格
+![智慧：知道何时合并路径](../images/08-multi-path/08_020.png)
 
-![智慧：知道何时合并路径](../../images/08-multi-path/08_020.png)
-
-*智慧：知道何时合并路径*
-
+*Wisdom: Knowing when to merge paths*
 
 ---
 
+### Square 21
 
-### 第21格
+![10分钟行动：列出当前所有路径](../images/08-multi-path/08_021.png)
 
-![10分钟行动：列出当前所有路径](../../images/08-multi-path/08_021.png)
-
-*10分钟行动：列出当前所有路径*
-
+*10-Minute Action: List All Current Paths*
 
 ---
 
+### Panel 22
 
-### 第22格
+![下一章预告：炸弹拆除](../images/08-multi-path/08_022.png)
 
-![下一章预告：炸弹拆除](../../images/08-multi-path/08_022.png)
-
-*下一章预告：炸弹拆除*
-
+*Next Chapter Preview: Bomb Disposal*
 
 ---

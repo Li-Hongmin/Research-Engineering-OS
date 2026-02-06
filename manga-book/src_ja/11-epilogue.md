@@ -1,154 +1,123 @@
-# 终章：新的开始
+# 終章：新たな始まり
 
+**論文の提出に成功しました**
 
-**论文提交成功**
+### 第1マス
 
+![小研点击提交按钮的瞬间](../images/11-epilogue/11_001.png)
 
-### 第1格
-
-![小研点击提交按钮的瞬间](images/11-epilogue/11_001.png)
-
-*小研点击提交按钮的瞬间*
-
+*小研が送信ボタンをクリックした瞬間*
 
 ---
 
+### 第2マス
 
-### 第2格
+![提交成功！确认邮件到达](../images/11-epilogue/11_002.png)
 
-![提交成功！确认邮件到达](images/11-epilogue/11_002.png)
-
-*提交成功！确认邮件到达*
-
+*送信が完了しました！確認メールが届きます*
 
 ---
-
 
 ### 第3格
 
-![庆祝：不是疲惫而是满足](images/11-epilogue/11_003.png)
+![庆祝：不是疲惫而是满足](../images/11-epilogue/11_003.png)
 
-*庆祝：不是疲惫而是满足*
-
-
----
-
-
-### 第4格
-
-![回顾：从序章的恐慌到现在](images/11-epilogue/11_004.png)
-
-*回顾：从序章的恐慌到现在*
-
+*祝う：疲れではなく満足*
 
 ---
 
+### 第4コマ
 
-### 第5格
+![回顾：从序章的恐慌到现在](../images/11-epilogue/11_004.png)
 
-![学到的一切：快闪回顾](images/11-epilogue/11_005.png)
-
-*学到的一切：快闪回顾*
-
+*振り返り：序章の恐慌から今まで*
 
 ---
 
+### 第5マス
 
-### 第6格
+![学到的一切：快闪回顾](../images/11-epilogue/11_005.png)
 
-![感谢：Research Engineering OS这本书](images/11-epilogue/11_006.png)
-
-*感谢：Research Engineering OS这本书*
-
+*学んだことすべて：クイック振り返り*
 
 ---
 
+### 第6マス
 
-### 第7格
+![感谢：Research Engineering OS这本书](../images/11-epilogue/11_006.png)
 
-![变化：从reactive到proactive](images/11-epilogue/11_007.png)
-
-*变化：从reactive到proactive*
-
+*謝辞：『Research Engineering OS』という本*
 
 ---
 
+### 第7マス
 
-### 第8格
+![变化：从reactive到proactive](../images/11-epilogue/11_007.png)
 
-![新身份：可靠的研究者](images/11-epilogue/11_008.png)
-
-*新身份：可靠的研究者*
-
+*変化：reactiveからproactiveへ*
 
 ---
 
+### 第8コマ
 
-### 第9格
+![新身份：可靠的研究者](../images/11-epilogue/11_008.png)
 
-![新来的同学来问问题](images/11-epilogue/11_009.png)
-
-*新来的同学来问问题*
-
+*新しい身分：信頼できる研究者*
 
 ---
 
+### 第9コマ
 
-### 第10格
+![新来的同学来问问题](../images/11-epilogue/11_009.png)
 
-![小研开始指导新人](images/11-epilogue/11_010.png)
-
-*小研开始指导新人*
-
+*新しく来たクラスメイトが質問しに来た*
 
 ---
 
+### 第10コマ
 
-### 第11格
+![小研开始指导新人](../images/11-epilogue/11_010.png)
 
-![递出自己的Research Engineering OS](images/11-epilogue/11_011.png)
-
-*递出自己的Research Engineering OS*
-
+*小研が新人の指導を始める*
 
 ---
 
+### 第11コマ
 
-### 第12格
+![递出自己的Research Engineering OS](../images/11-epilogue/11_011.png)
 
-![新人眼中的希望](images/11-epilogue/11_012.png)
-
-*新人眼中的希望*
-
+*自分のResearch Engineering OSを差し出す*
 
 ---
 
+### 第12コマ
 
-### 第13格
+![新人眼中的希望](../images/11-epilogue/11_012.png)
 
-![核心信息：好习惯是最好的投资](images/11-epilogue/11_013.png)
-
-*核心信息：好习惯是最好的投资*
-
+*新人の目に映る希望*
 
 ---
 
+### 第13コマ
 
-### 第14格
+![核心信息：好习惯是最好的投资](../images/11-epilogue/11_013.png)
 
-![邀请：你也可以成为小研](images/11-epilogue/11_014.png)
-
-*邀请：你也可以成为小研*
-
+*核心情報：良い習慣は最高の投資*
 
 ---
 
+### 第14コマ
 
-### 第15格
+![邀请：你也可以成为小研](../images/11-epilogue/11_014.png)
 
-![结尾：新的一天开始](images/11-epilogue/11_015.png)
+*招待：あなたも小研になれます*
 
-*结尾：新的一天开始*
+---
 
+### 第15マス
+
+![结尾：新的一天开始](../images/11-epilogue/11_015.png)
+
+*結び：新しい一日が始まる*
 
 ---

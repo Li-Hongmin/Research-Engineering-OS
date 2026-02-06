@@ -1,254 +1,203 @@
-# 第十章：团队协作
+# Chapter 10: Team Collaboration
 
+**Team Collaboration**
 
-**团队协作**
+### Cell 1
 
+![小研加入研究团队](../images/10-team/10_001.png)
 
-### 第1格
-
-![小研加入研究团队](../src/images/10-team/10_001.png)
-
-*小研加入研究团队*
-
+*Xiaoyan Joins the Research Team*
 
 ---
 
+### Panel 2
 
-### 第2格
+![观察：每个人都很强](../images/10-team/10_002.png)
 
-![观察：每个人都很强](../src/images/10-team/10_002.png)
-
-*观察：每个人都很强*
-
+*Observation: Everyone is very strong*
 
 ---
 
+### Panel 3
 
-### 第3格
+![问题：但团队产出不如预期](../images/10-team/10_003.png)
 
-![问题：但团队产出不如预期](../src/images/10-team/10_003.png)
-
-*问题：但团队产出不如预期*
-
+*Problem: But the team’s output is below expectations*
 
 ---
 
+### Panel 4
 
-### 第4格
+![疑问：为什么强者组队却变弱？](../images/10-team/10_004.png)
 
-![疑问：为什么强者组队却变弱？](../src/images/10-team/10_004.png)
-
-*疑问：为什么强者组队却变弱？*
-
+*Question: Why do the strong become weaker when they team up?*
 
 ---
 
+### Panel 5
 
-### 第5格
+![失败模式1：沟通不足](../images/10-team/10_005.png)
 
-![失败模式1：沟通不足](../src/images/10-team/10_005.png)
-
-*失败模式1：沟通不足*
-
+*Failure Mode 1: Insufficient Communication*
 
 ---
 
+### Panel 6
 
-### 第6格
+![周一站会：各说各的](../images/10-team/10_006.png)
 
-![周一站会：各说各的](../src/images/10-team/10_006.png)
-
-*周一站会：各说各的*
-
+*Monday stand-up: everyone talks past each other*
 
 ---
 
+### Panel 7
 
-### 第7格
+![失败模式2：代码冲突](../images/10-team/10_007.png)
 
-![失败模式2：代码冲突](../src/images/10-team/10_007.png)
-
-*失败模式2：代码冲突*
-
+*Failure Mode 2: Code Conflict*
 
 ---
 
+### Panel 8
 
-### 第8格
+![周三：发现两人改了同一文件](../images/10-team/10_008.png)
 
-![周三：发现两人改了同一文件](../src/images/10-team/10_008.png)
-
-*周三：发现两人改了同一文件*
-
+*Wednesday: Discovered two people had modified the same file*
 
 ---
 
+### Panel 9
 
-### 第9格
+![失败模式3：隐性知识依赖](../images/10-team/10_009.png)
 
-![失败模式3：隐性知识依赖](../src/images/10-team/10_009.png)
-
-*失败模式3：隐性知识依赖*
-
+*Failure Mode 3: Implicit Knowledge Dependency*
 
 ---
 
+### Panel 10
 
-### 第10格
+![周五：唯一知道的人请假了](../images/10-team/10_010.png)
 
-![周五：唯一知道的人请假了](../src/images/10-team/10_010.png)
-
-*周五：唯一知道的人请假了*
-
+*Friday: the only person who knew took leave*
 
 ---
 
+### Square 11
 
-### 第11格
+![失败模式4：重复劳动](../images/10-team/10_011.png)
 
-![失败模式4：重复劳动](../src/images/10-team/10_011.png)
-
-*失败模式4：重复劳动*
-
+*Failure Mode 4: Repetitive Work*
 
 ---
 
+### Grid 12
 
-### 第12格
+![原则：团队需要约定](../images/10-team/10_012.png)
 
-![原则：团队需要约定](../src/images/10-team/10_012.png)
-
-*原则：团队需要约定*
-
+*Principle: the team needs to agree*
 
 ---
 
+### Grid 13
 
-### 第13格
+![解决1：每日短站会](../images/10-team/10_013.png)
 
-![解决1：每日短站会](../src/images/10-team/10_013.png)
-
-*解决1：每日短站会*
-
+*Solution 1: Daily Stand-up Meeting*
 
 ---
 
+### Panel 14
 
-### 第14格
+![解决2：共享代码规范](../images/10-team/10_014.png)
 
-![解决2：共享代码规范](../src/images/10-team/10_014.png)
-
-*解决2：共享代码规范*
-
+*Solution 2: Shared Code Standards*
 
 ---
 
+### Square 15
 
-### 第15格
+![解决3：PR Review流程](../images/10-team/10_015.png)
 
-![解决3：PR Review流程](../src/images/10-team/10_015.png)
-
-*解决3：PR Review流程*
-
+*Solution 3: PR Review Process*
 
 ---
 
+### Panel 16
 
-### 第16格
+![解决4：共享实验追踪](../images/10-team/10_016.png)
 
-![解决4：共享实验追踪](../src/images/10-team/10_016.png)
-
-*解决4：共享实验追踪*
-
+*Solution 4: Shared Experiment Tracking*
 
 ---
 
+### Panel 17
 
-### 第17格
+![解决5：文档即知识共享](../images/10-team/10_017.png)
 
-![解决5：文档即知识共享](../src/images/10-team/10_017.png)
-
-*解决5：文档即知识共享*
-
+*Solution 5: Documentation as Knowledge Sharing*
 
 ---
 
+### Grid 18
 
-### 第18格
+![解决6：分工明确+接口清晰](../images/10-team/10_018.png)
 
-![解决6：分工明确+接口清晰](../src/images/10-team/10_018.png)
-
-*解决6：分工明确+接口清晰*
-
+*Solution 6: Clear division of responsibilities + well-defined interfaces*
 
 ---
 
+### Panel 19
 
-### 第19格
+![实践：共同维护的约定文档](../images/10-team/10_019.png)
 
-![实践：共同维护的约定文档](../src/images/10-team/10_019.png)
-
-*实践：共同维护的约定文档*
-
+*Practice: A Shared Maintenance Agreement Document*
 
 ---
 
+### Panel 20
 
-### 第20格
+![文化：互相帮助，而非互相阻碍](../images/10-team/10_020.png)
 
-![文化：互相帮助，而非互相阻碍](../src/images/10-team/10_020.png)
-
-*文化：互相帮助，而非互相阻碍*
-
+*Culture: helping one another, not hindering one another*
 
 ---
 
+### Panel 21
 
-### 第21格
+![转变：1+1+1+1 > 4](../images/10-team/10_021.png)
 
-![转变：1+1+1+1 > 4](../src/images/10-team/10_021.png)
-
-*转变：1+1+1+1 > 4*
-
+*Transformation: 1+1+1+1 > 4*
 
 ---
 
+### Panel 22
 
-### 第22格
+![胜利：团队论文提交成功](../images/10-team/10_022.png)
 
-![胜利：团队论文提交成功](../src/images/10-team/10_022.png)
-
-*胜利：团队论文提交成功*
-
+*Victory: Team Paper Successfully Submitted*
 
 ---
 
+### Panel 23
 
-### 第23格
+![成长：每个人都学到了新东西](../images/10-team/10_023.png)
 
-![成长：每个人都学到了新东西](../src/images/10-team/10_023.png)
-
-*成长：每个人都学到了新东西*
-
+*Growth: Everyone learned something new*
 
 ---
 
+### Panel 24
 
-### 第24格
+![10分钟行动：提议一个团队约定](../images/10-team/10_024.png)
 
-![10分钟行动：提议一个团队约定](../src/images/10-team/10_024.png)
-
-*10分钟行动：提议一个团队约定*
-
+*10-Minute Action: Propose a Team Agreement*
 
 ---
 
+### Square 25
 
-### 第25格
+![终章预告：小研的完整成长](../images/10-team/10_025.png)
 
-![终章预告：小研的完整成长](../src/images/10-team/10_025.png)
-
-*终章预告：小研的完整成长*
-
+*Final Chapter Preview: Xiaoyan’s Complete Growth*
 
 ---
