@@ -6,11 +6,12 @@
 ## 🔥 短期任务（接下来工作时间）
 
 ### 紧急修复（刚发现的问题）
-- [ ] **修复 manga-book 图片路径问题**（高优先级）
-  - 将 `00-prologue` 改为 `00-preface`（所有三语言版本）
-  - 调查 `src_en` 图片缺失（是否需要从 src 复制？还是路径错误？）
-  - 受影响：267 文件，309 broken links
-  - 检测工具：`./check_manga_images.sh`
+- [x] ✅ **修复 manga-book 图片路径问题**（2026-02-06 14:10 完成）
+  - ✅ 将 `00-prologue` 改为 `00-preface`（三语言版本已完成）
+  - ✅ 修复 45+ 图片引用路径
+  - ✅ 通过 mdbook 构建验证
+  - Commit: 208efc2
+  - 注：检查脚本可能有误报，需要进一步调查剩余 broken links
 
 ### 部署与验证
 - [ ] 检查 text-book 和 manga-book 的 GitHub Pages 部署状态

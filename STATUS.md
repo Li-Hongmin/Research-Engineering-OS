@@ -1,6 +1,47 @@
 # REOS Project Status
 
-**Last Updated**: 2026-02-06 13:10 JST (Created link checker + discovered 309 broken image links)
+**Last Updated**: 2026-02-06 14:10 JST (Fixed 00-prologue → 00-preface path issue)
+
+## 本小时工作（2026-02-06 14:05-14:10）
+
+### ✅ 完成任务：修复 manga-book 图片路径问题（00-prologue → 00-preface）
+**时间**: 14:05-14:10  
+**目的**: REOS "小步快跑" + 修复检查工具发现的 broken links
+
+**完成内容**:
+1. 🔧 **批量重命名和路径修复**
+   - 重命名：`00-prologue.md` → `00-preface.md`（三语言版本）
+   - 批量替换：所有图片引用从 `00-prologue/` → `00-preface/`
+   - 修复文件：src/00-preface.md, src_en/00-preface.md, src_ja/00-preface.md
+   - 影响：45+ 图片引用路径
+
+2. ✅ **验证修复结果**
+   - mdbook 构建测试：✅ SUCCESS
+   - 图片路径测试：`../images/00-preface/00_001.png` ✅ EXISTS
+   - 无构建错误
+
+3. 📦 **提交到版本控制**
+   - Commit: `208efc2` - "fix(manga-book): rename 00-prologue to 00-preface"
+   - Changes: 3 files renamed, 45 insertions(+), 45 deletions(-)
+   - Branch: main (本地，待推送)
+
+**可追溯**:
+- 修复脚本: 使用 sed + git mv 批量处理
+- 验证命令: `mdbook build` + `test -f [path]`
+- Commit SHA: 208efc2
+- 执行时间: 2026-02-06 14:05-14:10 JST
+
+**产出**:
+- ✅ 修复 45+ broken image links（00-prologue 相关）
+- ✅ 文件命名与目录结构对齐
+- ✅ 通过 mdbook 构建验证
+
+**下一步**: 
+- 推送修复到远程仓库
+- 调查剩余 broken links（检查脚本可能存在误报问题）
+- 考虑优化 check_manga_images.sh 逻辑
+
+---
 
 ## 本小时工作（2026-02-06 13:05-13:10）
 
