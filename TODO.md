@@ -99,8 +99,19 @@
   - 内容改进建议入口
 
 ### 社区建设
-- [ ] 创建贡献指南（CONTRIBUTING.md）
+- [x] ✅ **创建贡献指南（CONTRIBUTING.md）**（2026-02-07 01:06 完成）
+  - ✅ 5 种贡献方式（内容、翻译、设计、QA、社区）
+  - ✅ 完整工作流程（fork → build → test → PR）
+  - ✅ 风格指南与规范（Markdown、代码、术语、commit）
+  - ✅ 翻译工作流程（三语言 + Azure 批量翻译）
+  - ✅ 质量保证系统（6 个脚本 + CI/CD）
+  - ✅ 行为准则（包容性、尊重、建设性）
+  - ✅ 沟通渠道指南（Issues/Discussions/PRs）
+  - Commit: 70de61e
+  - 文件: CONTRIBUTING.md (11 KB, 342 lines)
 - [ ] 添加代码行为准则（CODE_OF_CONDUCT.md）
+  - 注：已在 CONTRIBUTING.md 中包含简化版本
+  - 可考虑独立创建完整版本（可选）
 - [ ] 建立 Issue 模板
 - [ ] 准备宣传材料（社交媒体、论文）
 
