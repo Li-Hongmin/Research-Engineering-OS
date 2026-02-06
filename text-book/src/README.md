@@ -25,10 +25,19 @@
 
 ---
 
+## 版本选择
+
+本书提供两种阅读方式：
+
+- 📖 **文字版**（当前）- 系统化的技术指南，适合深入学习
+- 🎨 **[漫画版](../manga/)** - 跟随主人公小研的故事，轻松理解研究工程实践
+
+---
+
 ## 在线阅读
 
 本书完全开源，可以在线免费阅读。如果觉得有帮助，欢迎：
-- ⭐ 在 [GitHub](https://github.com/your-username/research-engineering-os) 上点星
+- ⭐ 在 [GitHub](https://github.com/Li-Hongmin/Research-Engineering-OS) 上点星
 - 📖 购买 [纸质版/Kindle版](https://kdp.amazon.com) 收藏
 - 💬 提供反馈和建议
 
