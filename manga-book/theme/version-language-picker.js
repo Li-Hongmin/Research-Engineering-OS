@@ -58,13 +58,26 @@
 
     function buildVersionUrl(targetVersion, context) {
         const basePath = context.basePath;
-        const pagePath = context.pagePath;
+        let pagePath = context.pagePath;
 
         if (targetVersion === "manga") {
             return `${basePath}/manga${pagePath}`;
         } else {
             // When switching from manga to text, use English as default
             const lang = context.isManga ? "en" : context.language;
+            
+            // Fix path mapping: manga has multi-page structure (e.g., /00-preface/01.html)
+            // while text has single-page structure (e.g., /00-preface.html)
+            if (context.isManga) {
+                // Extract chapter name from manga path: /00-preface/01.html → /00-preface.html
+                const chapterMatch = pagePath.match(/\/([\w-]+)\//);
+                if (chapterMatch) {
+                    pagePath = `/${chapterMatch[1]}.html`;
+                } else if (pagePath === "/" || pagePath === "") {
+                    pagePath = "/";
+                }
+            }
+            
             return `${basePath}/${lang}${pagePath}`;
         }
     }
