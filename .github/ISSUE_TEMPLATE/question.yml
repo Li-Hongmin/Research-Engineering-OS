@@ -1,0 +1,90 @@
+name: ❓ Question | 问题
+description: Ask a question about the project | 询问有关项目的问题
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提问！我们很乐意帮助。
+        Welcome! We're happy to help.
+        
+        💡 提示：查看 [DOCS_INDEX.md](https://github.com/li-hongmin/Research-Engineering-OS-/blob/main/DOCS_INDEX.md) 可能已有答案。
+        💡 Tip: Check [DOCS_INDEX.md](https://github.com/li-hongmin/Research-Engineering-OS-/blob/main/DOCS_INDEX.md) for existing answers.
+
+  - type: dropdown
+    id: question-category
+    attributes:
+      label: Question Category | 问题类别
+      options:
+        - Content understanding (内容理解)
+        - How to contribute (如何贡献)
+        - Technical setup (技术设置)
+        - Translation/i18n (翻译/国际化)
+        - Build/deployment (构建/部署)
+        - Project philosophy/REOS (项目理念/REOS)
+        - Other (其他)
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question | 您的问题
+      description: |
+        What would you like to know?
+        您想了解什么？
+      placeholder: |
+        Be as specific as possible.
+        Include relevant context (chapter, section, error messages, etc.)
+        
+        请尽可能具体。
+        包括相关上下文（章节、小节、错误消息等）
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context | 上下文
+      description: |
+        Provide any relevant context.
+        提供任何相关上下文。
+      placeholder: |
+        - What are you trying to achieve?
+        - What have you tried so far?
+        - Any error messages or unexpected behavior?
+        
+        - 您想实现什么？
+        - 您到目前为止尝试了什么？
+        - 是否有错误消息或意外行为？
+
+  - type: textarea
+    id: documentation-checked
+    attributes:
+      label: Documentation Checked | 已检查的文档
+      description: |
+        Which documentation have you already checked?
+        您已经检查了哪些文档？
+      placeholder: |
+        - [ ] README.md
+        - [ ] DOCS_INDEX.md
+        - [ ] CONTRIBUTING.md
+        - [ ] GLOSSARY.md
+        - [ ] Relevant chapter in the book
+        - [ ] GitHub Discussions
+        
+        示例：
+        - [x] README.md
+        - [x] CONTRIBUTING.md
+        - [ ] GLOSSARY.md
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist | 检查清单
+      options:
+        - label: I have searched existing issues and discussions (我已搜索现有 issues 和 discussions)
+          required: true
+        - label: I have checked the documentation (我已检查文档)
+          required: false

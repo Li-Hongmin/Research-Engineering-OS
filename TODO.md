@@ -109,10 +109,17 @@
   - ✅ 沟通渠道指南（Issues/Discussions/PRs）
   - Commit: 70de61e
   - 文件: CONTRIBUTING.md (11 KB, 342 lines)
+- [x] ✅ **建立 GitHub Issue 模板**（2026-02-07 02:06 完成）
+  - ✅ bug_report.yml (3.8 KB) - 错误报告
+  - ✅ content_improvement.yml (3.3 KB) - 内容改进
+  - ✅ translation.yml (4.2 KB) - 翻译问题
+  - ✅ feature_request.yml (4.4 KB) - 功能建议
+  - ✅ question.yml (2.8 KB) - 问题咨询
+  - ✅ config.yml (559 B) - 配置文件
+  - 双语支持（中英文）+ 结构化表单
 - [ ] 添加代码行为准则（CODE_OF_CONDUCT.md）
   - 注：已在 CONTRIBUTING.md 中包含简化版本
   - 可考虑独立创建完整版本（可选）
-- [ ] 建立 Issue 模板
 - [ ] 准备宣传材料（社交媒体、论文）
 
 ## 💡 想法池（未排期）

@@ -1,0 +1,128 @@
+name: 🐛 Bug Report | 错误报告
+description: Report a bug or issue | 报告项目中的错误或问题
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您帮助改进 Research Engineering OS！
+        Thank you for helping improve Research Engineering OS!
+
+  - type: dropdown
+    id: book-version
+    attributes:
+      label: Book Version | 书籍版本
+      description: Which version are you reporting about? | 您在报告哪个版本的问题？
+      options:
+        - Text Book (文本版)
+        - Manga Book (漫画版)
+        - Both (两者)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language | 语言
+      description: Which language version? | 哪个语言版本？
+      options:
+        - 中文 (Chinese)
+        - English (英文)
+        - 日本語 (Japanese / 日文)
+        - All languages (所有语言)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Bug Type | 问题类型
+      description: What kind of bug is this? | 这是什么类型的问题？
+      options:
+        - Content error (内容错误)
+        - Broken link (链接失效)
+        - Missing image (图片缺失)
+        - Code example not working (代码示例无法运行)
+        - Translation issue (翻译问题)
+        - Formatting issue (格式问题)
+        - Build/deployment issue (构建/部署问题)
+        - Other (其他)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description | 问题描述
+      description: |
+        Clearly describe the bug you found.
+        请清楚描述您发现的问题。
+      placeholder: |
+        Example:
+        In Chapter 5, section "DoD Checklist", the link to "GLOSSARY.md" is broken.
+        
+        示例：
+        在第5章 "DoD Checklist" 部分，链接到 "GLOSSARY.md" 的链接失效了。
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location | 位置
+      description: |
+        Where is the bug? (Chapter, section, page URL, file path)
+        问题在哪里？（章节、小节、页面URL、文件路径）
+      placeholder: |
+        Example:
+        - Chapter: 05-dod.md
+        - Section: "DoD Checklist"
+        - URL: https://li-hongmin.github.io/Research-Engineering-OS/05-dod.html
+        
+        示例：
+        - 章节：05-dod.md
+        - 小节："DoD Checklist"
+        - URL: https://li-hongmin.github.io/Research-Engineering-OS/05-dod.html
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior | 期望行为
+      description: |
+        What should happen instead?
+        应该是什么样的？
+      placeholder: |
+        Example:
+        The link should point to the correct GLOSSARY.md file.
+        
+        示例：
+        链接应该指向正确的 GLOSSARY.md 文件。
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots | 截图
+      description: |
+        If applicable, add screenshots to help explain the problem.
+        如果适用，添加截图帮助说明问题。
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context | 附加信息
+      description: |
+        Any other context about the problem.
+        关于此问题的其他信息。
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist | 检查清单
+      options:
+        - label: I have searched existing issues to avoid duplicates (我已搜索现有 issues 以避免重复)
+          required: true
+        - label: I have read CONTRIBUTING.md (我已阅读 CONTRIBUTING.md)
+          required: false

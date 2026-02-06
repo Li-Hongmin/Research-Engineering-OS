@@ -1,0 +1,138 @@
+name: 💡 Feature Request | 功能建议
+description: Suggest a new feature or enhancement | 建议新功能或增强
+title: "[Feature]: "
+labels: ["enhancement", "feature-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您分享改进 Research Engineering OS 的想法！
+        Thank you for sharing your ideas to improve Research Engineering OS!
+
+  - type: dropdown
+    id: feature-scope
+    attributes:
+      label: Feature Scope | 功能范围
+      options:
+        - Content (内容)
+        - Tooling/Automation (工具/自动化)
+        - User Interface (用户界面)
+        - Infrastructure (基础设施)
+        - Documentation (文档)
+        - Other (其他)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Description | 问题描述
+      description: |
+        What problem does this feature solve?
+        这个功能解决什么问题？
+      placeholder: |
+        Describe the problem or limitation you're facing.
+        Is this related to a missing capability, a workflow inefficiency, or user experience issue?
+        
+        描述您面临的问题或限制。
+        这是否与缺失的功能、工作流程效率低下或用户体验问题有关？
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution | 建议方案
+      description: |
+        How would you solve this problem?
+        您会如何解决这个问题？
+      placeholder: |
+        Describe your proposed solution in detail.
+        - What would be added/changed?
+        - How would users interact with it?
+        - What would be the expected outcome?
+        
+        详细描述您的建议方案。
+        - 会添加/更改什么？
+        - 用户如何与它交互？
+        - 预期结果是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered | 考虑的替代方案
+      description: |
+        Have you considered alternative solutions?
+        您是否考虑过替代方案？
+      placeholder: |
+        Describe any alternative solutions or features you've considered.
+        Why is your proposed solution better?
+        
+        描述您考虑过的任何替代方案或功能。
+        为什么您的建议方案更好？
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits | 收益
+      description: |
+        Who will benefit and how?
+        谁会受益，如何受益？
+      placeholder: |
+        - Who is the target audience? (readers, contributors, maintainers)
+        - How will this improve their experience?
+        - Are there any measurable benefits?
+        
+        - 目标受众是谁？（读者、贡献者、维护者）
+        - 这将如何改善他们的体验？
+        - 是否有可衡量的收益？
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples | 示例
+      description: |
+        Provide examples, mockups, or references.
+        提供示例、原型或参考资料。
+      placeholder: |
+        - Similar features in other projects
+        - Mockups or wireframes
+        - Code examples
+        - Screenshots or links
+        
+        - 其他项目中的类似功能
+        - 原型或线框图
+        - 代码示例
+        - 截图或链接
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Notes | 实现说明
+      description: |
+        (Optional) Technical notes for implementation.
+        （可选）实现的技术说明。
+      placeholder: |
+        If you have ideas about how this could be implemented technically:
+        - Required tools or libraries
+        - Integration points
+        - Potential challenges
+        
+        如果您对如何在技术上实现有想法：
+        - 所需工具或库
+        - 集成点
+        - 潜在挑战
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist | 检查清单
+      options:
+        - label: I have searched existing issues to avoid duplicates (我已搜索现有 issues 以避免重复)
+          required: true
+        - label: This feature aligns with REOS principles (这个功能符合 REOS 原则)
+          required: false
+        - label: I am willing to help implement this feature (我愿意帮助实现这个功能)
+          required: false

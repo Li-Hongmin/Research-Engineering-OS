@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Documentation | 文档
+    url: https://li-hongmin.github.io/Research-Engineering-OS/
+    about: Read the book online | 在线阅读书籍
+  - name: 💬 GitHub Discussions | 讨论区
+    url: https://github.com/li-hongmin/Research-Engineering-OS-/discussions
+    about: Ask questions and share ideas | 提问和分享想法
+  - name: 📚 DOCS_INDEX.md
+    url: https://github.com/li-hongmin/Research-Engineering-OS-/blob/main/DOCS_INDEX.md
+    about: Find documentation quickly | 快速找到文档

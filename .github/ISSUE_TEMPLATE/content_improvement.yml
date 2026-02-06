@@ -1,0 +1,112 @@
+name: ✨ Content Improvement | 内容改进
+description: Suggest improvements to existing content | 建议改进现有内容
+title: "[Content]: "
+labels: ["enhancement", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您帮助改进 Research Engineering OS 的内容质量！
+        Thank you for helping improve the content quality of Research Engineering OS!
+
+  - type: dropdown
+    id: book-version
+    attributes:
+      label: Book Version | 书籍版本
+      options:
+        - Text Book (文本版)
+        - Manga Book (漫画版)
+        - Both (两者)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: Improvement Type | 改进类型
+      options:
+        - Add example (添加示例)
+        - Clarify explanation (澄清说明)
+        - Update outdated information (更新过时信息)
+        - Add illustration/diagram (添加插图/图表)
+        - Improve code example (改进代码示例)
+        - Restructure content (重构内容结构)
+        - Other (其他)
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location | 位置
+      description: |
+        Which chapter/section needs improvement?
+        哪个章节/小节需要改进？
+      placeholder: |
+        Example: Chapter 3, Section "Version Control"
+        示例：第3章，"版本控制" 部分
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content | 当前内容
+      description: |
+        What is the current content? (optional)
+        当前的内容是什么？（可选）
+      placeholder: |
+        You can paste the current text or describe it.
+        您可以粘贴当前文本或描述它。
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Your Suggestion | 您的建议
+      description: |
+        How would you improve it?
+        您会如何改进？
+      placeholder: |
+        Describe your improvement idea in detail.
+        Be specific about what to add, change, or remove.
+        
+        详细描述您的改进想法。
+        具体说明要添加、更改或删除什么。
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why This Improvement? | 为什么需要这个改进？
+      description: |
+        How will this help readers?
+        这将如何帮助读者？
+      placeholder: |
+        Example:
+        - Makes the concept easier to understand
+        - Provides a real-world use case
+        - Reflects current best practices
+        
+        示例：
+        - 使概念更容易理解
+        - 提供真实世界的用例
+        - 反映当前最佳实践
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context | 附加信息
+      description: |
+        References, links, or other relevant information.
+        参考资料、链接或其他相关信息。
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist | 检查清单
+      options:
+        - label: I have searched existing issues to avoid duplicates (我已搜索现有 issues 以避免重复)
+          required: true
+        - label: I am willing to help implement this improvement (我愿意帮助实现这个改进)
+          required: false

@@ -1,0 +1,138 @@
+name: 🌍 Translation | 翻译
+description: Report translation issues or suggest improvements | 报告翻译问题或建议改进
+title: "[Translation]: "
+labels: ["translation", "i18n"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您帮助改进 Research Engineering OS 的多语言支持！
+        Thank you for helping improve multilingual support for Research Engineering OS!
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type | 问题类型
+      options:
+        - Translation error (翻译错误)
+        - Missing translation (缺失翻译)
+        - Terminology inconsistency (术语不一致)
+        - Readability improvement (可读性改进)
+        - Cultural adaptation (文化适配)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-language
+    attributes:
+      label: Language | 语言
+      description: Which language is affected? | 哪个语言受到影响？
+      options:
+        - English (英文)
+        - 日本語 (Japanese / 日文)
+        - Multiple languages (多个语言)
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location | 位置
+      description: |
+        Where is the translation issue?
+        翻译问题在哪里？
+      placeholder: |
+        Example:
+        - File: src_en/03-version-control.md
+        - Chapter: Version Control
+        - Section: "Git Workflow"
+        
+        示例：
+        - 文件: src_en/03-version-control.md
+        - 章节: Version Control
+        - 小节: "Git Workflow"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-translation
+    attributes:
+      label: Current Translation | 当前翻译
+      description: |
+        What is the current translation?
+        当前的翻译是什么？
+      placeholder: |
+        Paste the current text or describe the issue.
+        粘贴当前文本或描述问题。
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-translation
+    attributes:
+      label: Suggested Translation | 建议翻译
+      description: |
+        What should it be instead?
+        应该改成什么？
+      placeholder: |
+        Provide your suggested translation.
+        If terminology-related, please explain your reasoning.
+        
+        提供您建议的翻译。
+        如果涉及术语，请解释您的理由。
+    validations:
+      required: true
+
+  - type: textarea
+    id: original-text
+    attributes:
+      label: Original Text (Chinese) | 原文（中文）
+      description: |
+        What is the original Chinese text? (optional)
+        原始中文文本是什么？（可选）
+      placeholder: |
+        If available, paste the Chinese source text for reference.
+        如果有，粘贴中文原文以供参考。
+
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Reasoning | 理由
+      description: |
+        Why is this translation better?
+        为什么这个翻译更好？
+      placeholder: |
+        Explain why your suggestion improves:
+        - Accuracy
+        - Naturalness
+        - Consistency with terminology (GLOSSARY.md)
+        - Cultural appropriateness
+        
+        解释您的建议如何改进：
+        - 准确性
+        - 自然性
+        - 术语一致性（GLOSSARY.md）
+        - 文化适配性
+
+  - type: textarea
+    id: terminology
+    attributes:
+      label: Related Terminology | 相关术语
+      description: |
+        Are there related terms in GLOSSARY.md?
+        GLOSSARY.md 中是否有相关术语？
+      placeholder: |
+        List any related terms from GLOSSARY.md that should be considered.
+        列出 GLOSSARY.md 中应考虑的相关术语。
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist | 检查清单
+      options:
+        - label: I have checked GLOSSARY.md for terminology consistency (我已检查 GLOSSARY.md 的术语一致性)
+          required: true
+        - label: I have searched existing issues to avoid duplicates (我已搜索现有 issues 以避免重复)
+          required: true
+        - label: I am a native/fluent speaker of the target language (我是目标语言的母语/流利使用者)
+          required: false
