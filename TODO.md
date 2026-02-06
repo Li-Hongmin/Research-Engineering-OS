@@ -5,6 +5,13 @@
 
 ## 🔥 短期任务（接下来工作时间）
 
+### 紧急修复（刚发现的问题）
+- [ ] **修复 manga-book 图片路径问题**（高优先级）
+  - 将 `00-prologue` 改为 `00-preface`（所有三语言版本）
+  - 调查 `src_en` 图片缺失（是否需要从 src 复制？还是路径错误？）
+  - 受影响：267 文件，309 broken links
+  - 检测工具：`./check_manga_images.sh`
+
 ### 部署与验证
 - [ ] 检查 text-book 和 manga-book 的 GitHub Pages 部署状态
   - 验证 https://li-hongmin.github.io/Research-Engineering-OS/ 是否正常
@@ -20,7 +27,10 @@
 
 ### 自动化改进
 - [ ] 考虑将健康检查集成到 pre-commit hook
-- [ ] 添加链接有效性检查到 CI workflow
+- [x] ✅ 添加链接有效性检查到 CI workflow（2026-02-06 13:10 创建工具）
+  - check_links.sh: 通用链接检查器（支持 --fast 模式）
+  - check_manga_images.sh: 专用 manga 图片检查器
+  - **发现问题**: 309 个 broken image links（待修复）
 - [x] ✅ 创建自动翻译同步检查脚本（2026-02-06 08:31 创建，11:15 验证）
   - check_translation_sync.sh 已创建并运行成功
   - 可检测三语言版本的章节完整性和 SUMMARY.md 一致性
