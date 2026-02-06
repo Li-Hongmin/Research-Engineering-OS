@@ -178,7 +178,7 @@
 
 1.  **run 情報を記録する**
           # run.json を自動生成する（第6章のツールを利用）
-          python log_run.py --run_id <id>
+          python log_run.py --run_id `<id>`
 2.  **run.md に重要な情報をメモする**（5行以内）
     - この実験の仮説は何か？
     - 主な変更点は何か？

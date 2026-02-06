@@ -280,8 +280,8 @@ Potential risks:
 
     ```bash
 Rollback strategy:
-- If tests fail: git checkout -- <file>
-- If experimental results degrade: revert to commit <hash>
+- If tests fail: git checkout -- `<file>`
+- If experimental results degrade: revert to commit `<hash>`
 - If other functionality is affected: roll back and create a new branch for isolated debugging
 ```
 
