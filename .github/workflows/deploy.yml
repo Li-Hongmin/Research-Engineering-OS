@@ -34,19 +34,28 @@ jobs:
           chmod +x build_all.sh
           ./build_all.sh
 
-      - name: Build manga edition
+      - name: Build manga edition (multilingual)
         run: |
           cd manga-book
-          mdbook build
+          chmod +x build_all.sh
+          ./build_all.sh
 
       - name: Combine outputs
         run: |
-          # Move manga-book output to text-book/book/manga
+          # Move manga-book multilingual output to text-book/book/manga/
+          # This preserves manga's zh/, en/, ja/ structure under /manga/
           mkdir -p text-book/book/manga
+          
+          # Copy manga's multilingual build output
+          # manga-book/book/ contains: zh/, en/, ja/, images/, index.html
           cp -r manga-book/book/* text-book/book/manga/
 
-          # Create navigation index (optional enhancement)
-          echo "✅ Combined text-book and manga-book into single deployment"
+          # Verify structure
+          echo "✅ Combined text-book and manga-book:"
+          echo "  text-book: /zh/, /en/, /ja/"
+          echo "  manga-book: /manga/zh/, /manga/en/, /manga/ja/"
+          ls -la text-book/book/
+          ls -la text-book/book/manga/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
