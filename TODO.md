@@ -44,7 +44,7 @@
   - ✅ 自动检测未闭合的 HTML 标签（critical）
   - ✅ 检查尾随空格、过度空行、缺少 alt text（warnings）
   - ✅ 发现并修复 5 个 HTML 标签问题
-  - 🔄 待集成到 CI workflow（下一步）
+  - ✅ 已集成到 CI workflow（2026-02-06 21:10 完成）
 - [x] ✅ 添加链接有效性检查到 CI workflow（2026-02-06 13:10 创建工具）
   - check_links.sh: 通用链接检查器（支持 --fast 模式）
   - check_manga_images.sh: 专用 manga 图片检查器
