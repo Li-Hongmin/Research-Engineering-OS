@@ -209,3 +209,50 @@ Commit: {git_commit}
 - 新增建议时标注日期和来源
 - 定期 review，决定哪些进入实施
 - 实施后移到"已处理"区域
+
+---
+
+## 🔴 紧急/结构性改进
+
+### 图片存储优化：消除重复副本
+
+**当前问题**：
+- 三个语言版本各自保存一份相同的图片
+- `src/images/` - 235MB
+- `src_en/images/` - 235MB  
+- `src_ja/images/` - 235MB
+- **总计：705MB 重复数据！**
+
+**建议改进**：
+
+```
+text-book/
+├── images/          # 共享图片（只保存一份）
+├── src/             # 中文版 markdown
+├── src_en/          # 英文版 markdown
+└── src_ja/          # 日文版 markdown
+```
+
+所有 markdown 引用统一为 `../images/xxx.png`
+
+**优点**：
+- ✅ 节省 470MB 空间
+- ✅ 图片维护更简单（改一次，三版本同步）
+- ✅ Git 仓库更小，clone/push 更快
+- ✅ 符合 DRY 原则
+
+**实施步骤**：
+1. 创建 `text-book/images/` 目录
+2. 移动 `src/images/` 到 `text-book/images/`
+3. 删除 `src_en/images/` 和 `src_ja/images/`
+4. 批量修改所有 markdown 中的图片路径
+5. 测试构建
+
+**风险评估**：
+- 需要修改所有 markdown 文件的图片引用
+- 需要仔细测试三个语言版本的构建
+- 建议在独立分支进行，测试通过后合并
+
+**优先级**：高（节省空间，改善维护性）
+
+---
