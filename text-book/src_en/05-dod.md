@@ -193,7 +193,7 @@ After meeting the minimal DoD, the following items can further improve result cr
 1. **Record run information**
 
           # Automatically generate run.json (see Chapter 6 tools)
-          python log_run.py --run_id <id>
+          python log_run.py --run_id `<id>`
 
 2. **Manually write key information in run.md** (no more than 5 lines)
 

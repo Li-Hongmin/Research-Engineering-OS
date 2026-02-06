@@ -788,7 +788,7 @@ Pull Request（或 Merge Request）模板强制你在合并前回答关键问题
           - 每个实验必须有 run.json（自动）和 run.md（手动 5 行）
 
           ## 代码提交规范
-          - Commit message 格式：<type>: <description>
+          - Commit message 格式：`<type>`: `<description>`
             - type: feat | fix | refactor | docs | test
           - 提交前运行 make test
 

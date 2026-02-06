@@ -767,7 +767,7 @@ cat > docs/TEAM_RULES.md <<EOF
 - Every experiment must have run.json (automatic) and run.md (manual, 5 lines)
 
 ## Code Commit Standards
-- Commit message format: <type>: <description>
+- Commit message format: `<type>`: `<description>`
   - type: feat | fix | refactor | docs | test
 - Run make test before committing
 

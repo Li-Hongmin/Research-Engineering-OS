@@ -235,7 +235,7 @@
 1.  **记录 run 信息**
 
           # 自动生成 run.json（见第6章工具）
-          python log_run.py --run_id <id>
+          python log_run.py --run_id `<id>`
 
 2.  **手写 run.md 关键信息**（不超过 5 行）
 

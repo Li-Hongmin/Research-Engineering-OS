@@ -313,8 +313,8 @@
 
     ```bash
 回滚策略：
-- 如果测试失败：git checkout -- <文件>
-- 如果实验结果变差：回退到 commit <hash>
+- 如果测试失败：git checkout -- `<文件>`
+- 如果实验结果变差：回退到 commit `<hash>`
 - 如果影响其他功能：回滚并新建 branch 单独调试
 ```
 

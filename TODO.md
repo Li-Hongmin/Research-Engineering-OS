@@ -39,9 +39,12 @@
   - ✅ 创建 `.git/hooks/pre-commit`
   - ✅ 自动运行 `check_health.sh` 在每次 commit 前
   - ✅ 测试通过
-- [ ] 添加 Markdown lint 检查到 CI
-  - 自动检测未闭合的 HTML 标签
-  - 检查常见 Markdown 格式问题
+- [x] ✅ 添加 Markdown lint 检查工具（2026-02-06 20:15 完成）
+  - ✅ 创建 `check_markdown_lint.sh` 脚本
+  - ✅ 自动检测未闭合的 HTML 标签（critical）
+  - ✅ 检查尾随空格、过度空行、缺少 alt text（warnings）
+  - ✅ 发现并修复 5 个 HTML 标签问题
+  - 🔄 待集成到 CI workflow（下一步）
 - [x] ✅ 添加链接有效性检查到 CI workflow（2026-02-06 13:10 创建工具）
   - check_links.sh: 通用链接检查器（支持 --fast 模式）
   - check_manga_images.sh: 专用 manga 图片检查器
