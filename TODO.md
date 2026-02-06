@@ -35,7 +35,10 @@
   - Commit: daf0c13
 
 ### 自动化改进
-- [ ] 考虑将健康检查集成到 pre-commit hook
+- [x] ✅ 考虑将健康检查集成到 pre-commit hook（2026-02-06 19:07 完成）
+  - ✅ 创建 `.git/hooks/pre-commit`
+  - ✅ 自动运行 `check_health.sh` 在每次 commit 前
+  - ✅ 测试通过
 - [ ] 添加 Markdown lint 检查到 CI
   - 自动检测未闭合的 HTML 标签
   - 检查常见 Markdown 格式问题
