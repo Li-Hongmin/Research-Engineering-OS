@@ -14,7 +14,7 @@
 
 ![但是小研很平静：她已经准备好了](../../images/09-no-boom/09_002.png)
 
-*But Xiaoyan was very calm: she was already prepared.*
+*But Rina was very calm: she was already prepared.*
 
 ---
 
@@ -94,7 +94,7 @@
 
 ![现实中的小研：每一项都提前检查过](../../images/09-no-boom/09_012.png)
 
-*Xiaoyan in real life: checked every item in advance*
+*Rina in real life: checked every item in advance*
 
 ---
 

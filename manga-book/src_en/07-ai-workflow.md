@@ -6,7 +6,7 @@
 
 ![小研发现AI编程助手，效率飙升](../../images/07-ai-workflow/07_001.png)
 
-*Xiaoyan discovers an AI programming assistant, productivity soars*
+*Rina discovers an AI programming assistant, productivity soars*
 
 ---
 

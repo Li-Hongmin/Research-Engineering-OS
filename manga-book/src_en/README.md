@@ -12,7 +12,7 @@
 
 This is the comic version of *Research Engineering OS*. Through vivid comic stories, it presents the engineering practice challenges in scientific research and their solutions.
 
-Follow the journey of the protagonist **Xiaoyan** and discover together:
+Follow the journey of the protagonist **Rina** and discover together:
 
 - **Three types of technical debt**: exploration debt, validation debt, reproducibility debt  
 - **Experiments as the basic unit**: treat experiments—not code—as the fundamental unit of thinking  

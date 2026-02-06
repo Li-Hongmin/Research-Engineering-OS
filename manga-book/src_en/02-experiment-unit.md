@@ -6,7 +6,7 @@
 
 ![小研看着复杂的代码文件结构困惑](../../images/02-experiment-unit/02_001.png)
 
-*Xiaoyan looks puzzled at the complex code file structure*
+*Rina looks puzzled at the complex code file structure*
 
 ---
 

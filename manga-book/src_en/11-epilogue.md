@@ -6,7 +6,7 @@
 
 ![小研点击提交按钮的瞬间](../../images/11-epilogue/11_001.png)
 
-*The moment Xiaoyan clicks the submit button*
+*The moment Rina clicks the submit button*
 
 ---
 
@@ -78,7 +78,7 @@
 
 ![小研开始指导新人](../../images/11-epilogue/11_010.png)
 
-*Xiaoyan begins mentoring the newcomer*
+*Rina begins mentoring the newcomer*
 
 ---
 
@@ -110,7 +110,7 @@
 
 ![邀请：你也可以成为小研](../../images/11-epilogue/11_014.png)
 
-*Invitation: You Can Also Become “Xiaoyan”*
+*Invitation: You Can Also Become “Rina”*
 
 ---
 

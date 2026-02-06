@@ -6,7 +6,7 @@
 
 ![小研面对混乱的项目目录](../../images/03-repo-layout/03_001.png)
 
-*Xiaoyan faces the chaotic project directory*
+*Rina faces the chaotic project directory*
 
 ---
 

@@ -6,7 +6,7 @@
 
 ![小研宣布：实验做完了！](../../images/05-dod/05_001.png)
 
-*Xiaoyan announced: The experiment is finished!*
+*Rina announced: The experiment is finished!*
 
 ---
 

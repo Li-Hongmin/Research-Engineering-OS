@@ -22,7 +22,7 @@
 
 ![小研翻找代码目录，看到混乱的文件夹结构](../../images/00-preface/00_003.png)
 
-*Xiaoyan rummages through the code directory and sees a chaotic folder structure*
+*Rina rummages through the code directory and sees a chaotic folder structure*
 
 ---
 
@@ -30,7 +30,7 @@
 
 ![回忆闪回：三周前的成功，小研开心地看着好结果](../../images/00-preface/00_004.png)
 
-*Flashback: the success from three weeks ago—Xiaoyan happily looks at the good results*
+*Flashback: the success from three weeks ago—Rina happily looks at the good results*
 
 ---
 
@@ -38,7 +38,7 @@
 
 ![回到现实：小研困惑地对比新旧打印稿](../../images/00-preface/00_005.png)
 
-*Back to reality: Xiaoyan compares the old and new printouts in confusion*
+*Back to reality: Rina compares the old and new printouts in confusion*
 
 ---
 
@@ -78,7 +78,7 @@
 
 ![小研被三只怪兽包围，绝望](../../images/00-preface/00_010.png)
 
-*Xiaoyan is surrounded by three monsters, in despair*
+*Rina is surrounded by three monsters, in despair*
 
 ---
 
@@ -102,7 +102,7 @@
 
 ![小研接过书，眼中重燃希望](../../images/00-preface/00_013.png)
 
-*Xiaoyan took the book, and hope rekindled in her eyes.*
+*Rina took the book, and hope rekindled in her eyes.*
 
 ---
 

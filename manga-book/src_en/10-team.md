@@ -6,7 +6,7 @@
 
 ![小研加入研究团队](../../images/10-team/10_001.png)
 
-*Xiaoyan Joins the Research Team*
+*Rina Joins the Research Team*
 
 ---
 
@@ -198,6 +198,6 @@
 
 ![终章预告：小研的完整成长](../../images/10-team/10_025.png)
 
-*Final Chapter Preview: Xiaoyan’s Complete Growth*
+*Final Chapter Preview: Rina’s Complete Growth*
 
 ---

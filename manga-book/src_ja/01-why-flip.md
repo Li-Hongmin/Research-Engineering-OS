@@ -4,9 +4,9 @@
 
 ### 第1マス
 
-![小研在图书馆深夜阅读Research Engineering OS](../../images/01-why-flip/01_001.png)
+![みなみ在图书馆深夜阅读Research Engineering OS](../../images/01-why-flip/01_001.png)
 
-*小研は図書館で深夜にResearch Engineering OSを読んでいる*
+*みなみは図書館で深夜にResearch Engineering OSを読んでいる*
 
 ---
 
@@ -172,9 +172,9 @@
 
 ### 第22コマ
 
-![小研明白：问题不是最后一刻产生的](../../images/01-why-flip/01_022.png)
+![みなみ明白：问题不是最后一刻产生的](../../images/01-why-flip/01_022.png)
 
-*小研は理解した：問題は最後の瞬間に生じたのではない*
+*みなみは理解した：問題は最後の瞬間に生じたのではない*
 
 ---
 

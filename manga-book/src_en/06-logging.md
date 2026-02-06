@@ -6,7 +6,7 @@
 
 ![三个月后，小研试图找回实验细节](../../images/06-logging/06_001.png)
 
-*Three months later, Xiaoyan tried to recall the experimental details*
+*Three months later, Rina tried to recall the experimental details*
 
 ---
 

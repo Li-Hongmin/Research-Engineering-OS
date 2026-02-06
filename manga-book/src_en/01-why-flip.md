@@ -6,7 +6,7 @@
 
 ![小研在图书馆深夜阅读Research Engineering OS](../../images/01-why-flip/01_001.png)
 
-*Xiaoyan reads **Research Engineering OS** late at night in the library*
+*Rina reads **Research Engineering OS** late at night in the library*
 
 ---
 
@@ -174,7 +174,7 @@
 
 ![小研明白：问题不是最后一刻产生的](../../images/01-why-flip/01_022.png)
 
-*Xiaoyan understands: the problem didn’t arise at the last moment*
+*Rina understands: the problem didn’t arise at the last moment*
 
 ---
 
