@@ -224,10 +224,11 @@ The project includes comprehensive health check tools (also available via Makefi
 - **PR Comments**: Automated health status feedback on pull requests
 
 ### Project Health Status
-Current status: ✅ **EXCELLENT**
-- 905 Markdown files validated
-- 264 manga images verified
+Current status: ✅ **EXCELLENT** (as of 2026-02-07 18:05 JST)
+- 923 Markdown files validated
+- 671 images (139 text-book + 264 manga + 268 other assets)
 - 3 language versions synchronized
+- 65k+ words across all editions
 - All builds passing
 
 ## ⚖️ License
@@ -237,11 +238,11 @@ Current status: ✅ **EXCELLENT**
 ## 📧 Contact
 
 For questions or contributions, please reach out through:
-- GitHub Issues
-- GitHub Discussions
-- Email: [contact information]
+- **GitHub Issues**: Bug reports and feature requests
+- **GitHub Discussions**: General questions and community discussions
+- **Email**: lihongmin@edu.k.u-tokyo.ac.jp (Li Hongmin)
 
 ---
 
-**Last Updated**: 2026-02-07
-**Version**: 2.2 (Added content consistency checker + comprehensive documentation index)
+**Last Updated**: 2026-02-07 18:05 JST
+**Version**: 2.3 (Updated project statistics, contact info, and health status)
