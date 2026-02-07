@@ -2,7 +2,7 @@
 
 A story-driven educational resource series for researchers in AI/ML/computational biology who need reproducible, traceable research practices.
 
-[![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md) [![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md) [![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md) ![Last Commit](https://img.shields.io/github/last-commit/Li-Hongmin/Research-Engineering-OS) ![Languages](https://img.shields.io/github/languages/count/Li-Hongmin/Research-Engineering-OS) ![Top Language](https://img.shields.io/github/languages/top/Li-Hongmin/Research-Engineering-OS) ![Repo Size](https://img.shields.io/github/repo-size/Li-Hongmin/Research-Engineering-OS) ![GitHub Pages](https://img.shields.io/badge/docs-live-success?logo=github)
 
 ## 📚 Project Overview
 
