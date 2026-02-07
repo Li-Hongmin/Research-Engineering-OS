@@ -1,6 +1,49 @@
 # REOS Project Status
 
-**Last Updated**: 2026-02-07 12:06 JST (Created CHANGELOG.md for project history tracking)
+**Last Updated**: 2026-02-07 13:06 JST (Added CHANGELOG.md link to README.md)
+
+## 本小时工作（2026-02-07 13:05-13:06）
+
+### ✅ 完成任务：在 README.md 中添加 CHANGELOG.md 链接
+**时间**: 13:05-13:06 (5 分钟)  
+**目的**: REOS "记录优先" + 完善文档导航
+
+**完成内容**:
+1. 📝 **更新 README.md**
+   - 在"Documentation & Guidelines → Quick Links"部分添加 CHANGELOG.md 链接
+   - 位置：紧跟在 CODE_OF_CONDUCT.md 之后
+   - 描述：📋 **[Changelog](CHANGELOG.md)** - Project history and release notes
+   - 保持与其他文档链接一致的格式（emoji + 粗体 + 链接 + 描述）
+
+2. ✅ **验证与提交**
+   - 健康检查: `make health` → ⚠️ GOOD（仅工作树未提交）
+   - Git commit: `351cb6f` - "docs: add CHANGELOG.md link to README.md"
+   - Changes: 1 file, 1 insertion(+)
+   - Pre-commit hook: ✅ 自动运行并通过
+   - 推送到远程: `8bdbb0d..351cb6f main -> main`
+
+**可追溯**:
+- 修改文件: `README.md` (+1 line)
+- Commit SHA: 351cb6f
+- 健康检查: 2026-02-07 13:05:49 JST → GOOD
+- 执行时间: 2026-02-07 13:05-13:06 JST
+
+**产出**:
+- ✅ README.md 文档导航完善（现有 5 个核心文档链接）
+- ✅ CHANGELOG.md 可发现性提升（从主 README 直达）
+- ✅ 5 分钟完成完整循环（修改 → 验证 → 提交 → 推送）
+
+**后续操作**:
+- 📋 完成上小时（12:06）的后续任务："在 README.md 中添加指向 CHANGELOG.md 的链接"
+- 🎯 继续监控 TODO.md 中的其他任务
+
+**教训**:
+- ✅ 下午选择轻量级文档任务（低风险、快速完成）
+- ✅ 增量改进：每个小改进都立即提交（避免累积变更）
+- ✅ 5 分钟快速完成（符合小步快跑原则）
+- ✅ Pre-commit hook 持续保障质量（自动运行健康检查）
+
+---
 
 ## 本小时工作（2026-02-07 12:05-12:06）
 
