@@ -14,6 +14,7 @@
 | 文档 | 用途 | 目标读者 |
 |------|------|---------|
 | **README.md** | 项目概览、快速开始、内容结构 | 所有人（首次访问者） |
+| **QUICKSTART.md** | 5-10 分钟快速上手指南（新贡献者） | 想快速开始贡献的新手 |
 | **text-book/README.md** | 文本版使用指南 | 想阅读多语言文本版的读者 |
 | **manga-book/README.md** | 漫画版使用指南 | 想阅读漫画版的读者 |
 | **GLOSSARY.md** | 术语表、关键概念定义 | 需要查找术语含义的读者 |
@@ -132,11 +133,12 @@ shared/
 
 ### 新贡献者上手流程
 
-1. **阅读** README.md（了解项目）
-2. **查看** TODO.md（找待办任务）
-3. **运行** check_health.sh（验证环境）
-4. **参考** IMPROVEMENTS.md（了解改进方向）
-5. **更新** STATUS.md（记录工作）
+1. **快速开始** → QUICKSTART.md（5-10 分钟上手）
+2. **阅读** README.md（了解项目）
+3. **查看** TODO.md（找待办任务）
+4. **运行** check_health.sh（验证环境）
+5. **参考** IMPROVEMENTS.md（了解改进方向）
+6. **更新** STATUS.md（记录工作）
 
 ### 内容改进流程
 
@@ -163,6 +165,7 @@ shared/
 
 ### "我想..."
 
+- **快速上手（新手）** → QUICKSTART.md（5-10 分钟）
 - **了解项目** → README.md
 - **开始贡献** → CONTRIBUTING.md（完整贡献指南）
 - **理解术语** → GLOSSARY.md
@@ -229,5 +232,5 @@ shared/
 - 工作流程变化时更新"文档使用流程"部分
 - 保持"快速查找指南"的实用性
 
-**Last Updated**: 2026-02-07 17:07 JST  
-**Version**: 2.1 - 新增 CHANGELOG.md, LICENSE_GUIDE.md
+**Last Updated**: 2026-02-07 20:17 JST  
+**Version**: 2.2 - 新增 QUICKSTART.md（新贡献者 5-10 分钟快速上手）

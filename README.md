@@ -175,6 +175,7 @@ Currently, the manga edition requires manual deployment setup.
 ## 📋 Documentation & Guidelines
 
 ### Quick Links
+- ⚡ **[Quick Start](QUICKSTART.md)** - 5-10 minute guide for new contributors
 - 📚 **[Documentation Index](DOCS_INDEX.md)** - Complete navigation to all project docs
 - ✅ **[Content Review Checklist](CONTENT_REVIEW_CHECKLIST.md)** - Systematic quality review guide
 - 🤝 **[Contributing Guide](CONTRIBUTING.md)** - How to contribute (5 ways + workflows)
