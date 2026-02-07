@@ -2,7 +2,7 @@
 # Purpose: Unified entry point for common development tasks
 # Created: 2026-02-07 07:05 JST
 
-.PHONY: help health lint check-links check-translation check-manga check-consistency check-all build clean
+.PHONY: help health lint check-links check-translation check-manga check-consistency check-all test build clean commit
 
 # Default target
 help:
@@ -18,6 +18,7 @@ help:
 	@echo "  make check-manga         - Check manga image assets"
 	@echo "  make check-consistency   - Check three-language content consistency"
 	@echo "  make check-all           - Run all quality checks"
+	@echo "  make test                - Alias for check-all (quick shorthand)"
 	@echo ""
 	@echo "Building:"
 	@echo "  make build               - Build all versions (text-book + manga-book)"
@@ -37,6 +38,7 @@ help:
 	@echo "Git:"
 	@echo "  make status              - Show git status"
 	@echo "  make sync                - Pull latest changes from remote"
+	@echo "  make commit              - Interactive commit helper (checks + status + commit)"
 	@echo ""
 
 # Quality Checks
@@ -113,3 +115,28 @@ sync:
 	@echo "🔄 Pulling latest changes from remote..."
 	@git pull
 	@echo "✅ Sync completed!"
+
+commit:
+	@echo "🚀 REOS Interactive Commit Helper"
+	@echo "=================================="
+	@echo ""
+	@echo "Step 1: Running quality checks..."
+	@./check_health.sh || { echo "❌ Health check failed! Fix issues before committing."; exit 1; }
+	@echo ""
+	@echo "Step 2: Git status"
+	@git status
+	@echo ""
+	@echo "Step 3: Ready to commit!"
+	@echo ""
+	@echo "Next steps:"
+	@echo "  1. Review changes above"
+	@echo "  2. Stage files: git add <files>"
+	@echo "  3. Commit: git commit -m \"your message\""
+	@echo "  4. Push: git push"
+	@echo ""
+	@echo "💡 Tip: Pre-commit hook will run health check automatically"
+
+# Testing (alias for check-all)
+test: check-all
+	@echo ""
+	@echo "✅ All tests passed!"
