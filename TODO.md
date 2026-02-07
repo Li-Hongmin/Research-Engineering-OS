@@ -48,7 +48,11 @@
 - [x] ✅ 添加链接有效性检查到 CI workflow（2026-02-06 13:10 创建工具）
   - check_links.sh: 通用链接检查器（支持 --fast 模式）
   - check_manga_images.sh: 专用 manga 图片检查器
-  - **发现问题**: 309 个 broken image links（待修复）
+- [x] ✅ **修复 broken links**（2026-02-07 11:15 完成）
+  - ✅ CODE_OF_CONDUCT.md: 修复 GitHub Discussions 链接
+  - ✅ manga-book/src_ja/: 修复 12 个文件的图片路径（../../images/ → ../images/）
+  - ✅ 265 处图片引用路径统一
+  - Commit: a93d26c
 - [x] ✅ 创建自动翻译同步检查脚本（2026-02-06 08:31 创建，11:15 验证）
   - check_translation_sync.sh 已创建并运行成功
   - 可检测三语言版本的章节完整性和 SUMMARY.md 一致性
