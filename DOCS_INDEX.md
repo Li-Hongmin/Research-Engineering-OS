@@ -22,6 +22,9 @@
 
 | 文档 | 用途 | 目标读者 |
 |------|------|---------|
+| **CONTRIBUTING.md** | 贡献指南（5种贡献方式 + 完整工作流程） | 新贡献者、开发者 |
+| **CODE_OF_CONDUCT.md** | 社区行为准则（Contributor Covenant 2.1） | 所有社区成员 |
+| **CONTENT_REVIEW_CHECKLIST.md** | 系统化内容审查清单（8 大领域） | 内容审查者、质量保障团队 |
 | **IMPROVEMENTS.md** | 改进建议收集、优先级排序 | 内容贡献者、维护者 |
 | **TODO.md** | 待办任务追踪（短/中/长期） | 项目维护者、REOS 自动化 |
 | **STATUS.md** | 实时项目状态、每小时工作日志 | 项目维护者、REOS 自动化 |
@@ -38,6 +41,12 @@
 
 ## 🔧 自动化工具脚本
 
+### 构建与命令管理
+
+| 工具 | 功能 | 使用场景 |
+|------|------|---------|
+| **Makefile** | 统一命令入口（20+ 命令：构建、检查、开发、Git） | 所有开发任务（推荐优先使用） |
+
 ### 健康检查与验证
 
 | 脚本 | 功能 | 使用场景 |
@@ -47,6 +56,7 @@
 | **check_links.sh** | 链接有效性检查（内部+外部） | 定期检查、发布前 |
 | **check_manga_images.sh** | 漫画图片引用完整性检查 | manga-book 修改后 |
 | **check_translation_sync.sh** | 三语言版本同步状态检查 | 翻译后、发布前 |
+| **check_content_consistency.sh** | 三语言内容一致性检查（结构、章节、代码块、图片） | 发布前、定期检查 |
 
 ### 翻译工具
 
@@ -147,13 +157,17 @@ shared/
 ### "我想..."
 
 - **了解项目** → README.md
-- **开始贡献** → TODO.md（找任务）
+- **开始贡献** → CONTRIBUTING.md（完整贡献指南）
 - **理解术语** → GLOSSARY.md
 - **提改进建议** → IMPROVEMENTS.md
 - **查看项目状态** → STATUS.md
-- **检查项目健康** → `bash check_health.sh`
-- **验证翻译同步** → `bash check_translation_sync.sh`
-- **检查链接有效性** → `bash check_links.sh`
+- **查看所有可用命令** → `make help`（推荐）
+- **检查项目健康** → `make health`（或 `bash check_health.sh`）
+- **运行所有检查** → `make check-all`
+- **构建所有版本** → `make build`
+- **验证翻译同步** → `make check-translation`（或 `bash check_translation_sync.sh`）
+- **检查链接有效性** → `make check-links`（或 `bash check_links.sh`）
+- **检查三语言一致性** → `make check-consistency`（或 `bash check_content_consistency.sh`）
 
 ### "我遇到..."
 
@@ -208,4 +222,5 @@ shared/
 - 工作流程变化时更新"文档使用流程"部分
 - 保持"快速查找指南"的实用性
 
-**Last Updated**: 2026-02-06 23:07 JST
+**Last Updated**: 2026-02-07 09:10 JST  
+**Version**: 2.0 - 新增 CONTRIBUTING.md, CODE_OF_CONDUCT.md, CONTENT_REVIEW_CHECKLIST.md, Makefile, check_content_consistency.sh
