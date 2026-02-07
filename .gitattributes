@@ -1,0 +1,74 @@
+# Git Attributes for Research-Engineering-OS
+# https://git-scm.com/docs/gitattributes
+
+# Auto detect text files and normalize line endings to LF in the repository
+* text=auto eol=lf
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.md text
+*.txt text
+*.json text
+*.toml text
+*.yml text
+*.yaml text
+*.sh text eol=lf
+*.py text
+*.js text
+*.ts text
+*.jsx text
+*.tsx text
+*.css text
+*.scss text
+*.html text
+*.xml text
+*.svg text
+
+# Declare files that will always have CRLF line endings on checkout (if any)
+# *.sln text eol=crlf
+
+# Denote all files that are truly binary and should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+
+# Language statistics (exclude generated files)
+# This ensures GitHub language stats are accurate
+*.min.js linguist-generated=true
+*.min.css linguist-generated=true
+book/* linguist-generated=true
+*/book/* linguist-generated=true
+
+# Archive and export settings
+# Exclude build artifacts and development files from git archive
+.gitignore export-ignore
+.gitattributes export-ignore
+.editorconfig export-ignore
+.github/ export-ignore
+__pycache__/ export-ignore
+*.pyc export-ignore
+.venv/ export-ignore
+.venv_translate/ export-ignore
+.vscode/ export-ignore
+
+# Diff behavior for specific file types
+*.md diff=markdown
+*.py diff=python
+*.sh diff=bash
+
+# Merge strategy for specific files
+# Use 'ours' strategy for generated lockfiles if needed
+# package-lock.json merge=ours
