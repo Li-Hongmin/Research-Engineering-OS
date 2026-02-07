@@ -125,7 +125,7 @@ We have customized it for the **Research Engineering OS** project context, which
 ## Questions?
 
 If you have questions about this Code of Conduct, please:
-- Open a [GitHub Discussion](../../discussions)
+- Open a [GitHub Discussion](https://github.com/li-hongmin/Research-Engineering-OS-/discussions)
 - Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for related guidelines
 - Contact the maintainers directly
 

@@ -4,7 +4,7 @@
 
 ### 第1マス
 
-![みなみ面对混乱的项目目录](../../images/03-repo-layout/03_001.png)
+![みなみ面对混乱的项目目录](../images/03-repo-layout/03_001.png)
 
 *みなみが混乱したプロジェクトディレクトリに直面している*
 
@@ -12,7 +12,7 @@
 
 ### 第2マス
 
-![文件命名灾难：final_final_v3_REAL](../../images/03-repo-layout/03_002.png)
+![文件命名灾难：final_final_v3_REAL](../images/03-repo-layout/03_002.png)
 
 *ファイル命名の惨事：final_final_v3_REAL*
 
@@ -20,7 +20,7 @@
 
 ### 第3マス
 
-![找不到上周的代码](../../images/03-repo-layout/03_003.png)
+![找不到上周的代码](../images/03-repo-layout/03_003.png)
 
 *先週のコードが見つからない*
 
@@ -28,7 +28,7 @@
 
 ### 第4コマ
 
-![领悟：混乱的代价是时间](../../images/03-repo-layout/03_004.png)
+![领悟：混乱的代价是时间](../images/03-repo-layout/03_004.png)
 
 *悟り：混乱の代償は時間*
 
@@ -36,7 +36,7 @@
 
 ### 第5コマ
 
-![决心：今天就整理](../../images/03-repo-layout/03_005.png)
+![决心：今天就整理](../images/03-repo-layout/03_005.png)
 
 *決意：今日は整理する*
 
@@ -44,7 +44,7 @@
 
 ### 第6マス
 
-![标准目录结构概念](../../images/03-repo-layout/03_006.png)
+![标准目录结构概念](../images/03-repo-layout/03_006.png)
 
 *標準ディレクトリ構造の概念*
 
@@ -52,7 +52,7 @@
 
 ### 第7コマ
 
-![src/目录：稳定的核心代码](../../images/03-repo-layout/03_007.png)
+![src/目录：稳定的核心代码](../images/03-repo-layout/03_007.png)
 
 *src/ディレクトリ：安定したコアコード*
 
@@ -60,7 +60,7 @@
 
 ### 第8コマ
 
-![experiments/目录：实验性代码](../../images/03-repo-layout/03_008.png)
+![experiments/目录：实验性代码](../images/03-repo-layout/03_008.png)
 
 *experiments/ディレクトリ：実験的なコード*
 
@@ -68,7 +68,7 @@
 
 ### 第9コマ
 
-![configs/目录：所有配置集中](../../images/03-repo-layout/03_009.png)
+![configs/目录：所有配置集中](../images/03-repo-layout/03_009.png)
 
 *configs/ディレクトリ：すべての設定を集約*
 
@@ -76,7 +76,7 @@
 
 ### 第10コマ
 
-![data/目录：数据目录（不提交）](../../images/03-repo-layout/03_010.png)
+![data/目录：数据目录（不提交）](../images/03-repo-layout/03_010.png)
 
 *data/ディレクトリ：データディレクトリ（提出しない）*
 
@@ -84,7 +84,7 @@
 
 ### 第11コマ
 
-![Makefile：一键命令入口](../../images/03-repo-layout/03_011.png)
+![Makefile：一键命令入口](../images/03-repo-layout/03_011.png)
 
 *Makefile：ワンコマンドのエントリーポイント*
 
@@ -92,7 +92,7 @@
 
 ### 第12マス
 
-![README.md：项目首页](../../images/03-repo-layout/03_012.png)
+![README.md：项目首页](../images/03-repo-layout/03_012.png)
 
 *README.md：プロジェクトのホームページ*
 
@@ -100,7 +100,7 @@
 
 ### 第13コマ
 
-![快变量vs慢变量概念](../../images/03-repo-layout/03_013.png)
+![快变量vs慢变量概念](../images/03-repo-layout/03_013.png)
 
 *速い変数 vs 遅い変数の概念*
 
@@ -108,7 +108,7 @@
 
 ### 第14コマ
 
-![错误：把实验代码直接放src](../../images/03-repo-layout/03_014.png)
+![错误：把实验代码直接放src](../images/03-repo-layout/03_014.png)
 
 *エラー：実験コードをそのままsrcに置く*
 
@@ -116,7 +116,7 @@
 
 ### 第15コマ
 
-![后果：稳定代码被破坏](../../images/03-repo-layout/03_015.png)
+![后果：稳定代码被破坏](../images/03-repo-layout/03_015.png)
 
 *結果：安定したコードが破壊される*
 
@@ -124,7 +124,7 @@
 
 ### 第16コマ
 
-![正确做法：毕业制度](../../images/03-repo-layout/03_016.png)
+![正确做法：毕业制度](../images/03-repo-layout/03_016.png)
 
 *正しいやり方：卒業制度*
 
@@ -132,7 +132,7 @@
 
 ### 第17コマ
 
-![实践：定期的代码毕业](../../images/03-repo-layout/03_017.png)
+![实践：定期的代码毕业](../images/03-repo-layout/03_017.png)
 
 *実践：定期的なコードの卒業*
 
@@ -140,7 +140,7 @@
 
 ### 第18コマ
 
-![改造前：混乱的根目录](../../images/03-repo-layout/03_018.png)
+![改造前：混乱的根目录](../images/03-repo-layout/03_018.png)
 
 *改造前：混乱したルートディレクトリ*
 
@@ -148,7 +148,7 @@
 
 ### 第19コマ
 
-![改造后：清晰的结构](../../images/03-repo-layout/03_019.png)
+![改造后：清晰的结构](../images/03-repo-layout/03_019.png)
 
 *改造後：明確な構造*
 
@@ -156,7 +156,7 @@
 
 ### 第20コマ
 
-![好处：新人5分钟上手](../../images/03-repo-layout/03_020.png)
+![好处：新人5分钟上手](../images/03-repo-layout/03_020.png)
 
 *メリット：新人でも5分で使いこなせる*
 
@@ -164,7 +164,7 @@
 
 ### 第21コマ
 
-![好处：自己3个月后也能看懂](../../images/03-repo-layout/03_021.png)
+![好处：自己3个月后也能看懂](../images/03-repo-layout/03_021.png)
 
 *メリット：自分でも3か月後に理解できる*
 
@@ -172,7 +172,7 @@
 
 ### 第22コマ
 
-![10分钟行动：创建基础目录](../../images/03-repo-layout/03_022.png)
+![10分钟行动：创建基础目录](../images/03-repo-layout/03_022.png)
 
 *10分間アクション：基本ディレクトリを作成*
 
@@ -180,7 +180,7 @@
 
 ### 第23コマ
 
-![总结：好结构是投资](../../images/03-repo-layout/03_023.png)
+![总结：好结构是投资](../images/03-repo-layout/03_023.png)
 
 *まとめ：良い構造は投資である*
 
@@ -188,7 +188,7 @@
 
 ### 第24コマ
 
-![提示：使用cookiecutter模板](../../images/03-repo-layout/03_024.png)
+![提示：使用cookiecutter模板](../images/03-repo-layout/03_024.png)
 
 *ヒント：cookiecutterテンプレートを使用*
 
@@ -196,7 +196,7 @@
 
 ### 第25マス
 
-![下一章预告：Git作为证据](../../images/03-repo-layout/03_025.png)
+![下一章预告：Git作为证据](../images/03-repo-layout/03_025.png)
 
 *次章予告：証拠としてのGit*
 
