@@ -180,6 +180,7 @@ Currently, the manga edition requires manual deployment setup.
 - 🤝 **[Contributing Guide](CONTRIBUTING.md)** - How to contribute (5 ways + workflows)
 - 📜 **[Code of Conduct](CODE_OF_CONDUCT.md)** - Community guidelines
 - 📋 **[Changelog](CHANGELOG.md)** - Project history and release notes
+- ⚖️ **[License Selection Guide](LICENSE_GUIDE.md)** - Guide for choosing the right license
 
 ### Content Guidelines
 - **Language**: Chinese primary with English technical terms
