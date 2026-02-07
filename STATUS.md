@@ -1,6 +1,51 @@
 # REOS Project Status
 
-**Last Updated**: 2026-02-07 22:05 JST (Created ARCHITECTURE.md)
+**Last Updated**: 2026-02-07 23:05 JST (Added ARCHITECTURE.md to README)
+
+## 本小时工作（2026-02-07 23:05）
+
+### ✅ 完成任务：将 ARCHITECTURE.md 添加到 README.md
+**时间**: 23:05 (5 分钟)  
+**目的**: 提高项目架构文档的可发现性
+
+**问题背景**:
+- ARCHITECTURE.md 在 22:05 创建，但未在 README.md 中引用
+- 新贡献者可能不知道这个重要文档的存在
+- README.md 是项目的入口，应该包含所有关键文档链接
+
+**完成内容**:
+1. 📝 **更新 README.md**
+   - 在"Quick Links"部分添加 ARCHITECTURE.md
+   - 使用 🏗️ emoji 标识架构文档
+   - 定位在 Quick Start 和 Documentation Index 之间
+   - 描述：Project structure, design decisions, and technical stack
+
+2. 🔖 **更新版本信息**
+   - 版本号: 2.3 → 2.4
+   - 时间戳: 18:05 → 23:05 JST
+   - 版本说明: Added ARCHITECTURE.md to documentation links
+
+3. ✅ **Git 提交**
+   - Commit: a19f3d7
+   - 消息: docs: add ARCHITECTURE.md to README quick links
+   - Pre-commit hook 通过健康检查 ✅
+
+**符合 REOS 原则**:
+- ✅ 小步快跑：5 分钟完成
+- ✅ 可追溯：文件修改记录 + git commit
+- ✅ 增量改进：不破坏现有结构
+- ✅ 自动化：Pre-commit hook 自动验证
+
+**价值**:
+- ✅ 提高架构文档可发现性（减少新贡献者学习曲线）
+- ✅ 完善项目文档导航体系
+- ✅ 与 DOCS_INDEX.md 形成互补（README = 快速入口，DOCS_INDEX = 完整索引）
+
+**下一步**:
+- [ ] 考虑在 CONTRIBUTING.md 中也引用 ARCHITECTURE.md（帮助贡献者理解项目结构）
+- [ ] 定期审查 README.md 文档链接是否完整
+
+---
 
 ## 本小时工作（2026-02-07 22:05）
 
