@@ -31,6 +31,9 @@ help:
 	@echo "  make serve-text          - Serve text-book locally (port 8000)"
 	@echo "  make serve-manga         - Serve manga-book locally (port 8001)"
 	@echo ""
+	@echo "Statistics:"
+	@echo "  make stats               - Show comprehensive project statistics"
+	@echo ""
 	@echo "Git:"
 	@echo "  make status              - Show git status"
 	@echo "  make sync                - Pull latest changes from remote"
@@ -97,6 +100,10 @@ serve-text:
 serve-manga:
 	@echo "🌐 Serving manga-book at http://localhost:8001"
 	@cd manga-book/book && python3 -m http.server 8001
+
+# Statistics
+stats:
+	@./project_stats.sh
 
 # Git
 status:
