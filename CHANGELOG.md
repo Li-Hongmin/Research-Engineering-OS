@@ -10,6 +10,12 @@ and this project uses date-based versioning (YYYY-MM-DD).
 ## [2026-02-07] - Latest
 
 ### Added
+- **License Selection Guide** (`LICENSE_GUIDE.md`)
+  - Comprehensive guide for choosing the right open source license
+  - Analyzes 5 common licenses (CC-BY-4.0, CC-BY-SA-4.0, MIT, Apache-2.0, GPL-3.0)
+  - **Recommends CC-BY-4.0** for REOS: educational-friendly, allows commercial use, requires attribution
+  - Provides dual-license option (MIT for code + CC-BY-4.0 for content)
+  - Includes implementation steps and decision checklist
 - **Project Statistics Tool** (`project_stats.sh`)
   - 7 major statistics categories: documentation, manga, images, scripts, git repo
   - Colorful output for better readability
