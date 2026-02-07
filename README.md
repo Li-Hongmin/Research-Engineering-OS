@@ -176,6 +176,7 @@ Currently, the manga edition requires manual deployment setup.
 
 ### Quick Links
 - ⚡ **[Quick Start](QUICKSTART.md)** - 5-10 minute guide for new contributors
+- 🏗️ **[Architecture](ARCHITECTURE.md)** - Project structure, design decisions, and technical stack
 - 📚 **[Documentation Index](DOCS_INDEX.md)** - Complete navigation to all project docs
 - ✅ **[Content Review Checklist](CONTENT_REVIEW_CHECKLIST.md)** - Systematic quality review guide
 - 🤝 **[Contributing Guide](CONTRIBUTING.md)** - How to contribute (5 ways + workflows)
@@ -245,5 +246,5 @@ For questions or contributions, please reach out through:
 
 ---
 
-**Last Updated**: 2026-02-07 18:05 JST
-**Version**: 2.3 (Updated project statistics, contact info, and health status)
+**Last Updated**: 2026-02-07 23:05 JST
+**Version**: 2.4 (Added ARCHITECTURE.md to documentation links)
