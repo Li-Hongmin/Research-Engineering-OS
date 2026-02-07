@@ -30,6 +30,13 @@
 | **STATUS.md** | 实时项目状态、每小时工作日志 | 项目维护者、REOS 自动化 |
 | **CLAUDE.md** | Claude 工作上下文和指导 | AI 助手、维护者 |
 
+### 项目管理文档
+
+| 文档 | 用途 | 目标读者 |
+|------|------|---------|
+| **CHANGELOG.md** | 项目变更日志（Keep a Changelog 格式） | 用户、贡献者、维护者 |
+| **LICENSE_GUIDE.md** | 许可证选择指南（5种许可证对比 + 推荐） | 项目维护者、Fork 项目者 |
+
 ### 技术报告文档
 
 | 文档 | 用途 | 目标读者 |
@@ -222,5 +229,5 @@ shared/
 - 工作流程变化时更新"文档使用流程"部分
 - 保持"快速查找指南"的实用性
 
-**Last Updated**: 2026-02-07 09:10 JST  
-**Version**: 2.0 - 新增 CONTRIBUTING.md, CODE_OF_CONDUCT.md, CONTENT_REVIEW_CHECKLIST.md, Makefile, check_content_consistency.sh
+**Last Updated**: 2026-02-07 17:07 JST  
+**Version**: 2.1 - 新增 CHANGELOG.md, LICENSE_GUIDE.md
