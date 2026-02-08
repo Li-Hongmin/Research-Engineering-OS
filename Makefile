@@ -17,6 +17,7 @@ help:
 	@echo "  make check-translation   - Check translation synchronization"
 	@echo "  make check-manga         - Check manga image assets"
 	@echo "  make check-consistency   - Check three-language content consistency"
+	@echo "  make check-architecture  - Verify project structure vs ARCHITECTURE.md"
 	@echo "  make check-all           - Run all quality checks"
 	@echo "  make test                - Alias for check-all (quick shorthand)"
 	@echo ""
@@ -70,7 +71,11 @@ check-consistency:
 	@echo "📊 Checking three-language content consistency..."
 	@./check_content_consistency.sh
 
-check-all: health lint check-links check-translation check-manga check-consistency
+check-architecture:
+	@echo "🏗️ Verifying project structure against ARCHITECTURE.md..."
+	@./check_architecture.sh
+
+check-all: health lint check-links check-translation check-manga check-consistency check-architecture
 	@echo ""
 	@echo "✅ All quality checks completed!"
 

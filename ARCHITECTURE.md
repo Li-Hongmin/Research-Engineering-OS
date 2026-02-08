@@ -26,10 +26,8 @@ Research-Engineering-OS-/
 │   ├── src/                    # 中文源文件
 │   ├── src_en/                 # 英文源文件
 │   ├── src_ja/                 # 日文源文件
-│   ├── book.toml               # 中文配置
-│   ├── book_en.toml            # 英文配置
-│   ├── book_ja.toml            # 日文配置
-│   └── build_all.sh            # 三语言构建脚本
+│   ├── book.toml               # mdBook 配置（动态修改支持三语言）
+│   └── build_all.sh            # 三语言构建脚本（动态切换 src 目录）
 │
 ├── 📖 manga-book/              # 漫画书（图文版）
 │   ├── src/                    # 中文源文件
