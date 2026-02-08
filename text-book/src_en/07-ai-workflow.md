@@ -180,19 +180,19 @@ Danger signals:
 
 The following code must not be accepted blindly in an AI-generated version; it must be carefully reviewed by a human:
 
-- **Data processing:** data loading, preprocessing, splitting, augmentation  
-- **Model core:** loss functions, key modules (attention, normalization, etc.)  
-- **Evaluation logic:** metric computation, post-processing, threshold selection  
-- **Randomness control:** random seed configuration, random sampling logic  
-- **Hyperparameters:** learning-rate scheduling, weight decay, dropout rate  
+- **Data processing:** data loading, preprocessing, splitting, augmentation
+- **Model core:** loss functions, key modules (attention, normalization, etc.)
+- **Evaluation logic:** metric computation, post-processing, threshold selection
+- **Randomness control:** random seed configuration, random sampling logic
+- **Hyperparameters:** learning-rate scheduling, weight decay, dropout rate
 
 **Review checklist:**
 
-- Logical correctness (is the algorithm implemented correctly?)  
-- Boundary conditions (what happens with empty data or extreme values?)  
-- Data consistency (are training and testing logic consistent?)  
-- Randomness (is the seed set correctly? is it reproducible?)  
-- Performance impact (will it be extremely slow? will memory blow up?)  
+- Logical correctness (is the algorithm implemented correctly?)
+- Boundary conditions (what happens with empty data or extreme values?)
+- Data consistency (are training and testing logic consistent?)
+- Randomness (is the seed set correctly? is it reproducible?)
+- Performance impact (will it be extremely slow? will memory blow up?)
 
 ### Principle 5: Add minimal tests first, then modify core logic
 
@@ -229,10 +229,10 @@ The following code must not be accepted blindly in an AI-generated version; it m
 
 **Benefits of test-first:**
 
-- Clarifies current behavior (as a baseline for regression tests)  
-- Quickly validates refactoring (1 minute instead of 1 hour of experiments)  
-- Avoids breaking existing functionality  
-- Forces you to think about “what the correct behavior is”  
+- Clarifies current behavior (as a baseline for regression tests)
+- Quickly validates refactoring (1 minute instead of 1 hour of experiments)
+- Avoids breaking existing functionality
+- Forces you to think about “what the correct behavior is”
 
 ## AI Rules Page (CLAUDE.md): Team consensus for collaboration
 

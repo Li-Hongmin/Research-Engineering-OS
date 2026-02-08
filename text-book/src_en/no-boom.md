@@ -440,15 +440,15 @@ if __name__ == "__main__":
 
 Do not wait until:
 
-- ❌ all experiments are finished  
-- ❌ you start writing the paper  
-- ❌ you are preparing for submission  
+- ❌ all experiments are finished
+- ❌ you start writing the paper
+- ❌ you are preparing for submission
 
 Instead, do it when:
 
-- ✅ you have the first promising result (even if it is not yet perfect)  
-- ✅ you have confirmed the overall technical direction  
-- ✅ you can answer “what this project ultimately aims to demonstrate”  
+- ✅ you have the first promising result (even if it is not yet perfect)
+- ✅ you have confirmed the overall technical direction
+- ✅ you can answer “what this project ultimately aims to demonstrate”
 
 **Rule of thumb:** Establish the reproducibility baseline 3 months before the paper deadline. For a conference paper (a 6-month project), establish it in month 3.
 
@@ -481,9 +481,9 @@ Instead, do it when:
 
 Only add validations that **reviewers will definitely ask for**:
 
-- If you can only choose one: add a fair baseline comparison  
-- If you can choose two: additionally add the main ablation study  
-- For the rest: you can state “due to time constraints, left for future work”  
+- If you can only choose one: add a fair baseline comparison
+- If you can choose two: additionally add the main ablation study
+- For the rest: you can state “due to time constraints, left for future work”
 
 ##### Priority 3: Write Minimal Reproducibility Documentation (1 day)
 
@@ -491,10 +491,10 @@ Only add validations that **reviewers will definitely ask for**:
 # Minimal reproducibility documentation includes:
 ```
 
-1. Environment specification (Python version, key library versions)  
-2. Data acquisition method (links or contact information)  
-3. Execution commands (even if there is only one)  
-4. Expected results (numerical ranges)  
+1. Environment specification (Python version, key library versions)
+2. Data acquisition method (links or contact information)
+3. Execution commands (even if there is only one)
+4. Expected results (numerical ranges)
 5. Known issues (honestly describe reproducibility difficulties)
 
 ### If There Is Only 1 Week Left Until the Deadline

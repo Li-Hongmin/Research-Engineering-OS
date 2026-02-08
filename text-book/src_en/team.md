@@ -58,10 +58,10 @@ The counterintuitive part of teamwork is this: **each individual may be highly c
 
 Everyone carries a lot of information in their head that “only they know”:
 
-- Why this parameter is set to this value  
-- Why this code is written this way  
-- Why this experiment failed  
-- Why this dataset must be processed in this manner  
+- Why this parameter is set to this value
+- Why this code is written this way
+- Why this experiment failed
+- Why this dataset must be processed in this manner
 
 When collaboration is required, this tacit knowledge becomes a bottleneck—others can only “wait until you have time to explain,” while you are interrupted repeatedly.
 
@@ -69,9 +69,9 @@ When collaboration is required, this tacit knowledge becomes a bottleneck—othe
 
 Without clear division of labor and interfaces, you end up with:
 
-- Two people writing functionally identical code with different implementations  
-- Two people processing the same data in different ways  
-- Two people running the same experiment but recording it differently  
+- Two people writing functionally identical code with different implementations
+- Two people processing the same data in different ways
+- Two people running the same experiment but recording it differently
 
 On the surface it looks like “parallel work,” but in reality it is “wasted compute and time.”
 
@@ -79,10 +79,10 @@ On the surface it looks like “parallel work,” but in reality it is “wasted
 
 Everyone “does well” on their own branch, but when merging you find:
 
-- Incompatible interfaces  
-- Dependency version conflicts  
-- Inconsistent configuration methods  
-- Inconsistent evaluation criteria  
+- Incompatible interfaces
+- Dependency version conflicts
+- Inconsistent configuration methods
+- Inconsistent evaluation criteria
 
 In the end, the time spent on “merging and alignment” exceeds the time spent on development.
 
@@ -92,10 +92,10 @@ A personal project can be “anything goes”—after all, only you need to unde
 
 But a team project requires **explicit standards**:
 
-- How code should be written  
-- How experiments should be recorded  
-- How changes should be merged  
-- How issues should be communicated  
+- How code should be written
+- How experiments should be recorded
+- How changes should be merged
+- How issues should be communicated
 
 **No standards = everyone uses their own approach = collaboration becomes impossible.**
 
@@ -143,10 +143,10 @@ But a team project requires **explicit standards**:
 
 **Naming principles:**
 
-- Use full words; avoid abbreviations (unless they are widely accepted, such as num, max, avg)  
-- Start function names with verbs (compute, load, save, train, evaluate)  
-- Use nouns for variable names (model, dataset, config, metrics)  
-- Prefix boolean variables with is/has/should (is_training, has_attention, should_save)  
+- Use full words; avoid abbreviations (unless they are widely accepted, such as num, max, avg)
+- Start function names with verbs (compute, load, save, train, evaluate)
+- Use nouns for variable names (model, dataset, config, metrics)
+- Prefix boolean variables with is/has/should (is_training, has_attention, should_save)
 
 ### Commenting Standards: Written for Future You and Your Teammates
 
