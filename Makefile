@@ -33,8 +33,10 @@ help:
 	@echo "  make serve-text          - Serve text-book locally (port 8000)"
 	@echo "  make serve-manga         - Serve manga-book locally (port 8001)"
 	@echo ""
-	@echo "Statistics:"
+	@echo "Statistics & Reports:"
 	@echo "  make stats               - Show comprehensive project statistics"
+	@echo "  make weekly-report       - Generate weekly activity report"
+	@echo "  make report              - Alias for weekly-report"
 	@echo ""
 	@echo "Git:"
 	@echo "  make status              - Show git status"
@@ -108,9 +110,16 @@ serve-manga:
 	@echo "🌐 Serving manga-book at http://localhost:8001"
 	@cd manga-book/book && python3 -m http.server 8001
 
-# Statistics
+# Statistics & Reports
 stats:
 	@./project_stats.sh
+
+weekly-report:
+	@echo "📊 Generating weekly activity report..."
+	@./generate_weekly_report.sh
+
+report: weekly-report
+	@echo "✅ Report saved to reports/"
 
 # Git
 status:
