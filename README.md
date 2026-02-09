@@ -232,7 +232,7 @@ Current status: ✅ **EXCELLENT** (as of 2026-02-10 02:06 JST)
 - 3 language versions synchronized
 - 65k+ words across all editions (text-book 42k + manga 9k + docs 14k)
 - All builds passing
-- 201 total commits, 9 automation scripts
+- 207 total commits, 9 automation scripts
 
 ## ⚖️ License
 
@@ -247,5 +247,5 @@ For questions or contributions, please reach out through:
 
 ---
 
-**Last Updated**: 2026-02-10 03:05 JST
-**Version**: 2.5.1 (Updated project statistics: 929 files, 668 images, 203 commits)
+**Last Updated**: 2026-02-10 06:05 JST
+**Version**: 2.5.2 (Updated project statistics: 929 files, 668 images, 207 commits)
