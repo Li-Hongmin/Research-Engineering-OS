@@ -226,12 +226,13 @@ The project includes comprehensive health check tools (also available via Makefi
 - **PR Comments**: Automated health status feedback on pull requests
 
 ### Project Health Status
-Current status: ✅ **EXCELLENT** (as of 2026-02-07 18:05 JST)
-- 923 Markdown files validated
-- 671 images (139 text-book + 264 manga + 268 other assets)
+Current status: ✅ **EXCELLENT** (as of 2026-02-10 02:06 JST)
+- 929 Markdown files validated
+- 668 images (136 text-book + 264 manga + 268 other assets)
 - 3 language versions synchronized
-- 65k+ words across all editions
+- 65k+ words across all editions (text-book 42k + manga 9k + docs 14k)
 - All builds passing
+- 201 total commits, 9 automation scripts
 
 ## ⚖️ License
 
@@ -246,5 +247,5 @@ For questions or contributions, please reach out through:
 
 ---
 
-**Last Updated**: 2026-02-07 23:05 JST
-**Version**: 2.4 (Added ARCHITECTURE.md to documentation links)
+**Last Updated**: 2026-02-10 02:06 JST
+**Version**: 2.5 (Updated project statistics: 929 files, 668 images, 201 commits)
