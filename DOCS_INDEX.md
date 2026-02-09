@@ -39,6 +39,7 @@
 | **ARCHITECTURE.md** | 项目架构、技术栈、设计决策、目录结构 | 新贡献者、维护者、架构师 |
 | **CHANGELOG.md** | 项目变更日志（Keep a Changelog 格式） | 用户、贡献者、维护者 |
 | **LICENSE_GUIDE.md** | 许可证选择指南（5种许可证对比 + 推荐） | 项目维护者、Fork 项目者 |
+| **MAINTENANCE.md** | 项目维护指南（日常、周报、构建、故障排查） | 项目维护者、REOS 自动化、运维人员 |
 
 ### 技术报告文档
 
@@ -235,5 +236,5 @@ shared/
 - 工作流程变化时更新"文档使用流程"部分
 - 保持"快速查找指南"的实用性
 
-**Last Updated**: 2026-02-09 12:06 JST  
-**Version**: 2.4 - 新增 FAQ.md（常见问题解答）
+**Last Updated**: 2026-02-09 13:06 JST  
+**Version**: 2.5 - 新增 MAINTENANCE.md（项目维护指南）
