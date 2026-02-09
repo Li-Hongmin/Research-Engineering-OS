@@ -247,5 +247,5 @@ For questions or contributions, please reach out through:
 
 ---
 
-**Last Updated**: 2026-02-10 02:06 JST
-**Version**: 2.5 (Updated project statistics: 929 files, 668 images, 201 commits)
+**Last Updated**: 2026-02-10 03:05 JST
+**Version**: 2.5.1 (Updated project statistics: 929 files, 668 images, 203 commits)
