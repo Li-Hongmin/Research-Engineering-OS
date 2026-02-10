@@ -1,37 +1,39 @@
-# From “It Runs” to “Trustworthy”: Only a Definition of Done Away
+# From "It Runs" to "Trustworthy": Only a Definition of Done Away
 
-## Story: The Cost of “Good Enough”
+![Illustration](../images/05_checklist_complete.png)
+
+## Story: The Cost of "Good Enough"
 
 ![完成清单](../images/comics/05_checklist_hero.png)
 
 ![05 03 almost done trap](../images/comics/05_03_almost_done_trap.png)
-At 2 a.m., you finally get a “pretty good-looking” result—test accuracy 94.3%, 3 percentage points higher than the baseline. Excited, you take a screenshot and post it to the team chat: “The new method works!”
+At 2 a.m., you finally get a "pretty good-looking" result-test accuracy 94.3%, 3 percentage points higher than the baseline. Excited, you take a screenshot and post it to the team chat: "The new method works!"
 
 Three days later, when you are ready to write the paper, you want to rerun the experiment to verify the result. You open the code and hesitate:
 
-- Which configuration file did I use? There are three similar yaml files; I can’t remember.
+- Which configuration file did I use? There are three similar yaml files; I can't remember.
 - Which version of the data did I use? I think I temporarily changed the split once.
 - What was the random seed? I forgot to record it.
 - Was the code committed at the time? Or were there temporary local edits?
 
 You bite the bullet and rerun it. The result comes out: 92.7%. That is 1.6 percentage points lower than before.
 
-Your heart sinks—so which run is correct? Or are both unreliable?
+Your heart sinks-so which run is correct? Or are both unreliable?
 
-**The problem in this scenario is: you do not have a clear standard for judging whether “an experiment is done.”**
+**The problem in this scenario is: you do not have a clear standard for judging whether "an experiment is done."**
 
-In software engineering, there is a concept called **Definition of Done (DoD)**—the definition of completion. It answers: “When can I say this task is truly finished?”
+In software engineering, there is a concept called **Definition of Done (DoD)**-the definition of completion. It answers: "When can I say this task is truly finished?"
 
 In research, we also need a DoD, but with different standards:
 
 - Engineering DoD: the code runs, tests pass, documentation is complete.
 - Research DoD: results are trustworthy, reproducible, and comparable.
 
-## Why “It Runs” ≠ “Done”
+## Why "It Runs" ≠ "Done"
 
-In research, there are many situations that “look finished but actually plant landmines”:
+In research, there are many situations that "look finished but actually plant landmines":
 
-### Landmine 1: “Got a result” but cannot reproduce it
+### Landmine 1: "Got a result" but cannot reproduce it
 
 ![05 04 mine reproduce](../images/comics/05_04_mine_reproduce.png)
 **Symptom:** You see a good result, but lack complete records of the environment, configuration, and data version. A few days later, you try to rerun it and the numbers do not match.
@@ -40,9 +42,9 @@ In research, there are many situations that “look finished but actually plant 
 
 - You panic when reviewers ask for reproducibility;
 - Teammates cannot build on your results;
-- Worst case: the paper is rejected because the “results are not reproducible.”
+- Worst case: the paper is rejected because the "results are not reproducible."
 
-### Landmine 2: “Improvement works” but you do not know why
+### Landmine 2: "Improvement works" but you do not know why
 
 ![05 05 mine unknown why](../images/comics/05_05_mine_unknown_why.png)
 
@@ -54,7 +56,7 @@ In research, there are many situations that “look finished but actually plant 
 - You do not know what to keep or discard in subsequent iterations;
 - You may mistakenly treat ineffective or even harmful changes as the key contribution.
 
-### Landmine 3: “Comparative experiments” but inconsistent evaluation protocol
+### Landmine 3: "Comparative experiments" but inconsistent evaluation protocol
 
 ![05 06 mine unfair eval](../images/comics/05_06_mine_unfair_eval.png)
 **Symptom:** Your method and the baseline use different evaluation scripts, or different post-processing. Your method appears better, but the comparison is actually unfair.
@@ -63,11 +65,11 @@ In research, there are many situations that “look finished but actually plant 
 
 - Reviewers point out the unfair evaluation and ask you to redo it;
 - After rerunning, the advantage disappears;
-- You waste substantial time “equalizing” the evaluation.
+- You waste substantial time "equalizing" the evaluation.
 
 ## DoD Checklist for Paper-Candidate Conclusions
 
-The following checklist applies to any experimental result that “might go into the paper.” It is recommended to paste it verbatim into the project README as a team consensus.
+The following checklist applies to any experimental result that "might go into the paper." It is recommended to paste it verbatim into the project README as a team consensus.
 
 ### Minimal DoD (5 mandatory items)
 
@@ -102,9 +104,9 @@ The following checklist applies to any experimental result that “might go into
 - Use exactly the same post-processing;
 - Use consistent metric computation logic (e.g., the same thresholds and the same averaging scheme).
 
-    **Acceptance criterion:** you can point to a single unified evaluation script, and all methods’ metrics come from that script.
+    **Acceptance criterion:** you can point to a single unified evaluation script, and all methods' metrics come from that script.
 
-4.  **At least one smoke test runs in 1–3 minutes**
+4.  **At least one smoke test runs in 1-3 minutes**
 
     A smoke test is a quick test that validates the core pipeline, aiming to catch obvious errors as early as possible.
 
@@ -115,7 +117,7 @@ The following checklist applies to any experimental result that “might go into
 - Loss computation (values are reasonable; no NaN)
 - Evaluation pipeline (metrics are computed correctly)
 
-    **Implementation suggestion:** use a tiny data subset (e.g., 10 samples), run 2–3 iterations, and ensure the end-to-end pipeline is intact.
+    **Implementation suggestion:** use a tiny data subset (e.g., 10 samples), run 2-3 iterations, and ensure the end-to-end pipeline is intact.
 
 5.  **Figures are generated by scripts, not manual drag-and-drop**
 
@@ -143,7 +145,7 @@ After meeting the minimal DoD, the following items can further improve result cr
 
     For experiments with substantial randomness, a single run is insufficient to demonstrate effectiveness. Recommended:
 
-- Run with at least 3–5 different random seeds;
+- Run with at least 3-5 different random seeds;
 - Report mean and standard deviation (or confidence intervals);
 - List the run_id corresponding to each seed in the run records.
 
@@ -184,7 +186,7 @@ After meeting the minimal DoD, the following items can further improve result cr
 
 - Time-series data: ensure the test set is temporally later than the training set.
 
-## DoD Checklist: Operational Steps from “It Runs” to “It’s Trustworthy”
+## DoD Checklist: Operational Steps from "It Runs" to "It's Trustworthy"
 
 ![质量门](../images/comics/05_quality_gate.png)
 
@@ -214,7 +216,7 @@ After meeting the minimal DoD, the following items can further improve result cr
     Check:
 
 - Does it run smoothly (without errors)?
-- Are the results within a reasonable range (difference no more than 1–2% or one standard deviation)?
+- Are the results within a reasonable range (difference no more than 1-2% or one standard deviation)?
 - If the discrepancy is large, investigate the cause (environment, data, randomness).
 
 2. **Comparative experiment check**
@@ -326,7 +328,7 @@ When a project needs to be handed over (e.g., student graduation, team member de
 
 ### As a Self-Audit Standard
 
-Even for individual projects, DoD helps you avoid “fooling yourself”:
+Even for individual projects, DoD helps you avoid "fooling yourself":
 
 - Regularly (e.g., weekly) check experiments that have not completed DoD and fill in missing records;
 - Perform batch checks before writing the paper to avoid last-minute scrambling;
@@ -334,25 +336,25 @@ Even for individual projects, DoD helps you avoid “fooling yourself”:
 
 ## Common Obstacles and Solutions
 
-### Obstacle 1: “I’m just exploring right now; there’s no need to be so strict.”
+### Obstacle 1: "I'm just exploring right now; there's no need to be so strict."
 
 **Rebuttal:** During exploration, you may **lower the DoD standard**, but you cannot have no standard at all.
 
-Recommended “simplified DoD for the exploration phase”:
+Recommended "simplified DoD for the exploration phase":
 
 - No requirement for multiple-run statistics;
 - No requirement for complete ablation studies;
 - **But must**: record commit, config, and seed to ensure it can be rerun.
 
-Once an experiment “seems valuable,” immediately upgrade to the full DoD.
+Once an experiment "seems valuable," immediately upgrade to the full DoD.
 
-### Obstacle 2: “Meeting DoD takes too much time.”
+### Obstacle 2: "Meeting DoD takes too much time."
 
 **Response:** A one-time investment of 30 minutes yields:
 
 - No need for emergency patch-ups during review (saves days);
 - A clear baseline for subsequent improvements (saves repeated work);
-- No anxiety about “not being reproducible” at submission time (reduces psychological burden).
+- No anxiety about "not being reproducible" at submission time (reduces psychological burden).
 
 **Practical suggestions:**
 
@@ -360,7 +362,7 @@ Once an experiment “seems valuable,” immediately upgrade to the full DoD.
 - Add checks in Git pre-commit hooks (see Chapter 7);
 - With proficiency, DoD will integrate into daily workflows and no longer be an extra cost.
 
-### Obstacle 3: “We already have experiment management tools (e.g., MLflow, W&B).”
+### Obstacle 3: "We already have experiment management tools (e.g., MLflow, W&B)."
 
 **Response:** Tools are great, but DoD is a **standard**, not a tool.
 
@@ -372,17 +374,17 @@ Tools can help you:
 
 But tools cannot replace:
 
-- Your definition of “what counts as done”;
+- Your definition of "what counts as done";
 
-- Your checks on “whether the evaluation is fair”;
+- Your checks on "whether the evaluation is fair";
 
-- Your verification of “whether the code is reproducible”.
+- Your verification of "whether the code is reproducible".
 
-**Recommendation:** Combine the DoD checklist with tooling; for example, record a “DoD compliance status” field in the MLflow run.
+**Recommendation:** Combine the DoD checklist with tooling; for example, record a "DoD compliance status" field in the MLflow run.
 
 ## 10-Minute Action: Perform a DoD Check on the Current Best Result
 
-If you do only one thing right now: perform a complete DoD check on your currently “most promising” experimental result.
+If you do only one thing right now: perform a complete DoD check on your currently "most promising" experimental result.
 
 1. **Find the run_id for this experiment** (if it does not exist, create one now)
 

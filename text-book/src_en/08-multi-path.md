@@ -1,6 +1,8 @@
 # How to Explore Multiple Paths Without Turning Everything into a Garbage Heap
 
-## Story Introduction: From “Flexible Exploration” to “Afraid to Touch Anything”
+![Illustration](../images/08_exploration_branches.png)
+
+## Story Introduction: From "Flexible Exploration" to "Afraid to Touch Anything"
 
 ![研究十字路口](../images/comics/08_crossroads.png)
 
@@ -14,7 +16,7 @@ Your research project has reached its third month. You are a diligent researcher
 
 - Path D: Adjust the loss function (6 different loss combinations)
 
-You are excited—so much exploration! You will surely find an effective combination!
+You are excited-so much exploration! You will surely find an effective combination!
 
 But when you open the project directory, what you see looks like this:
 
@@ -53,12 +55,12 @@ You remember that one experiment performed very well, but you cannot recall whic
 
 ### Problem 2: You dare not delete anything
 
-`outputs/` already occupies 50GB, but you do not dare delete any directory—what if the one you delete is exactly the experiment needed for the paper? You decide to “keep it for now; the disk is large enough anyway.”
+`outputs/` already occupies 50GB, but you do not dare delete any directory-what if the one you delete is exactly the experiment needed for the paper? You decide to "keep it for now; the disk is large enough anyway."
 
 ### Problem 3: You cannot compare different paths
 
 ![08 10 path comparison](../images/comics/08_10_path_comparison.png)
-You want to compare the effects of “Path A (attention improvements)” and “Path B (learning-rate optimization),” but you discover that:
+You want to compare the effects of "Path A (attention improvements)" and "Path B (learning-rate optimization)," but you discover that:
 
 - They use different baselines (one from three months ago, one from recently)
 
@@ -84,7 +86,7 @@ The essence of research is **uncertainty**: you do not know which path will succ
 
 ### Three Stages of Losing Control
 
-#### Stage 1: Rapid Exploration (Weeks 1–4)
+#### Stage 1: Rapid Exploration (Weeks 1-4)
 
 **Behavior:**
 
@@ -92,11 +94,11 @@ The essence of research is **uncertainty**: you do not know which path will succ
 
 - Copy and paste code, change the name, and use it
 
-- Put outputs wherever convenient—“just get it running first”
+- Put outputs wherever convenient-"just get it running first"
 
 **Feeling:** full of energy, rapid progress.
 
-#### Stage 2: Path Divergence (Weeks 5–8)
+#### Stage 2: Path Divergence (Weeks 5-8)
 
 **Behavior:**
 
@@ -122,7 +124,7 @@ The essence of research is **uncertainty**: you do not know which path will succ
 
 **Feeling:** anxious, powerless, wanting to start over.
 
-### Root Cause: Lack of “Discardable” and “Mergeable” Mechanisms
+### Root Cause: Lack of "Discardable" and "Mergeable" Mechanisms
 
 The core challenges of multi-path exploration are:
 
@@ -408,7 +410,7 @@ When comparing all paths, you must use **the same baseline**:
 - Training time: 2.5 hours
 
     ## Purpose
-    The comparison baseline for all paths (A–Z).
+    The comparison baseline for all paths (A-Z).
     Any improvement from any path should be reported relative to this baseline.
 
     ## Reproduction
@@ -622,7 +624,7 @@ Benefits:
 
 ## Frequently Asked Questions and Solutions
 
-### Q1: There are too many paths—what if I cannot keep track of them?
+### Q1: There are too many paths-what if I cannot keep track of them?
 **Solution:** Maintain a path tracking table.
 
 ```md
@@ -640,7 +642,7 @@ Benefits:
 Baseline: 0.920 (outputs/baseline/2026-02-01_1030_baseline)
 
 ## Plan for Next Week
-- Path A: complete ablation studies to confirm each component’s contribution
+- Path A: complete ablation studies to confirm each component's contribution
 - Path C: run more seeds to verify stability
 - Path E: initial implementation and validation
 ```
@@ -730,9 +732,9 @@ If you do only one thing right now: inventory and categorize all current explora
 
     Create `docs/EXPLORATION_TRACKER.md` to record all active paths.
 
-5.  **Schedule next week’s cleanup time**
+5.  **Schedule next week's cleanup time**
 
-    Add to your calendar: **Every Friday 17:00 – Exploration Path Cleanup (30 minutes)}
+    Add to your calendar: **Every Friday 17:00 - Exploration Path Cleanup (30 minutes)}
 
 After completing this 10-minute action, you will immediately feel:
 
@@ -740,6 +742,6 @@ After completing this 10-minute action, you will immediately feel:
 
 - Clarity on which paths are worth continuing and which should be abandoned
 
-- No longer worrying that the “junk pile” will spiral out of control
+- No longer worrying that the "junk pile" will spiral out of control
 
 **Remember: multi-path exploration is an essential feature of research, but unmanaged multi-path exploration becomes a disaster. Regular cleanup is not a burden; it is a necessary ritual for staying clear-headed.**

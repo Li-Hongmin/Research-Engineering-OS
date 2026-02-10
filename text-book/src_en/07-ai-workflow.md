@@ -1,5 +1,7 @@
 # After an AI Coding Assistant Joins, the Workflow Must Be Upgraded
 
+![Illustration](../images/07_ai_collaboration.png)
+
 ## Story Setup: When AI Turns from an Accelerator into a Landmine Factory
 
 You spent a month rapidly building a complex multimodal learning framework with the help of Copilot. The code generation speed was astonishing—previously you could write 200 lines a day; now you could write 500 lines in half a day. You felt your productivity had multiplied severalfold.

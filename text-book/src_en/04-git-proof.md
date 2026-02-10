@@ -1,35 +1,37 @@
-# Git Is Not for “Saving Code”; It Is for “Proving History”
+# Git Is Not for "Saving Code"; It Is for "Proving History"
 
-## Story Setup: Reviewers Ask for Reproducibility, but You Can’t Find the Code from Back Then
+![Illustration](../images/04_git_timeline.png)
+
+## Story Setup: Reviewers Ask for Reproducibility, but You Can't Find the Code from Back Then
 
 ![Git侦探](../images/comics/04_git_detective.png)
 
 ![04 04 reviewer crisis](../images/comics/04_04_reviewer_crisis.png)
-Three months after submitting your paper, the reviews arrive. One comment is blunt: “Please provide the code and data; we would like to reproduce the results in Table 3.”
+Three months after submitting your paper, the reviews arrive. One comment is blunt: "Please provide the code and data; we would like to reproduce the results in Table 3."
 
-Your heart sinks—you quickly open the repository. But what you see makes your back go cold:
+Your heart sinks-you quickly open the repository. But what you see makes your back go cold:
 
-- The Git history contains only a handful of commits: “initial commit,” “update,” “fix bug,” “final version”;
+- The Git history contains only a handful of commits: "initial commit," "update," "fix bug," "final version";
 - The results in the paper were produced three months ago, and you can no longer remember which version of the code was used;
 - The code directory contains multiple versions of the training script: `train.py`, `train_v2.py`, `train_final.py`, and you are not sure which one was used;
 - Worse still, you realize that you recently refactored the model code heavily for new experiments, and the current version can no longer reproduce the numbers reported in the paper.
 
-You can only reply stiffly: “We are organizing the code and will provide it as soon as possible.” Then begins the painful “archaeology”—trying to reconstruct the code state from memory, chat logs, and experiment notes.
+You can only reply stiffly: "We are organizing the code and will provide it as soon as possible." Then begins the painful "archaeology"-trying to reconstruct the code state from memory, chat logs, and experiment notes.
 
 **Does this scenario feel familiar?**
 
-## Why “Casual Commits” Won’t Save You
+## Why "Casual Commits" Won't Save You
 
-Many people think they are using Git, but in practice they treat it as a “cloud drive”:
+Many people think they are using Git, but in practice they treat it as a "cloud drive":
 
-- They change a lot of code and commit everything at once, with a message like “update”;
+- They change a lot of code and commit everything at once, with a message like "update";
 - They never use branches; all changes accumulate on `main`;
-- They only remember to commit after an experiment finishes—by then the code has already changed again;
-- The commit history provides no clue as to “which version corresponds to which experimental result.”
+- They only remember to commit after an experiment finishes-by then the code has already changed again;
+- The commit history provides no clue as to "which version corresponds to which experimental result."
 
-The problem with this workflow is that **you lose Git’s most essential value—the ability to serve as a “historical proof tool.”**
+The problem with this workflow is that **you lose Git's most essential value-the ability to serve as a "historical proof tool."**
 
-In engineering, Git is primarily used for collaboration and rollback. In research, Git’s core value is **proof**:
+In engineering, Git is primarily used for collaboration and rollback. In research, Git's core value is **proof**:
 
 - Proving which version of the code produced a given result;
 - Proving that every experiment in the paper corresponds to a specific code version;
@@ -41,7 +43,7 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 
 ![04 05 commit too big](../images/comics/04_05_commit_too_big.png)
 
-**Symptom:** A single commit includes changes across a dozen files, spanning data processing, model architecture, training pipeline, and more. The commit message says only “improve model.”
+**Symptom:** A single commit includes changes across a dozen files, spanning data processing, model architecture, training pipeline, and more. The commit message says only "improve model."
 
 **Consequences:**
 
@@ -52,8 +54,8 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 **Correct practice:**
 
 - Each commit should contain **one logical change** only;
-- Commit messages should clearly state “what changed” and “why”;
-- Follow the “atomicity principle”: every commit should keep the code in a runnable state.
+- Commit messages should clearly state "what changed" and "why";
+- Follow the "atomicity principle": every commit should keep the code in a runnable state.
 
 ### Pitfall 2: Misalignment Between Experiment Timing and Code Changes
 
@@ -81,15 +83,15 @@ In engineering, Git is primarily used for collaboration and rollback. In researc
 **Consequences:**
 
 - The `main` branch becomes unstable and filled with experimental code;
-- When you need the “paper reproduction version,” you do not know which branch to use;
+- When you need the "paper reproduction version," you do not know which branch to use;
 - Too many branches leave team members unsure which branch to base new work on.
 
 ## A Git Branching Strategy Suitable for Research
 
 ![分支策略](../images/comics/04_branch_strategy.png)
-Unlike engineering projects, a research project’s branching strategy must balance two needs:
+Unlike engineering projects, a research project's branching strategy must balance two needs:
 
-- **Stability:** the paper’s results must be supported by a clean, stable code version;
+- **Stability:** the paper's results must be supported by a clean, stable code version;
 - **Exploration:** new ideas require rapid trial-and-error and should not be constrained by heavy process.
 
 ### Recommended Branch Structure
@@ -102,7 +104,7 @@ Unlike engineering projects, a research project’s branching strategy must bala
       - One branch per experimental hypothesis
       - Use clear names: exp/attention-ablation, exp/data-augmentation
       - Short-lived branches: merge or delete after validation
-      - Allow “dirty” rapid iteration
+      - Allow "dirty" rapid iteration
 
     archive/<paper-version>:
       - Archive branches for key milestones such as submission and publication
@@ -147,7 +149,7 @@ Unlike engineering projects, a research project’s branching strategy must bala
 
 2.  Advance each branch independently without interfering with others
 
-3.  Manage each branch’s experimental artifacts using an independent run_id
+3.  Manage each branch's experimental artifacts using an independent run_id
 
 4.  Merge valuable changes back into main one by one
 
@@ -273,9 +275,9 @@ Tags are a severely underestimated feature in Git. For research projects, the va
 
 ## Frequently Asked Questions and Solutions
 
-### Q1: The code has already changed a lot—how can I recover?
+### Q1: The code has already changed a lot-how can I recover?
 
-If your repository history is already very messy, do not try to “rewrite history” (unless you are very familiar with Git rebase). The recommended approach is:
+If your repository history is already very messy, do not try to "rewrite history" (unless you are very familiar with Git rebase). The recommended approach is:
 
 1.  **Set a baseline point:** tag the current state: `git tag baseline-before-cleanup`
 
@@ -291,7 +293,7 @@ If your repository history is already very messy, do not try to “rewrite histo
 
 - Identify the code versions corresponding to key paper experiments and add tags retroactively
 
-- Record the “mapping between historical versions” in the README or documentation
+- Record the "mapping between historical versions" in the README or documentation
 
 - Use the standardized workflow for new experiments; trace old experiments as much as possible
 
@@ -304,9 +306,9 @@ If your repository history is already very messy, do not try to “rewrite histo
 
 - **Regular cleanup:** hold a weekly meeting to collectively remove useless experiment branches and archive important tags.
 
-### Q3: How should we handle experiments in a “dirty” state?
+### Q3: How should we handle experiments in a "dirty" state?
 
-Sometimes you temporarily modify code to run an experiment but have not had time to commit; this is a “dirty” state.
+Sometimes you temporarily modify code to run an experiment but have not had time to commit; this is a "dirty" state.
 
 **Recording strategy:**
 

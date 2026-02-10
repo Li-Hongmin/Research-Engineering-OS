@@ -1,8 +1,10 @@
-# Experiment Logging Automation: What’s Missing Is Not Tools, but Default Behavior
+# Experiment Logging Automation: What's Missing Is Not Tools, but Default Behavior
 
-## Story Setup: “Archaeological Work” Three Months Later
+![Illustration](../images/06_logging_path.png)
 
-Your paper has been accepted, but the reviewers request supplementary materials explaining the exact setup of a particular experiment in Table 4. You open the code repository and begin “archaeology”:
+## Story Setup: "Archaeological Work" Three Months Later
+
+Your paper has been accepted, but the reviewers request supplementary materials explaining the exact setup of a particular experiment in Table 4. You open the code repository and begin "archaeology":
 
 **Step 1: Find the logs**
 
@@ -10,23 +12,23 @@ You remember this experiment was run three months ago. You open the `outputs/` d
 
 **Step 2: Find the configuration**
 
-You finally locate the result files, but there is no record of the configuration. You comb through the code history, trying to find the hyperparameters used at the time. In one commit you find a configuration that seems plausible, but you are not sure whether it was the final version—you remember temporarily changing the learning rate, but you do not remember what you changed it to.
+You finally locate the result files, but there is no record of the configuration. You comb through the code history, trying to find the hyperparameters used at the time. In one commit you find a configuration that seems plausible, but you are not sure whether it was the final version-you remember temporarily changing the learning rate, but you do not remember what you changed it to.
 
 **Step 3: Find the data**
 
-The data path in the code is `data/v2/`, but your current data directory is `data/v3/`. You do not remember whether you switched dataset versions back then. You search your chat history for “data,” trying to find clues.
+The data path in the code is `data/v2/`, but your current data directory is `data/v3/`. You do not remember whether you switched dataset versions back then. You search your chat history for "data," trying to find clues.
 
 **Step 4: Give up**
 
-After an entire afternoon of struggle, you decide to rerun the experiment. However, because the parameters are uncertain, the rerun results do not match what was reported in the paper. In the supplementary materials you can only write: “Due to the long time elapsed, some experimental details may be inaccurate.”
+After an entire afternoon of struggle, you decide to rerun the experiment. However, because the parameters are uncertain, the rerun results do not match what was reported in the paper. In the supplementary materials you can only write: "Due to the long time elapsed, some experimental details may be inaccurate."
 
-**Reviewer’s reply:** “We cannot accept a paper where the authors cannot reproduce their own results.”
+**Reviewer's reply:** "We cannot accept a paper where the authors cannot reproduce their own results."
 
 ##### This tragedy could have been avoided.
 
 If you had spent 2 minutes recording key information at the end of the experiment, you would not have faced a nightmare three months later.
 
-The issue is not a lack of tools (MLflow, W&B, and TensorBoard are all excellent), but rather the **absence of logging as a default behavior**: many people think, “This is just a quick try; no need to record it,” and then they keep trying and forget to log. In the end, even valuable experiments leave no trace.
+The issue is not a lack of tools (MLflow, W&B, and TensorBoard are all excellent), but rather the **absence of logging as a default behavior**: many people think, "This is just a quick try; no need to record it," and then they keep trying and forget to log. In the end, even valuable experiments leave no trace.
 
 ## A Two-Layer Logging Strategy: Machine-Precise + Human-Concise
 
@@ -36,7 +38,7 @@ The core challenge of experiment logging is balancing two needs:
 
 - **Humans require concise, readable summaries** (for rapid review and decision-making).
 
-With only machine logs (e.g., JSON), it is difficult for humans to quickly understand “what this experiment was trying to verify”; with only human logs (e.g., notes), machines cannot automatically reproduce and compare runs.
+With only machine logs (e.g., JSON), it is difficult for humans to quickly understand "what this experiment was trying to verify"; with only human logs (e.g., notes), machines cannot automatically reproduce and compare runs.
 
 **Solution: two layers of logs, each doing its own job.**
 
@@ -128,7 +130,7 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 
 - **environment.pip_freeze_hash:** A hash of dependency versions, computed with `pip freeze | sha256sum`. Avoid storing the full `pip freeze` output (too long); store only the hash and the path to the original file.
 
-- **random.seed:** All random seeds. Ensure that seeds are set for PyTorch, NumPy, and Python’s built-in `random`.
+- **random.seed:** All random seeds. Ensure that seeds are set for PyTorch, NumPy, and Python's built-in `random`.
 
 ### Layer 2: Human Log (run.md)
 
@@ -168,13 +170,13 @@ With only machine logs (e.g., JSON), it is difficult for humans to quickly under
 
 - **Lower the logging barrier:** If you have to write a long document, you will procrastinate; with 5 lines, you can finish in 2 minutes.
 
-- **Force distillation of the core:** Compels you to think about “what exactly did this experiment validate,” rather than producing a chronological narrative.
+- **Force distillation of the core:** Compels you to think about "what exactly did this experiment validate," rather than producing a chronological narrative.
 
 - **Fast review:** Months later, a 5-line summary is more useful than a full log.
 
 ## Automation Tools: Make Logging a Zero-Cost Behavior
 
-**Core idea:** Logging should not depend on “remembering to do it”; it should happen automatically.
+**Core idea:** Logging should not depend on "remembering to do it"; it should happen automatically.
 
 ### Automatically Generate run.json in the Training Script
 
@@ -566,7 +568,7 @@ if __name__ == "__main__":
 
 **Solutions:**
 
-- Save only the “key hyperparameters” in run.json (e.g., learning rate, batch size);
+- Save only the "key hyperparameters" in run.json (e.g., learning rate, batch size);
 
 - Save the full config to a separate file: `config_resolved.yaml`;
 
@@ -587,7 +589,7 @@ fi
 
 - Periodically (e.g., every Friday) check which experiments are missing run.md and fill them in in a batch.
 
-- If you truly cannot recall, write “forgotten”—it is still better than having no record.
+- If you truly cannot recall, write "forgotten"-it is still better than having no record.
 
 ### Q3: What if the data version is too large to compute a hash?
 
@@ -595,7 +597,7 @@ fi
 
 - Use a data versioning tool (e.g., DVC, Git LFS);
 
-- Or record only a “manifest file” of the data:
+- Or record only a "manifest file" of the data:
 
 ```sh
 # Generate a manifest
@@ -642,4 +644,4 @@ create_run_md_template(output_dir, run_id)
 
    Spend 2 minutes completing the five-element template.
 
-Starting from the next experiment, logging will be automatic and zero-cost. The only thing you need to do is spend 2 minutes writing a 5-line summary—an investment that will yield a hundredfold return three months later.
+Starting from the next experiment, logging will be automatic and zero-cost. The only thing you need to do is spend 2 minutes writing a 5-line summary-an investment that will yield a hundredfold return three months later.
