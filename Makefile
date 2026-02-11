@@ -2,7 +2,7 @@
 # Purpose: Unified entry point for common development tasks
 # Created: 2026-02-07 07:05 JST
 
-.PHONY: help health lint check-links check-translation check-manga check-consistency check-all test build clean commit
+.PHONY: help health lint check-links check-translation check-manga check-consistency check-all test build clean commit snapshot
 
 # Default target
 help:
@@ -35,6 +35,7 @@ help:
 	@echo ""
 	@echo "Statistics & Reports:"
 	@echo "  make stats               - Show comprehensive project statistics"
+	@echo "  make snapshot            - Update project health snapshot (.reos/health_snapshot.json)"
 	@echo "  make weekly-report       - Generate weekly activity report"
 	@echo "  make report              - Alias for weekly-report"
 	@echo ""
@@ -113,6 +114,10 @@ serve-manga:
 # Statistics & Reports
 stats:
 	@./project_stats.sh
+
+snapshot:
+	@echo "📸 Updating project health snapshot..."
+	@./update_health_snapshot.sh
 
 weekly-report:
 	@echo "📊 Generating weekly activity report..."
