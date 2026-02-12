@@ -132,6 +132,8 @@ echo ""
 # 7. Summary
 echo -e "${YELLOW}📈 Project Summary${NC}"
 echo "-----------------------------------"
+# Note: Counts ALL .md files (source + build output + root docs like README/STATUS)
+# Compare with update_health_snapshot.sh which only counts source content files
 total_md=$(find . -name "*.md" -not -path "./.venv/*" -not -path "./.venv_translate/*" | wc -l | tr -d ' ')
 total_images=$(find . -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) -not -path "./.venv/*" | wc -l | tr -d ' ')
 echo "  - Total Markdown files: $total_md"

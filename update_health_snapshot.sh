@@ -29,7 +29,9 @@ bash project_stats.sh > "$TEMP_STATS" 2>&1
 # 3. Parse statistics
 echo "🔍 Parsing metrics..."
 
-# Count markdown files (text-book + manga-book)
+# Count markdown files (SOURCE CONTENT ONLY: text-book/src* + manga-book)
+# Note: Excludes build output (book/), root docs (README/STATUS), and archives
+# Compare with project_stats.sh which counts ALL .md files for total project scope
 MD_COUNT=$(find src/ src_en/ src_ja/ manga-book/ -name "*.md" 2>/dev/null | wc -l | xargs)
 
 # Count images
