@@ -36,6 +36,7 @@ help:
 	@echo "Statistics & Reports:"
 	@echo "  make stats               - Show comprehensive project statistics"
 	@echo "  make snapshot            - Update project health snapshot (.reos/health_snapshot.json)"
+	@echo "  make dashboard           - Generate interactive HTML dashboard"
 	@echo "  make weekly-report       - Generate weekly activity report"
 	@echo "  make report              - Alias for weekly-report"
 	@echo ""
@@ -118,6 +119,12 @@ stats:
 snapshot:
 	@echo "📸 Updating project health snapshot..."
 	@./update_health_snapshot.sh
+
+dashboard:
+	@echo "🎨 Generating project health dashboard..."
+	@./generate_dashboard.sh
+	@echo ""
+	@echo "✅ Dashboard ready! Open: dashboard.html"
 
 weekly-report:
 	@echo "📊 Generating weekly activity report..."

@@ -199,6 +199,7 @@ shared/
 #### 📊 统计与报告
 - **查看项目统计** → `make stats`
 - **更新健康快照** → `make snapshot`
+- **生成可视化 Dashboard** → `make dashboard`（生成 dashboard.html）
 - **生成周报** → `make weekly-report` 或 `make report`
 
 #### 🔧 Git 操作

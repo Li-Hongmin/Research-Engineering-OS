@@ -54,6 +54,9 @@ test_*.py
 *.swp
 *.swo
 
+# Generated files
+dashboard.html
+
 # macOS
 .DS_Store
 .AppleDouble
