@@ -168,6 +168,7 @@ shared/
 
 ### "我想..."
 
+#### 📚 阅读与理解
 - **快速上手（新手）** → QUICKSTART.md（5-10 分钟）
 - **了解项目** → README.md
 - **解决常见问题** → FAQ.md（安装、使用、贡献、调试）
@@ -176,19 +177,42 @@ shared/
 - **提改进建议** → IMPROVEMENTS.md
 - **查看项目状态** → STATUS.md
 - **查看所有可用命令** → `make help`（推荐）
-- **检查项目健康** → `make health`（或 `bash check_health.sh`）
-- **运行所有检查** → `make check-all`
+
+#### 🔍 质量检查
+- **检查项目健康** → `make health`
+- **运行所有检查** → `make check-all` 或 `make test`
+- **检查 Markdown 格式** → `make lint`
+- **检查链接有效性** → `make check-links`（快速）或 `make check-links-full`（完整）
+- **验证翻译同步** → `make check-translation`
+- **检查漫画图片** → `make check-manga`
+- **检查三语言一致性** → `make check-consistency`
+- **验证项目结构** → `make check-architecture`
+
+#### 🏗️ 构建与开发
 - **构建所有版本** → `make build`
-- **验证翻译同步** → `make check-translation`（或 `bash check_translation_sync.sh`）
-- **检查链接有效性** → `make check-links`（或 `bash check_links.sh`）
-- **检查三语言一致性** → `make check-consistency`（或 `bash check_content_consistency.sh`）
+- **仅构建文本版** → `make build-text`
+- **仅构建漫画版** → `make build-manga`
+- **本地预览文本版** → `make serve-text`（http://localhost:8000）
+- **本地预览漫画版** → `make serve-manga`（http://localhost:8001）
+- **清理构建产物** → `make clean`
+
+#### 📊 统计与报告
+- **查看项目统计** → `make stats`
+- **更新健康快照** → `make snapshot`
+- **生成周报** → `make weekly-report` 或 `make report`
+
+#### 🔧 Git 操作
+- **查看 Git 状态** → `make status`
+- **同步远程更改** → `make sync`
+- **交互式提交助手** → `make commit`
 
 ### "我遇到..."
 
-- **构建失败** → 运行 check_health.sh，查看具体错误
-- **图片显示问题** → 运行 check_manga_images.sh
-- **翻译不同步** → 运行 check_translation_sync.sh
-- **Markdown 格式问题** → 运行 check_markdown_lint.sh
+- **构建失败** → 运行 `make health`，查看具体错误
+- **图片显示问题** → 运行 `make check-manga`
+- **翻译不同步** → 运行 `make check-translation`
+- **Markdown 格式问题** → 运行 `make lint`
+- **链接失效** → 运行 `make check-links`
 - **不知道下一步** → 查看 TODO.md 短期任务
 
 ---
@@ -236,5 +260,5 @@ shared/
 - 工作流程变化时更新"文档使用流程"部分
 - 保持"快速查找指南"的实用性
 
-**Last Updated**: 2026-02-09 13:06 JST  
-**Version**: 2.5 - 新增 MAINTENANCE.md（项目维护指南）
+**Last Updated**: 2026-02-12 16:05 JST  
+**Version**: 2.6 - 增强快速查找指南（完整 Makefile 命令分类）
