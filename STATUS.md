@@ -1,6 +1,99 @@
 # REOS Project Status
 
-**Last Updated**: 2026-02-12 14:05 JST (README 统计更新 - EXCELLENT)
+**Last Updated**: 2026-02-12 15:07 JST (统计脚本文档改进 - EXCELLENT)
+
+## 本小时工作（2026-02-12 15:05）
+
+### ✅ 完成任务：澄清统计脚本的计数范围差异
+**时间**: 15:05-15:07 (2 分钟)  
+**目的**: REOS 每小时推进 - 修复文档追溯性问题
+
+**工作内容**:
+1. 🏥 **健康检查**
+   - 命令: `./check_health.sh`
+   - 结果: ✅ **EXCELLENT** (7/7 检查项通过)
+   - Git 状态：干净 + 已同步
+
+2. 📊 **项目统计**
+   - 命令: `bash project_stats.sh`
+   - 当前规模:
+     - 930 个 Markdown 文件（所有文件）
+     - 860 个 Markdown 文件（源内容）
+     - 804 张图片
+     - 278 个 commits（+1，从 14:05 的 277）
+     - 24,717 words 文档（+276 words，从 14:05 的 24,441）
+     - 10 shell + 8 Python 脚本
+
+3. 🔍 **发现问题：统计数据不一致**
+   - **现象**: 两个脚本报告的 Markdown 文件数量不同
+     - `project_stats.sh`: 930 个文件
+     - `update_health_snapshot.sh`: 860 个文件（在 health-snapshot.json 中）
+   - **原因分析**:
+     - `project_stats.sh`: 计数 ALL .md 文件（包括构建输出、README、STATUS、archives）
+       ```bash
+       find . -name "*.md" -not -path "./.venv/*" ...
+       ```
+     - `update_health_snapshot.sh`: 只计数 SOURCE 内容（text-book/src* + manga-book）
+       ```bash
+       find src/ src_en/ src_ja/ manga-book/ -name "*.md" ...
+       ```
+   - **差异**: 930 - 860 = 70 个文件（构建输出 + 根目录文档）
+
+4. 📝 **修复：添加文档注释**
+   - **编辑文件**: `project_stats.sh`
+     - 第 134-135 行：添加注释说明计数范围（ALL files）
+     - 注释引导用户对比 `update_health_snapshot.sh`
+   - **编辑文件**: `update_health_snapshot.sh`
+     - 第 32-34 行：添加注释说明计数范围（SOURCE ONLY）
+     - 注释说明排除了 build output、root docs、archives
+     - 注释引导用户对比 `project_stats.sh`
+
+5. 📸 **健康快照更新**
+   - 命令: `bash update_health_snapshot.sh`
+   - 结果: ✅ 成功更新 `.reos/health-snapshot.json`
+   - 历史记录: 19 条
+   - 趋势观察:
+     - Commits: 278（+1）
+     - Documentation words: 24,717（+276）
+     - 健康状态: EXCELLENT
+
+6. 💾 **提交变更**
+   - Commit: d372f8d
+   - 消息: `docs: clarify Markdown file counting scope in stats scripts`
+   - 修改文件:
+     - `project_stats.sh`: +2 行注释
+     - `update_health_snapshot.sh`: +4 行注释
+     - `.reos/health-snapshot.json`: 自动更新
+   - Pre-commit hook: ✅ 通过
+
+**符合 REOS 原则**:
+- ✅ 小步快跑：2 分钟发现问题 → 添加文档 → 提交
+- ✅ 追溯闭环：
+  - 问题来源: 健康检查输出对比（860 vs 930）
+  - 修改位置: 两个脚本的注释（具体行号）
+  - 结果验证: git diff 确认注释清晰
+- ✅ 自动化优先：使用 git hook 自动验证
+- ✅ 不破坏主线：仅添加注释，不改逻辑
+- ✅ 记录：更新 STATUS.md（本条目）
+
+**项目当前状态**:
+- ✅ 健康度: **EXCELLENT** (7/7 检查通过)
+- ✅ Git: 干净工作目录
+- ✅ 文档: 24,717 words（持续增长）
+- ✅ Commits: 278（稳步推进）
+- ✅ 追溯性: 统计差异已文档化
+
+**设计决策**:
+- 保留两种计数方式（各有用途）:
+  - **Total scope** (930): 反映整体项目规模（包括生成物）
+  - **Source content** (860): 追踪源内容变化（排除生成物）
+- 通过注释而非修改逻辑解决混淆
+
+**下一步**:
+- 继续保持每小时定期维护
+- LICENSE 文件仍需用户决策（见 TODO.md）
+
+---
 
 ## 本小时工作（2026-02-12 14:05）
 
